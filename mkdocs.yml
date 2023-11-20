@@ -1,4 +1,84 @@
+---
 site_name: redBorder Documentation
+site_url: "https://docs.redborder.com/"
+docs_dir: "docs"
+repo_url: https://github.com/redBorder/redborder-documentation
+repo_name: redBorder/redborder-documentation
+edit_url: "edit/master/docs"
+
 theme:
   name: material
+  palette:   
+    # Palette toggle for light mode
+    - scheme: default
+      primary: red
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
 
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: red
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  favicon: assets/images/redborder-logo-white-crop-u4409.png
+  features:
+    - content.action.edit
+    - content.code.copy
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+
+markdown_extensions:
+  - abbr
+  - attr_list
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.keys
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.tasklist
+  - footnotes
+  - def_list
+  - meta
+
+plugins:
+  - search
+  - awesome-pages
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - build: true
+          default: true
+          locale: en
+          name: English
+        - build: true
+          default: false
+          locale: es
+          name: Español
+  - tags
+
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/redBorder
+    - icon: fontawesome/brands/github
+      link: https://github.com/redBorder
+    - icon: material/home
+      link: https://redborder.com
+
+copyright: Copyright &copy; 2024 Eneo Tecnología
