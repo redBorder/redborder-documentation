@@ -1,0 +1,24 @@
+---
+INHERIT: ../build_base.yml
+
+# Do not modify this block
+pdf-config: &pdf-config
+  author: redBorder Documentation Team
+  cover: true
+  cover_logo: assets/images/logo_trans.png
+  cover_subtitle: A book from the Documentation Team
+  toc_level: 3
+  ordered_chapter_level: 3
+  verbose: false
+  back_cover: true
+  
+# You are free to configure here what you want
+plugins:
+  - with-pdf:
+      <<: *pdf-config
+      cover_title: redBorder Manager Guide (English version)
+      output_path: ../pdf/redBorderManagerGuide.pdf
+
+# Customize your own book
+nav:
+  - index.md

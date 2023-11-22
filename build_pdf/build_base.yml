@@ -1,0 +1,56 @@
+---
+site_name: 'redBorder Documentation'
+site_url: 'https://docs.redborder.com'
+docs_dir: '../../docs'
+
+theme:
+  name: material
+  font:
+    text: Red Hat Text
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - search.suggest
+  logo: assets/images/logotype.svg
+  favicon: assets/images/redborder-logo-white-crop-u4409.png
+  palette:
+    - scheme: default
+      media: "(prefers-color-scheme: light)"
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+      primary: black
+    - scheme: slate
+      media: "(prefers-color-scheme: dark)"
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+      primary: black
+
+markdown_extensions:
+  - abbr
+  - attr_list
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.keys
+  - pymdownx.tabbed
+  - pymdownx.details
+  - pymdownx.tasklist
+  - footnotes
+  - def_list
+  - meta
+
+plugins:
+  - awesome-pages
+  - tags
+
+copyright: Copyright &copy; 2023 Eneo Tecnología
+extra:
+  version: !ENV [VERSION, 'Custom version']
