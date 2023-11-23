@@ -3,7 +3,7 @@
 SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 cd $SCRIPTPATH
 
-for book in manager_book
+for book in getting_started_book
 do
   for config_file in $(ls ${SCRIPTPATH}/${book}/*.yml)
   do

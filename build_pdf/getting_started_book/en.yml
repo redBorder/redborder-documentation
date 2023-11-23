@@ -16,8 +16,8 @@ pdf-config: &pdf-config
 plugins:
   - with-pdf:
       <<: *pdf-config
-      cover_title: redBorder Manager Guide (English version)
-      output_path: ../pdf/redBorderManagerGuide.pdf
+      cover_title: redBorder Getting Started Guide (English version)
+      output_path: ../pdf/redBorderGettingStartedGuide.pdf
 
 # Customize your own book
 nav:
