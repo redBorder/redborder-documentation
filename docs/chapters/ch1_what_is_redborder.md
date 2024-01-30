@@ -1,5 +1,5 @@
 
-# Chapter 1. What is RedBorder?
+# What is RedBorder?
 
 **Redborder** is the latest open, active, and scalable platform for Cybersecurity and Real-time Network Traffic Analysis (NTA). It is based on Big Data technology for enterprises and service providers.
 
