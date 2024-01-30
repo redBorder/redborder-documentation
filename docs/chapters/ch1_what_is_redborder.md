@@ -1,99 +1,100 @@
 
-# Capítulo 1. ¿Qué es RedBorder?
+# Chapter 1. What is RedBorder?
 
-**Redborder** es la última plataforma abierta, activa y escalable de Ciberseguridad y Análisis en tiempo real de Tráfico de Red (NTA). Se basa en la tecnología Big Data para empresas y proveedores de servicios.
+**Redborder** is the latest open, active, and scalable platform for Cybersecurity and Real-time Network Traffic Analysis (NTA). It is based on Big Data technology for enterprises and service providers.
 
-Su capacidad para ingerir, analizar y reportar grandes cantidades de datos se ha desarrollado y probado en entornos de muy alta demanda, así como el Análisis de Tráfico de Red, la Ciberseguridad o el análisis e informe de conexiones a través de redes inalámbricas en distintos lugares.
+Its ability to ingest, analyze, and report large amounts of data has been developed and tested in high-demand environments, as well as Network Traffic Analysis, Cybersecurity, or analysis and reporting of connections through wireless networks in different locations.
 
-La plataforma unifica las diferentes fuentes de datos proporcionadas por las aplicaciones y las sondas. Además, incluye una serie de características comunes: paneles e informes personalizables, correlación, motores de análisis, gestión de usuarios y almacenamiento en capas.
+The platform unifies the different data sources provided by applications and probes. Additionally, it includes a set of common features: customizable panels and reports, correlation, analysis engines, user management, and layered storage.
 
-Las aplicaciones se encuentran dentro de la plataforma y se pueden instalar como si fueran complementos. Estos se centran en digerir nuevos tipos de datos.
+Applications are within the platform and can be installed as plugins. These focus on digesting new types of data.
 
-Las sondas se sitúan fuera de la plataforma, pero se gestionan desde ella y su función es la creación de nuevos tipos de datos y capacidades de inspección.
+Probes are located outside the platform but are managed from it, and their function is to create new types of data and inspection capabilities.
 
-Dependiendo de las aplicaciones integradas en la plataforma, el usuario verá una u otras opciones en la barra de menú. Las aplicaciones que están disponibles en esta nueva versión de Redborder son las siguientes:
+Depending on the applications integrated into the platform, the user will see different options in the menu bar. The applications available in this new version of Redborder are as follows:
 
 - Business Intelligence
 - Malware
-- Tráfico
-- Intrusión
+- Traffic
+- Intrusion
 - Monitor
-- Social
 - Vault
-- Movilidad
-- Informes
+- Mobility
+- Reports
 
-## 1.1 Escenario básico para la instalación de Redborder
+## Basic scenario for Redborder installation
 
-Un escenario básico típico propuesto por la solución consiste en un conjunto de sensores dispuestos en diferentes puntos sensibles de la red de la organización que conectarán con un Manager o clúster de managers para su gestión y monitorización.
+A typical basic scenario proposed by the solution consists of a set of sensors arranged at different sensitive points of the organization's network that will connect to a Manager or manager cluster for management and monitoring.
 
-Dichos puntos están formados por enlaces de red, llamados segmentos, por los que circulará el tráfico sensible y que el sensor analizará de manera más o menos transparente, en función del modo de funcionamiento configurado (IPS/IDS o Flow).
+These points are formed by network links, called segments, through which sensitive traffic will flow and which the sensor will analyze more or less transparently, depending on the configured operating mode (IPS/IDS or Flow).
 
-Para la planificación de la instalación de los sensores, se deberán tener en cuenta algunos aspectos fundamentales:
+For the planning of sensor installation, some fundamental aspects should be taken into account:
 
-- **Los segmentos bypass** (interfaces específicas de red pareadas, normalmente con soporte bypass) se interpondrán en medio del tráfico a analizar.
-- **Las interfaces de gestión** (en forma de bonding) para acceso remoto tanto desde equipos normales como desde el Manager.
-- **Las interfaces de acceso IPMI para la gestión remota del hardware** (conexión SOL ó Serial Over Lan, iKVM y comandos IPMI como inicio, reinicio y apagado).
+- **Bypass segments** (specific network interfaces paired, usually with bypass support) will be placed in the middle of the traffic to be analyzed.
+- **Management interfaces** (in bonding form) for remote access both from normal equipment and from the Manager.
+- **IPMI access interfaces for remote hardware management** (SOL or Serial Over LAN connection, iKVM, and IPMI commands such as start, restart, and shutdown).
 
-Para el **Manager** no es necesario un hardware específico, la única condición es **la existencia de una o más interfaces de red.**
+For the **Manager**, specific hardware is not necessary; **the only condition is the existence of one or more network interfaces.**
 
-!!! note "Nota"
+!!! note "Note"
 
-    En caso de que se haya creado un **clúster** son necesarias dos interfaces de red: una para la red de gestión (Management IP Address) y otra para la red de sincronismo (Sync IP address).
+    In case a **cluster** has been created, two network interfaces are necessary: one for the management network (Management IP Address) and another for the synchronization network (Sync IP address).
 
-!!! danger "Advertencia"
+In this way, it allows the creation of a bonding for management and connection with the sensors and another bonding (optional) for their communications towards other networks. Both systems support the 802.1q standard for virtual LAN (optional when configuring).
 
-    Es **importante** que primero se realice la configuración del Manager (o clúster de managers) antes de configurar los sensores.
-    
-    El Manager debe estar operativo y en una red accesible a los sensores. Algunos de los procesos de configuración de los sensores dependen del acceso al Manager.
+!!! danger "Warning"
 
-![Escenario básico para la instalación del Manager](images/ch01_img001.png)
+    It is **important** to first configure the Manager (or manager cluster) before configuring the sensors.
 
-Escenario básico para la instalación del Manager
+    The Manager must be operational and in a network accessible to the sensors. Some of the sensor configuration processes depend on access to the Manager.
 
-## 1.2 Estructura de la interfaz de usuario del menú de instalación
+![Basic scenario for Manager installation](images/ch01_img001.png)
 
-### 1.2.1 Menú, submenú y línea de comandos
+Basic scenario for Manager installation
 
-![Estructura de la interfaz de usuario del menú de instalación](images/ch01_img002.png)
+## User Interface Structure of the Installation Menu
 
-Estructura de la interfaz de usuario del menú de instalación
+### Menu, submenu, and command line
 
-#### *Menú*
+![User Interface Structure of the Installation Menu](images/ch01_img002.png)
 
-En el margen izquierdo de la pantalla encontrará un listado con las opciones disponibles. Para seleccionar cualquiera de ellas solo debe introducir en la línea en la que figura Selection, el número o letra que corresponda a la opción que desea elegir.
+User Interface Structure of the Installation Menu
 
-#### *Submenú*
+#### *Menu*
 
-En el margen izquierdo de la pantalla encontrará un listado con las opciones disponibles. Para seleccionar cualquiera de ellas solo debe introducir en la línea en la que figura Selection, el número o letra que corresponda a la opción que desea elegir.
+On the left side of the screen, you will find a list of available options. To select any of them, simply enter the number or letter corresponding to the option you want to choose on the line labeled Selection.
 
-#### *Línea de comandos / Selector de opciones*
+#### *Submenu*
 
-En el margen superior, y separado del menú y submenú gráficamente, encontramos el área en el que se deberán indicar las selecciones en la línea en la que figura `Selection` e introducir los comandos o datos que se soliciten para ejecutar las acciones pertinentes. En esta zona visualizaremos la fecha y la hora del sistema (por defecto en UTC).
+If different actions can be performed on the selected option, a submenu will appear on the right margin of the screen.
 
-### 1.2.2 Selección de opciones
+#### *Command Line / Option Selector*
 
-#### *Opciones predeterminadas*
+At the top margin, and separated graphically from the menu and submenu, we find the area where selections should be indicated on the line labeled `Selection` and enter the commands or data requested to execute the relevant actions. In this area, we will display the system date and time (defaulted to UTC).
 
-En algunos casos, el sistema mostrará una serie de opciones predeterminadas. Si se trata de la respuesta a una pregunta, la opción definida por defecto se visualizará en mayúsculas.
+### Option Selection
 
-![Selección de opciones predeterminadas](images/ch01_img003.png)
+#### *Default Options*
 
-Selección de opciones predeterminadas
+In some cases, the system will display a series of default options. If it is in response to a question, the default defined option will be displayed in uppercase.
 
-#### *Opciones disponibles en el menú del asistente de instalación de RedBorder*
+![Selection of default options](images/ch01_img003.png)
 
-- Selección de opción por defecto: pulse **Enter**.
-- Otras opciones: introduzca la letra o comando que corresponda.
-- Salir: cuando quiera salir de una pantalla para regresar al menú inicial seleccione la opción **quit**, introduciendo la letra **q**.
-- Aplicar cambios: para guardar las modificaciones realizadas y aplicar los cambios, seleccione la opción **apply** introduciendo la letra **a**.
+Selection of default options
 
-![Opciones disponibles en el menú del asistente de instalación de Redborder](images/ch01_img004.png)
+#### *Options available in the RedBorder installation wizard menu*
 
-Opciones disponibles en el menú del asistente de instalación de Redborder
+- Default option selection: press **Enter**.
+- Other options: enter the letter or command that corresponds.
+- Exit: when you want to exit a screen to return to the initial menu, select the quit option by entering the letter **q**.
+- Apply changes: to save the modifications made and apply the changes, select the **apply** option by entering the letter **a**.
 
-!!! warning "Importante"
+![Options available in the Redborder installation wizard menu](images/ch01_img004.png)
 
-    **Es necesario "aplicar" para activar los cambios**
-    
-    Si visualiza este mensaje deberá seleccionar la opción **a**. En caso contrario, el sistema no guardará ni aplicará las modificaciones realizadas.
+Options available in the Redborder installation wizard menu
+
+!!! warning "Important"
+
+    **It is necessary to "apply" to activate the changes**
+
+    If you see this message, you must select the **a** option. Otherwise, the system will not save or apply the modifications made.

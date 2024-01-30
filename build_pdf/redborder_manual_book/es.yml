@@ -16,10 +16,10 @@ pdf-config: &pdf-config
 plugins:
   - with-pdf:
       <<: *pdf-config
-      cover_title: redBorder Getting Started Guide (English version)
-      output_path: ../pdf/redBorderGettingStartedGuide.pdf
+      cover_title: redBorder manual (Spanish version)
+      output_path: ../pdf/redBorderManual.es.pdf
 
 # Customize your own book
 nav:
-  - index.md
-  - getting_started.md
+  - index.es.md
+  - chapters/ch1_what_is_redborder.es.md

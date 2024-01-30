@@ -18,12 +18,11 @@ Dependiendo de las aplicaciones integradas en la plataforma, el usuario verá un
 - Tráfico
 - Intrusión
 - Monitor
-- Social
 - Vault
 - Movilidad
 - Informes
 
-## 1.1 Escenario básico para la instalación de Redborder
+## Escenario básico para la instalación de Redborder
 
 Un escenario básico típico propuesto por la solución consiste en un conjunto de sensores dispuestos en diferentes puntos sensibles de la red de la organización que conectarán con un Manager o clúster de managers para su gestión y monitorización.
 
@@ -41,6 +40,8 @@ Para el **Manager** no es necesario un hardware específico, la única condició
 
     En caso de que se haya creado un **clúster** son necesarias dos interfaces de red: una para la red de gestión (Management IP Address) y otra para la red de sincronismo (Sync IP address).
 
+De esta manera se permite la creación de un bonding para la gestión y conexión con los sensores y otro bonding (opcional) para sus comunicaciones hacia otras redes. Ambos sistemas soportan el estándar 802.1q para virtual LAN (opcional a la hora de configurar).
+
 !!! danger "Advertencia"
 
     Es **importante** que primero se realice la configuración del Manager (o clúster de managers) antes de configurar los sensores.
@@ -51,9 +52,9 @@ Para el **Manager** no es necesario un hardware específico, la única condició
 
 Escenario básico para la instalación del Manager
 
-## 1.2 Estructura de la interfaz de usuario del menú de instalación
+## Estructura de la interfaz de usuario del menú de instalación
 
-### 1.2.1 Menú, submenú y línea de comandos
+### Menú, submenú y línea de comandos
 
 ![Estructura de la interfaz de usuario del menú de instalación](images/ch01_img002.png)
 
@@ -65,13 +66,13 @@ En el margen izquierdo de la pantalla encontrará un listado con las opciones di
 
 #### *Submenú*
 
-En el margen izquierdo de la pantalla encontrará un listado con las opciones disponibles. Para seleccionar cualquiera de ellas solo debe introducir en la línea en la que figura Selection, el número o letra que corresponda a la opción que desea elegir.
+En caso de que sobre la opción seleccionada se puedan realizar diferentes acciones, aparecerá un submenú en el margen derecho de la pantalla.
 
 #### *Línea de comandos / Selector de opciones*
 
 En el margen superior, y separado del menú y submenú gráficamente, encontramos el área en el que se deberán indicar las selecciones en la línea en la que figura `Selection` e introducir los comandos o datos que se soliciten para ejecutar las acciones pertinentes. En esta zona visualizaremos la fecha y la hora del sistema (por defecto en UTC).
 
-### 1.2.2 Selección de opciones
+### Selección de opciones
 
 #### *Opciones predeterminadas*
 
