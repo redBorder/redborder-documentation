@@ -22,6 +22,8 @@ Depending on the applications integrated into the platform, the user will see di
 - Mobility
 - Reports
 
+Additionally, Redborder now includes an **anomaly detection system powered by artificial intelligence**, which will be constantly learning about trends and normal data behavior in the different applications of the platform.
+
 ## Basic scenario for Redborder installation
 
 A typical basic scenario proposed by the solution consists of a set of sensors arranged at different sensitive points of the organization's network that will connect to a Manager or manager cluster for management and monitoring.
@@ -36,13 +38,13 @@ For the planning of sensor installation, some fundamental aspects should be take
 
 For the **Manager**, specific hardware is not necessary; **the only condition is the existence of one or more network interfaces.**
 
-!!! note "Note"
+!!! info "Keep in mind..."
 
     In case a **cluster** has been created, two network interfaces are necessary: one for the management network (Management IP Address) and another for the synchronization network (Sync IP address).
 
 In this way, it allows the creation of a bonding for management and connection with the sensors and another bonding (optional) for their communications towards other networks. Both systems support the 802.1q standard for virtual LAN (optional when configuring).
 
-!!! danger "Warning"
+!!! warning "Important"
 
     It is **important** to first configure the Manager (or manager cluster) before configuring the sensors.
 
@@ -54,47 +56,19 @@ Basic scenario for Manager installation
 
 ## User Interface Structure of the Installation Menu
 
-### Menu, submenu, and command line
+For our new version of Redborder NG, we have completely revamped the installation wizard. Now we have a more intuitive and easier-to-use wizard, as well as new configurations for the new additions to the platform.
 
-![User Interface Structure of the Installation Menu](images/ch01_img002.png)
+![Initial screen of the installation wizard](images/ch01_img002.png)
 
-User Interface Structure of the Installation Menu
+Initial screen of the installation wizard
 
-#### *Menu*
-
-On the left side of the screen, you will find a list of available options. To select any of them, simply enter the number or letter corresponding to the option you want to choose on the line labeled Selection.
-
-#### *Submenu*
-
-If different actions can be performed on the selected option, a submenu will appear on the right margin of the screen.
-
-#### *Command Line / Option Selector*
-
-At the top margin, and separated graphically from the menu and submenu, we find the area where selections should be indicated on the line labeled `Selection` and enter the commands or data requested to execute the relevant actions. In this area, we will display the system date and time (defaulted to UTC).
+!!! info "Keep in mind..."
+    At the moment, the installation wizard is **only available in English.**
 
 ### Option Selection
 
-#### *Default Options*
+Navigating through our new installation wizard is very straightforward:
 
-In some cases, the system will display a series of default options. If it is in response to a question, the default defined option will be displayed in uppercase.
-
-![Selection of default options](images/ch01_img003.png)
-
-Selection of default options
-
-#### *Options available in the RedBorder installation wizard menu*
-
-- Default option selection: press **Enter**.
-- Other options: enter the letter or command that corresponds.
-- Exit: when you want to exit a screen to return to the initial menu, select the quit option by entering the letter **q**.
-- Apply changes: to save the modifications made and apply the changes, select the **apply** option by entering the letter **a**.
-
-![Options available in the Redborder installation wizard menu](images/ch01_img004.png)
-
-Options available in the Redborder installation wizard menu
-
-!!! warning "Important"
-
-    **It is necessary to "apply" to activate the changes**
-
-    If you see this message, you must select the **a** option. Otherwise, the system will not save or apply the modifications made.
+- Move between available options: use the **arrow keys**.
+- Check a checkbox: press the **space** key.
+- Select an option: press the **enter** key.

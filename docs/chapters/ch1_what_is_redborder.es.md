@@ -22,6 +22,8 @@ Dependiendo de las aplicaciones integradas en la plataforma, el usuario verá un
 - Movilidad
 - Informes
 
+Además, ahora redborder incluye un **sistema de detección de anomalías potenciado por inteligencia artificial**, que estará constantemente aprendiendo sobre las tendencias y el comportamiento normal de los datos en las diferentes aplicaciones de la plataforma.
+
 ## Escenario básico para la instalación de Redborder
 
 Un escenario básico típico propuesto por la solución consiste en un conjunto de sensores dispuestos en diferentes puntos sensibles de la red de la organización que conectarán con un Manager o clúster de managers para su gestión y monitorización.
@@ -36,13 +38,13 @@ Para la planificación de la instalación de los sensores, se deberán tener en 
 
 Para el **Manager** no es necesario un hardware específico, la única condición es **la existencia de una o más interfaces de red.**
 
-!!! note "Nota"
+!!! info "Ten en cuenta..."
 
     En caso de que se haya creado un **clúster** son necesarias dos interfaces de red: una para la red de gestión (Management IP Address) y otra para la red de sincronismo (Sync IP address).
 
 De esta manera se permite la creación de un bonding para la gestión y conexión con los sensores y otro bonding (opcional) para sus comunicaciones hacia otras redes. Ambos sistemas soportan el estándar 802.1q para virtual LAN (opcional a la hora de configurar).
 
-!!! danger "Advertencia"
+!!! warning "Importante"
 
     Es **importante** que primero se realice la configuración del Manager (o clúster de managers) antes de configurar los sensores.
     
@@ -52,49 +54,21 @@ De esta manera se permite la creación de un bonding para la gestión y conexió
 
 Escenario básico para la instalación del Manager
 
-## Estructura de la interfaz de usuario del menú de instalación
+## Estructura de la interfaz de usuario del asistente de instalación
 
-### Menú, submenú y línea de comandos
+Para nuestra nueva versión de redborder NG hemos renovado por completo el asistente de instalación. Ahora contamos con un asistente más intuitivo y sencillo de utilizar, además de configuraciones nuevas para las nuevas adiciones a la plataforma.
 
-![Estructura de la interfaz de usuario del menú de instalación](images/ch01_img002.png)
+![Pantalla inicial del asistente de instalación](images/ch01_img002.png)
 
-Estructura de la interfaz de usuario del menú de instalación
+Pantalla inicial del asistente de instalación
 
-#### *Menú*
-
-En el margen izquierdo de la pantalla encontrará un listado con las opciones disponibles. Para seleccionar cualquiera de ellas solo debe introducir en la línea en la que figura Selection, el número o letra que corresponda a la opción que desea elegir.
-
-#### *Submenú*
-
-En caso de que sobre la opción seleccionada se puedan realizar diferentes acciones, aparecerá un submenú en el margen derecho de la pantalla.
-
-#### *Línea de comandos / Selector de opciones*
-
-En el margen superior, y separado del menú y submenú gráficamente, encontramos el área en el que se deberán indicar las selecciones en la línea en la que figura `Selection` e introducir los comandos o datos que se soliciten para ejecutar las acciones pertinentes. En esta zona visualizaremos la fecha y la hora del sistema (por defecto en UTC).
+!!! info "Ten en cuenta..."
+    De momento, solo está disponible el asistente de instalación en el **idioma inglés**
 
 ### Selección de opciones
 
-#### *Opciones predeterminadas*
+Navegar por nuestro nuevo asistente de instalación es muy sencillo:
 
-En algunos casos, el sistema mostrará una serie de opciones predeterminadas. Si se trata de la respuesta a una pregunta, la opción definida por defecto se visualizará en mayúsculas.
-
-![Selección de opciones predeterminadas](images/ch01_img003.png)
-
-Selección de opciones predeterminadas
-
-#### *Opciones disponibles en el menú del asistente de instalación de RedBorder*
-
-- Selección de opción por defecto: pulse **Enter**.
-- Otras opciones: introduzca la letra o comando que corresponda.
-- Salir: cuando quiera salir de una pantalla para regresar al menú inicial seleccione la opción **quit**, introduciendo la letra **q**.
-- Aplicar cambios: para guardar las modificaciones realizadas y aplicar los cambios, seleccione la opción **apply** introduciendo la letra **a**.
-
-![Opciones disponibles en el menú del asistente de instalación de Redborder](images/ch01_img004.png)
-
-Opciones disponibles en el menú del asistente de instalación de Redborder
-
-!!! warning "Importante"
-
-    **Es necesario "aplicar" para activar los cambios**
-    
-    Si visualiza este mensaje deberá seleccionar la opción **a**. En caso contrario, el sistema no guardará ni aplicará las modificaciones realizadas.
+- Moverse entre las opciones disponibles: pulsa las **flechas del teclado**
+- Marcar una casilla: pulsa la tecla de **espacio**.
+- Seleccionar una opción: pulsa la tecla de **enter**.
