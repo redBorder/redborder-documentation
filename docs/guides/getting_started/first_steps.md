@@ -1,4 +1,5 @@
-# Getting started
+
+# First steps
 
 redBorder is an Open Source network visibility, data analytics, and cybersecurity Big Data solution that is scalable up to the needs of enterprise networks and service providers
 
@@ -11,6 +12,7 @@ The successful implementation of redBorder requires a machine with the **Rocky L
     * Disk: 80 GB
     * RAM: 16 GB
     * Network Interface: At least one
+
 === "Proxy"
 
     * Disk: 30 GB
@@ -59,14 +61,12 @@ The redBorder system comprises the main information management and visualization
 
 ## Configuration
 
-To complete the initial configuration run the wizard an follow the steps.
+To complete the initial configuration run the wizard and follow the steps.
 
-    ```bash
     rb_setup_wizard
-    ```
 
 ## Ready
 
-Ready to Get Started!
+**Ready to Get Started!**
 
 You've successfully completed the initial steps. Now, all that's left is to wait as the system finishes the configuration. If you've followed each step carefully, you're on your way to harnessing the full capabilities of redBorder. Thank you for choosing redBorder for your network management and security needs! If you have any questions or need assistance, feel free to refer to the documentation or reach out to our support team. Welcome to redBorder!

@@ -1,0 +1,4 @@
+---
+nav:
+    - ... | index*.md
+    - RedBorder basics: redborder_basics

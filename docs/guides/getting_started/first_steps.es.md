@@ -1,4 +1,5 @@
-# Getting started
+
+# Primeros pasos
 
 redBorder es una solución de Big Data de visibilidad de red, análisis de datos y ciberseguridad de código abierto que es escalable según las necesidades de las redes empresariales y los proveedores de servicios.
 
@@ -62,9 +63,7 @@ El sistema de redBorder está compuesto por el sistema principal de gestión y v
 
 Para completar la configuración inicial ejecuta el wizard y sigue sus pasos.
 
-    ```bash
     rb_setup_wizard
-    ```
 
 ## Listo
 
