@@ -1,0 +1,4 @@
+---
+nav:
+    - ... | index*.md
+    - Getting started: getting_started

@@ -22,3 +22,4 @@ plugins:
 # Customize your own book
 nav:
   - index.md
+  - guides/getting_started/first_steps.md

@@ -8,3 +8,4 @@ mkdocs-static-i18n
 jieba
 mkdocs-with-pdf
 qrcode
+WeasyPrint == 52.5
