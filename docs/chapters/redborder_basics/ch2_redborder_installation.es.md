@@ -40,9 +40,6 @@ Ya con los paquetes descargados e instalados, el siguiente paso es configurar Re
 
 El cual iniciará el **asistente de instalación** de la plataforma en consola para funcionar como guía durante todo el proceso.
 
-!!! warning "Importante"
-    Se debe realizar la configuración del manager desde el TTY de la máquina a configurar.
-
 ### Configuración de red
 
 En el recuadro inferior se listan las interfaces de red existentes en el equipo en cuestión. Debajo de todas las interfaces que posee el equipo, está la opción `Finalize`, que podemos seleccionar **después de haber configurado** exitosamente las interfaces.

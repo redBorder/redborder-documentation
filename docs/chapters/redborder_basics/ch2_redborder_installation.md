@@ -40,9 +40,6 @@ With the packages downloaded and installed, the next step is to configure RedBor
 
 This command will start the **installation wizard** of the platform in the console to guide you through the entire process.
 
-!!! warning "Important"
-    Manager configuration must be done from the machine's TTY.
-
 ### Network Configuration
 
 In the lower box, the existing network interfaces on the machine in question are listed. Underneath all the interfaces that the machine possesses, there is the `Finalize` option, which we can select **after successfully configuring the interfaces**.
