@@ -9,7 +9,7 @@ Once the Manager installation process is completed, the user can access the RedB
 
 Platform Access Screen
 
-!!! info "Keep in mind..."
+!!! info "Please note..."
 
     It is possible to log in to the platform using the default account: **admin**.
 
