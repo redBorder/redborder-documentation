@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://docs.redborder.com/</loc>
+        <lastmod>2024-02-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/chapters/</loc>
+        <lastmod>2024-02-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/chapters/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/chapters/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/chapters/redborder_basics/ch1_what_is_redborder/</loc>
+        <lastmod>2024-02-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/chapters/redborder_basics/ch1_what_is_redborder/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/chapters/redborder_basics/ch1_what_is_redborder/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/chapters/redborder_basics/ch2_redborder_installation/</loc>
+        <lastmod>2024-02-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/chapters/redborder_basics/ch2_redborder_installation/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/chapters/redborder_basics/ch2_redborder_installation/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/guides/</loc>
+        <lastmod>2024-02-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/guides/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/guides/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/guides/getting_started/first_steps/</loc>
+        <lastmod>2024-02-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/guides/getting_started/first_steps/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/guides/getting_started/first_steps/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/</loc>
+        <lastmod>2024-02-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/chapters/</loc>
+        <lastmod>2024-02-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/chapters/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/chapters/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/chapters/redborder_basics/ch1_what_is_redborder/</loc>
+        <lastmod>2024-02-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/chapters/redborder_basics/ch1_what_is_redborder/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/chapters/redborder_basics/ch1_what_is_redborder/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/chapters/redborder_basics/ch2_redborder_installation/</loc>
+        <lastmod>2024-02-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/chapters/redborder_basics/ch2_redborder_installation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/chapters/redborder_basics/ch2_redborder_installation/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/guides/</loc>
+        <lastmod>2024-02-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/guides/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/guides/"/>
+    </url>
+    <url>
+        <loc>https://docs.redborder.com/es/guides/getting_started/first_steps/</loc>
+        <lastmod>2024-02-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.redborder.com/es/guides/getting_started/first_steps/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.redborder.com/guides/getting_started/first_steps/"/>
+    </url>
+</urlset>
