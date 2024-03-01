@@ -41,7 +41,7 @@ Veamos estas partes:
 
 1. **Barra de menú**: en ella encontrará el acceso directo a todas las secciones de la plataforma Redborder. Se encuentra subdividida en dos áreas diferenciadas según operatividad:
   
-    1. *Área de analítica (margen superior izquierdo)*: aquí encontrará todo los datos recolectados por los sensores mostrados en diferentes métricas e informes.
+    1. *Área de analítica (margen superior izquierdo)*: aquí encontrará todos los datos recolectados por los sensores mostrados en diferentes métricas e informes.
     - *Área de configuración (margen superior derecho)*: opciones de configuración y gestión de las Apps y de Redborder.
 
 - **Submenú**: muestra las opciones disponibles según la sección que nos encontremos consultando.
