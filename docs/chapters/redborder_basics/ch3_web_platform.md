@@ -24,9 +24,9 @@ This home screen is fully customizable. The user can create as many dashboards p
 
 1. In the case of the Community version, the number of customizable dashboards is limited to one per user profile.
 
-![Manager Home Screen Administration: Dashboard](images/ch03_img002.png)
+![Manager Home Screen: Dashboard](images/ch03_img002.png)
 
-Manager Home Screen Administration: Dashboard
+Manager Home Screen: Dashboard
 
 ## RedBorder Platform Interface Structure
 
@@ -41,18 +41,18 @@ Let's see these parts:
 
 1. **Menu Bar**: Here you will find direct access to all sections of the RedBorder platform. It is subdivided into two areas according to functionality:
   
-    1. *Analytics Area (upper left corner)*: here you will find all the data collected by the sensors displayed in different metrics and reports.
-    - *Configuration Area (upper right corner)*: configuration and management options for Apps and RedBorder.
+    1. *Analytics Area (upper left corner)*: Here you will find all the data collected by the sensors displayed in different metrics and reports.
+    - *Configuration Area (upper right corner)*: Configuration and management options for the Apps and RedBorder.
 
-- **Submenu**: Shows the available options depending on the section we are consulting.
+- **Submenu**: Shows the available options depending on the section we are consulting. Here we can see the configured filters, change the view we are in (Raw, Tops, Compare, Unique), among other options.
 
-- **Main Area**: This is the content area. In this zone, data is displayed in different metrics and graphs that are fully customizable.
+- **Main Area**: This is the content area. In this zone, data is displayed in different metrics and graphs. We can hover over the graph to see detailed information at that moment, and we can also select an area of the graph to zoom in and then filter within that time range of the graph.
 
-- **Summary**: Under the graph, you will find a summary with the information displayed in the metric, providing total values.
+- **Summary**: Below the graph, you will find a summary with the information displayed in the metric, providing total values and the percentage of visible data.
 
-- **Search Engine**: Allows you to quickly search for any feature in the data table with the attribute being queried. You only need to enter the IP, sensor, client, etc. you want to query. Additionally, searches can be turned into filters, as we will see later.
+- **Search Engine**: Allows you to quickly search for any feature in the data table with the attribute being queried. You only need to enter the IP (you can use a regular expression), sensor, client, etc. that you want to query.
 
-- **Data Table**: Provides details of the information displayed in the metric. Additionally, different actions can be performed per row. These actions depend on the App being queried.
+- **Data Table**: Provides details of the information displayed in the metric. Additionally, different actions can be performed per row. These actions depend on the module we are in.
 
 ### Options included in the menu bar
 

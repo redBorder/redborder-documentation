@@ -24,9 +24,9 @@ Esta pantalla de inicio es completamente personalizable. El usuario podrá crear
 
 1. En el caso de la versión Community, el número de dashboards personalizables se limita a uno por perfil de usuario.
 
-![Administración de la pantalla de inicio del Manager: dashboard](images/ch03_img002.png)
+![Pantalla de inicio del Manager: dashboard](images/ch03_img002.png)
 
-Administración de la pantalla de inicio del Manager: dashboard
+Pantalla de inicio del Manager: dashboard
 
 ## Estructura de la interfaz de la plataforma Redborder
 
@@ -44,15 +44,15 @@ Veamos estas partes:
     1. *Área de analítica (margen superior izquierdo)*: aquí encontrará todos los datos recolectados por los sensores mostrados en diferentes métricas e informes.
     - *Área de configuración (margen superior derecho)*: opciones de configuración y gestión de las Apps y de Redborder.
 
-- **Submenú**: muestra las opciones disponibles según la sección que nos encontremos consultando.
+- **Submenú**: muestra las opciones disponibles según la sección que nos encontremos consultando. Aquí podemos ver los filtros configurados, cambiar la vista en la que nos encontramos (Raw, Tops, Comparar, Único), entre otras opciones.
 
-- **Área principal**: este es el área de contenido. En esta zona se muestran los datos en diferentes métricas y gráficos completamente personalizables
+- **Área principal**: este es el área de contenido. En esta zona se muestran los datos en diferentes métricas y gráficos. Podemos mover el cursor sobre el gráfico para ver el detalle de la información en ese momento, además que también podemos seleccionar un área del gráfico para hacer zoom y luego filtrar en ese rango temporal del gráfico.
 
-- **Resumen**: bajo el gráfico encontrará un resumen con la información mostrada en la métrica, proveyendo valores totales.
+- **Resumen**: bajo el gráfico encontrará un resumen con la información mostrada en la métrica, proveyendo valores totales y el porcentaje de los datos visibles.
 
-- **Motor de búsqueda**: permite buscar rápidamente cualquier característica en la tabla de datos con el atributo que está siendo consultado. Únicamente tiene que introducir la IP, el sensor, el cliente, etc. que quiera consultar. Además, las búsquedas pueden convertirse en filtros, tal y como veremos más tarde.
+- **Motor de búsqueda**: permite buscar rápidamente cualquier característica en la tabla de datos con el atributo que está siendo consultado. Únicamente tiene que introducir la IP (puede usar una expresión regular), el sensor, el cliente, etc. que quiera consultar.
 
-- **Tabla de datos**: proporciona detalles de la información mostrada en la métrica. Además se pueden realizar diferentes acciones por filas. Estas acciones dependen de la App que estemos consultando.
+- **Tabla de datos**: proporciona detalles de la información mostrada en la métrica. Además se pueden realizar diferentes acciones por filas. Estas acciones dependen del módulo en el que nos encontremos.
 
 ### Opciones incluidas en la barra de menú
 
