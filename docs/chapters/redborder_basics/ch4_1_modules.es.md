@@ -17,6 +17,8 @@ Este módulo viene desactivado por defecto, para activarlo ejecute el siguiente 
 
 ![Módulo de Business Inteligence](images/ch04_img001.png)
 
+Módulo de BI
+
 ## Malware (WIP)
 
 El módulo **Malware** es una solución completa para la detección de archivos, direcciones IP y direcciones URL maliciosas. Para ello se emplean múltiples motores de detección y servicios de reputación que van más allá de las políticas basadas en firmas y técnicas similares.
@@ -27,11 +29,15 @@ Este módulo viene desactivado por defecto, para activarlo ejecute el siguiente 
 
 ![Módulo de Malware](images/ch04_img002.png)
 
+Módulo de Malware
+
 ## Tráfico
 
 El módulo **Tráfico** utiliza netflow para extraer información sobre todo el tráfico del sensor. El módulo provee información como IPs, protocolos, localizaciones y mucho más.
 
 ![Módulo de Tráfico](images/ch04_img003.png)
+
+Módulo de Tráfico
 
 ## Intrusion
 
@@ -39,11 +45,15 @@ El módulo **Intrusión** utiliza datos del sensor o sensores IPS para mostrar e
 
 ![Módulo de Intrusión](images/ch04_img004.png)
 
+Módulo de Intrusión
+
 ## Monitor
 
 El módulo Monitor utiliza datos provenientes de protocolos SNMP, Redfish e Ipmi para mostrar el estado de la infraestructura.
 
 ![Módulo de Monitor](images/ch04_img005.png)
+
+Módulo de Monitor
 
 ## Vault
 
@@ -53,18 +63,26 @@ También es posible aumentar las capacidades del módulo Vault a través de las 
 
 ![Módulo de Vault](images/ch04_img006.png)
 
+Módulo de Vault
+
 ## Movilidad
 
 El módulo **Movilidad** provee información de localización de sensores de APs de la red. Puede ser usado para mostrar como las personas se mueven en un edificio.
 
 ![Módulo de Movilidad](images/ch04_img007.png)
 
+Módulo de Movilidad
+
 ## Wireless
 
 ![Módulo de Wireless](images/ch04_img008.png)
+
+Módulo de Wireless
 
 ## Reportes
 
 El módulo de **Reportes** permite al usuario tener informes periodicos con información sobre la plataforma Redborder.
 
 ![Módulo de Reportes](images/ch04_img009.png)
+
+Ejemplo de informes creados
