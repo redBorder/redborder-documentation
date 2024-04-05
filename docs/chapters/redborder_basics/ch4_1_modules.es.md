@@ -15,7 +15,7 @@ Este módulo viene desactivado por defecto, para activarlo ejecute el siguiente 
 
     rb_set_modules bi:1; chef_client
 
-![Módulo de Business Inteligence](/chapters/redborder_basics/images/ch04_img001.png)
+![Módulo de Business Inteligence](images/ch04_img001.png)
 
 ## Malware (WIP)
 
@@ -25,25 +25,25 @@ Este módulo viene desactivado por defecto, para activarlo ejecute el siguiente 
 
     rb_set_modules malware:1; rb_set_malware_mode enable logstash; chef_client
 
-![Módulo de Malware](/chapters/redborder_basics/images/ch04_img002.png)
+![Módulo de Malware](images/ch04_img002.png)
 
 ## Tráfico
 
 El módulo **Tráfico** utiliza netflow para extraer información sobre todo el tráfico del sensor. El módulo provee información como IPs, protocolos, localizaciones y mucho más.
 
-![Módulo de Tráfico](/chapters/redborder_basics/images/ch04_img003.png)
+![Módulo de Tráfico](images/ch04_img003.png)
 
 ## Intrusion
 
 El módulo **Intrusión** utiliza datos del sensor o sensores IPS para mostrar eventos de intrusión basados en reglas de Snort. También, gracias a las diferentes vistas que incluye RedBorder, es posible analizar los paquetes que coincidieron con la especificación de la regla.
 
-![Módulo de Intrusión](/chapters/redborder_basics/images/ch04_img004.png)
+![Módulo de Intrusión](images/ch04_img004.png)
 
 ## Monitor
 
 El módulo Monitor utiliza datos provenientes de protocolos SNMP, Redfish e Ipmi para mostrar el estado de la infraestructura.
 
-![Módulo de Monitor](/chapters/redborder_basics/images/ch04_img005.png)
+![Módulo de Monitor](images/ch04_img005.png)
 
 ## Vault
 
@@ -51,20 +51,20 @@ El módulo Vault utiliza datos de syslog para proveer información sobre eventos
 
 También es posible aumentar las capacidades del módulo Vault a través de las extensiones que añaden compatibilidades con otros fabricantes.
 
-![Módulo de Vault](/chapters/redborder_basics/images/ch04_img006.png)
+![Módulo de Vault](images/ch04_img006.png)
 
 ## Movilidad
 
 El módulo **Movilidad** provee información de localización de sensores de APs de la red. Puede ser usado para mostrar como las personas se mueven en un edificio.
 
-![Módulo de Movilidad](/chapters/redborder_basics/images/ch04_img007.png)
+![Módulo de Movilidad](images/ch04_img007.png)
 
 ## Wireless
 
-![Módulo de Wireless](/chapters/redborder_basics/images/ch04_img008.png)
+![Módulo de Wireless](images/ch04_img008.png)
 
 ## Reportes
 
 El módulo de **Reportes** permite al usuario tener informes periodicos con información sobre la plataforma Redborder.
 
-![Módulo de Reportes](/chapters/redborder_basics/images/ch04_img009.png)
+![Módulo de Reportes](images/ch04_img009.png)
