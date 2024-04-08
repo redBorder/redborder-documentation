@@ -77,6 +77,10 @@ Módulo de Movilidad
 
 El módulo **Wireless** proporciona un análisis de los datos de los visitantes de sensores APs de la red **sin tener en cuenta el cálculo de movimientos**.
 
+Este módulo viene desactivado por defecto, para activarlo ejecute el siguiente comando desde la consola:
+
+    rb_set_modules wireless:1; chef_client
+
 ![Módulo de Wireless](images/ch04_img008.png)
 
 Módulo de Wireless

@@ -77,6 +77,10 @@ Mobility Module
 
 The **Wireless** module provides an analysis of visitor data from AP network sensors **without taking into account movement calculations**.
 
+This module is disabled by default, to activate it, run the following command from the console:
+
+    rb_set_modules wireless:1; chef_client
+
 ![Wireless Module](images/ch04_img008.png)
 
 Wireless Module
