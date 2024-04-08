@@ -109,3 +109,65 @@ All attributes have specific meaning and functionality. For example, in the Traf
 ![Attributes: Overview](images/ch04_img023.png)
 
 Attributes: Overview
+
+## Body of the screen
+
+### Time Filtering
+
+Located to the left, a bit below the submenu, are shortcuts to filtered events based on time periods. The periods defined in the platform are Last Hour, 2 hours, 3 hours, 12 hours, 24 hours, and Last Week.
+
+![Time Period Filters](images/ch04_img024.png)
+
+Time Period Filters
+
+There is the possibility to select a different time period than the default one offered. Depending on the user's needs, a custom selection of the period can be made using the Custom option. The procedure to perform a custom time filter is specified later.
+
+### Attribute Tabs
+
+Classified information of network traffic by attributes. By browsing through each of the tabs, detailed values associated with the selected attributes can be explored.
+
+![Attribute Tabs](images/ch04_img025.png)
+
+Attribute Tabs
+
+!!! info "Keep in mind..."
+    The user can change the order in which the tabs are displayed at any time. To do this, simply drag and drop the tab to the desired position.
+
+    This part of the body is not shown in the Raw view.
+
+### View
+
+In this area, the data is displayed according to the selected view and chart type. Placing the mouse over any of the points that make up the chart, a dialog box displays detailed information for that moment in time, aggregation, and attribute.
+
+![View](images/ch04_img026.png)
+
+View
+
+### Summary
+
+Below the *View* area, there is a summary of all the data displayed, both in the view and in the table. In the following order, this summary indicates the total aggregation value of all loaded data, the total aggregation value of all loaded and selected data, the number of rows of loaded data, and the percentage of aggregated value of the loaded data from the total data.
+
+![Summary](images/ch04_img027.png)
+
+Summary
+
+### Search Engine
+
+Allows searching by attribute. Searches are automatically converted into filters, as we'll see later.
+
+![Search Engine](images/ch04_img028.png)
+
+Search Engine
+
+### Data Table
+
+Displays values classified by the selected attribute type. For example, each row could show each of the source IPs (Column/Attribute: SRC Address) with the percentage of detailed bytes (aggregation) that element consumes within the network.
+
+For the isolated analysis of one or more elements from this bar (selecting as a filter), click on the element you want to filter and then press the corresponding button that will appear next to the search engine.
+
+![Data Table](images/ch04_img029.png)
+
+Data Table
+
+!!! info "Keep in mind..."
+    Hovering over any of the elements in the data table will display a menu with different actions that can be performed on that element. Depending on the type of attribute, sorting options will be displayed in the contextual menu.
