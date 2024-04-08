@@ -19,9 +19,9 @@ Submenu Options
 
 Allow users to isolate a portion of the information for detailed inspection. In this tab, you can see the number of filters that have been applied to take actions on them:
 
-- Advanced search.
-- Create an alarm.
-- Create a widget.
+- *Advanced search.*
+- *Create an alarm.*
+- *Create a widget.*
 
 ![Filters](images/ch04_img012.png)
 
@@ -34,7 +34,7 @@ Offers different options for displaying information.
 - *Raw*: Raw events.
 - *Tops*: Shows the total sum of data from different events to display them as one.
 - *Compare*: Comparison of events within a time period.
-- *Unique*: Shows events that have occurred only once.
+- *Unique*: Display the number of unique events, grouped as indicated.
 
 ![Views](images/ch04_img013.png)
 
@@ -85,10 +85,10 @@ Chart Type: Accumulated
 In this section, the user can perform various actions to manage the data being displayed. The options vary depending on the selected view.
 
 - *Show filtered total/Hide filtered total*: shows or hides the chart considering the selected filters.
+- *Export to CSV*: Provides the option to export a CSV report of any selected field by selecting the event limit.
 - *Time Machine*: Allows changing the date/time of the machine to view all information and events that have occurred in that time period.
 - *Sort aggregations*: Allows changing the order of the aggregations displayed in the module.
-- *Export to CSV*: Provides the option to export a CSV report of any selected field by selecting the event limit.
-- *Save tab as default*: By selecting this option, the default tab layout can be modified.
+- *Save tabs as default*: By selecting this option, the default tabs layout can be modified.
 
 ![Options](images/ch04_img021.png)
 
@@ -104,7 +104,7 @@ Attributes can be displayed in different ways: as tabs or as columns (Add Tabs/C
 
 Attributes
 
-All attributes have specific meaning and functionality. For example, in the Traffic module, we can observe highly relevant attributes such as Public IP, which shows the real IP address of devices on the network, Public IP MAP, indicating their position on the map, or Country Code, which indicates the country they belong to.
+All attributes have specific meaning and functionality. For example, in the Traffic module, we can observe highly relevant attributes such as *Public IP*, which shows the real IP address of devices on the network, *Public IP MAP*, indicating their position on the map, or *Country Code*, which indicates the country they belong to.
 
 ![Attributes: Overview](images/ch04_img023.png)
 

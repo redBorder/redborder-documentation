@@ -13,9 +13,7 @@ The **Business Intelligence** module uses customer information through BI sensor
 
 This module is disabled by default, to activate it, run the following command from the console:
 
-```bash
-rb_set_modules bi:1; chef_client
-```
+    rb_set_modules bi:1; chef_client
 
 ![Business Intelligence Module](images/ch04_img001.png)
 
@@ -27,9 +25,7 @@ The **Malware** module is a complete solution for detecting malicious files, IP 
 
 This module is disabled by default, to activate it, run the following command from the console:
 
-```bash
-rb_set_modules malware:1; rb_set_malware_mode enable logstash; chef_client
-```
+    rb_set_modules malware:1; rb_set_malware_mode enable logstash; chef_client
 
 ![Malware Module](images/ch04_img002.png)
 
@@ -53,7 +49,7 @@ Intrusion Module
 
 ## Monitor
 
-The Monitor module uses data from SNMP, Redfish, and IPMI protocols to display the status of the infrastructure.
+The **Monitor** module uses data from SNMP, Redfish, and IPMI protocols to display the status of the infrastructure.
 
 ![Monitor Module](images/ch04_img005.png)
 
@@ -61,7 +57,7 @@ Monitor Module
 
 ## Vault
 
-The Vault module uses syslog data to provide information about events from different sources, such as category, target, event action, and more.
+The **Vault** module uses syslog data to provide information about events from different sources, such as category, target, event action, and more.
 
 It is also possible to enhance the capabilities of the Vault module through extensions that add compatibility with other manufacturers.
 
@@ -78,6 +74,8 @@ The **Mobility** module provides location information for AP sensors in the netw
 Mobility Module
 
 ## Wireless
+
+The **Wireless** module provides an analysis of visitor data from AP network sensors **without taking into account movement calculations**.
 
 ![Wireless Module](images/ch04_img008.png)
 

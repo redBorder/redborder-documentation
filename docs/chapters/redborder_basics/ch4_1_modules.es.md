@@ -49,7 +49,7 @@ Módulo de Intrusión
 
 ## Monitor
 
-El módulo Monitor utiliza datos provenientes de protocolos SNMP, Redfish e Ipmi para mostrar el estado de la infraestructura.
+El módulo **Monitor** utiliza datos provenientes de protocolos SNMP, Redfish e Ipmi para mostrar el estado de la infraestructura.
 
 ![Módulo de Monitor](images/ch04_img005.png)
 
@@ -57,7 +57,7 @@ Módulo de Monitor
 
 ## Vault
 
-El módulo Vault utiliza datos de syslog para proveer información sobre eventos de diferentes orígenes, tales como categoría, objetivo, acción del evento y más.
+El módulo **Vault** utiliza datos de syslog para proveer información sobre eventos de diferentes orígenes, tales como categoría, objetivo, acción del evento y más.
 
 También es posible aumentar las capacidades del módulo Vault a través de las extensiones que añaden compatibilidades con otros fabricantes.
 
@@ -74,6 +74,8 @@ El módulo **Movilidad** provee información de localización de sensores de APs
 Módulo de Movilidad
 
 ## Wireless
+
+El módulo **Wireless** proporciona un análisis de los datos de los visitantes de sensores APs de la red **sin tener en cuenta el cálculo de movimientos**.
 
 ![Módulo de Wireless](images/ch04_img008.png)
 

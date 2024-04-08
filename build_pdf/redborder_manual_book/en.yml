@@ -24,3 +24,5 @@ nav:
   - index.md
   - chapters/redborder_basics/ch1_what_is_redborder.md
   - chapters/redborder_basics/ch2_redborder_installation.md
+  - chapters/redborder_basics/ch4_1_modules.md
+  - chapters/redborder_basics/ch4_2_modules_menu_options.md

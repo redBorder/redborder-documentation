@@ -17,9 +17,9 @@ Vista general de un módulo
 
 Permiten a los usuarios aislar una porción de la información para detallarla. En esta pestaña puede ver el número de filtros que han sido aplicados para aplicar acciones sobre ellos:
 
-- Busqueda avanzada.
-- Crear una alarma.
-- Crear un widget.
+- *Busqueda avanzada.*
+- *Crear una alarma.*
+- *Crear un widget.*
 
 ![Filtros](images/ch04_img012.png)
 
@@ -32,7 +32,7 @@ Ofrece diferentes opciones para mostrar la información.
 - *Raw*: Eventos en bruto.
 - *Tops*: Muestra la suma total de datos de diferentes eventos para mostrarlos como uno solo.
 - *Comparar*: Comparación de eventos dentro de un periodo de tiempo.
-- *Único*: Muestra eventos que han ocurrido únicamente una vez.
+- *Único*: Muestra el número de eventos únicos, agrupados según se indique.
 
 ![Vistas](images/ch04_img013.png)
 
@@ -83,10 +83,10 @@ Tipo de gráfico: Acumulado
 En esta sección, el usuario puede realizar varias acciones para administrar los datos que se muestran. Las opciones varían según la vista seleccionada.
 
 - *Mostrar total filtrado/Ocultar total filtrado*: muestra u oculta el gráfico considerando los filtros seleccionados.
+- *Exportar a CSV*: Proporciona la opción de exportar a CSV un informe de cualquier campo seleccionando el límite del evento.
 - *Máquina del tiempo*: Permite cambiar la fecha/hora de la máquina para poder ver toda la información y los eventos que han transcurrido en ese período de tiempo.
 - *Ordenar agregaciones*: Permite cambiar el orden de las agregaciones que se muestran en el módulo.
-- *Exportar a CSV*: Proporciona la opción de exportar a CSV un informe de cualquier campo seleccionando el límite del evento.
-- *Guardar pestaña como predeterminada*: Al seleccionar esta opción, se puede modificar el diseño de pestaña predeterminado.
+- *Guardar pestañas como predeterminadas*: Al seleccionar esta opción, se puede modificar el diseño de pestañas predeterminado.
 
 ![Opciones](images/ch04_img021.png)
 
@@ -102,7 +102,7 @@ Los atributos pueden ser mostrados de diferentes maneras: como pestañas o como 
 
 Atributos
 
-Todos los atributos tienen un significado y funcionalidad específica. Por ejemplo, en el módulo de Tráfico podemos observar atributos muy relevantes como Public IP, el cual muestra la dirección IP real de los dispositivos que se encuentran en la red, Public IP MAP, que indica su posición en el mapa, o Country Code, el cual indica el país al que pertenece.
+Todos los atributos tienen un significado y funcionalidad específica. Por ejemplo, en el módulo de Tráfico podemos observar atributos muy relevantes como *Public IP*, el cual muestra la dirección IP real de los dispositivos que se encuentran en la red, *Public IP MAP*, que indica su posición en el mapa, o *Country Code*, el cual indica el país al que pertenece.
 
 ![Atributos: Vista general](images/ch04_img023.png)
 
