@@ -38,4 +38,4 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 mkdocs serve
 
 ## Update documentation in the server:
-mkdocs gh-pages
+mkdocs gh-deploy
