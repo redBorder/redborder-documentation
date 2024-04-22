@@ -2,3 +2,4 @@
 nav:
     - ... | index*.md
     - RedBorder basics: redborder_basics
+    - Seeing more in detail: more_in_detail
