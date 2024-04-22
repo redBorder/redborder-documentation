@@ -25,3 +25,4 @@ nav:
   - chapters/redborder_basics/ch1_what_is_redborder.md
   - chapters/redborder_basics/ch2_redborder_installation.md
   - chapters/more_in_detail/ch4_3_filtering_events.md
+  - chapters/more_in_detail/ch4_4_ip_reputation_monitorization.md
