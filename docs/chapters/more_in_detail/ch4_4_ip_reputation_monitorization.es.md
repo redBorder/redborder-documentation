@@ -15,14 +15,9 @@ Renombrando una IP, crear un objeto de red
 
 También encontramos la opción de consultar fuentes externas para ayudarnos a identificar la ubicación y la reputación de las IP consultadas.
 
-- uTrace
 - Whois.sc
 
-![Reputación de IP, uTrace](images/ch04_img040.png)
-
-Reputación de IP, uTrace
-
-![Reputación de IP, Whois.sc](images/ch04_img041.png)
+![Reputación de IP, Whois.sc](images/ch04_img040.png)
 
 Reputación de IP, Whois.sc
 
@@ -33,6 +28,6 @@ Es posible obtener un resumen completo de la información asociada con las IP co
 - *Whois*: muestra el resultado de la consulta del Manager a whois, y de donde se obtiene. También muestra, entre otra información, quién posee esa IP, reputación, etc.
 - *DNS*: el Manager realiza una resolución inversa que nos permite conocer el DNS asociado con la IP consultada.
 
-![Reputación de IP, búsqueda de fuente básica](images/ch04_img042.png)
+![Reputación de IP, búsqueda de fuente básica](images/ch04_img041.png)
 
 Reputación de IP, búsqueda de fuente básica
