@@ -51,9 +51,9 @@ The Raw view allows displaying all events collected by attributes and segmented 
 
 Each column in the data table shows the values corresponding to the selected attributes. In this table, we can perform various actions:
 
-- **Timestamp**: You can see the time slot referenced to display the number of events that occurred at that moment. With a granularity greater than or equal to 2 minutes, events with less than two minutes difference between them are grouped into a single set. To separate them, simply click on the menu icon to the right of the row of the group in question.
-- **Verify event information**: When reaching the maximum granularity of events, it is possible to see all the information in detail of a specific event. To do this, simply click on the information icon to the right of the row in question.
-- **Create object**: Some of the attributes shown in the event information allow the possibility of converting them into an Object. This means that these values can add a name and a description that allows the location of an item more quickly and easily.
+- **Timestamp**: you can see the time slot referenced to display the number of events that occurred at that moment. With a granularity greater than or equal to 2 minutes, events with less than two minutes difference between them are grouped into a single set. To separate them, simply click on the menu icon to the right of the row of the group in question.
+- **Verify event information**: when reaching the maximum granularity of events, it is possible to see all the information in detail of a specific event. To do this, simply click on the information icon to the right of the row in question.
+- **Create object**: some of the attributes shown in the event information allow the possibility of converting them into an Object. This means that these values can add a name and a description that allows the location of an item more quickly and easily.
 
 !!! info "Keep in mind..."
     Remember that the maximum available granularity is 1 minute.
