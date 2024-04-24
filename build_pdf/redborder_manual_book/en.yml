@@ -26,4 +26,6 @@ nav:
   - chapters/redborder_basics/ch2_redborder_installation.md
   - chapters/redborder_basics/ch4_1_modules.md
   - chapters/redborder_basics/ch4_2_modules_menu_options.md
+  - chapters/more_in_detail/ch4_3_filtering_events.md
+  - chapters/more_in_detail/ch4_4_ip_reputation_monitorization.md
   - chapters/more_in_detail/ch4_5_views.md
