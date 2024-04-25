@@ -1,7 +1,7 @@
 
 # First steps
 
-redBorder is an Open Source network visibility, data analytics, and cybersecurity Big Data solution that is scalable up to the needs of enterprise networks and service providers
+RedBorder is an Open Source network visibility, data analytics, and cybersecurity Big Data solution that is scalable up to the needs of enterprise networks and service providers
 
 ## Requeriments
 
