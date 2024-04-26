@@ -3,7 +3,7 @@
 
 En el submenú de la sección existen muchas opciones que nos permiten visualizar eventos de acuerdo a sus necesidades de análisis.
 
-Una de estas opciones es **Filtros** que permite el filtrado de eventos de acuerdo a los criterios definidos por el usuario. Estos filtros puedne ser guardados para ser usados más tarde para mostrar los eventos.
+Una de estas opciones es **Filtros** que permite el filtrado de eventos de acuerdo a los criterios definidos por el usuario. Estos filtros pueden ser guardados para ser usados más tarde para mostrar los eventos.
 
 ## Opciones de filtrado
 
