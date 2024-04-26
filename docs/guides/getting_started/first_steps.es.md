@@ -1,7 +1,7 @@
 
 # Primeros pasos
 
-redBorder es una solución de Big Data de visibilidad de red, análisis de datos y ciberseguridad de código abierto que es escalable según las necesidades de las redes empresariales y los proveedores de servicios.
+RedBorder es una solución de Big Data de visibilidad de red, análisis de datos y ciberseguridad de código abierto que es escalable según las necesidades de las redes empresariales y los proveedores de servicios.
 
 ## Requisitos
 

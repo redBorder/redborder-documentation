@@ -1,4 +1,3 @@
-
 # Views, multiple options for data visualization
 
 Views provide multiple perspectives to display data associated with network traffic.
