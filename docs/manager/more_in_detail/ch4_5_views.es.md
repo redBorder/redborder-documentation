@@ -1,4 +1,3 @@
-
 # Vistas, varias opciones para visualizar datos
 
 Las vistas proporcionan múltiples perspectivas para mostrar los datos asociados al tráfico de red.
