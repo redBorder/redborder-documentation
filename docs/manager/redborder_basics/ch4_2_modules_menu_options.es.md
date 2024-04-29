@@ -136,11 +136,13 @@ Tipo de gráfico: Flujos
 
 En esta sección, el usuario puede realizar varias acciones para administrar los datos que se muestran. Las opciones varían según la vista seleccionada.
 
-- *Mostrar total filtrado/Ocultar total filtrado*: al seleccionar esta opción, se muestra en el gráfico el valor de todo el tráfico diferenciado recibido o emitido por cada uno de los atributos que se pueden consultar. Cuando esta opción está activa, aparece la lista de opciones "Ocultar total". Disponible en la vista superior y única.
+- *Mostrar total /Ocultar total*: al seleccionar esta opción, se muestra en el gráfico el valor de todo el tráfico diferenciado recibido o emitido por cada uno de los atributos que se pueden consultar. Cuando esta opción está activa, aparece la lista de opciones "Ocultar total". Disponible en la vista superior y única.
 - *Exportar a CSV*: proporciona la opción de exportar a CSV que incluye los datos que corresponden al atributo seleccionado, puede establecer un límite de filas para incluir en el archivo. Disponible solo para las **vistas Tops y Único**.
 - *Máquina del tiempo*: devuelve la máquina a un estado anterior. Al seleccionar esta opción, el usuario puede ver los datos como si los estuviera viendo en el último día y hora especificados. Disponible para todas las vistas excepto para Raw.
 - *Ordenar agregaciones*: permite cambiar el orden de las agregaciones que se muestran en el módulo.
-- *Guardar pestañas como predeterminadas*: al seleccionar esta opción, las pestañas abiertas actualmente se guardarán como las pestañas predeterminadas.
+- *Ordenar columnas*: **disponible para la vista Raw**. permite cambiar el orden de las columnas que se muestran en el módulo.
+- *Guardar pestañas/columnas como predeterminadas*: al seleccionar esta opción, las pestañas abiertas actualmente se guardarán como las pestañas predeterminadas.
+- *Activar recarga*: **disponible para la vista Raw**. Activa la cuenta regresiva para la recarga de datos; en la izquierda de la barra de sección aparece una cuenta regresiva que indica el tiempo para volver a cargar. En cualquier momento, se puede detener esto seleccionando *Detener la recarga*.
 
 ![Opciones](images/ch04_img021.png)
 

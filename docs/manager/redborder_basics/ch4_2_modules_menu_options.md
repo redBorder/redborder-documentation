@@ -138,11 +138,13 @@ Graph Type: Flows
 
 In this section, the user can perform various actions to manage the data being displayed. The options vary depending on the selected view.
 
-- *Show filtered total/Hide filtered total*: when selecting this option, the value of all differentiated traffic received or transmitted by each of the attributes that can be queried is displayed on the graph. When this option is active, the list of "Hide total" options appears. Available in the upper and unique view.
+- *Show total/Hide total*: when selecting this option, the value of all differentiated traffic received or transmitted by each of the attributes that can be queried is displayed on the graph. When this option is active, the list of "Hide total" options appears. Available in the upper and unique view.
 - *Export to CSV*: provides the option to export to CSV including the data corresponding to the selected attribute, you can set a row limit to include in the file. Only available for **Tops and Unique views**.
 - *Time machine*: returns the machine to a previous state. By selecting this option, the user can see the data as if they were viewing it on the last specified day and time. Available for all views except Raw.
 - *Sort aggregations*: allows changing the order of the aggregations displayed in the module.
-- *Save tabs as default*: by selecting this option, the currently open tabs will be saved as the default tabs.
+- *Sort columns*: **available for Raw view**. Allows changing the order of the columns displayed in the module.
+- *Save tabs/columns as default*: by selecting this option, the currently open tabs will be saved as the default tabs.
+- *Start Reloading*: **available for Raw view**. Activates the countdown for data reload; on the left of the section bar, a countdown appears indicating the time to reload. At any time, this can be stopped by selecting *Stop Reloading*.
 
 ![Options](images/ch04_img021.png)
 
