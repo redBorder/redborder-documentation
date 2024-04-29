@@ -21,13 +21,15 @@ Permiten a los usuarios aislar una porción de la información para detallarla. 
 - *Crear una alarma.*
 - *Crear un widget.*
 
+Para más información sobre los filtros de eventos, puede consultar el artículo [Filtrado de eventos](/manager/more_in_detail/ch4_3_filtering_events)
+
 ![Filtros](images/ch04_img012.png)
 
 Filtros
 
 ### Vistas
 
-Ofrece diferentes opciones para mostrar la información.
+Ofrece diferentes opciones para mostrar la información. Para más información, puede consultar el artículo [Vistas, varias opciones para visualizar datos](/manager/more_in_detail/ch4_5_views)
 
 - *Raw*: eventos en bruto.
 - *Tops*: muestra la suma total de datos de diferentes eventos para mostrarlos como uno solo.
@@ -42,6 +44,34 @@ Vistas
 
 Hay diferentes valores o unidades de medida en los que los datos pueden ser mostrados. Por ejemplo, flows por segundo (flows/s) o bytes por segundo (bps). Tenga en cuenta que cada módulo tiene sus propias opciones de agregación.
 
+Si desea ver las agregaciones disponibles, despliegue esta pestaña:
+
+??? info "Agregaciones disponibles"
+
+    | Agregación         | Descripción                            |
+    | ------------------ | -------------------------------------- |
+    | bps                | Número de bits por segundo |
+    | bytes              | Número total de bytes transferidos |
+    | packets            | Número total de paquetes enviados a través de la red |
+    | packets/s          | Número total de paquetes por segundo enviados a través de la red |
+    | flows              | Número de flujos exportados |
+    | flows/s            | Número de flujos exportados por segundo |
+    | client             | Número de direcciones MAC únicas detectadas por la sonda de red |
+    | quality            | Porcentaje de la fuerza de señal de la red según lo reportado por el controlador inalámbrico y basado en RSSI y número de clientes |
+    | risk               | Porcentaje que representa cuán malicioso es su tráfico basado en sistemas de reputación |
+    | wireless stations  | Número de estaciones inalámbricas reportadas por el controlador inalámbrico |
+    | clients/station    | Número de clientes que tiene cada estación inalámbrica |
+    | bps/client         | Promedio de uso de red que produce cada cliente |
+    | bytes/client       | Promedio de bytes que envía cada cliente |
+    | flows/client       | Número de flujos exportados por la red dividido por el número de clientes |
+    | fps/client         | Número de flujos por segundo exportados por la sonda de red dividido por el número de clientes |
+    | bytes/station      | Promedio de bytes que envía cada estación inalámbrica |
+    | bps/station        | Promedio de uso de red que produce cada estación inalámbrica |
+
+    !!! tip "Se recomienda..."
+    
+        Optimice su métrica combinando diferentes tipos de opciones de granularidad de agregación (períodos de tiempo) que están disponibles.
+
 ![Agregación](images/ch04_img014.png)
 
 Agregación
@@ -50,43 +80,69 @@ Agregación
 
 Indica el grado de detalle temporal que puede mostrar la información. El mínimo valor para la granularidad es un minuto.
 
+Las opciones de granularidad varían según el rango de tiempo que se muestra (1h., 2h., La semana pasada, el mes pasado, etc.). Con esta vista, el usuario puede analizar el tráfico de red en tiempo real.
+
+De acuerdo con el período de tiempo seleccionado, el usuario puede conocer los detalles del tráfico en, por ejemplo, un lapso de dos minutos.
+
 ![Granularidad](images/ch04_img015.png)
 
 Granularidad
 
 ### Gráfico
 
-Muestra los diferentes tipos de gráficos entre los que podemos mostrar los datos. Los tipos de gráficos disponibles varían dependiendo de la vista seleccionada. Son los siguientes:
+Muestra los diferentes tipos de gráficos entre los que se pueden mostrar los datos. Los tipos de gráficos disponibles varían dependiendo de la vista seleccionada. Esta opción no aparece, por ejemplo, al aplicar la vista de mapa de los datos, ya que los datos se representan en dicho mapa.
+
+Estas son las posibilidades gráficas de la plataforma Redborder para vistas:
+
+**Área**: gráfico que proporciona una superposición de los datos a un grupo de elementos que pertenecen al atributo seleccionado, haciendo que el tráfico total sea la suma del tráfico por atributo.
 
 ![Tipo de gráfico: Área](images/ch04_img016.png)
 
 Tipo de gráfico: Área
 
+Si se desea mostrar un solo elemento gráfico, simplemente haga clic sobre su gráfica dibujada para aislarlo.
+
+**Líneas**: gráfico que proporciona una superposición de los datos a un grupo de elementos que pertenecen al atributo seleccionado; en este caso, el área no se muestra pero el gráfico está representado por una línea.
+
 ![Tipo de gráfico: Líneas](images/ch04_img017.png)
 
 Tipo de gráfico: Líneas
+
+**Barras**: proporciona una superposición de datos a un grupo de elementos que pertenecen al atributo seleccionado, siendo el total, la suma de valores de cada uno de esos elementos. En este caso, los datos se representan mediante barras.
 
 ![Tipo de gráfico: Barras](images/ch04_img018.png)
 
 Tipo de gráfico: Barras
 
+**Barras apiladas**: también llamado o **Barras acumuladas**, proporciona en el mismo gráfico los datos obtenidos para cada uno de los elementos incluidos en el atributo seleccionado, para que pueda ver los resultados de IP independiente, sensor, etc., representados en barras.
+
 ![Tipo de gráfico: SBarras](images/ch04_img019.png)
 
 Tipo de gráfico: Barras apiladas
+
+**Acumulado**: muestra comparativamente en el mismo gráfico los datos para cada uno de los atributos seleccionados.
 
 ![Tipo de gráfico: Acumulado](images/ch04_img020.png)
 
 Tipo de gráfico: Acumulado
 
+**Flujos**: gráfico solo disponible en la vista Raw. Muestra el flujo del tráfico por sensor.
+
+![Tipo de gráfico: Flujos](images/ch06_img001.png)
+
+Tipo de gráfico: Flujos
+
 ### Opciones
 
 En esta sección, el usuario puede realizar varias acciones para administrar los datos que se muestran. Las opciones varían según la vista seleccionada.
 
-- *Mostrar total filtrado/Ocultar total filtrado*: muestra u oculta el gráfico considerando los filtros seleccionados.
-- *Exportar a CSV*: proporciona la opción de exportar a CSV un informe de cualquier campo seleccionando el límite del evento.
-- *Máquina del tiempo*: permite cambiar la fecha/hora de la máquina para poder ver toda la información y los eventos que han transcurrido en ese período de tiempo.
+- *Mostrar total /Ocultar total*: al seleccionar esta opción, se muestra en el gráfico el valor de todo el tráfico diferenciado recibido o emitido por cada uno de los atributos que se pueden consultar. Cuando esta opción está activa, aparece la lista de opciones "Ocultar total". Disponible en la vista superior y única.
+- *Exportar a CSV*: proporciona la opción de exportar a CSV que incluye los datos que corresponden al atributo seleccionado, puede establecer un límite de filas para incluir en el archivo. Disponible solo para las **vistas Tops y Único**.
+- *Máquina del tiempo*: devuelve la máquina a un estado anterior. Al seleccionar esta opción, el usuario puede ver los datos como si los estuviera viendo en el último día y hora especificados. Disponible para todas las vistas excepto para Raw.
 - *Ordenar agregaciones*: permite cambiar el orden de las agregaciones que se muestran en el módulo.
-- *Guardar pestañas como predeterminadas*: al seleccionar esta opción, se puede modificar el diseño de pestañas predeterminado.
+- *Ordenar columnas*: **disponible para la vista Raw**. permite cambiar el orden de las columnas que se muestran en el módulo.
+- *Guardar pestañas/columnas como predeterminadas*: al seleccionar esta opción, las pestañas abiertas actualmente se guardarán como las pestañas predeterminadas.
+- *Activar recarga*: **disponible para la vista Raw**. Activa la cuenta regresiva para la recarga de datos; en la izquierda de la barra de sección aparece una cuenta regresiva que indica el tiempo para volver a cargar. En cualquier momento, se puede detener esto seleccionando *Detener la recarga*.
 
 ![Opciones](images/ch04_img021.png)
 
@@ -96,7 +152,31 @@ Opciones
 
 Los eventos recibidos por el Manager consisten en un par "columna: valor". Los valores dados en cada columna pueden entenderse como datos específicos del evento que son los que realmente proporcionan información. Estos son los llamados "atributos".
 
-Los atributos pueden ser mostrados de diferentes maneras: como pestañas o como columnas (Añadir Pestañas/Columnas) dependiendo de la vista en la que se encuentre.
+Estos atributos nos ayudan a llevar a cabo un análisis integral y personalizado para cada uno de los elementos involucrados en el flujo del tráfico de red de nuestra organización. Estos se organizan en pestañas o columnas a la vista que estamos consultando. Las opciones que se muestran son comunes para todas las vistas, excepto para el caso de Comparar (ofrece solo comparabilidad por semanas o meses) y Mapas, en cuyo caso esta sección no se muestra.
+
+Si desea ver las categorías de atributos disponibles, despliegue esta pestaña:
+
+??? info "Categorías de atributos disponibles"
+
+    === "Categorías generales"
+
+        - Aplicación
+        - Datos de cliente
+        - Lista negra
+        - Enlace de datos
+        - Flujo
+        - Interfaz
+        - Localización
+        - Red
+        - Transporte
+        - UUIDs
+
+    === "Categorías de Malware"
+
+        - Email
+        - Archivo
+        - Malware
+        - Red
 
 ![Atributos](images/ch04_img022.png)
 

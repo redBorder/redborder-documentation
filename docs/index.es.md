@@ -29,7 +29,7 @@ Las secciones de documentación son las siguientes:
 
 Queremos hacer que nuestra documentación se accesible para todos. De momento, nuestra documentación se encuentra disponible en español e inglés. Futuras versiones podrían llegar a incluir traducciones a otros idiomas
 
-!!! info "Tenga en cuenta..."
+!!! info "Ten en cuenta..."
 
     Debido a una limitación inherente a MkDocs, puede que algunas funciones de la plataforma no estén disponibles en todos los idiomas.
 
