@@ -23,13 +23,15 @@ Allow users to isolate a portion of the information for detailed inspection. In 
 - *Create an alarm.*
 - *Create a widget.*
 
+For more information about event filters, you can refer to the article [Event Filtering](/manager/more_in_detail/ch4_3_filtering_events)
+
 ![Filters](images/ch04_img012.png)
 
 Filters
 
 ### Views
 
-Offers different options for displaying information.
+Offers different options for displaying information. For more information, you can refer to the article [Views, multiple options for visualizing data](/manager/more_in_detail/ch4_5_views)
 
 - *Raw*: Raw events.
 - *Tops*: Shows the total sum of data from different events to display them as one.
@@ -44,6 +46,34 @@ Views
 
 There are different values or units of measure in which the data can be displayed. For example, flows per second (flows/s) or bytes per second (bps). Note that each module has its own aggregation options.
 
+If you want to see the available aggregations, expand this tab:
+
+??? info "Available Aggregations"
+
+    | Aggregation        | Description                            |
+    | ------------------ | -------------------------------------- |
+    | bps                | Number of bits per second |
+    | bytes              | Total number of bytes transferred |
+    | packets            | Total number of packets sent across the network |
+    | packets/s          | Total number of packets per second sent across the network |
+    | flows              | Number of exported flows |
+    | flows/s            | Number of exported flows per second |
+    | client             | Number of unique MAC addresses detected by the network probe |
+    | quality            | Percentage of network signal strength as reported by the wireless controller and based on RSSI and number of clients |
+    | risk               | Percentage representing how malicious your traffic is based on reputation systems |
+    | wireless stations  | Number of wireless stations reported by the wireless controller |
+    | clients/station    | Number of clients each wireless station has |
+    | bps/client         | Average network usage per client |
+    | bytes/client       | Average bytes sent per client |
+    | flows/client       | Number of flows exported by the network divided by the number of clients |
+    | fps/client         | Number of flows per second exported by the network probe divided by the number of clients |
+    | bytes/station      | Average bytes sent per wireless station |
+    | bps/station        | Average network usage per wireless station |
+
+    !!! tip "Recommendation..."
+    
+        Optimize your metric by combining different types of aggregation granularity options (time periods) that are available.
+
 ![Aggregation](images/ch04_img014.png)
 
 Aggregation
@@ -52,43 +82,69 @@ Aggregation
 
 Indicates the degree of temporal detail that can be shown in the information. The minimum value for granularity is one minute.
 
+Granularity options vary depending on the time range displayed (1h, 2h, Last week, Last month, etc.). With this view, the user can analyze network traffic in real-time.
+
+Depending on the selected time period, the user can understand traffic details, for example, over a two-minute interval.
+
 ![Granularity](images/ch04_img015.png)
 
 Granularity
 
 ### Chart
 
-Displays the different types of charts among which we can show the data. The available chart types vary depending on the selected view. They are as follows:
+Displays the different types of graphs among which the data can be shown. The available graph types vary depending on the selected view. This option does not appear, for example, when applying the map view of the data, as the data is represented on that map.
+
+These are the graphical possibilities of the Redborder platform for views:
+
+**Area**: graph that overlays the data on a group of elements belonging to the selected attribute, making the total traffic the sum of the traffic per attribute.
 
 ![Chart Type: Area](images/ch04_img016.png)
 
 Chart Type: Area
 
+To display a single graphical element, simply click on its drawn graph to isolate it.
+
+**Lines**: graph that overlays the data on a group of elements belonging to the selected attribute; in this case, the area is not shown but the graph is represented by a line.
+
 ![Chart Type: Lines](images/ch04_img017.png)
 
 Chart Type: Lines
+
+**Bars**: overlays data on a group of elements belonging to the selected attribute, with the total being the sum of values for each of those elements. In this case, the data is represented by bars.
 
 ![Chart Type: Bars](images/ch04_img018.png)
 
 Chart Type: Bars
 
+**Stacked Bars**: provides in the same graph the data obtained for each of the elements included in the selected attribute, so you can see the results of independent IP, sensor, etc., represented in bars.
+
 ![Chart Type: Stacked Bars](images/ch04_img019.png)
 
 Chart Type: Stacked Bars
+
+**Accumulated**: comparatively shows the data for each of the selected attributes in the same graph.
 
 ![Chart Type: Accumulated](images/ch04_img020.png)
 
 Chart Type: Accumulated
 
+**Flows**: graph only available in Raw view. Shows traffic flow by sensor.
+
+![Graph Type: Flows](images/ch06_img001.png)
+
+Graph Type: Flows
+
 ### Options
 
 In this section, the user can perform various actions to manage the data being displayed. The options vary depending on the selected view.
 
-- *Show filtered total/Hide filtered total*: shows or hides the chart considering the selected filters.
-- *Export to CSV*: Provides the option to export a CSV report of any selected field by selecting the event limit.
-- *Time Machine*: Allows changing the date/time of the machine to view all information and events that have occurred in that time period.
-- *Sort aggregations*: Allows changing the order of the aggregations displayed in the module.
-- *Save tabs as default*: By selecting this option, the default tabs layout can be modified.
+- *Show total/Hide total*: when selecting this option, the value of all differentiated traffic received or transmitted by each of the attributes that can be queried is displayed on the graph. When this option is active, the list of "Hide total" options appears. Available in the upper and unique view.
+- *Export to CSV*: provides the option to export to CSV including the data corresponding to the selected attribute, you can set a row limit to include in the file. Only available for **Tops and Unique views**.
+- *Time machine*: returns the machine to a previous state. By selecting this option, the user can see the data as if they were viewing it on the last specified day and time. Available for all views except Raw.
+- *Sort aggregations*: allows changing the order of the aggregations displayed in the module.
+- *Sort columns*: **available for Raw view**. Allows changing the order of the columns displayed in the module.
+- *Save tabs/columns as default*: by selecting this option, the currently open tabs will be saved as the default tabs.
+- *Start Reloading*: **available for Raw view**. Activates the countdown for data reload; on the left of the section bar, a countdown appears indicating the time to reload. At any time, this can be stopped by selecting *Stop Reloading*.
 
 ![Options](images/ch04_img021.png)
 
@@ -98,7 +154,31 @@ Options
 
 Events received by the Manager consist of a "column: value" pair. The values given in each column can be understood as specific event data that actually provide information. These are called "attributes".
 
-Attributes can be displayed in different ways: as tabs or as columns (Add Tabs/Columns) depending on the view you are in.
+These attributes help us carry out a comprehensive and customized analysis for each of the elements involved in the flow of network traffic in our organization. These are organized into tabs or columns in the view we are consulting. The options shown are common for all views, except for the Compare case (offers only comparability by weeks or months) and Maps, in which case this section is not shown.
+
+If you want to see the available attribute categories, expand this tab:
+
+??? info "Available Attribute Categories"
+
+    === "General Categories"
+
+        - Application
+        - Client Data
+        - Blacklist
+        - Data Link
+        - Flow
+        - Interface
+        - Location
+        - Network
+        - Transport
+        - UUIDs
+
+    === "Malware Categories"
+
+        - Email
+        - File
+        - Malware
+        - Network
 
 ![Attributes](images/ch04_img022.png)
 
