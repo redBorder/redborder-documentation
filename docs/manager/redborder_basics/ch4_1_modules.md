@@ -101,6 +101,6 @@ Within the creation of the new report, we can select parameters such as scheduli
 
 Editing and creating reports
 
-In the list of reports, we have the possibility to edit an existing report or also generate it in PDF or send it by email, all these options are in the edit button to the right of the list.
+In the list of reports, we have the possibility to edit an existing report, generate it in PDF or send it by email, all these options are in the edit button to the right of the list.
 
 The report blocks can also be modified by choosing the block editing option in the report list, where the user can add, move, and delete any type of block for the report.

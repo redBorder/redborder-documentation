@@ -101,6 +101,6 @@ Dentro de la creación del nuevo indorme podemos seleccionar parámetros como ti
 
 Edición y creación de reportes
 
-En la lista de informes tenemos la posibilidad de editar un informe existente o también generarlo en PDF o enviarlo por correo electrónico, todas estas opciones están en el botón de edición a la derecha de la lista.
+En la lista de informes tenemos la posibilidad de editar un informe existente, generarlo en PDF o enviarlo por correo electrónico, todas estas opciones están en el botón de edición a la derecha de la lista.
 
 Los bloques del informe también se pueden modificar eligiendo la opción de edición de bloque en la lista de informes, donde el usuario podrá agregar, mover y eliminar cualquier tipo de bloque para el informe.
