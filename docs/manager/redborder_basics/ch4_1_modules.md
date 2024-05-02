@@ -87,8 +87,20 @@ Wireless Module
 
 ## Reports
 
-The **Reports** module allows the user to have periodic reports with information about the RedBorder platform.
+The **Reports** module allows users to have periodic reports with information about the Redborder platform.
 
 ![Reports Module](images/ch04_img009.png)
 
-Reports Module
+List of reports
+
+To create a new report, click on the *New Report* button and fill in all the fields. It is also possible to import a report from a file using the *Import Report* button.
+
+Within the creation of the new report, we can select parameters such as scheduling type, sharing with users, or sharing with domains. Once the report is created, it will be displayed in the list of reports as seen above.
+
+![Editing and Creating Reports](images/ch04_img049.png)
+
+Editing and creating reports
+
+In the list of reports, we have the possibility to edit an existing report, generate it in PDF or send it by email, all these options are in the edit button to the right of the list.
+
+The report blocks can also be modified by choosing the block editing option in the report list, where the user can add, move, and delete any type of block for the report.

@@ -87,8 +87,20 @@ Módulo de Wireless
 
 ## Reportes
 
-El módulo de **Reportes** permite al usuario tener informes periodicos con información sobre la plataforma Redborder.
+El módulo de **Reportes** permite al usuario tener informes periódicos con información sobre la plataforma Redborder.
 
 ![Módulo de Reportes](images/ch04_img009.png)
 
-Ejemplo de informes creados
+Listado de reportes
+
+Para crear un nuevo informe haremos clic en el botón *Nuevo informe* y rellenaremos todos los campos. También es posible importar un informe desde un archivo usando el botón Importar informe.
+
+Dentro de la creación del nuevo indorme podemos seleccionar parámetros como tipo de programación, compartir usuarios o compartir dominios. Una vez que se crea el informe, se mostrará en la lista de informes vista anteriormente.
+
+![Edición y creación de Reportes](images/ch04_img049.png)
+
+Edición y creación de reportes
+
+En la lista de informes tenemos la posibilidad de editar un informe existente, generarlo en PDF o enviarlo por correo electrónico, todas estas opciones están en el botón de edición a la derecha de la lista.
+
+Los bloques del informe también se pueden modificar eligiendo la opción de edición de bloque en la lista de informes, donde el usuario podrá agregar, mover y eliminar cualquier tipo de bloque para el informe.
