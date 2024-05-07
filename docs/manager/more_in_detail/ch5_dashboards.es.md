@@ -3,7 +3,7 @@
 
 ## Opciones de dashboards
 
-La primera opción que encontramos en la barra de menú en el área de análisis es el Dashboard. Esta es la opción seleccionada por defecto que verá tan pronto como inicie sesión en el Manager de Redborder.
+La primera opción que encontramos en la barra de menú en el área de análisis es *Dashboard*. Esta es la opción seleccionada por defecto que verá tan pronto como inicie sesión en el Manager de Redborder.
 
 ![Vista general del dashboard](images/ch05_img001.png)
 
@@ -14,6 +14,7 @@ La sección de Dashboard presenta diferentes opciones:
 - **Lista de dashboards disponibles**: en la parte superior, el usuario verá los dashboards creados y disponibles para su perfil. Junto a cada dashboard, hay dos iconos; el primero (llave inglesa) nos permite ver y editar la configuración general del dashboard. El ícono "Copiar" a la derecha nos permitirá clonar el dashboard seleccionado.
 - **Añadir dashboard/Importar dashboard**: permiten añadir un nuevo dashboard personalizado e importar otros ya creados. El proceso de creación e importación del dashboard se verá más adelante.
 - **Añadir Widget**: añada los widgets que desea personalizar en el dashboard.
+- **URL del dashboard**: da al usuario una manera rápida de copiar el URL del dashboards actual para compartirlo u otros motivos.
 - **Tiempo de actualización**: los datos en los dashboards se actualizan cada 300 segundos (5 minutos), este tiempo es personalizable desde *General Settings*. Verá una cuenta regresiva del tiempo restante hasta la próxima actualización. Puede restablecer la cuenta haciendo clic en la figura que se muestra. En ese momento, aparecerá la palabra "Detenido". Haga clic nuevamente para iniciar la cuenta regresiva.
 - **Desbloquear**: El usuario tiene la opción de bloquear / desbloquear el dashboard que está consultando para que ningún otro usuario con permisos pueda editar el dashboard.
 - **Máquina del tiempo**: permite al usuario ver los resultados de las métricas de un día y hora en particular como si fuese ese su tiempo real.
@@ -93,11 +94,10 @@ El primer paso es seleccionar el tipo de widget que desea agregar. Existen tres 
 
     - Tráfico
     - Intrusión
-    - Monitor
-    - Social
-    - Vault
     - Movilidad
     - Malware
+    - Vault
+    - Wireless
     - Combinación
 
 - **Estado**: mostrar la configuración y el estado de las máquinas y la infraestructura de red.
