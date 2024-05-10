@@ -9,6 +9,10 @@ En la sección ***Sensors*** el usuario puede realizar la consulta, gestión y c
 
 La organización de esta sección es muy similar, en cuanto a estructura, a la de otras partes de la web. En este caso, encontraremos:
 
+![Vista general de sensores](images/ch06_img001.png)
+
+Vista general de sensores
+
 1. **Sección del submenú**: opciones de configuración y gestión de sensores.
     - *Expandir todo*: Expande completamente el árbol de sensores.
     - *Contraer todo*: Contrae completamente el árbol de sensores.
@@ -23,10 +27,6 @@ La organización de esta sección es muy similar, en cuanto a estructura, a la d
     - *Puntos de acceso*: ofrece acceso directo a la visualización de los *Access Points* definidos.
 
     Sensores en la Vista el usuario puede encontrar una lista de sensores disponibles según las aplicaciones incluidas en su licencia. Haga clic en el sensor que desea verificar para ver una lista alfabética de todos los sensores asociados con esta aplicación.
-
-![Vista general de sensores](images/ch06_img001.png)
-
-Vista general de sensores
 
 !!! info "Ten en cuenta..."
     Cada vista presenta su propio menú de opciones y las diferentes posibilidades de creación y edición de sensores o dominios.
@@ -68,6 +68,26 @@ Aquí se encuentran las opciones disponibles en la sección Sensores. Pueden ser
     1. Datos indexados: Muestra estadísticas de datos indexados del clúster
     - Históricos: Muestra información acerca del histórico de datos del clúster
     - Realtime: Muestra información acerca del proceso Realtime
+
+## Añadir sensor
+
+A lo largo de las opciones del submenú encontramos **Añadir un Sensor**. En el menú desplegable, muestran los diferentes sensores disponibles para agregar a la infraestructura de red.
+
+Seleccione el tipo de sensor en el menú desplegable y luego complete la información solicitada.
+
+También es posible reclamar un sensor desde un proxy remoto utilizando la opción en el menú desplegable e ingresando el UUID del sensor.
+
+![Añadir sensor](images/ch06_img018.png)
+
+Añadir sensor
+
+!!! info "Ten en cuenta..."
+
+    En el momento en que se crea un sensor, por defecto se establece como raíz, por encima del nivel de dominio.
+    
+    El usuario puede organizar su infraestructura de sensores en cualquier momento, arrastrando y soltando el sensor en el nivel en el que desea colocarlo.
+    
+    El sensor hereda automáticamente las propiedades del dominio raíz. (políticas, modo de funcionamiento, variables de Snort, etc.).
 
 ## Vistas
 
@@ -205,3 +225,31 @@ Puntos de Acceso (Zona)
 ![Añadir Zona](images/ch06_img015.png)
 
 Añadir Zona
+
+## Añadir un dominio
+
+Como hemos visto anteriormente, existen diversos tipos de dominios identificados a través de un icono en la vista de árbol. El proceso de adición de un dominio es muy sencillo; la configuración deberá realizarse posteriormente mediante el icono Editar -> Edit que encontramos al lado de cada dominio en la vista árbol o desde la vista **Access Points**.
+
+Seleccionar la opción *Add Domain* que se encuentra en el submenú superior derecha, elegir el tipo de dominio que se quiere añadir, y a continuación, rellenar los campos requeridos (estos variarán según el tipo de dominio a crear).
+
+![Añadir un dominio](images/ch06_img016.png)
+
+Añadir un dominio
+
+A partir de este momento, el resto de información asociada al dominio deberá modificarse haciendo clic en el botón de edición situado a la derecha de cada dominio en la vista Árbol o Access Points y seleccionando la opción *Edit*.
+
+## Editar un dominio
+
+Desde esta interfaz puede modificar la configuración de un dominio existente e ingresar la información de un dominio recién creado.
+
+Para acceder a esta pantalla, el usuario debe hacer clic en el botón editar a la derecha del dominio que desea editar desde la vista de árbol o Puntos de acceso y selecciona la opción **Editar**.
+
+![Edición de un dominio](images/ch06_img017.png)
+
+Edición de un dominio
+
+Estos son los datos generales que podemos modificar para los dominios. Sin embargo, dependiendo del tipo de dominio seleccionado, aparecerá uno de estos campos:
+
+- **General**: Muestra información general del dominio. Nombre , tipo de dominio: (seleccione el tipo de dominio en el cuadro) y descripción.
+- **Servidores**: En esta sección, el usuario puede definir la configuración de los servidores Proxy y Syslog. Todos los valores mostrados se heredan de forma predeterminada. Sobreescribe si es necesario.
+- **Localización**: Localiza el sensor/dominio en un mapa mundial.
