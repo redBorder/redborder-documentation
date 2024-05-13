@@ -99,7 +99,7 @@ Opciones del menú Vistas
 
 ### Árbol
 
-La vista **árbol** (Visualizada en la imagen anterior) es la que se muestra por defecto al acceder a **Sensores**. En ella se visualiza un listado en el que se muestra la organización de dominios y sensores según niveles de jerarquía y dependencia.
+La vista **árbol** (Esta es la vista que hemos visto en todas las imágenes anteriores) es la que se muestra por defecto al acceder a **Sensores**. En ella se visualiza un listado en el que se muestra la organización de dominios y sensores según niveles de jerarquía y dependencia.
 
 Desde esta vista el usuario puede añadir un nuevo dominio o sensor, borrar los existentes, acceder a otras vistas, importar y exportar el arbol así como editar directamente todos los dominios y sensores que son parte del listado.
 
@@ -126,7 +126,7 @@ Confirmar eliminación de sensor
 
 En caso de que se hayan registrado **sensores IPS/IDS** se mostrará el tipo de política/s que se le hayan aplicado.
 
-Al hacer clic sobre él accedemos al panel de reglas incluidas en esa política. Para más información consulte el capítulo 8 "**Creación de políticas**".
+Al hacer clic sobre él accedemos al panel de reglas incluidas en esa política.
 
 ![Ícono Políticas](images/ch06_img008.png)
 
@@ -138,13 +138,14 @@ Al hacer clic sobre él accedemos al panel de reglas incluidas en esa política.
 - Eliminar un dominio o sensor
 - Acceder a otras vistas
 - Importar y Exportar el árbol
-- Editar un domninio o sensor
+- Editar un dominio o sensor
 
 #### Niveles de organización
 
 - **Dominio**: se trata de contenedores que pueden incluir sensores, grupos de sensores, etc. El nivel dominio nos muestra el nombre del dominio y nos permite agregar una descripción. Es posible clasificarlos según su naturaleza (organizacional, espacial, etc.)
 
 - **Sensores**: nodos finales que se corresponden con elementos físicos colocados en la red (switches, routers, IPS, etc.).
+
 A nivel de sensores se muestra la siguiente información: nombre del sensor, IP, política aplicada (sensores IPS), último chequeo y versión. Es posible añadir una descripción al sensor.
 
 !!! info "Ten en cuenta..."
@@ -167,7 +168,7 @@ Los dominios y sensores que caen por debajo del nivel del elemento sobrescrito, 
 !!! info "Ten en cuenta..."
     Esta opción solo se encuentra disponible en el menú desplegado por el icono "Editar" a nivel de sensor.
 
-Al hacer clic sobre icono del icono "Editar" sensor, aparece la opción Monitor. Luego, podemos ver una lista con las métricas de monitoreo que se utilizan para monitorear el estado del sensor en diferentes niveles. La columna de tecnología indica el origen desde donde se recopilan los datos.
+Al hacer clic sobre icono del icono "Editar" sensor, aparece la opción Monitor. Luego, podemos ver una lista con las métricas de monitoreo que se utilizan para monitorear el estado del sensor en diferentes niveles.
 
 ![Menú de edición de sensor](images/ch06_img009.png)
 
@@ -178,6 +179,8 @@ Estas son las acciones disponible para el control del estado del sensor:
 - **Restaurar predeterminado**: aplica las métricas predeterminadas que se incluyen en el momento de creación de los sensores.
 - **Añadir monitor**: muestra las métricas disponibles.
 - **Eliminar monitor**: elimina la métrica aplicada.
+
+ La columna de tecnología indica el origen desde donde se recopilan los datos.
 
 ![Monitores](images/ch06_img010.png)
 
@@ -228,7 +231,7 @@ Añadir Zona
 
 ## Añadir un dominio
 
-Como hemos visto anteriormente, existen diversos tipos de dominios identificados a través de un icono en la vista de árbol. El proceso de adición de un dominio es muy sencillo; la configuración deberá realizarse posteriormente mediante el icono Editar -> Edit que encontramos al lado de cada dominio en la vista árbol o desde la vista **Access Points**.
+Como hemos visto anteriormente, existen diversos tipos de dominios identificados a través de un icono en la vista de árbol. El proceso de adición de un dominio es muy sencillo; la configuración deberá realizarse posteriormente mediante el icono Editar que encontramos al lado de cada dominio en la vista árbol o desde la vista **Access Points**.
 
 Seleccionar la opción *Add Domain* que se encuentra en el submenú superior derecha, elegir el tipo de dominio que se quiere añadir, y a continuación, rellenar los campos requeridos (estos variarán según el tipo de dominio a crear).
 

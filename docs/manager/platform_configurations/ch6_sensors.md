@@ -98,7 +98,7 @@ View Menu Options
 
 ### Tree
 
-The **tree** view (Shown in the image above) is the default view when accessing **Sensors**. It displays a list showing the organization of domains and sensors according to levels of hierarchy and dependency.
+The **tree** view (This is the view that we have seen in all the previous images) is the default view when accessing **Sensors**. It displays a list showing the organization of domains and sensors according to levels of hierarchy and dependency.
 
 From this view, the user can add a new domain or sensor, delete existing ones, access other views, import and export the tree, as well as directly edit all domains and sensors that are part of the list.
 
@@ -125,7 +125,7 @@ Confirm Sensor Deletion
 
 If **IPS/IDS sensors** have been registered, the type of policy/policies applied to them will be displayed.
 
-By clicking on it, we access the panel of rules included in that policy. For more information, refer to chapter 8 "**Policy Creation**".
+By clicking on it, we access the panel of rules included in that policy.
 
 ![Policy Icon](images/ch06_img008.png)
 
@@ -145,7 +145,7 @@ Policy Icon
 
 - **Sensors**: These are end nodes corresponding to physical elements placed in the network (switches, routers, IPS, etc.).
 
-At the sensor level, the following information is displayed: sensor name, IP, applied policy (IPS sensors), last check, and version. A description can be added to the sensor.
+At the sensor level, the following information is displayed: sensor name, IP, applied policy (IPS sensors), last check and version. A description can be added to the sensor.
 
 !!!info "Please note..."
     Remember that IPS or Gateway sensors must be created through sensor registration in the Manager installation process. **Sensors** allows you to edit and overwrite the parameters inherited from General Configuration: **Tools -> General Configuration**.
@@ -167,7 +167,7 @@ Domains and sensors falling below the level of the overridden element will again
 !!!info "Please note..."
     This option is only available in the menu displayed by the "Edit" icon at the sensor level.
 
-When clicking on the "Edit" icon of the sensor, the Monitor option appears. Then, we can see a list of monitoring metrics used to monitor the status of the sensor at different levels. The technology column indicates the source from which the data is collected.
+When clicking on the "Edit" icon of the sensor, the Monitor option appears. Then, we can see a list of monitoring metrics used to monitor the status of the sensor at different levels. 
 
 ![Sensor Edit Menu](images/ch06_img009.png)
 
@@ -178,6 +178,8 @@ These are the actions available for controlling the sensor status:
 - **Restore Default**: applies the default metrics included at the time of sensor creation.
 - **Add Monitor**: shows available metrics.
 - **Delete Monitor**: removes the applied metric.
+
+The technology column indicates the source from which the data is collected.
 
 ![Monitors](images/ch06_img010.png)
 
