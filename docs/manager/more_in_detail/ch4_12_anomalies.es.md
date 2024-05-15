@@ -1,7 +1,7 @@
 
 # Detección de anomalías
 
-Cuando la detección de anomalías está activada (Ver General Settings: outliers) en las vista de Tops de cada módulo aparecerá, en el menú desplegable de los eventos la opción de "Outliers".
+Cuando la detección de anomalías está activada (Ver Configuración General: Outliers) en las vista de Tops de cada módulo aparecerá, en el menú desplegable de los eventos la opción de "Outliers".
 
 ![Anomalías](images/ch04_img048.png)
 
@@ -15,7 +15,7 @@ En la gráfica resultante, la línea de puntos corresponde con la predicción mi
 
 ![Detalle de anomalías](images/ch04_img050.png)
 
-Al posicionar el cursor encima de la gráfica, ésta muestra el valor real, el valor esperado y la valor de la predicción.
+Al posicionar el cursor encima de la gráfica, ésta muestra el valor real, el valor esperado y el valor de la predicción.
 
 Para automatizar este proceso, es posible crear alarmas en el sistema que notificaran al usuario cuando se produzcan anomalías. Para ello haz click en **Herramientas -> Alarmas** y ajuste los parámetros de la alarma, activando la opción **Outliers Enabled**, el Time Window y las condiciones o filtros sobre los que realizar la detección.
 
