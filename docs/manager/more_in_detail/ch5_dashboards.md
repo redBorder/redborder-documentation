@@ -11,7 +11,7 @@ Dashboard Overview
 
 The Dashboard section presents different options:
 
-- **List of Available Dashboards**: t the top, the user will see the created dashboards available for their profile. Next to each dashboard, there are two icons; the first one (wrench) allows us to view and edit the general dashboard settings. The "Copy" icon on the right allows us to clone the selected dashboard.
+- **List of Available Dashboards**: At the top, the user will see the created dashboards available for their profile. Next to each dashboard, there are two icons; the first one (wrench) allows us to view and edit the general dashboard settings. The "Copy" icon on the right allows us to clone the selected dashboard.
 - **Add Dashboard/Import Dashboard**: allow adding a new custom dashboard and importing others already created. The process of creating and importing the dashboard will be discussed later.
 - **Add Widget**: add the widgets you want to customize on the dashboard.
 - **Dashboard URL**: give the user a quick way of copying the URL of the current dashboard for sharing or other purposes.

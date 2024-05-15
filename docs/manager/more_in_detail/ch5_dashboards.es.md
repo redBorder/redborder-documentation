@@ -14,7 +14,7 @@ La sección de Dashboard presenta diferentes opciones:
 - **Lista de dashboards disponibles**: en la parte superior, el usuario verá los dashboards creados y disponibles para su perfil. Junto a cada dashboard, hay dos iconos; el primero (llave inglesa) nos permite ver y editar la configuración general del dashboard. El ícono "Copiar" a la derecha nos permitirá clonar el dashboard seleccionado.
 - **Añadir dashboard/Importar dashboard**: permiten añadir un nuevo dashboard personalizado e importar otros ya creados. El proceso de creación e importación del dashboard se verá más adelante.
 - **Añadir Widget**: añada los widgets que desea personalizar en el dashboard.
-- **URL del dashboard**: da al usuario una manera rápida de copiar el URL del dashboards actual para compartirlo u otros motivos.
+- **URL del dashboard**: da al usuario una manera rápida de copiar la URL del dashboard actual para compartirla.
 - **Tiempo de actualización**: los datos en los dashboards se actualizan cada 300 segundos (5 minutos), este tiempo es personalizable desde *General Settings*. Verá una cuenta regresiva del tiempo restante hasta la próxima actualización. Puede restablecer la cuenta haciendo clic en la figura que se muestra. En ese momento, aparecerá la palabra "Detenido". Haga clic nuevamente para iniciar la cuenta regresiva.
 - **Desbloquear**: El usuario tiene la opción de bloquear / desbloquear el dashboard que está consultando para que ningún otro usuario con permisos pueda editar el dashboard.
 - **Máquina del tiempo**: permite al usuario ver los resultados de las métricas de un día y hora en particular como si fuese ese su tiempo real.
@@ -41,7 +41,7 @@ Además, en la parte inferior de la pantalla, el usuario verá una serie de opci
 - Cancelar
 - Borrar
 - Convertir en informe
-- Exportar dashboard: el sistema creará un archivo comprimido para la descarga; **este es un paso necesario si quieres importar.**
+- Exportar dashboard: el sistema creará un archivo comprimido u lo descargará; **este es un paso necesario si posteriormente se quiere importar.**
 
 ![Editar dashboard](images/ch05_img003.png)
 
@@ -221,15 +221,15 @@ Este "viaje en el tiempo" nos ofrece un grado máximo de precisión en el análi
 
 ### Clonar, editar, recargar y eliminar widgets
 
-El usuario puede acceder directamente a los widgets desde el dashboard. En la esquina superior derecha aparece un menú que da acceso directo a las siguientes acciones.:
+El usuario puede acceder directamente a los widgets desde el dashboard. En la esquina superior derecha aparece un menú que da acceso directo a las siguientes acciones:
 
 - **Clonar**: permite duplicar el widget e incorporarlo directamente en el dashboard que el usuario seleccione.
 - **Editar**: da acceso a la configuración general del widget para editar los campos que desee.
-- **Recargar**: datos actualizados.
-- **Eliminar**
+- **Recargar**: actualiza la información mostrada en el widget.
+- **Eliminar**: elimina el widget del dashboard.
 
 ![Máquina del tiempo](images/ch05_img016.png)
 
 !!! warning "Importante"
 
-    Cuando seleccionas la opción Eliminar, el sistema no mostrará un mensaje de confirmación, por lo que debe asegurarse de que desea eliminar ese widget. En caso de que elimine accidentalmente un widget, recuerde que siempre puede ir al "Añadir widget" para reinsertar o duplicar cualquiera de las características similares, y luego editarlo.
+    Cuando seleccionas la opción Eliminar, el sistema no mostrará un mensaje de confirmación, por lo que debe asegurarse de que desea eliminar ese widget. En caso de que elimine accidentalmente un widget, recuerde que siempre puede ir a "Añadir widget" para reinsertar o duplicar cualquiera de las características similares, y luego editarlo.
