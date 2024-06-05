@@ -5,7 +5,7 @@
 
 ## Introduction
 
-This is the redBorder documentation repository.
+This is the redBorder documentation repository. As normal github documentation repositories, is readable through [here](https://docs.redborder.com/)
 
 ## License
 
