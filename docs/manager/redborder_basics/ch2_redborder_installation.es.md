@@ -20,7 +20,7 @@ La implementación exitosa de RedBorder requiere una máquina con el sistema ope
     * Disco: 80 GB
     * RAM: 16 GB
     * CPU: 4 núcleos
-    * Interfaz de red: Al menos una
+    * Interfaz de red: Al menos una para un manager solitario. Al menos dos para un manager en cluster.
 
 ## Proceso de instalación
 
