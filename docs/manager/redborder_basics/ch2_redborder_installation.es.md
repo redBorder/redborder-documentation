@@ -70,6 +70,12 @@ Es obligatorio configurar al menos un servidor, sin embargo, actualmente es posi
 
 Configuración de DNS
 
+### Elección de la interfaz de sincronismo (WIP)
+
+En el caso en el qu estemos instalando un cluster, tendremos que seleccionar la segunda interfaz para los managers se sincronicen
+
+![Configuración de la interfaz de sincronismo](images/ch2_sync_network_selection.png
+
 ### Nombre de host y dominio
 
 Durante la instalación, se da la opción de decidir cuál será el nombre de host para el nodo de RedBorder, así como también el dominio utilizado para la comunicación con posibles servidores Proxy de RedBorder o IPS de RedBorder.
