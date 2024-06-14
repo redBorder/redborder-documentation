@@ -70,6 +70,12 @@ Configuring at least one server is mandatory; however, it is currently possible 
 
 DNS Configuration
 
+### Sync network selection
+
+In case you are installing a cluster, you have to select a second interface to make managers synchronize among them.
+
+![Configuración de la interfaz de sincronismo](images/ch2_sync_network_selection.png
+
 ### Hostname and Domain
 
 During installation, you have the option to decide the hostname for the RedBorder node, as well as the domain used for communication with potential RedBorder Proxy servers or RedBorder IPS.
