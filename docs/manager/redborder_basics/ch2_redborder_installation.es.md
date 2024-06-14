@@ -123,8 +123,15 @@ Es posible también, configurar RedBorder para utilizar el servicio de Amazon RD
 Dependiendo de cómo sea la instalación de RedBorder que se quiera realizar, se puede indicar a la plataforma qué es lo que se debe ejecutar en el nodo en instalación. El caso más común será la instalación de un único manager en la red, para esto se debe elegir el modo `full`, esto indicará a la plataforma que debe ejecutar todos los servicios en el máquina en cuestión.
 
 !!! info "Ten en cuenta..."
-    Si se instalará un cluster de managers, se debe elegir que uno de los nodos trabaje en modo `core` mientras que los otros nodos deben operar en el modo `custom` y seleccionar qué servicios mantendrán.
+    Si se instalara un cluster de managers, se debe elegir que uno de los nodos trabaje en modo `core` mientras que los otros nodos deben operar en el modo `custom` y seleccionar qué servicios mantendrán.
 
 ![Configurar modo de manager](images/ch02_img009.png)
 
 Elección de modo de manager
+
+### El fin de la instalación
+
+La instalación casi ha finalizado, sólo hay que esperar a que el proceso finalice. Para observar el proceso hay que ejecutar el siguiente comando: 
+```
+journalctl -u rb-bootstrap
+```
