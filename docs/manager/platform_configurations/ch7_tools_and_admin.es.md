@@ -56,3 +56,67 @@ Crear una alarma nueva
 - Condiciones
 
     Son los filtros en los que se va a basar el disparado de la alarma. Pueden ser configurados de manera similar a como se configurarían en el tipo de aplicación / elemento para el que se ha definido la alarma.
+
+## Auditorías
+
+Esta opción muestra una lista de la actividad del usuario (o usuarios) registrada en la plataforma Redborder, ordenada cronológicamente de manera predeterminada. El usuario puede ordenar la tabla de forma ascendente o descendente para cada una de las columnas. Puede usar el cuadro de búsqueda ubicado en la parte superior para filtrar la información que desea ver. Las columnas que se muestran en esta tabla son las siguientes:
+
+- Usuario: usuario que realizó la acción
+- Recurso: elemento que se ha creado, modificado o eliminado.
+- Acción: acción que se ha llevado a cabo (creación, edición, eliminación).
+- Mensaje: breve descripción de lo que ha sido auditado.
+- Timestamp: fecha y hora del registro de actividad.
+
+![Auditorias: registro de actividad del usuario](images/ch07_img004.png)
+
+Auditorias: registro de actividad del usuario
+
+## Configuración del clúster
+
+La opción Configuración del clúster nos permite verificar el estado y la configuración del clúster, establecer el proceso de creación del clúster durante el proceso de instalación del Manager.
+
+Puede modificar estos valores editando a través del botón de desbloqueo  Desbloquear. La información se puede cambiar con los siguientes parámetros:
+
+- Estado del clúster
+- Direcciones IP virtuales
+- Histórico de Nodos
+- Histórico de Reglas
+
+![Configuración del clúster: Estado y configuración del clúster](images/ch07_img005.png)
+
+Configuración del clúster: Estado y configuración del clúster
+
+## Configuración general
+
+La opción Configuración General nos muestra una interfaz cuya edición se determinará tanto para la configuración de la plataforma como para la infraestructura de la red, como se explicó en el capítulo sobre sensores.
+
+![Configuración General: Configuración general del Manager de Redborder](images/ch07_img006.png)
+
+Configuración General: Configuración general del Manager de Redborder
+
+!!! info "Ten en cuenta..."
+    Para ver todas las secciones, se recomienda habilitar la opción Mostrar opciones avanzadas ubicado en la parte superior derecha de la pantalla en la configuración general.
+
+    En esta pantalla puede editar los parámetros tanto del Manager como de las Aplicaciones que se han registrado. Las secciones que se muestran dependerán de las aplicaciones integradas en la plataforma Redborder.
+
+Para realizar una configuración básica en Manager, el usuario puede editar parámetros generales, características de las aplicaciones, configuración del servidor, red, rutas y geolocalización de las IPs.
+
+### Parametros generales
+
+En esta sección, el usuario puede cambiar los siguientes elementos:
+
+- Nombre empresa: nombre de la compañía que usa Redborder.
+- Correo empresa de la empresa: correo electrónico de la empresa. Se utilizará como remitente de informes y gestión de licencias.
+- URL de la Web: esta es la interfaz de URL, usada para ser referenciada en los emails.
+- Largo mínimo de contraseña: indica el número mínimo de caracteres que debe tener una contraseña para ser aceptada en la plataforma.
+- Temporizador para cerrado de sesión: tiempo en segundos que la plataforma esperará para cerrar la sesión de algún usuario inactivo.
+- Tiempo de refresco del dashboard: periodo del refresco del dashboard en segundos.
+- Tiempo bruto de recarga automática: periodo de actualización para la interfaz en segundos.
+- Periodicidad de actualización de información de vulnerabilidades: periodicidad para actualizar la información disponible sobre vulnerabilidades.
+- Hora de actualización de información de vulnerabilidades: hora en UTC en la que se ejecutará el trabajo de actualización de reglas la información sobre vulnerabilidades.
+- Periodicidad de actualización de reglas de snort: periodicidad para actualizar las Reglas.
+- Hora de actualización de reglas de snort: hora UTC en que se ejecutará el trabajo de actualización de reglas.
+
+!!! warning "Importante"
+
+    Todos los parámetros definidos en esta interfaz son heredados por aquellos elementos que se encuentran en niveles inferiores en un estado dependiente (dominios, sensores). Para modificar esta información, el usuario debe escribirla o editarla.
