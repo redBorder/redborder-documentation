@@ -72,7 +72,7 @@ Configuración de DNS
 
 ### Elección de la interfaz de sincronismo (WIP)
 
-En el caso en el qu estemos instalando un cluster, tendremos que seleccionar la segunda interfaz para los managers se sincronicen
+En el caso en el qu estemos instalando un cluster, tendremos que seleccionar la segunda interfaz para que los managers se sincronicen.
 
 ![Configuración de la interfaz de sincronismo](images/ch2_sync_network_selection.png
 
