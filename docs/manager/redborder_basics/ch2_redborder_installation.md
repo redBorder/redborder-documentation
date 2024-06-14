@@ -20,7 +20,7 @@ The successful deployment of RedBorder requires a machine with the **Rocky Linux
     * Disk: 80 GB
     * RAM: 16 GB
     * CPU: 4 cores
-    * Network Interface: At least one
+    * Network Interface: At least one on installing a single manager. At least two on installing a cluster node.
 
 ## Installation Process
 
