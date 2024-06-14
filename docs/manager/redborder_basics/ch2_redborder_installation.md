@@ -128,3 +128,10 @@ Depending on the RedBorder installation you want to perform, you can indicate to
 ![Manager Mode Selection](images/ch02_img009.png)
 
 Manager Mode Selection
+
+### Finising the installation
+
+The installation is almost ready, you have to wait until the setup process finish. To read the logs about it run this: 
+```
+journalctl -u rb-bootstrap
+```
