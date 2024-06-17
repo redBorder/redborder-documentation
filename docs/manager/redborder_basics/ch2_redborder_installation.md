@@ -74,7 +74,7 @@ DNS Configuration
 
 In case you are installing a cluster, you have to select a second interface to make managers synchronize among them.
 
-![Configuración de la interfaz de sincronismo](images/ch2_sync_network_selection.png
+![Configuración de la interfaz de sincronismo](images/ch02_sync_network_selection.png)
 
 ### Hostname and Domain
 
