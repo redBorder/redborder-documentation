@@ -94,7 +94,7 @@ Aquí el uso puede ver todas las reglas para el motor de correlación. Es posibl
 
 ## Categorías de monitores
 
-Aquí podemos agregar una nueva categoría para monitorizar el hardware. Las categorías utilizan tecnologías como SNMP, Redfish o IPMI para proporcionar información sobre el sistema y su funcionamiento.
+Aquí podemos agregar una nueva categoría para monitorizar el hardware. Las categorías utilizan tecnologías como SNMP, Redfish, IPMI o también un esquema Bulkstats para proporcionar información sobre el sistema y su funcionamiento.
 
 ![Categorías de Monitor](images/ch07_img008.png)
 
@@ -106,7 +106,7 @@ Para agregar una nueva categoría de monitor debemos usar el botón superior der
 
 Monitor de infraestructura
 
-## Operaciones SNMP
+### Operaciones SNMP
 
 Para explicar la operación de la función snmp usaremos un ejemplo, monitorear el uso de memoria. Cuando creamos una nueva categoría de monitor con el botón Nueva categoría de monitor de la página Categorías de monitor, veremos la siguiente ventana emergente.
 
@@ -138,3 +138,145 @@ Para cada OID, la salida se almacenará en una variable que luego usaremos en la
 Una vez en este punto, solo tenemos que crear el monitor presionando el botón *Crear*.
 
 Para agregar el nuevo monitor a un dispositivo sensor, crearemos un nuevo sensor en la pestaña Sensor, seleccionando *Monitor Device*.
+
+### Bulkstats
+
+Las *Bulk Statistics* (o estadísticas recopiladas) son estadísticas que se recopilan en un grupo o esquema, por ejemplo, estadísticas del sistema, estadísticas de puertos o estadísticas Radius.
+
+Es posible visualizar información de Bulkstats en el manager de redBorder, para ello es necesario configurar la parte del cliente en el dispositivo de Cisco para activar el envío de información al manager via ftp.
+
+Una vez hecho esto, podremos visualizar toda la información referente a Bulkstats en el manager de redBorder accediendo a su pestaña correspondiente y seleccionando los campos deseados dentro del módulo de Monitor.
+
+![Módulo de Monitor: Campos de Bulkstats](images/ch07_img012.png)
+
+Módulo de Monitor: Campos de Bulkstats
+
+Para definir un monitor Bulkstats personalizado, primero es necesario que el usuario tenga un esquema de Bulkstat en su dispositivo de red que pueda guardar en un archivo de texto plano y darle un nombre (por ejemplo: *Bulkstats-Schema.txt*).
+
+Normalmente, los esquemas de bulkstats se ven así:
+
+![Esquemas Bulkstats: Archivo de texto plano](images/ch07_img013.png)
+
+Esquemas Bulkstats: Archivo de texto plano
+
+Luego, se debe hacer clic en el botón **Nueva categoría de monitor** y dentro del nuevo formulario de categoría de monitores, seleccione Bulkstats en la lista de Tecnología. Esto mostrará la nueva opción para colocar su archivo de esquema de archivos masivos que define la configuración del usuario.
+
+![Nueva categoría de monitor: Selección tecnológica](images/ch07_img014.png)
+
+Nueva categoría de monitor: Selección tecnológica
+
+Para asignar la nueva categoría de monitor a un device sensor, es necesario crear un *monitor device* (si el usuario aún no ha creado  uno) desde la vista de Árbol de sensores.
+
+Hacer clic en el menú del sensor y luego haga clic en Monitores.
+
+![Árbol de sensores](images/ch07_img015.png)
+
+Árbol de sensores
+
+Dentro del menú de monitores, presionamos el botón **Añadir Monitor** y dentro de la ventana, presionamos el botón **Añadir** correspondiente a la categoría de monitor creada.
+
+![Monitores para dispositivo: Se muestra el modo Añadir monitores](images/ch07_img016.png)
+
+Monitores para dispositivo: Se muestra el modo Añadir monitores
+
+Una vez agregado el monitor al sensor, mostraría el destino donde necesita configurar el dispositivo para enviar la información.
+
+![Monitores para dispositivo: Ruta de destino](images/ch07_img017.png)
+
+Monitores para dispositivo: Ruta de destino
+
+La url corresponde a la ruta de destino. Es necesario configurar el protocolo sftp en la red del dispositivo para enviar la información sobre los esquemas bulkstats al manager.
+
+## Licencias
+
+A través de esta opción, el usuario puede verificar qué nodos tienen sus licencias vencidas. Del mismo modo, es posible cargar una nueva licencia o solicitar una nueva.
+
+En el borde superior de la pantalla se indica la cantidad de licencias disponibles, las aplicaciones que se pueden usar con estas licencias y la cantidad de nodos caducados. Hay una lista de nodos caducados que necesitan renovar sus licencias en el centro de la pantalla. También hay una lista de las acciones disponibles.
+
+Para cargar un archivo con una nueva licencia de Redborder, haga clic en **Seleccionar archivo**. Para solicitar una nueva licencia, haga clic en **Solicitar una licencia**.
+
+![Licencias: consultas y actualización de licencias caducadas](images/ch07_img018.png)
+
+Licencias: consultas y actualización de licencias caducadas
+
+## Fuentes de búsqueda
+
+Lista de las URL de servicios web que realizan las consultas de datos de red. Desde esta pantalla es posible agregar más servicios web, así como editar los existentes.
+
+- Eliminar un servicio: haga clic en el botón "Eliminar".
+- Editar un servicio existente: haga clic en el botón "Editar":
+
+    ![Fuentes de búsqueda: consultas de servicios web](images/ch07_img019.png)
+
+    Fuentes de búsqueda: consultas de servicios web
+
+- Añadir nuevo servicio web: haga clic en el botón  + Agregar fuente de búsqueda.
+
+    ![Añadir una nueva fuente de búsqueda](images/ch07_img020.png)
+
+    Añadir una nueva fuente de búsqueda
+
+## Objetos
+
+Esta opción permite la creación y edición directa de Objetos relacionados a aplicaciones internas, usuarios finales, protocolos, etc. El usuario puede navegar a través de diferentes pestañas que corresponden a los tipos de objetos que se pueden crear. Si desea ubicar los objetos de una manera más eficiente, puede usar el navegador.
+
+Se pueden crear tres tipos de objetos:
+
+- Red
+- MAC
+- VLAN
+
+![Objetos: lista de objetos](images/ch07_img021.png)
+
+Objetos: lista de objetos
+
+- Cree un nuevo objeto: haga clic en Nuevo objeto (Red, MAC, VLAN)
+- Editar un objeto existente: haga clic en el botón "Editar".
+- Eliminar un objeto: haga clic en el icono "Eliminar".
+
+![Objetos: crear un nuevo objeto](images/ch07_img021.png)
+
+Objetos: crear un nuevo objeto
+
+En todos los casos, cuando crea o edita un objeto, el sistema le solicita un nombre, un valor y una descripción.
+
+En el margen superior derecho se muestra un submenú de opciones. Permite al usuario importar o exportar los datos relacionados con estos objetos en formato .csv.
+
+!!! info "Ten en cuenta..."
+    Es posible crear un objeto directamente a partir de los atributos que se muestran en las tablas de datos de los módulos. Para esto, debe ir al módulo y hacer clic en el triángulo invertido que aparece cuando pasamos el ratón sobre un atributo como IP, MAC o VLAN.
+
+## Mapas superpuestos
+
+Esta opción permite superponer una imagen sobre un mapa de Google para obtener más personalización.
+
+Editar mapa: haga clic en el botón "Editar" situado junto a la lista de mapas existente.
+
+Agregar nuevo mapa: haga clic en  + Nuevo mapa de superposición. 
+
+En ambos casos, se indicará el nombre del mapa, la latitud y la longitud en el lugar donde se debe ubicar la imagen.
+
+Por último, subir la imagen desde su equipo en formato .jpg o .png.
+
+![Mapas superpuestos: superponer imágenes sobre un mapa mundial](images/ch07_img022.png)
+
+Mapas superpuestos: superponer imágenes sobre un mapa mundial
+
+## Alertas de plataforma
+
+Las alertas son mensajes que se muestran a todos los usuarios cuando estos entran a la plataforma web de RedBorder. Es en este apartado donde se pueden administrar las alertas de la plataforma.
+
+Hay tres niveles para las alertas: información, advertencia y peligro. Cada nivel tiene su propio color para que las alertas se puedan diferenciar y todas se colocan por debajo de la barra de menú. En la siguiente imágen tenemos un ejemplo de una alerta de prueba.
+
+![Alertas de plataforma](images/ch07_img023.png)
+
+Alertas de plataforma
+
+Es posible crear alertas para la plataforma utilizando el botón Nueva alerta. Es necesario seleccionar el nivel de alerta y el mensaje de la alerta..
+
+![Alerta de plataforma: Nueva alerta](images/ch07_img024.png)
+
+Alerta de plataforma: Nueva alerta
+
+Si el usuario hace clic en el mensaje de alerta, no se volverá a mostrar hasta que el usuario inicie sesión nuevamente.
+
+Es posible eliminar la alerta haciendo clic en la cruz del mensaje. Después de eso, el mensaje de alerta ya no se mostrará.
