@@ -280,3 +280,99 @@ Alerta de plataforma: Nueva alerta
 Si el usuario hace clic en el mensaje de alerta, no se volverá a mostrar hasta que el usuario inicie sesión nuevamente.
 
 Es posible eliminar la alerta haciendo clic en la cruz del mensaje. Después de eso, el mensaje de alerta ya no se mostrará.
+
+## Versión de reglas
+
+El usuario puede administrar las fuentes de las reglas de la plataforma. Es posible agregar o cargar nuevas fuentes y también habilitar las elegidas. Las reglas se usan para la sonda de **Snort**, que es utilizada por el módulo de intrusión.
+
+![Versión de reglas](images/ch07_img025.png)
+
+Versión de reglas
+
+Es posible cargar reglas para un IPS en particular usando la opción Cargar fuente, donde el usuario puede seleccionar el archivo para cargar.
+
+También es posible agregar fuentes para descargar nuevas reglas de Internet que se actualizan periódicamente; en caso de ser necesario, el usuario puede forzar la actualización de las reglas para asegurarse de que todas las reglas estén en su versión más reciente.
+
+## Centro de soporte
+
+El usuario puede usar el Centro de soporte para resolver cualquier pregunta o problema relacionado con la plataforma. Es necesario estar registrado en el Centro de Soporte.
+
+![Centro de soporte](images/ch07_img026.png)
+
+Centro de soporte
+
+## Usuarios
+
+La activación o modificación de los datos de los usuarios, la gestión de servicios o la creación de nuevos registros es posible desde la interfaz  Configuración de usuarios.
+
+Para buscar un usuario específico, introduzca sus datos en el navegador. También puede navegar a través de la lista alfabética que se encuentra en la parte superior de la lista de usuarios.
+
+El único usuario que tiene permisos para hacerlo es Superadministrator. El resto de los usuarios solo pueden visualizar las secciones de la plataforma (modo de lectura) pero no pueden modificar su contenido (excepto en el caso de su propio perfil de usuario).
+
+![Usuarios: interfaz de gestión de permisos de los usuarios](images/ch07_img027.png)
+
+Usuarios: interfaz de gestión de permisos de los usuarios
+
+En el cuerpo de la pantalla, encontramos una lista que contiene los usuarios activos en la plataforma Redborder, dirección de correo electrónico, Dominio Top (nivel máximo al que tiene acceso el usuario), número de veces que ha iniciado sesión, IP y hora desde la que realizó Su último acceso.
+
+Al hacer clic en el botón "Editar", el usuario puede modificar la  información y visualizar un resumen de su estado y actividad dentro de la plataforma.
+
+![Usuarios: edición del perfil del usuario](images/ch07_img028.png)
+
+Usuarios: edición del perfil del usuario
+
+!!! warning "Importante"
+    Cada vez que se modifique cualquier dato en el perfil de un usuario, se debe introducir la contraseña actual para confirmar los cambios.
+
+para crear un nuevo usuario, haga clic en **Nuevo usuario** y complete la información requerida en el perfil del usuario. Puede marcar la casilla *Administrador* para darle al nuevo usuario permisos completos.
+
+![Usuarios: Nuevo usuario](images/ch07_img029.png)
+
+Usuarios: Nuevo usuario
+
+### Área de usuario
+
+En la parte superior derecha de la barra de menú, encontrará el área de usuario, desde la cual puede ver las notificaciones, verificar el perfil, acceder a la ayuda contextual y salir del sistema.
+
+![Área de usuario](images/ch07_img030.png)
+
+Área de usuario
+
+#### Notificaciones
+
+Para ver una lista resumida de notificaciones, haga clic en **Área del usuario**. Para acceder a una lista completa de ellas, seleccione la opción **Ver todo** o haga clic en cualquiera de las notificaciones que aparecen en el resumen; de esta forma puede acceder a una nueva pantalla desde la cual puede ver los detalles de las notificaciones y eliminarlas todas a través de la opción **Borrar todos**.
+
+![Área de usuario: notificaciones](images/ch07_img031.png)
+
+Área de usuario: notificaciones
+
+#### Mi perfil
+
+Esta opción permite el acceso directo al perfil del usuario y realiza las mismas acciones con la opción **Herramientas -> Usuarios**.
+
+#### Mostrar ayuda
+
+Esta opción permite una ayuda sensible al contexto que facilita la navegación y la usabilidad de la plataforma.
+
+![Área de usuario: ayuda](images/ch07_img032.png)
+
+Área de usuario: ayuda
+
+#### Cerrar sesión
+
+Para una desconexión segura de la plataforma, seleccione la opción **Cerrar sesión**. El sistema volverá a la pantalla de inicio de sesión.
+
+## Worker y cola de trabajo
+
+En esta opción, el usuario puede verificar el estado del trabajo  (Worker)  y los servicios  (Jobs)  que se ejecutan en segundo plano. También puede verificar cuáles de estas tareas se han completado.
+
+!!! info "Ten en cuenta..."
+    Llamamos **Worker** a los programas que se ejecutan constantemente en segundo plano.
+
+    Una **Tarea** es un programa que se ejecuta periódicamente o solo una vez, pero no permanece ejecutándose en segundo plano, sino que se ejecuta y se cierra.
+
+![Worker y cola de trabajo: estado de la lista de workers y cola de trabajo.](images/ch07_img033.png)
+
+Worker y cola de trabajo: estado de la lista de workers y cola de trabajo.
+
+**Tareas almacenadas** muestra la lista de servicios terminados. Puede conocer el estado de cada uno a través del icono "Información", o eliminar de la lista utilizando el icono "Eliminar". Esta pantalla se recarga automáticamente cada 5 segundos.
