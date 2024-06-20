@@ -1,4 +1,4 @@
-# Use Case: Tracking an IP with Redborder
+# Tracking an IP with Redborder
 
 We can use Redborder to track a suspicious IP. It's possible to learn about its behaviour using the Traffic module.
 

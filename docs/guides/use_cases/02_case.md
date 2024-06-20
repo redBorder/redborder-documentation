@@ -1,4 +1,4 @@
-# Use Case: Reviewing remote information from Untangle
+# Reviewing remote information from Untangle
 
 Redborder has the capability to collect information from other manufacturers and use it to monitorize remote systems. In this use case we will show how is possible to review a remote system status which is being monitorized by Untangle.
 

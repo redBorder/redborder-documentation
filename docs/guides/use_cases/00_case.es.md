@@ -1,4 +1,4 @@
-# Caso de uso: Seguimiento de una IP con Redborder
+# Seguimiento de una IP con Redborder
 
 Podemos usar Redborder para rastrear una IP sospechosa. Es posible aprender sobre su comportamiento utilizando el módulo de Tráfico.
 

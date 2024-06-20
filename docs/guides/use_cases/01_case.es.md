@@ -1,4 +1,4 @@
-# Caso de uso: Alerta de ataque de autenticación de fuerza bruta
+# Alerta de ataque de autenticación de fuerza bruta
 
 Podemos utilizar Redborder para alertar sobre posibles ataques de fuerza bruta gracias al uso de su motor de correlación y las reglas establecidas. Primero, debemos ir a la sección Reglas del motor de correlación ubicada en la parte Herramientas.
 

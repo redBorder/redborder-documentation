@@ -1,4 +1,4 @@
-# Use Case: Brute force authentication attack alert
+# Brute force authentication attack alert
 
 We can use Redborder to alert of possible brute force attacks thanks to the use of its correlation engine and the rules that are established. First, we must go to the Correlation Engine Rules section located in the Tools part.
 
