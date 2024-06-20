@@ -1,4 +1,4 @@
-# Caso de uso: detectar un ataque de Eternalblue con Redborder
+# Detectar un ataque de Eternalblue con Redborder
 
 En este caso, veremos cómo Redborder puede usar las reglas de Snort para detectar un ataque de Eternalblue.
 

@@ -1,4 +1,4 @@
-# revisión de información remota desde Untangle
+# Revisión de información remota desde Untangle
 
 Redborder tiene la capacidad de recopilar información de otros fabricantes y usarla para monitorizar sistemas remotos. En este caso de uso, mostraremos cómo es posible revisar un estado del sistema remoto que está siendo monitorizado por Untangle.
 
