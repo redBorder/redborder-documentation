@@ -30,7 +30,7 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
     Crear una alarma nueva
 
-    1. Configuración General
+    1. **Configuración General**
 
         | Campo              | Descripción                            |
         | ------------------ | -------------------------------------- |
@@ -43,7 +43,7 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
         | Zona horaria       | Permite elegir qué definición de tiempo se quiere utilizar para la alarma |
         | Gravedad           | El usuario debe definir el nivel de gravedad que se le da a la alarma. Dependiendo de las condiciones que haya definido para la alarma, implicará un riesgo muy bajo, bajo, medio, alto, muy alto o crítico. Esta gradación de gravedad también se indica en una escala de colores |
 
-    - Anomalías
+    - **Anomalías**
 
         RedBorder utiliza técnicas de análisis de datos para proveer notificaciones de peligros potenciales, esta opción permite al usuario configurar alarmas inteligentes que serán activadas dependiendo de si se detecta alguna anomalía de red dentro de los filtros especificados en el apartado *Condiciones*.
 
@@ -51,7 +51,7 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
         La **granularidad** indica el grado de detalle temporal que utilizará la alarma para analizar los datos.
 
-    - Notificaciones
+    - **Notificaciones**
 
         | Medio de notificación         | Descripción                            |
         | ------------------ | -------------------------------------- |
@@ -59,7 +59,7 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
         | Email              | Habilita la selección de usuarios a los que enviar las notificaciones por  correo electrónico cuando se active una alarma |
         | Slack              | Habilita el campo *Slack Webhook* que permite a la plataforma enviar un mensaje a un canal de Slack cuando se active una alarma |
 
-    - Condiciones
+    - **Condiciones**
 
         Son los filtros en los que se va a basar el disparado de la alarma. Pueden ser configurados de manera similar a como se configurarían en el tipo de aplicación / elemento para el que se ha definido la alarma.
 
@@ -69,11 +69,11 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
     Esta opción muestra una lista de la actividad del usuario (o usuarios) registrada en la plataforma Redborder, ordenada cronológicamente de manera predeterminada. El usuario puede ordenar la tabla de forma ascendente o descendente para cada una de las columnas. Puede usar el cuadro de búsqueda ubicado en la parte superior para filtrar la información que desea ver. Las columnas que se muestran en esta tabla son las siguientes:
 
-    - Usuario: usuario que realizó la acción
-    - Recurso: elemento que se ha creado, modificado o eliminado.
-    - Acción: acción que se ha llevado a cabo (creación, edición, eliminación).
-    - Mensaje: breve descripción de lo que ha sido auditado.
-    - Timestamp: fecha y hora del registro de actividad.
+    - **Usuario**: usuario que realizó la acción
+    - **Recurso**: elemento que se ha creado, modificado o eliminado.
+    - **Acción**: acción que se ha llevado a cabo (creación, edición, eliminación).
+    - **Mensaje**: breve descripción de lo que ha sido auditado.
+    - **Timestamp**: fecha y hora del registro de actividad.
 
     ![Auditorias: registro de actividad del usuario](images/ch07_img004.png)
 
@@ -108,7 +108,7 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
     ## Categorías de monitores
 
-    Aquí podemos agregar una nueva categoría para monitorizar el hardware. Las categorías utilizan tecnologías como SNMP, Redfish, IPMI o también un esquema Bulkstats para proporcionar información sobre el sistema y su funcionamiento.
+    Aquí podemos agregar una nueva categoría para monitorizar el hardware. Las categorías utilizan tecnologías como *SNMP*, *Redfish*, *IPMI* o también un esquema *Bulkstats* para proporcionar información sobre el sistema y su funcionamiento.
 
     ![Categorías de Monitor](images/ch07_img008.png)
 
@@ -122,7 +122,7 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
     ### Operaciones SNMP
 
-    Para explicar la operación de la función snmp usaremos un ejemplo, monitorear el uso de memoria. Cuando creamos una nueva categoría de monitor con el botón Nueva categoría de monitor de la página Categorías de monitor, veremos la siguiente ventana emergente.
+    Para explicar la operación de la función *SNMP* usaremos un ejemplo, monitorear el uso de memoria. Cuando creamos una nueva categoría de monitor con el botón **Nueva categoría de monitor** de la página Categorías de monitor, veremos la siguiente ventana emergente.
 
     ![Creación inicial de una categoría de monitor](images/ch07_img010.png)
 
@@ -132,9 +132,9 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
         100*(memory_total-memory_free-memory_total_buffer-memory_total_cache)/memory_total
 
-    El resultado es una combinación de diferentes valores snmp. Ahora, si queremos crear un monitor como el de este ejemplo, debemos elegir *Operación SNMP* en el menú desplegable de tecnología.
+    El resultado es una combinación de diferentes valores *SNMP*. Ahora, si queremos crear un monitor como el de este ejemplo, debemos elegir *Operación SNMP* en el menú desplegable de tecnología.
 
-    Debajo del campo OID, ahora hay un botón llamado Añadir nueva variable, que agrega otro campo para que podamos ingresar más OID snmp. Las OID's que se usaron son:
+    Debajo del campo *OID*, ahora hay un botón llamado Añadir nueva variable, que agrega otro campo para que podamos ingresar más *OID* snmp. Las *OID*'s que se usaron son:
 
         UCD-SNMP-MIB::memTotalReal.0
         UCD-SNMP-MIB::memAvalReal.0
@@ -147,25 +147,25 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
     Monitor de ejemplo
 
-    Para cada OID, la salida se almacenará en una variable que luego usaremos en la operación de OID.
+    Para cada *OID*, la salida se almacenará en una variable que luego usaremos en la operación de *OID*.
 
-    Una vez en este punto, solo tenemos que crear el monitor presionando el botón *Crear*.
+    Llegados a este punto, solo tenemos que crear el monitor presionando el botón *Crear*.
 
     Para agregar el nuevo monitor a un dispositivo sensor, crearemos un nuevo sensor en la pestaña Sensor, seleccionando *Monitor Device*.
 
     ### Bulkstats
 
-    Las *Bulk Statistics* (o estadísticas recopiladas) son estadísticas que se recopilan en un grupo o esquema, por ejemplo, estadísticas del sistema, estadísticas de puertos o estadísticas Radius.
+    Las *Bulk Statistics* (o estadísticas recopiladas) son estadísticas que se recopilan en un grupo o esquema, por ejemplo, estadísticas del sistema, estadísticas de puertos o estadísticas *Radius*.
 
-    Es posible visualizar información de Bulkstats en el manager de redBorder, para ello es necesario configurar la parte del cliente en el dispositivo de Cisco para activar el envío de información al manager via ftp.
+    Es posible visualizar información de *Bulkstats* en el manager de redBorder, para ello es necesario configurar la parte del cliente en el dispositivo de Cisco para activar el envío de información al manager via *FTP*.
 
-    Una vez hecho esto, podremos visualizar toda la información referente a Bulkstats en el manager de redBorder accediendo a su pestaña correspondiente y seleccionando los campos deseados dentro del módulo de Monitor.
+    Una vez hecho esto, podremos visualizar toda la información referente a *Bulkstats* en el manager de redBorder accediendo a su pestaña correspondiente y seleccionando los campos deseados dentro del módulo de Monitor.
 
     ![Módulo de Monitor: Campos de Bulkstats](images/ch07_img012.png)
 
     Módulo de Monitor: Campos de Bulkstats
 
-    Para definir un monitor Bulkstats personalizado, primero es necesario que el usuario tenga un esquema de Bulkstat en su dispositivo de red que pueda guardar en un archivo de texto plano y darle un nombre (por ejemplo: *Bulkstats-Schema.txt*).
+    Para definir un monitor *Bulkstats* personalizado, primero es necesario que el usuario tenga un esquema de *Bulkstat* en su dispositivo de red que pueda guardar en un archivo de texto plano y darle un nombre (por ejemplo: *Bulkstats-Schema.txt*).
 
     Normalmente, los esquemas de bulkstats se ven así:
 
@@ -173,15 +173,15 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
     Esquemas Bulkstats: Archivo de texto plano
 
-    Luego, se debe hacer clic en el botón **Nueva categoría de monitor** y dentro del nuevo formulario de categoría de monitores, seleccione Bulkstats en la lista de Tecnología. Esto mostrará la nueva opción para colocar su archivo de esquema de archivos masivos que define la configuración del usuario.
+    Luego, se debe hacer clic en el botón **Nueva categoría de monitor** y dentro del nuevo formulario de categoría de monitores, seleccione *Bulkstats* en la lista de Tecnología. Esto mostrará la nueva opción para colocar su archivo de esquema de archivos masivos que define la configuración del usuario.
 
     ![Nueva categoría de monitor: Selección tecnológica](images/ch07_img014.png)
 
     Nueva categoría de monitor: Selección tecnológica
 
-    Para asignar la nueva categoría de monitor a un device sensor, es necesario crear un *monitor device* (si el usuario aún no ha creado  uno) desde la vista de Árbol de sensores.
+    Para asignar la nueva categoría de monitor a un *device sensor*, es necesario crear un *monitor device* (si el usuario aún no ha creado uno) desde la vista de *Árbol de sensores*.
 
-    Hacer clic en el menú del sensor y luego haga clic en Monitores.
+    Hacer clic en el menú del sensor y luego haga clic en *Monitores*.
 
     ![Árbol de sensores](images/ch07_img015.png)
 
@@ -199,7 +199,7 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
     Monitores para dispositivo: Ruta de destino
 
-    La url corresponde a la ruta de destino. Es necesario configurar el protocolo sftp en la red del dispositivo para enviar la información sobre los esquemas bulkstats al manager.
+    La *URL* corresponde a la ruta de destino. Es necesario configurar el protocolo *SFTP* en la red del dispositivo para enviar la información sobre los esquemas *bulkstats* al manager.
 
 ??? note "Licencias"
 
@@ -219,16 +219,16 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
     ## Fuentes de búsqueda
 
-    Lista de las URL de servicios web que realizan las consultas de datos de red. Desde esta pantalla es posible agregar más servicios web, así como editar los existentes.
+    Lista de las *URL* de servicios web que realizan las consultas de datos de red. Desde esta pantalla es posible agregar más servicios web, así como editar los existentes.
 
-    - Eliminar un servicio: haga clic en el botón "Eliminar".
-    - Editar un servicio existente: haga clic en el botón "Editar":
+    - **Eliminar un servicio**: haga clic en el botón "Eliminar".
+    - **Editar un servicio existente**: haga clic en el botón "Editar":
 
         ![Fuentes de búsqueda: consultas de servicios web](images/ch07_img019.png)
 
         Fuentes de búsqueda: consultas de servicios web
 
-    - Añadir nuevo servicio web: haga clic en el botón  + Agregar fuente de búsqueda.
+    - **Añadir nuevo servicio web**: haga clic en el botón  + Agregar fuente de búsqueda.
 
         ![Añadir una nueva fuente de búsqueda](images/ch07_img020.png)
 
@@ -238,7 +238,7 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
     ## Objetos
 
-    Esta opción permite la creación y edición directa de Objetos relacionados a aplicaciones internas, usuarios finales, protocolos, etc. El usuario puede navegar a través de diferentes pestañas que corresponden a los tipos de objetos que se pueden crear. Si desea ubicar los objetos de una manera más eficiente, puede usar el navegador.
+    Esta opción permite la creación y edición directa de objetos relacionados a aplicaciones internas, usuarios finales, protocolos, etc. El usuario puede navegar a través de diferentes pestañas que corresponden a los tipos de objetos que se pueden crear. Si desea ubicar los objetos de una manera más eficiente, puede usar el navegador.
 
     Se pueden crear tres tipos de objetos:
 
@@ -250,9 +250,9 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
     Objetos: lista de objetos
 
-    - Cree un nuevo objeto: haga clic en Nuevo objeto (Red, MAC, VLAN)
-    - Editar un objeto existente: haga clic en el botón "Editar".
-    - Eliminar un objeto: haga clic en el icono "Eliminar".
+    - **Cree un nuevo objeto**: haga clic en Nuevo objeto (Red, MAC, VLAN)
+    - **Editar un objeto existente**: haga clic en el botón "Editar".
+    - **Eliminar un objeto**: haga clic en el icono "Eliminar".
 
     ![Objetos: crear un nuevo objeto](images/ch07_img021.png)
 
@@ -265,15 +265,20 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
     !!! info "Ten en cuenta..."
         Es posible crear un objeto directamente a partir de los atributos que se muestran en las tablas de datos de los módulos. Para esto, debe ir al módulo y hacer clic en el triángulo invertido que aparece cuando pasamos el ratón sobre un atributo como IP, MAC o VLAN.
 
+??? note "Tipos de objetos (WIP)"
+
+    ## Tipos de objetos
+
+    Esta opción permite al usuario crear categorías para los objetos de red, con ello, se puede crear un inventario de los objetos encontrados en la red.
+
 ??? note "Mapas superpuestos"
 
     ## Mapas superpuestos
 
     Esta opción permite superponer una imagen sobre un mapa de Google para obtener más personalización.
 
-    Editar mapa: haga clic en el botón "Editar" situado junto a la lista de mapas existente.
-
-    Agregar nuevo mapa: haga clic en  + Nuevo mapa de superposición. 
+    - **Editar mapa**: haga clic en el botón "Editar" situado junto a la lista de mapas existente.
+    - **Agregar nuevo mapa**: haga clic en  + Nuevo mapa de superposición. 
 
     En ambos casos, se indicará el nombre del mapa, la latitud y la longitud en el lugar donde se debe ubicar la imagen.
 
@@ -287,7 +292,7 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
     ## Alertas de plataforma
 
-    Las alertas son mensajes que se muestran a todos los usuarios cuando estos entran a la plataforma web de RedBorder. Es en este apartado donde se pueden administrar las alertas de la plataforma.
+    Las alertas son mensajes que se muestran a todos los usuarios cuando estos entran a la plataforma web. Es en este apartado donde se pueden administrar las alertas de la plataforma.
 
     Hay tres niveles para las alertas: información, advertencia y peligro. Cada nivel tiene su propio color para que las alertas se puedan diferenciar y todas se colocan por debajo de la barra de menú. En la siguiente imágen tenemos un ejemplo de una alerta de prueba.
 
@@ -295,7 +300,7 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
     Alertas de plataforma
 
-    Es posible crear alertas para la plataforma utilizando el botón Nueva alerta. Es necesario seleccionar el nivel de alerta y el mensaje de la alerta..
+    Es posible crear alertas para la plataforma utilizando el botón Nueva alerta. Es necesario seleccionar el nivel de alerta y el mensaje de la alerta.
 
     ![Alerta de plataforma: Nueva alerta](images/ch07_img024.png)
 
@@ -315,7 +320,7 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
     Versión de reglas
 
-    Es posible cargar reglas para un IPS en particular usando la opción Cargar fuente, donde el usuario puede seleccionar el archivo para cargar.
+    Es posible cargar reglas para un IPS en particular usando la opción **Cargar fuente**, donde el usuario puede seleccionar el archivo para cargar.
 
     También es posible agregar fuentes para descargar nuevas reglas de Internet que se actualizan periódicamente; en caso de ser necesario, el usuario puede forzar la actualización de las reglas para asegurarse de que todas las reglas estén en su versión más reciente.
 
@@ -333,7 +338,7 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
     ## Usuarios
 
-    La activación o modificación de los datos de los usuarios, la gestión de servicios o la creación de nuevos registros es posible desde la interfaz  Configuración de usuarios.
+    La activación o modificación de los datos de los usuarios, la gestión de servicios o la creación de nuevos registros es posible desde la interfaz **Configuración de usuarios**.
 
     Para buscar un usuario específico, introduzca sus datos en el navegador. También puede navegar a través de la lista alfabética que se encuentra en la parte superior de la lista de usuarios.
 
@@ -343,9 +348,9 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
     Usuarios: interfaz de gestión de permisos de los usuarios
 
-    En el cuerpo de la pantalla, encontramos una lista que contiene los usuarios activos en la plataforma Redborder, dirección de correo electrónico, Dominio Top (nivel máximo al que tiene acceso el usuario), número de veces que ha iniciado sesión, IP y hora desde la que realizó Su último acceso.
+    En el cuerpo de la pantalla, encontramos una lista que contiene los usuarios activos en la plataforma Redborder, dirección de correo electrónico, *Dominio Top* (nivel máximo al que tiene acceso el usuario), número de veces que ha iniciado sesión, IP y hora desde la que realizó su último acceso.
 
-    Al hacer clic en el botón "Editar", el usuario puede modificar la  información y visualizar un resumen de su estado y actividad dentro de la plataforma.
+    Al hacer clic en el botón **Editar**, el usuario puede modificar la información y visualizar un resumen de su estado y actividad dentro de la plataforma.
 
     ![Usuarios: edición del perfil del usuario](images/ch07_img028.png)
 
@@ -354,7 +359,7 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
     !!! warning "Importante"
         Cada vez que se modifique cualquier dato en el perfil de un usuario, se debe introducir la contraseña actual para confirmar los cambios.
 
-    para crear un nuevo usuario, haga clic en **Nuevo usuario** y complete la información requerida en el perfil del usuario. Puede marcar la casilla *Administrador* para darle al nuevo usuario permisos completos.
+    para crear un nuevo usuario, haga clic en **Nuevo usuario** y complete la información requerida en el perfil del usuario. Puede marcar la casilla **Administrador** para darle al nuevo usuario permisos completos.
 
     ![Usuarios: Nuevo usuario](images/ch07_img029.png)
 
@@ -370,7 +375,7 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
     #### Notificaciones
 
-    Para ver una lista resumida de notificaciones, haga clic en **Área del usuario**. Para acceder a una lista completa de ellas, seleccione la opción **Ver todo** o haga clic en cualquiera de las notificaciones que aparecen en el resumen; de esta forma puede acceder a una nueva pantalla desde la cual puede ver los detalles de las notificaciones y eliminarlas todas a través de la opción **Borrar todos**.
+    Para ver una lista resumida de notificaciones, haga clic en el **área del usuario**. Para acceder a una lista completa de ellas, seleccione la opción **Ver todo** o haga clic en cualquiera de las notificaciones que aparecen en el resumen; de esta forma puede acceder a una nueva pantalla desde la cual puede ver los detalles de las notificaciones y eliminarlas todas a través de la opción **Borrar todos**.
 
     ![Área de usuario: notificaciones](images/ch07_img031.png)
 
@@ -396,7 +401,7 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
     ## Worker y cola de trabajo
 
-    En esta opción, el usuario puede verificar el estado del trabajo  (Worker)  y los servicios  (Jobs)  que se ejecutan en segundo plano. También puede verificar cuáles de estas tareas se han completado.
+    En esta opción, el usuario puede verificar el estado del trabajo (*Worker*) y las tareas (*Jobs*) que se ejecutan en segundo plano. También puede verificar cuáles de estas tareas se han completado.
 
     !!! info "Ten en cuenta..."
         Llamamos **Worker** a los programas que se ejecutan constantemente en segundo plano.
