@@ -89,18 +89,37 @@ Módulo de Wireless
 
 El módulo de **Reportes** permite al usuario tener informes periódicos con información sobre la plataforma Redborder.
 
-![Módulo de Reportes](images/ch04_img009.png)
-
 Listado de reportes
 
-Para crear un nuevo informe haremos clic en el botón *Nuevo informe* y rellenaremos todos los campos. También es posible importar un informe desde un archivo usando el botón Importar informe.
+Para crear un nuevo informe, haga clic en el botón Nuevo informe y complete todos los campos requeridos. También tiene la opción de importar un informe desde un archivo utilizando el botón Importar informe.
 
-Dentro de la creación del nuevo indorme podemos seleccionar parámetros como tipo de programación, compartir usuarios o compartir dominios. Una vez que se crea el informe, se mostrará en la lista de informes vista anteriormente.
+Para buscar reportes, introduzca parte del nombre o de la descripción del reporte en la barra de búsqueda y presione la tecla "Enter". Además, puede ordenar los reportes haciendo clic en el encabezado de la columna por la cual desea ordenar; los reportes se ordenarán de forma descendente o ascendente alternativamente.
 
-![Edición y creación de Reportes](images/ch04_img049.png)
+![Módulo de Reportes](images/ch04_img009.png)
 
 Edición y creación de reportes
 
-En la lista de informes tenemos la posibilidad de editar un informe existente, generarlo en PDF o enviarlo por correo electrónico, todas estas opciones están en el botón de edición a la derecha de la lista.
+En la lista de informes, puede editar un informe existente, generar un PDF o enviarlo por correo electrónico. Todas estas opciones están disponibles en el botón de edición situado a la derecha de la lista.
 
-Los bloques del informe también se pueden modificar eligiendo la opción de edición de bloque en la lista de informes, donde el usuario podrá agregar, mover y eliminar cualquier tipo de bloque para el informe.
+Durante la creación de un nuevo informe, puede seleccionar parámetros como el tipo de programación, compartir con usuarios específicos o compartir con dominios. Una vez creado el informe, este aparecerá en la lista de informes mencionada anteriormente.
+
+
+![Edición y creación de Reportes](images/ch04_img049.png)
+
+Composición de reportes
+
+En la vista de composición, el usuario puede editar el reporte y añadir nuevos widgets presionando el botón "Añadir Bloque". Si agarramos el widget desde la barra de título en la parte superior, podremos desplazarlo. En la esquina inferior derecha de cada widget, el cursor cambiará de forma, permitiendo cambiar el tamaño del widget.
+
+![Generación de Reportes](images/ch04_img052.png)
+
+Generación de reportes
+
+Al generar un reporte, se abrirá una nueva ventana en la que, después de unos segundos, el reporte se renderizará en formato PDF. El usuario podrá descargar el reporte presionando el ícono con la silueta de una impresora ubicado en la parte superior derecha de la pantalla. Además, el reporte se guardará en una base de datos o de manera local, permitiendo su posterior visualización para consultar reportes anteriores.
+
+Historial de reportes
+
+Cada vez que se genera un PDF, esta acción se registrará en el historial de reportes, incluyendo la hora y fecha de generación, el reporte generado y el usuario que lo ha generado. El usuario también tiene la posibilidad de visualizar los reportes que han sido exportados previamente, ya sea por él mismo o por otros usuarios.
+
+![Historial de Reportes](images/ch04_img051.png)
+
+Módulo de Informes
