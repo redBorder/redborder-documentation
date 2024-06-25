@@ -122,7 +122,7 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
     ### Operaciones SNMP
 
-    Para explicar la operación de la función *SNMP* usaremos un ejemplo, monitorear el uso de memoria. Cuando creamos una nueva categoría de monitor con el botón **Nueva categoría de monitor** de la página Categorías de monitor, veremos la siguiente ventana emergente.
+    Para explicar la operación de la función *SNMP* usaremos un ejemplo, monitorear el uso de memoria. Cuando creamos una nueva categoría de monitor con el botón **Nueva categoría de monitor** de la página **Categorías de monitor**, veremos la siguiente ventana emergente.
 
     ![Creación inicial de una categoría de monitor](images/ch07_img010.png)
 
@@ -141,7 +141,7 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
         UCD-SNMP-MIB::memBuffer.0
         UCD-SNMP-MIB::memCached.0
 
-    En la parte inferior, hay un campo Operación de OID, en el que presentaremos la operación que queremos hacer con los OID ingresados previamente.
+    En la parte inferior, hay un campo Operación de *OID*, en el que presentaremos la operación que queremos hacer con los *OIDs* ingresados previamente.
 
     ![Monitor de ejemplo](images/ch07_img011.png)
 
@@ -167,13 +167,13 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
     Para definir un monitor *Bulkstats* personalizado, primero es necesario que el usuario tenga un esquema de *Bulkstat* en su dispositivo de red que pueda guardar en un archivo de texto plano y darle un nombre (por ejemplo: *Bulkstats-Schema.txt*).
 
-    Normalmente, los esquemas de bulkstats se ven así:
+    Normalmente, los esquemas de *bulkstats* se ven así:
 
     ![Esquemas Bulkstats: Archivo de texto plano](images/ch07_img013.png)
 
     Esquemas Bulkstats: Archivo de texto plano
 
-    Luego, se debe hacer clic en el botón **Nueva categoría de monitor** y dentro del nuevo formulario de categoría de monitores, seleccione *Bulkstats* en la lista de Tecnología. Esto mostrará la nueva opción para colocar su archivo de esquema de archivos masivos que define la configuración del usuario.
+    Luego, se debe hacer clic en el botón **Nueva categoría de monitor** y dentro del nuevo formulario de categoría de monitores, seleccione *Bulkstats* en la lista de **Tecnología**. Esto mostrará la nueva opción para colocar su archivo de esquema de archivos masivos que define la configuración del usuario.
 
     ![Nueva categoría de monitor: Selección tecnológica](images/ch07_img014.png)
 
@@ -209,7 +209,7 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
     En el borde superior de la pantalla se indica la cantidad de licencias disponibles, las aplicaciones que se pueden usar con estas licencias y la cantidad de nodos caducados. Hay una lista de nodos caducados que necesitan renovar sus licencias en el centro de la pantalla. También hay una lista de las acciones disponibles.
 
-    Para cargar un archivo con una nueva licencia de Redborder, haga clic en **Seleccionar archivo**. Para solicitar una nueva licencia, haga clic en **Solicitar una licencia**.
+    Para cargar un archivo con una nueva licencia de Redborder, haga clic en **Subir Licencia**. Para solicitar una nueva licencia, haga clic en **Solicitar una licencia**.
 
     ![Licencias: consultas y actualización de licencias caducadas](images/ch07_img018.png)
 
@@ -228,7 +228,7 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
         Fuentes de búsqueda: consultas de servicios web
 
-    - **Añadir nuevo servicio web**: haga clic en el botón  + Agregar fuente de búsqueda.
+    - **Añadir nuevo servicio web**: haga clic en el botón **Agregar fuente de búsqueda**.
 
         ![Añadir una nueva fuente de búsqueda](images/ch07_img020.png)
 
@@ -238,9 +238,9 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
     ## Objetos
 
-    Esta opción permite la creación y edición directa de objetos relacionados a aplicaciones internas, usuarios finales, protocolos, etc. El usuario puede navegar a través de diferentes pestañas que corresponden a los tipos de objetos que se pueden crear. Si desea ubicar los objetos de una manera más eficiente, puede usar el navegador.
+    Esta opción permite la creación y edición directa de objetos relacionados a aplicaciones internas, usuarios finales, protocolos, etc. El usuario puede navegar a través de diferentes pestañas que corresponden a las categorías de objetos que se pueden crear. Si desea ubicar los objetos de una manera más eficiente, puede usar el navegador.
 
-    Se pueden crear tres tipos de objetos:
+    Se pueden crear tres categorías de objetos:
 
     - Red
     - MAC
@@ -250,9 +250,9 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
     Objetos: lista de objetos
 
-    - **Cree un nuevo objeto**: haga clic en Nuevo objeto (Red, MAC, VLAN)
-    - **Editar un objeto existente**: haga clic en el botón "Editar".
-    - **Eliminar un objeto**: haga clic en el icono "Eliminar".
+    - **Cree un nuevo objeto**: haga clic en **Nuevo Objeto de Red** (Red, MAC, VLAN)
+    - **Editar un objeto existente**: haga clic en el botón **Editar**.
+    - **Eliminar un objeto**: haga clic en el icono **Eliminar**.
 
     ![Objetos: crear un nuevo objeto](images/ch07_img021.png)
 
@@ -277,8 +277,8 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
     Esta opción permite superponer una imagen sobre un mapa de Google para obtener más personalización.
 
-    - **Editar mapa**: haga clic en el botón "Editar" situado junto a la lista de mapas existente.
-    - **Agregar nuevo mapa**: haga clic en  + Nuevo mapa de superposición. 
+    - **Editar mapa**: haga clic en el botón *Editar* situado junto a la lista de mapas existente.
+    - **Agregar nuevo mapa**: haga clic en *Nuevo mapa de superposición*. 
 
     En ambos casos, se indicará el nombre del mapa, la latitud y la longitud en el lugar donde se debe ubicar la imagen.
 
@@ -320,7 +320,7 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
     Versión de reglas
 
-    Es posible cargar reglas para un IPS en particular usando la opción **Cargar fuente**, donde el usuario puede seleccionar el archivo para cargar.
+    Es posible cargar reglas para un IPS en particular usando la opción **Cargar Fuente**, donde el usuario puede seleccionar el archivo para cargar.
 
     También es posible agregar fuentes para descargar nuevas reglas de Internet que se actualizan periódicamente; en caso de ser necesario, el usuario puede forzar la actualización de las reglas para asegurarse de que todas las reglas estén en su versión más reciente.
 
@@ -342,7 +342,7 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
     Para buscar un usuario específico, introduzca sus datos en el navegador. También puede navegar a través de la lista alfabética que se encuentra en la parte superior de la lista de usuarios.
 
-    El único usuario que tiene permisos para hacerlo es Superadministrator. El resto de los usuarios solo pueden visualizar las secciones de la plataforma (modo de lectura) pero no pueden modificar su contenido (excepto en el caso de su propio perfil de usuario).
+    Los usuarios solo pueden visualizar las secciones de la plataforma (modo de lectura) pero no pueden modificar su contenido (excepto en el caso de su propio perfil de usuario). El único usuario que tiene permisos para hacerlo es Superadministrator.
 
     ![Usuarios: interfaz de gestión de permisos de los usuarios](images/ch07_img027.png)
 
@@ -409,7 +409,5 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
         Una **Tarea** es un programa que se ejecuta periódicamente o solo una vez, pero no permanece ejecutándose en segundo plano, sino que se ejecuta y se cierra.
 
     ![Worker y cola de trabajo: estado de la lista de workers y cola de trabajo.](images/ch07_img033.png)
-
-    Worker y cola de trabajo: estado de la lista de workers y cola de trabajo.
 
     **Tareas almacenadas** muestra la lista de servicios terminados. Puede conocer el estado de cada uno a través del icono "Información", o eliminar de la lista utilizando el icono "Eliminar". Esta pantalla se recarga automáticamente cada 5 segundos.
