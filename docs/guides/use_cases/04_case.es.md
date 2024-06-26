@@ -8,7 +8,7 @@ Para habilitar el motor de correlación, debemos introducir los siguientes coman
 
 ![Ataque de fuerza bruta SSH: Habilitar el motor de correlación](images/ch30_img005_a.png)
 
-Después de eso tendremos que esperar unos minutos para asegurarnos de que CEP se esté ejecutando. Podemos usar el script `rb_get_services.sh` para asegurarnos de ello.
+Después de eso tendremos que esperar unos minutos para asegurarnos de que CEP se esté ejecutando. Podemos usar el comando `rbcli service list` para asegurarnos de ello.
 
 ![Ataque de fuerza bruta SSH: motor de correlación habilitado](images/ch30_img005_b.png)
 

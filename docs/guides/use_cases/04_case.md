@@ -6,7 +6,7 @@ To enable the Correlation Engine, we have to introduce the following commands in
 
 ![SSH brute-force attack: Enabling Correlation Engine](images/ch30_img005_a.png)
 
-After that, we will have to wait a few minutes to ensure that CEP is running. We can use the `rb_get_services.sh` script to ensure that.
+After that, we will have to wait a few minutes to ensure that CEP is running. We can use the `rbcli service list` command to ensure that.
 
 ![SSH brute-force attack: Correlation Engine enabled](images/ch30_img005_b.png)
 
