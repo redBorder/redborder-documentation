@@ -79,11 +79,11 @@ Expand the following tabs to read a description of the options found in the tool
 
     Audits: user activity log
 
-??? note "Cluster Setings"
+??? note "Cluster Settings"
 
-    ## Cluster Setings
+    ## Cluster Settings
 
-    The Cluster Setings option allows us to check the status and configuration of the cluster, and establish the cluster creation process during the Manager installation process.
+    The Cluster Settings option allows us to check the status and configuration of the cluster, and establish the cluster creation process during the Manager installation process.
 
     You can modify these values by editing through the Unlock button. The information can be changed with the following parameters:
 
