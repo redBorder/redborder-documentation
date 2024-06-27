@@ -34,8 +34,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
-## Building the documentation locally:
+## Building the documentation locally
+
 mkdocs serve
 
-## Update documentation in the server:
+## Update documentation in the server
+
 mkdocs gh-deploy

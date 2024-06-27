@@ -19,17 +19,23 @@ Let's go through the general categories available in the general configuration:
 
 In this section, the user can change the following elements:
 
-- Company Name: name of the company using Redborder.
-- Company Email: email address of the company. It will be used as the sender of reports and license management.
-- Web *URL*: this is the interface *URL*, used for referencing in emails.
-- Minimum Password Length: indicates the minimum number of characters a password must have to be accepted on the platform.
-- Session Timeout: time in seconds that the platform will wait to log out an inactive user.
-- Dashboard Refresh Time: period for refreshing the dashboard in seconds.
-- Raw Automatic Reload Time: update period for the interface in seconds.
-- Vulnerability Information Update Frequency: frequency for updating available information about vulnerabilities.
-- Vulnerability Information Update Time: UTC time at which the update job for vulnerability information will run.
-- Snort Rules Update Frequency: frequency for updating the rules.
-- Snort Rules Update Time: UTC time at which the rule update job will run.
+- **Company name**: name of the company using Redborder.
+- **Company email**: email address of the company. It will be used as the sender of reports and license management.
+- **Web *URL***: this is the interface *URL*, used for referencing in emails.
+- **Minimum password length**: indicates the minimum number of characters a password must have to be accepted on the platform.
+- **Session timeout**: time in seconds that the platform will wait to log out an inactive user.
+- **Dashboard refresh time**: period for refreshing the dashboard in seconds.
+- **Raw automatic reload time**: update period for the interface in seconds.
+- **Vulnerability information update frequency**: frequency for updating available information about vulnerabilities.
+- **Vulnerability information update time**: UTC time at which the update job for vulnerability information will run.
+- **Snort rules update frequency**: frequency for updating the rules.
+- **Snort rules update time**: UTC time at which the rule update job will run.
+- **Enable Reverse Name Resolution**: if checked, the platform will attempt to resolve all IPs in each view to their corresponding domain.
+
+Other elements that the user cannot change are:
+
+- **Private Key**: key used by the system to communicate between cluster members (if any) and with the sensors (IPS or Proxy if any).
+- **Cluster UUID**: value used by the system as the identifier for the cluster of managers. The license is related to this identifier.
 
 !!! warning "Important"
 
@@ -51,7 +57,9 @@ Configuration of Syslog, MTA, NTP servers, and enabling proxy configuration.
 
 ## Default Rules
 
-Configuration of default rules for loading or dropping data.
+Configuration of default rules for loading or removing module data from storage. You can choose to save all data or save the latest data received within a specified time period.
+
+On the right, a summary is displayed with the parameters specified for storing the data.
 
 ## Monitoring and Logs
 
@@ -68,11 +76,11 @@ Enabling the *Enable Plugins* verification is optional because this is a paid se
 
 ## Amazon Cloudwatch
 
-If the user wants to send their logs to this Amazon service, the required fields must be completed.
+If the user wishes to send their logs to this Amazon service, all the displayed fields must be completed with the information provided by their contracted service.
 
 ## Google Maps API
 
-It is possible to link Redborder with the Google Maps API to obtain better location information.
+It is possible to link Redborder with the Google Maps API to obtain better location information using the API key or client ID provided by this service.
 
 ## Backup Segments (WIP, Remote S3)
 
@@ -86,7 +94,7 @@ To disable the option, simply uncheck it.
 
 ## OpenWeatherMap
 
-OpenWeatherMap is used in the mobility pipeline to enrich mobility data with weather information. This field allows the user to write down their OperWeatherMap API key to accomplish the enrichment.
+*OpenWeatherMap* is used in the mobility module to enrich mobility data with weather information. This field allows the user to write down their *OperWeatherMap* API key to accomplish the enrichment.
 
 ## White Networks
 
@@ -140,7 +148,8 @@ In this section, the user can select different additional steps for data enrichm
 - **Geo IP**: Allows protecting the sensor's MAC; for this, a hexadecimal encoded key is used, which combines with a fake MAC to obtain the real MAC.
 - **MAC Vendor**: the translation process of the MAC included in the event allows obtaining the device manufacturer's name. This process is compared in a file stored within the system.
 - **Darklist**: it is a service that retrieves a list of malicious IPs and stores multiple values such as score, threat type, country, latitude, longitude... in the system, allowing operations on event fields. The files are updated daily.
+- **Multiple Enrichment**: enables the use of information from multiple platform modules to enrich the information in the traffic module.
 
 ## Widgets Overview
 
-With this configuration, the user can choose which information will be displayed in the left sidebar of the general view when entering the web platform. All that the user has to do is check or uncheck the desired widgets for them to be removed or added to the *Overview*. All the widgets are enabled by default.
+With this configuration, the user can choose what information will be displayed in the left sidebar of the general view when entering the web platform. All the user needs to do is check or uncheck the desired widgets to make them visible or not in the *General View*. All widgets are shown by default.

@@ -19,17 +19,23 @@ Vamos a hacer un recorrido general a través de todas las categorías de la conf
 
 En esta sección, el usuario puede cambiar los siguientes elementos:
 
-- Nombre empresa: nombre de la compañía que usa Redborder.
-- Correo empresa de la empresa: correo electrónico de la empresa. Se utilizará como remitente de informes y gestión de licencias.
-- *URL* de la Web: esta es la interfaz de *URL*, usada para ser referenciada en los emails.
-- Largo mínimo de contraseña: indica el número mínimo de caracteres que debe tener una contraseña para ser aceptada en la plataforma.
-- Temporizador para cerrado de sesión: tiempo en segundos que la plataforma esperará para cerrar la sesión de algún usuario inactivo.
-- Tiempo de refresco del dashboard: periodo del refresco del dashboard en segundos.
-- Tiempo bruto de recarga automática: periodo de actualización para la interfaz en segundos.
-- Periodicidad de actualización de información de vulnerabilidades: periodicidad para actualizar la información disponible sobre vulnerabilidades.
-- Hora de actualización de información de vulnerabilidades: hora en UTC en la que se ejecutará el trabajo de actualización de reglas la información sobre vulnerabilidades.
-- Periodicidad de actualización de reglas de snort: periodicidad para actualizar las Reglas.
-- Hora de actualización de reglas de snort: hora UTC en que se ejecutará el trabajo de actualización de reglas.
+- **Nombre empresa**: nombre de la compañía que usa Redborder.
+- **Correo de la empresa**: correo electrónico de la empresa. Se utilizará como remitente de informes y gestión de licencias.
+- ***URL* de la Web**: esta es la interfaz de *URL*, usada para ser referenciada en los emails.
+- **Largo mínimo de contraseña**: indica el número mínimo de caracteres que debe tener una contraseña para ser aceptada en la plataforma.
+- **Temporizador para cerrado de sesión**: tiempo en segundos que la plataforma esperará para cerrar la sesión de algún usuario inactivo.
+- **Tiempo de refresco del dashboard**: periodo del refresco del dashboard en segundos.
+- **Tiempo bruto de recarga automática**: periodo de actualización para la interfaz en segundos.
+- **Periodicidad de actualización de información de vulnerabilidades**: periodicidad para actualizar la información disponible sobre vulnerabilidades.
+- **Hora de actualización de información de vulnerabilidades**: hora en UTC en la que se ejecutará el trabajo de actualización de reglas la información sobre vulnerabilidades.
+- **Periodicidad de actualización de reglas de snort**: periodicidad para actualizar las Reglas.
+- **Hora de actualización de reglas de snort**: hora UTC en que se ejecutará el trabajo de actualización de reglas.
+- **Activar resolución de nombres inversa**: si está marcada, la plataforma intentará resolver todas las IPs en cada vista por su dominio correspondiente.
+
+Otros elementos que el usuario no puede cambiar, son:
+
+- **Clave privada**: llave privada utilizada por el sistema para comunicarse entre los miembros del clúster (en caso de existir) y con los sensores (IPS o Proxy en caso de haber alguno).
+- **UUID del clúster**: valor utilizado por el sistema como identificador del clúster de managers. La licencia está relacionada a este identificador.
 
 !!! warning "Importante"
 
@@ -51,7 +57,9 @@ Configuración de servidores Syslog, MTA, NTP y habilitar la configuración de p
 
 ## Reglas predeterminadas
 
-Configuración de reglas predeterminadas para cargar o soltar datos.
+Configuración de reglas predeterminadas para cargar o eliminar del almacenamiento los datos de los módulos. Se puede elegir guardar la totalidad de los datos o guardar los últimos datos recibidos de un período en un tiempo determinado.
+
+A la derecha se muestra un resumen sobre con los parámetros indicados para almacenar los datos.
 
 ## Monitoreo y registros
 
@@ -68,11 +76,11 @@ La activación de la verificación *Habilitar Plugins* es opcional porque este e
 
 ## Amazon Cloudwatch
 
-Si el usuario desea enviar sus registros a este servicio de Amazon, se deben completar los campos obligatorios.
+Si el usuario desea enviar sus registros a este servicio de Amazon, se deben completar todos los campos mostrados con la información que le provee su servicio contratado.
 
 ## Google Maps API
 
-Es posible vincular Redborder con la API de Google Maps para obtener mejor información de ubicación.
+Es posible vincular Redborder con la API de Google Maps para obtener mejor información de ubicación mediante la llave de la API o el ID del cliente que le provee este servicio.
 
 ## Segmentos Backup (WIP, S3 remoto)
 
@@ -86,7 +94,7 @@ Si desea desactivar la opción, simplemente desmarque esa opción.
 
 ## OpenWeatherMap
 
-OpenWeatherMap se utiliza en la pipeline de movilidad para enriquecer los datos de movilidad con información meteorológica. Este campo permite al usuario ingresar su clave API de OpenWeatherMap para realizar el enriquecimiento.
+*OpenWeatherMap* se utiliza en el módulo de movilidad para enriquecer los datos de movilidad con información meteorológica. Este campo permite al usuario ingresar su clave API de *OpenWeatherMap* para realizar el enriquecimiento.
 
 ## Redes Permitidas
 
@@ -140,7 +148,8 @@ En esta sección, el usuario puede seleccionar desde la interfaz web los diferen
 - **Geo IP**: Permite proteger la MAC del sensor, para esto se utiliza una clave codificada hexadecimal que se combina con una MAC falsa para obtener la MAC real de la misma.
 - **MAC Vendor**: El proceso de traducción de la MAC incluido en el evento permite obtener el nombre del fabricante del dispositivo. Este proceso se compara en un archivo almacenado dentro del sistema.
 - **Darklist**: Es un servicio que se encarga de recuperar una lista de IP que son maliciosas y almacenar múltiples valores como puntuación, tipo de amenaza, país, latitud, longitud... en el sistema, permitiendo así realizar operaciones de modificación en los campos del evento. Los archivos se actualizan cada día.
+- **Enriquecimiento múltiple**: habilita el uso de información de múltiples módulos de la plataforma para enriquecer la información del módulo de tráfico.
 
 ## Widgets en la Vista General
 
-Con esta configuración, el usuario puede elegir qué información verá presentada en la barra lateral izquierda de la vista general, al entrar en la plataforma web. Todo lo que debe hacer el usuario es marcar o desmarcar los widgets deseados para que estos sean removidos o agregados a la *Vista General*. Todos los widgets vienen habilitados por defecto.
+Con esta configuración, el usuario puede elegir qué información verá presentada en la barra lateral izquierda de la vista general, al entrar en la plataforma web. Todo lo que debe hacer el usuario es marcar o desmarcar los widgets deseados para que estos sean visibles o no en la *Vista General*. Todos los widgets se muestran por defecto.

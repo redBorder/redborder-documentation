@@ -309,15 +309,15 @@ Expand the following tabs to read a description of the options found in the tool
 
     It is possible to delete the alert by clicking on the cross in the message. After that, the alert message will no longer be displayed.
 
-??? note "Rule Version"
+??? note "Rule Versions"
 
-    ## Rule Version
+    ## Rule Versions
 
     The user can manage the platform's rule sources. It is possible to add or load new sources and also enable the selected ones. The rules are used for the **Snort** probe, which is used by the intrusion module.
 
-    ![Rule Version](images/ch07_img025.png)
+    ![Rule Versions](images/ch07_img025.png)
 
-    Rule Version
+    Rule Versions
 
     It is possible to load rules for a particular IPS using the **Upload Source** option, where the user can select the file to upload.
 
