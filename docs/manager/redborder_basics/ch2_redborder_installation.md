@@ -37,7 +37,7 @@ The first action to start monitoring your network with RedBorder is to obtain th
 The entire installation process specified on this page must be repeated for each manager that will make up the cluster.
 
 ``` bash title="Config of required repositories"
-dnf install epel-release && rpm -ivh https://repo.redborder.com/ng/latest/rhel/9/x86_64/redborder-repo-1.0.0-1.el9.rb.noarch.rpm
+dnf install epel-release && rpm -ivh https://repo.redborder.com/ng/latest/rhel/9/x86_64/redborder-repo-latest-1.0.0-1.el9.rb.noarch.rpm
 ```
 
 ``` bash title="Redborder Manager Package Installation Command"
