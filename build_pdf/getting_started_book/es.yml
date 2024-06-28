@@ -23,3 +23,4 @@ plugins:
 nav:
   - index.es.md
   - guides/getting_started/first_steps.es.md
+  - guides/integrations/otrs.es.md
