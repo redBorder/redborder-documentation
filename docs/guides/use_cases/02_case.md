@@ -4,20 +4,30 @@ Redborder has the capability to collect information from other manufacturers and
 
 First of all we will access to Vault module.
 
-![Vault module: General view](images/ch30_img003_a.png)
+![Vault module: general view](images/ch30_img003_a.png)
+
+Módulo Vault: vista del nombre de protocolo
 
 We will select Class metric from Untangle and will filter one of them.
 
-![Vault module: Untangle Class](images/ch30_img003_b.png)
-  	
+![Vault module: Untangle Class metric](images/ch30_img003_b.png)
+
+Vault module: Untangle class metric
+
 Once we have filtered the Class, we will see the Hostname metric which are using the filtered class.
 
-![Vault module: Hostname view](images/ch30_img003_c.png)
+![Vault module: hostname view](images/ch30_img003_c.png)
+
+Vault module: hostname view
 
 We want to know which protocol is being used by the hostname and the class filtered.
 
-![Vault module: Filter view](images/ch30_img003_d.png)
+![Vault module: filter view](images/ch30_img003_d.png)
+
+Vault module: filter view
 
 Using the filter tool we can see that the protocol used by that particular hostname and that particular class is UDP.
 
-![Vault module: Protocolname view](images/ch30_img003_e.png)
+![Vault module: protocol name view](images/ch30_img003_e.png)
+
+Vault module: protocol name view
