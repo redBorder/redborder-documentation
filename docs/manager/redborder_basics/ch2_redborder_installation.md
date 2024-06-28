@@ -11,9 +11,9 @@ Installing the RedBorder Manager is the first step to start monitoring and prote
 ## Installation Requirements
 
 !!! info "Please note..."
-    The following requirements are related to **the installation of a single node with light to moderate usage**. Keep in mind that if you run the platform in a virtual environment, **performance may decrease** compared to an implementation on a physical machine.
+    If you run the platform in a virtual environment, **performance may decrease** compared to an implementation on a physical machine.
 
-The successful deployment of RedBorder requires a machine with the **Rocky Linux 9** operating system installed. The minimum hardware requirements for the machine are:
+The successful implementation of RedBorder requires at least one machine with the Rocky Linux 9 operating system installed. The hardware requirements will depend on whether we install a single manager or a cluster. For each case, these requirements are:
 
 === "Manager"
 
@@ -22,23 +22,41 @@ The successful deployment of RedBorder requires a machine with the **Rocky Linux
     * CPU: 4 cores
     * Network Interface: At least one
 
+=== "Cluster"
+    * Three machines with following specifications each:
+        * Disk: 80 GB
+        * RAM: 16 GB
+        * CPU: 4 cores
+        * Network Interface: At least two
+
 ## Installation Process
 
 The first action to start monitoring your network with RedBorder is to obtain the latest official RedBorder packages for **Rocky Linux 9** available at [repo.redborder.com](https://repo.redborder.com).
 
-``` bash title="Latest"
-yum install epel-release && rpm -ivh https://repo.redborder.com/ng/latest/rhel/9/x86_64/redborder-repo-1.0.0-1.el9.rb.noarch.rpm
+!!! info "In the case of installing a cluster..."
+The entire installation process specified on this page must be repeated for each manager that will make up the cluster.
+
+``` bash title="Config of required repositories"
+dnf install epel-release && rpm -ivh https://repo.redborder.com/ng/latest/rhel/9/x86_64/redborder-repo-1.0.0-1.el9.rb.noarch.rpm
 ```
 
-``` bash title="Manager"
-yum install redborder-manager
+``` bash title="Redborder Manager Package Installation Command"
+dnf install redborder-manager
 ```
 
-With the packages downloaded and installed, the next step is to configure RedBorder. To do this, log out of the console session and log back in; this will update the paths to the scripts, allowing us to execute the command:
+With the packages downloaded and installed, the next step is to configure RedBorder. To do this, we restart the console session:
 
+``` bash title="Console relogin command"
+/bin/bash --login
+```
+
+This will update the script paths, allowing us to run the **installation wizard**:
+
+``` bash title="Installation wizard command"
     rb_setup_wizard
+```
 
-This command will start the **installation wizard** of the platform in the console to guide you through the entire process.
+This will start the **installation wizard** for the platform in the console, which will serve as a guide throughout the entire process.
 
 ### Network Configuration
 
