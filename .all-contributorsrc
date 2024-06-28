@@ -25,6 +25,16 @@
         "content",
         "translation"
       ]
+    },
+    {
+      "login": "ljblancoredborder",
+      "name": "Luis Blanco",
+      "avatar_url": "https://avatars.githubusercontent.com/u/108473576?v=4",
+      "profile": "https://github.com/ljblancoredborder",
+      "contributions": [
+        "content",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
