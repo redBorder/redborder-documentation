@@ -58,6 +58,18 @@ Esto actualizará las rutas a los scripts y así podremos ejecutar el comando de
 
 El cual iniciará el **asistente de instalación** de la plataforma en consola para funcionar como guía durante todo el proceso.
 
+## Asistente de instalación
+
+Habiendo iniciado el **asistente de instalación** para la plataforma en la consola, se puede utilizar como guía durante todo el proceso. La primera pantalla que se muestra nos ofrece también un índice de los próximos pasos.
+
+![Iniciando el asistente](images/ch02_configure_wizard_start.png)
+
+Si no está seguro sobre la configuración actual, puede cancelar con la opción "No", la cual mostrará la siguiente pantalla antes de volver a la vista de la consola.
+
+![Cancelando el asistente](images/ch02_cancel_wizard.png)
+
+!!! warning "En algunos pasos, la opción \"NO\" cancelará todo el proceso de instalación, lo que significa que se perderá toda la configuración realizada durante el proceso."
+
 ### Configuración de red
 
 En el recuadro inferior se listan las interfaces de red existentes en el equipo en cuestión. Debajo de todas las interfaces que posee el equipo, está la opción `Finalize`, que podemos seleccionar **después de haber configurado** exitosamente las interfaces.

@@ -56,7 +56,17 @@ This will update the script paths, allowing us to run the **installation wizard*
     rb_setup_wizard
 ```
 
-This will start the **installation wizard** for the platform in the console, which will serve as a guide throughout the entire process.
+## Setup wizard
+
+This will start the **installation wizard** for the platform in the console, which will serve as a guide throughout the entire process. The very first screen is also guiding with the next steps.
+
+![Start wizard](images/ch02_configure_wizard_start.png)
+
+If you are not sure about the current setup you can cancel with the "No" option, which will show the following screen before returning back to the console view.
+
+![Cancel wizard](images/ch02_cancel_wizard.png)
+
+!!! warning "In some steps, \"No\" option will cancel the full installation process, which means that all configuration during the setup process will be lost."
 
 ### Network Configuration
 
