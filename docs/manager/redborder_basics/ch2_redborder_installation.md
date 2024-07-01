@@ -70,6 +70,10 @@ If you are not sure about the current setup you can cancel with the "No" option,
 
 ### Network Configuration
 
+This step is optional. If you are sure the network interfaces are already configured, you can skip this step. Otherwise, get into the configuration pressing "Yes".
+
+![Start Network Configuration](images/ch02_start_network_conf.png)
+
 In the lower box, the existing network interfaces on the machine in question are listed. Underneath all the interfaces that the machine possesses, there is the `Finalize` option, which we can select **after successfully configuring the interfaces**.
 
 ![Network Configuration](images/ch02_img001.png)
@@ -88,21 +92,23 @@ If selecting the static IP option, you must specify the IP address, subnet mask,
 
 Static Interface Configuration
 
+### Selecting management interface
+
+In case of having multiple interfaces, you need to select which one is the main interface to operate with this manager. The purpose if this interface is to configure the manager as you are doing here and link it with different kind of sensors. 
+
+![Management Interface Selection](images/ch02_select_manage_interface.png)
+
 ### DNS Configuration
 
-The installation wizard will give you the option to choose whether or not to configure DNS servers. If you wish to configure DNS.
+The installation wizard will give you the option to choose whether or not to configure DNS servers. 
 
-Configuring at least one server is mandatory; however, it is currently possible to configure up to 3 DNS servers in the platform. This can be done on the following screen:
+![DNS Configuration](images/ch02_start_dns.png)
+
+If you need to configure DNS, configure at least one server. This can be done on the following screen:
 
 ![DNS Configuration](images/ch02_img004.png)
 
 DNS Configuration
-
-### Sync network selection
-
-In case you are installing a cluster, you have to select a second interface to make managers synchronize among them.
-
-![Configuración de la interfaz de sincronismo](images/ch02_sync_network_selection.png)
 
 ### Hostname and Domain
 
@@ -122,11 +128,15 @@ Hostname and Domain Configuration
 RedBorder has the ability to work in a distributed manner, distributing functions or workload among two or more nodes, through a synchronization network that allows nodes to communicate and operate. For this, we use **Serf**(1), this service is responsible for creating the manager cluster and defining the roles of the nodes.
 { .annotate }
 
+![Start Serf Configuration](images/ch02_start_serf_configuration.png)
+
 1. Serf is a decentralized solution for service discovery and orchestration that is lightweight, highly available, and fault-tolerant.
 
 For Serf to work correctly, three parameters are required:
 
 - Sync network
+
+Sync network is the network for all managers to sync among them. In case you are really installing a cluster just make sure to select other interface different from management
 
 ![Configure Sync Network and Interface](images/ch02_img006.png)
 
@@ -136,7 +146,10 @@ For Serf to work correctly, three parameters are required:
 
 - Secret key to encrypt Serf network traffic
 
+Put a password from 6 to 20 characters for Serf.
 ![Configure Serf Key](images/ch02_img008.png)
+
+!!! warning "This password should be the same among all managers that will join to the same cluster. In case of a second cluster being in the same network, use a diffent password to prevent managers join to the wrong cluster." 
 
 ### Storage with Amazon S3 (WIP)
 
@@ -148,10 +161,19 @@ It is also possible to configure RedBorder to use the Amazon RDS service or some
 
 ### Selecting Manager Mode
 
-Depending on the RedBorder installation you want to perform, you can indicate to the platform what should be executed on the node being installed. The most common case will be the installation of a single manager in the network, for this, you must choose the `full` mode, indicating to the platform that it should run all services on the machine in question.
+Depending on the RedBorder installation you want to perform, you can indicate to the platform what should be executed on the node being installed. The most common case will be the installation the `full` mode, but in case you want to save performance, pick one of other modes instead. In case of a cluster installation, one node should've `core`mode. Sumerizing for each case:
 
-!!! tip "Please note..."
-    If a manager cluster will be installed, one of the nodes must operate in core mode while the other nodes must operate in `custom` mode and select which services they will maintain.
+=== "Single node"
+    Choose the `full` mode.
+
+=== "Leader node"
+    Choose the `full`mode as selected by default or `core` mode for minimal installation.
+
+=== "Follower node"
+    Choose the `full` mode as selected by default or any other mode for minimal installation.
+
+!!! warning "Please note..."
+    If a manager cluster will be installed, one of the nodes must operate in `core` mode while the other nodes must operate in `custom` mode and select which services they will maintain.
 
 ![Manager Mode Selection](images/ch02_img009.png)
 
@@ -159,7 +181,13 @@ Manager Mode Selection
 
 ### Finising the installation
 
-The installation is almost ready, you have to wait until the setup process finish. To read the logs about it run this: 
+The installation is almost ready, you have to wait until the setup process finish:
+
+![Applying Configuration](images/ch02_apply_conf.png)
+
+Press "OK" to go back to the console.
+
+Additionally you can read the logs about the installation running this: 
 ``` bash title=Print the setup logs
 journalctl -u rb-bootstrap
 ```

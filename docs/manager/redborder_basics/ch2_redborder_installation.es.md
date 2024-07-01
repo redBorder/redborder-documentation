@@ -72,6 +72,10 @@ Si no está seguro sobre la configuración actual, puede cancelar con la opción
 
 ### Configuración de red
 
+Este paso es opcional. Si está seguro de que las interfaces de red ya están configuradas, puede omitir este paso. De lo contrario, entra en la configuración presionando "Sí".
+
+![Inicio de la configuración de red](images/ch02_start_network_conf.png)
+
 En el recuadro inferior se listan las interfaces de red existentes en el equipo en cuestión. Debajo de todas las interfaces que posee el equipo, está la opción `Finalize`, que podemos seleccionar **después de haber configurado** exitosamente las interfaces.
 
 ![Configuración de red](images/ch02_img001.png)
@@ -88,23 +92,23 @@ En caso de seleccionar la opción de IP estática, se deberá especificar la IP,
 
 ![Configuración de interfaz estática](images/ch02_img003.png)
 
-Configuración de interfaz estática
+### Selecting management interface
+
+En caso de tener múltiples interfaces, necesita seleccionar cuál será la interfaz principal para operar con este gestor. El propósito de esta interfaz es configurar el gestor como lo está haciendo aquí, para luego vincularlo con los diferentes tipos de sensores.
+
+![Selección de interfaz de gestión](images/ch02_select_manage_interface.png)
 
 ### Configuración de DNS
 
-El asistente de instalación te dará la opción de elegir si quieres o no configurar servidores DNS. Si se desea configurar un DNS.
+El asistente de instalación le dará la opción de elegir si quiere o no configurar servidores DNS, si es que realmente se desea configurar un DNS.
 
-Es obligatorio configurar al menos un servidor, sin embargo, actualmente es posible configurar hasta 3 servidores DNS en la plataforma. Esto se puede hacer en la siguiente pantalla:
+![DNS Configuration](images/ch02_start_dns.png)
+
+Si necesita configurar DNS, configura al menos un servidor. Esto se puede hacer en la pantalla siguiente:
 
 ![Configuración de DNS](images/ch02_img004.png)
 
 Configuración de DNS
-
-### Elección de la interfaz de sincronismo (WIP)
-
-En el caso en el qu estemos instalando un cluster, tendremos que seleccionar la segunda interfaz para que los managers se sincronicen.
-
-![Configuración de la interfaz de sincronismo](images/ch02_sync_network_selection.png)
 
 ### Nombre de host y dominio
 
@@ -124,11 +128,15 @@ Configuración de hostname y dominio
 RedBorder tiene la capacidad de trabajar de manera distribuida, repartiendo funciones o carga de trabajo entre dos o más nodos, a través de una red de sincronismo que permite a los nodos comunicarse y operar, para ello, empleamos **Serf**(1), es este servicio el que se encarga de crear el cluster de managers y definir los roles de los nodos.
 { .annotate }
 
+![Iniciando la configuración de Serf](images/ch02_start_serf_configuration.png)
+
 1. Serf es una solución descentralizada para descubrimiento y orquestación de servicios que es ligera, altamente disponible y tolerante a fallos.
 
 Para que Serf funcione correctamente, son necesarios tres parámetros:
 
 - Red de sincronismo
+
+La red de sincronismo es la que utilizan todos los gestores para sincronizarse entre sí. En caso de que esté instalando un clúster, asegúrese de seleccionar una interfaz diferente a la de gestión.
 
 ![Configurar red e interfaz de sincronismo](images/ch02_img006.png)
 
@@ -138,7 +146,11 @@ Para que Serf funcione correctamente, son necesarios tres parámetros:
 
 - Clave secreta para encriptar el tráfico de red de Serf
 
+Ponga una contraseña entre 6 y 20 caracteres para el Serf.
+
 ![Configurar clave de serf](images/ch02_img008.png)
+
+!!! warning "Esta contraseña debe ser la misma entre todos los gestores que se unirán al mismo clúster. En caso de haber un segundo clúster en la misma red, define una contraseña para cada clúster, para evitar que los gestores se unan al clúster incorrecto." 
 
 ### Almacenamiento con Amazon S3 (WIP)
 
@@ -150,18 +162,33 @@ Es posible también, configurar RedBorder para utilizar el servicio de Amazon RD
 
 ### Seleccionar el modo del manager
 
-Dependiendo de cómo sea la instalación de RedBorder que se quiera realizar, se puede indicar a la plataforma qué es lo que se debe ejecutar en el nodo en instalación. El caso más común será la instalación de un único manager en la red, para esto se debe elegir el modo `full`, esto indicará a la plataforma que debe ejecutar todos los servicios en el máquina en cuestión.
+Depending on the RedBorder installation you want to perform, you can indicate to the platform what should be executed on the node being installed. The most common case will be the installation the `full` mode, but in case you want to save performance, pick one of other modes instead. In case of a cluster installation, one node should've `core`mode. Sumerizing for each case:
 
-!!! info "Ten en cuenta..."
+=== "Un sólo manager"
+    Elige el modo `full`.
+
+=== "Nodo líder"
+    Elige el modo `full` de manera predeterminada, o el modo `core` para una instalación mínima.
+
+=== "Nodo seguidor"
+    Elige el modo full de manera predeterminada, o el modo deseado para ese nodo para una instalación mínima.
+
+!!! info "Tenga en cuenta..."
     Si se instalara un cluster de managers, se debe elegir que uno de los nodos trabaje en modo `core` mientras que los otros nodos deben operar en el modo `custom` y seleccionar qué servicios mantendrán.
 
 ![Configurar modo de manager](images/ch02_img009.png)
 
 Elección de modo de manager
 
-### El fin de la instalación
+### Fin de la instalación
 
-La instalación casi ha finalizado, sólo hay que esperar a que el proceso finalice. Para observar el proceso hay que ejecutar el siguiente comando: 
+La instalación casi ha finalizado, sólo hay que esperar a que el proceso finalice.
+
+![Aplicando Configuración](images/ch02_apply_conf.png)
+
+Pulse "OK" para volver a la vista de consola.
+
+Adicionalmente, puede observar los logs de la installación lanzando el siguiente comando: 
 ``` bash title="Mostrar logs the instalación"
 journalctl -u rb-bootstrap
 ```
