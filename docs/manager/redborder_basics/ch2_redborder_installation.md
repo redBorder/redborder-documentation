@@ -66,7 +66,8 @@ If you are not sure about the current setup you can cancel with the "No" option,
 
 ![Cancel wizard](images/ch02_cancel_wizard.png)
 
-!!! warning "In some steps, \"No\" option will cancel the full installation process, which means that all configuration during the setup process will be lost."
+!!! warning "Cancelling..."
+    In some steps, "No" option will cancel the full installation process, which means that all configuration during the setup process will be lost.
 
 ### Network Configuration
 
@@ -130,26 +131,27 @@ RedBorder has the ability to work in a distributed manner, distributing function
 
 ![Start Serf Configuration](images/ch02_start_serf_configuration.png)
 
-1. Serf is a decentralized solution for service discovery and orchestration that is lightweight, highly available, and fault-tolerant.
+Serf is a decentralized solution for service discovery and orchestration that is lightweight, highly available, and fault-tolerant.
 
 For Serf to work correctly, three parameters are required:
 
-- Sync network
+#### Sync network
 
 Sync network is the network for all managers to sync among them. In case you are really installing a cluster just make sure to select other interface different from management
 
 ![Configure Sync Network and Interface](images/ch02_img006.png)
 
-- Indicate the Serf mode (Unicast / Multicast)
+#### Indicate the Serf mode (Unicast / Multicast)
 
 ![Configure Serf Mode](images/ch02_img007.png)
 
-- Secret key to encrypt Serf network traffic
+#### Secret key to encrypt Serf network traffic
 
 Put a password from 6 to 20 characters for Serf.
 ![Configure Serf Key](images/ch02_img008.png)
 
-!!! warning "This password should be the same among all managers that will join to the same cluster. In case of a second cluster being in the same network, use a diffent password to prevent managers join to the wrong cluster." 
+!!! warning "If you are configuring a cluster..."
+    This password should be the same among all managers that will join to the same cluster. In case of a second cluster being in the same network, use a diffent password to prevent managers join to the wrong cluster.
 
 ### Storage with Amazon S3 (WIP)
 
@@ -172,9 +174,6 @@ Depending on the RedBorder installation you want to perform, you can indicate to
 === "Follower node"
     Choose the `full` mode as selected by default or any other mode for minimal installation.
 
-!!! warning "Please note..."
-    If a manager cluster will be installed, one of the nodes must operate in `core` mode while the other nodes must operate in `custom` mode and select which services they will maintain.
-
 ![Manager Mode Selection](images/ch02_img009.png)
 
 Manager Mode Selection
@@ -188,6 +187,6 @@ The installation is almost ready, you have to wait until the setup process finis
 Press "OK" to go back to the console.
 
 Additionally you can read the logs about the installation running this: 
-``` bash title=Print the setup logs
-journalctl -u rb-bootstrap
+``` bash title="Print the setup logs"
+    journalctl -u rb-bootstrap
 ```

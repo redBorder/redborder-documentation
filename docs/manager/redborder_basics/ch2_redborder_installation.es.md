@@ -34,7 +34,7 @@ La implementación exitosa de RedBorder requiere de al menos una máquina con el
 La primera acción para comenzar a monitorizar tu red con RedBorder es obtener los paquetes oficiales más recientes de redBorder para **Rocky Linux 9** disponibles en [repo.redborder.com](https://repo.redborder.com).
 
 !!! info "En el caso de instalar un cluster..."
-Todo el proceso de instalación especificado en esta página debe repetirse para cada manager que conformará el clúster.
+    Todo el proceso de instalación especificado en esta página debe repetirse para cada manager que conformará el clúster.
 
 ``` bash title="Configuración de los repositorios requeridos"
 dnf install epel-release && rpm -ivh https://repo.redborder.com/ng/latest/rhel/9/x86_64/redborder-repo-latest-1.0.0-1.el9.rb.noarch.rpm
@@ -68,7 +68,8 @@ Si no está seguro sobre la configuración actual, puede cancelar con la opción
 
 ![Cancelando el asistente](images/ch02_cancel_wizard.png)
 
-!!! warning "En algunos pasos, la opción \"NO\" cancelará todo el proceso de instalación, lo que significa que se perderá toda la configuración realizada durante el proceso."
+!!! warning "Cancelación..."
+    La opción "No" cancelará todo el proceso de instalación, lo que significa que se perderá toda la configuración realizada durante el proceso.
 
 ### Configuración de red
 
@@ -92,7 +93,7 @@ En caso de seleccionar la opción de IP estática, se deberá especificar la IP,
 
 ![Configuración de interfaz estática](images/ch02_img003.png)
 
-### Selecting management interface
+### Selección de interfaz de gestión
 
 En caso de tener múltiples interfaces, necesita seleccionar cuál será la interfaz principal para operar con este gestor. El propósito de esta interfaz es configurar el gestor como lo está haciendo aquí, para luego vincularlo con los diferentes tipos de sensores.
 
@@ -116,7 +117,7 @@ Durante la instalación, se da la opción de decidir cuál será el nombre de ho
 
 El nombre de host a escoger debe respetar el estandar **RFC1123**.
 
-!!! info "Ten en cuenta..."
+!!! info "Tenga en cuenta..."
     El asistente de instalación genera automáticamente un nombre de host aleatorio para la máquina, así como también indica un nombre de dominio por defecto, que se recomienda no cambiar a menos que sea necesario.
 
 ![Configurar hostname y dominio](images/ch02_img005.png)
@@ -130,27 +131,28 @@ RedBorder tiene la capacidad de trabajar de manera distribuida, repartiendo func
 
 ![Iniciando la configuración de Serf](images/ch02_start_serf_configuration.png)
 
-1. Serf es una solución descentralizada para descubrimiento y orquestación de servicios que es ligera, altamente disponible y tolerante a fallos.
+Serf es una solución descentralizada para descubrimiento y orquestación de servicios que es ligera, altamente disponible y tolerante a fallos.
 
-Para que Serf funcione correctamente, son necesarios tres parámetros:
+Para que Serf funcione correctamente, son necesarios tres parámetros: la selección de la red de sincronismo, configurar el modo de serf para localizar otros nodos y la creación de una clave.
 
-- Red de sincronismo
+#### Red de sincronismo
 
 La red de sincronismo es la que utilizan todos los gestores para sincronizarse entre sí. En caso de que esté instalando un clúster, asegúrese de seleccionar una interfaz diferente a la de gestión.
 
 ![Configurar red e interfaz de sincronismo](images/ch02_img006.png)
 
-- Indicar el modo de Serf (Unicast / Multicast)
+#### Indicar el modo de Serf (Unicast / Multicast)
 
 ![Configurar modo serf](images/ch02_img007.png)
 
-- Clave secreta para encriptar el tráfico de red de Serf
+#### Clave secreta para encriptar el tráfico de red de Serf
 
 Ponga una contraseña entre 6 y 20 caracteres para el Serf.
 
 ![Configurar clave de serf](images/ch02_img008.png)
 
-!!! warning "Esta contraseña debe ser la misma entre todos los gestores que se unirán al mismo clúster. En caso de haber un segundo clúster en la misma red, define una contraseña para cada clúster, para evitar que los gestores se unan al clúster incorrecto." 
+!!! warning "Si está configurando un cluster..."
+    Esta contraseña debe ser la misma entre todos los managers que se unirán al mismo clúster. En caso de haber un segundo clúster en la misma red, defina una contraseña para cada clúster, para conseguir que cada manager se una al clúster correcto.
 
 ### Almacenamiento con Amazon S3 (WIP)
 
@@ -162,19 +164,16 @@ Es posible también, configurar RedBorder para utilizar el servicio de Amazon RD
 
 ### Seleccionar el modo del manager
 
-Depending on the RedBorder installation you want to perform, you can indicate to the platform what should be executed on the node being installed. The most common case will be the installation the `full` mode, but in case you want to save performance, pick one of other modes instead. In case of a cluster installation, one node should've `core`mode. Sumerizing for each case:
+Dependiendo de la instalación de RedBorder que desee realizar, puede indicar a la plataforma qué debe ejecutarse en el nodo que está instalando. El caso más común será la instalación en modo `full`, pero si desea ahorrar recursos, elija uno de los otros modos en su lugar. En caso de una instalación en clúster, uno de los nodos debe estar en modo `core`. Resumiendo la configuración para cada caso:
 
 === "Un sólo manager"
-    Elige el modo `full`.
+    Elija el modo `full`.
 
 === "Nodo líder"
-    Elige el modo `full` de manera predeterminada, o el modo `core` para una instalación mínima.
+    Elija el modo `full` de manera predeterminada, o el modo `core` para una instalación mínima.
 
 === "Nodo seguidor"
-    Elige el modo full de manera predeterminada, o el modo deseado para ese nodo para una instalación mínima.
-
-!!! info "Tenga en cuenta..."
-    Si se instalara un cluster de managers, se debe elegir que uno de los nodos trabaje en modo `core` mientras que los otros nodos deben operar en el modo `custom` y seleccionar qué servicios mantendrán.
+    Elija el modo `full` de manera predeterminada, o el modo deseado para ese nodo para una instalación mínima.
 
 ![Configurar modo de manager](images/ch02_img009.png)
 
@@ -182,7 +181,7 @@ Elección de modo de manager
 
 ### Fin de la instalación
 
-La instalación casi ha finalizado, sólo hay que esperar a que el proceso finalice.
+La instalación casi ha terminado, sólo hay que esperar a que el proceso finalice.
 
 ![Aplicando Configuración](images/ch02_apply_conf.png)
 
@@ -190,5 +189,5 @@ Pulse "OK" para volver a la vista de consola.
 
 Adicionalmente, puede observar los logs de la installación lanzando el siguiente comando: 
 ``` bash title="Mostrar logs the instalación"
-journalctl -u rb-bootstrap
+    journalctl -u rb-bootstrap
 ```
