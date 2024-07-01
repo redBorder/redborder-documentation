@@ -2,3 +2,4 @@
 nav:
     - ... | index*.md
     - Getting started: getting_started
+    - Use cases: use_cases
