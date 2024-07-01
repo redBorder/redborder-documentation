@@ -20,7 +20,7 @@ The successful implementation of RedBorder requires at least one machine with th
     * Disk: 80 GB
     * RAM: 16 GB
     * CPU: 4 cores
-    * Network Interface: At least one on installing a single manager. At least two on installing a cluster node.
+    * Network Interface: At least one
 
 === "Cluster"
     * Three machines with following specifications each:
