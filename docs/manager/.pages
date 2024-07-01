@@ -1,6 +1,6 @@
 ---
 nav:
     - ... | index*.md
-    - Getting started: getting_started
-    - Integrations: integrations
-    - Use cases: use_cases
+    - RedBorder basics: redborder_basics
+    - Seeing data in more detail: more_in_detail
+    - Platform configurations: platform_configurations

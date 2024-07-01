@@ -11,12 +11,12 @@ Esta documentación proporciona una guía paso a paso para integrar [OTRS](https
 Aquí tienes un ejemplo del endpoint de la API que crearás:
 
 ```http title="Create Ticket API Endpoint"
-http://10.1.209.179/otrs/nph-genericinterface.pl/Webservice/redborder/CreateTicket?UserLogin=root@localhost&Password=redborder
+http://<virtual-machine-ip>/otrs/nph-genericinterface.pl/Webservice/redborder/CreateTicket?UserLogin=root@localhost&Password=redborder
 ```
 
 ### Parámetros
 
-- `<url>`: La URL base de tu instancia de OTRS. Por ejemplo, `http://10.1.209.179` en un entorno de desarrollo, o `https://ib-salut-otrs.com` en un entorno de producción.
+- `<url>`: La URL base de tu instancia de OTRS. Por ejemplo, `http://<virtual-machine-ip>` en un entorno de desarrollo, o `https://example.com` en un entorno de producción.
 - `UserLogin`: El nombre de usuario del usuario que realizará la solicitud. En este ejemplo, es `root@localhost`.
 - `Password`: La contraseña del usuario especificado en `UserLogin`.
 
@@ -104,5 +104,5 @@ Sigue estos pasos para crear un servicio web en OTRS:
 ![Configure redBorder Web UI to Use the OTRS API](images/otrs_step_10.png)
 
 ```http title="Ejemplo del endpoint creado"
-http://10.1.209.179/otrs/nph-genericinterface.pl/Webservice/redborder/CreateTicket?UserLogin=root@localhost&Password=redborder
+http://<virtual-machine-ip>/otrs/nph-genericinterface.pl/Webservice/redborder/CreateTicket?UserLogin=root@localhost&Password=redborder
 ```
