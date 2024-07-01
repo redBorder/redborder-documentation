@@ -20,7 +20,7 @@ The successful implementation of RedBorder requires at least one machine with th
     * Disk: 80 GB
     * RAM: 16 GB
     * CPU: 4 cores
-    * Network Interface: At least one
+    * Network Interface: At least one on installing a single manager. At least two on installing a cluster node.
 
 === "Cluster"
     * Three machines with following specifications each:
@@ -88,6 +88,12 @@ Configuring at least one server is mandatory; however, it is currently possible 
 
 DNS Configuration
 
+### Sync network selection
+
+In case you are installing a cluster, you have to select a second interface to make managers synchronize among them.
+
+![Configuración de la interfaz de sincronismo](images/ch02_sync_network_selection.png)
+
 ### Hostname and Domain
 
 During installation, you have the option to decide the hostname for the RedBorder node, as well as the domain used for communication with potential RedBorder Proxy servers or RedBorder IPS.
@@ -140,3 +146,10 @@ Depending on the RedBorder installation you want to perform, you can indicate to
 ![Manager Mode Selection](images/ch02_img009.png)
 
 Manager Mode Selection
+
+### Finising the installation
+
+The installation is almost ready, you have to wait until the setup process finish. To read the logs about it run this: 
+```
+journalctl -u rb-bootstrap
+```

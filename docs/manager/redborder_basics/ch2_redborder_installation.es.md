@@ -20,7 +20,7 @@ La implementación exitosa de RedBorder requiere de al menos una máquina con el
     * Disco: 80 GB
     * RAM: 16 GB
     * CPU: 4 núcleos
-    * Interfaz de red: Al menos una
+    * Interfaz de red: Al menos una para un manager solitario. Al menos dos para un manager en cluster.
 
 === "Cluster"
     * Al menos tres máquinas con las siguientes características:
@@ -88,6 +88,12 @@ Es obligatorio configurar al menos un servidor, sin embargo, actualmente es posi
 
 Configuración de DNS
 
+### Elección de la interfaz de sincronismo (WIP)
+
+En el caso en el qu estemos instalando un cluster, tendremos que seleccionar la segunda interfaz para que los managers se sincronicen.
+
+![Configuración de la interfaz de sincronismo](images/ch02_sync_network_selection.png)
+
 ### Nombre de host y dominio
 
 Durante la instalación, se da la opción de decidir cuál será el nombre de host para el nodo de RedBorder, así como también el dominio utilizado para la comunicación con posibles servidores Proxy de RedBorder o IPS de RedBorder.
@@ -135,8 +141,15 @@ Es posible también, configurar RedBorder para utilizar el servicio de Amazon RD
 Dependiendo de cómo sea la instalación de RedBorder que se quiera realizar, se puede indicar a la plataforma qué es lo que se debe ejecutar en el nodo en instalación. El caso más común será la instalación de un único manager en la red, para esto se debe elegir el modo `full`, esto indicará a la plataforma que debe ejecutar todos los servicios en el máquina en cuestión.
 
 !!! info "Ten en cuenta..."
-    Si se instalará un cluster de managers, se debe elegir que uno de los nodos trabaje en modo `core` mientras que los otros nodos deben operar en el modo `custom` y seleccionar qué servicios mantendrán.
+    Si se instalara un cluster de managers, se debe elegir que uno de los nodos trabaje en modo `core` mientras que los otros nodos deben operar en el modo `custom` y seleccionar qué servicios mantendrán.
 
 ![Configurar modo de manager](images/ch02_img009.png)
 
 Elección de modo de manager
+
+### El fin de la instalación
+
+La instalación casi ha finalizado, sólo hay que esperar a que el proceso finalice. Para observar el proceso hay que ejecutar el siguiente comando: 
+```
+journalctl -u rb-bootstrap
+```
