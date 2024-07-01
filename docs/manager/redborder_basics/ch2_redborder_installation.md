@@ -150,6 +150,6 @@ Manager Mode Selection
 ### Finising the installation
 
 The installation is almost ready, you have to wait until the setup process finish. To read the logs about it run this: 
-```
+``` bash title=Print the setup logs
 journalctl -u rb-bootstrap
 ```

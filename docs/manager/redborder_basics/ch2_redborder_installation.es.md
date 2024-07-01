@@ -150,6 +150,6 @@ Elección de modo de manager
 ### El fin de la instalación
 
 La instalación casi ha finalizado, sólo hay que esperar a que el proceso finalice. Para observar el proceso hay que ejecutar el siguiente comando: 
-```
+``` bash title="Mostrar logs the instalación"
 journalctl -u rb-bootstrap
 ```
