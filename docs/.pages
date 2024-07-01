@@ -3,7 +3,7 @@ nav:
     - ... | index*.md
     - Guides: guides
     - Manager: manager
-    # - Proxy: index*.md
+    - Proxy: proxy
     # - IPS: index*.md
     # - Release notes: index*.md
     - RedBorder: https://redborder.com/
