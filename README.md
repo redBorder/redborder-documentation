@@ -7,6 +7,12 @@
 
 This is the redBorder documentation repository.
 
+## Requirements
+
+This is a python project. To install requirements use pip:
+
+`pip3 install -r requirements`
+
 ## License
 
 MIT license.
