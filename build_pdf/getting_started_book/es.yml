@@ -24,3 +24,8 @@ nav:
   - index.es.md
   - guides/getting_started/first_steps.es.md
   - guides/integrations/otrs.es.md
+  - guides/use_cases/ch9_IP_tracking.es.md
+  - guides/use_cases/ch9_untangle_remote_info.es.md
+  - guides/use_cases/ch9_detect_eternalblue.es.md
+  - guides/use_cases/ch9_detect_brute_force.es.md
+  - guides/use_cases/ch9_ssh_brute_force_alert.es.md
