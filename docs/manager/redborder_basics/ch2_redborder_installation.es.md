@@ -71,6 +71,9 @@ Si no está seguro sobre la configuración actual, puede cancelar con la opción
 !!! warning "Cancelación..."
     La opción "No" cancelará todo el proceso de instalación, lo que significa que se perderá toda la configuración realizada durante el proceso.
 
+!!! warning "Si está configurando un clúster..."
+    Asegurese de completar esta guía *antes* de lanzar el asistente en los demás nodos.
+
 ### Configuración de red
 
 Este paso es opcional. Si está seguro de que las interfaces de red ya están configuradas, puede omitir este paso. De lo contrario, entra en la configuración presionando "Sí".
@@ -151,7 +154,7 @@ Ponga una contraseña entre 6 y 20 caracteres para el Serf.
 
 ![Configurar clave de serf](images/ch02_img008.png)
 
-!!! warning "Si está configurando un cluster..."
+!!! warning "Si está configurando un clúster..."
     Esta contraseña debe ser la misma entre todos los managers que se unirán al mismo clúster. En caso de haber un segundo clúster en la misma red, defina una contraseña para cada clúster, para conseguir que cada manager se una al clúster correcto.
 
 ### Almacenamiento con Amazon S3 (WIP)
@@ -188,6 +191,9 @@ La instalación casi ha terminado, sólo hay que esperar a que el proceso finali
 Pulse "OK" para volver a la vista de consola.
 
 Adicionalmente, puede observar los logs de la installación lanzando el siguiente comando: 
-``` bash title="Mostrar logs the instalación"
-    journalctl -u rb-bootstrap
+``` bash title="Print the setup logs"
+    journalctl -u rb-bootstrap -f
 ```
+
+!!! warning "Si está configurando un clúster..."
+    Espere a que el servicio de bootstrap haya terminado con la instalación del primer nodo (master node) *antes* de lanzar rb_setup_wizard en los demás nodos (worker nodes).

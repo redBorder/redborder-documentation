@@ -69,6 +69,9 @@ If you are not sure about the current setup you can cancel with the "No" option,
 !!! warning "Cancelling..."
     In some steps, "No" option will cancel the full installation process, which means that all configuration during the setup process will be lost.
 
+!!! warning "If you are configuring a cluster..."
+    Make sure to complete this guide before running setup wizard on other nodes. 
+
 ### Network Configuration
 
 This step is optional. If you are sure the network interfaces are already configured, you can skip this step. Otherwise, get into the configuration pressing "Yes".
@@ -188,5 +191,8 @@ Press "OK" to go back to the console.
 
 Additionally you can read the logs about the installation running this: 
 ``` bash title="Print the setup logs"
-    journalctl -u rb-bootstrap
+    journalctl -u rb-bootstrap -f
 ```
+
+!!! warning "If you are configuring a cluster..."
+    Wait until bootstrap has finished the first node (the master node) installation before running rb_setup_wizard in the next nodes (the worker nodes) 
