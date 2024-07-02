@@ -95,7 +95,7 @@ Listado de reportes
 
 Para crear un nuevo informe haremos clic en el botón *Nuevo informe* y rellenaremos todos los campos. También es posible importar un informe desde un archivo usando el botón Importar informe.
 
-Dentro de la creación del nuevo indorme podemos seleccionar parámetros como tipo de programación, compartir usuarios o compartir dominios. Una vez que se crea el informe, se mostrará en la lista de informes vista anteriormente.
+Dentro de la creación del nuevo informe podemos seleccionar parámetros como tipo de programación, compartir usuarios o compartir dominios. Una vez que se crea el informe, se mostrará en la lista de informes vista anteriormente.
 
 ![Edición y creación de Reportes](images/ch04_img049.png)
 
