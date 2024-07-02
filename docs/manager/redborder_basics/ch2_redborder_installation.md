@@ -196,3 +196,7 @@ Additionally you can read the logs about the installation running this:
 
 !!! warning "If you are configuring a cluster..."
     Wait until bootstrap has finished the first node (the master node) installation before running rb_setup_wizard in the next nodes (the worker nodes) 
+
+At the end of the installation process you will see something like this:
+
+![End of installation](images/ch02_end_installation.png)

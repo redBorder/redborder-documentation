@@ -197,3 +197,7 @@ Adicionalmente, puede observar los logs de la installación lanzando el siguient
 
 !!! warning "Si está configurando un clúster..."
     Espere a que el servicio de bootstrap haya terminado con la instalación del primer nodo (master node) *antes* de lanzar rb_setup_wizard en los demás nodos (worker nodes).
+
+Al final del proceso de instalación journal mostrará lo siguiente:
+
+![Final de la instalación](images/ch02_end_installation.png)
