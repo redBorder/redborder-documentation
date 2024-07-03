@@ -96,9 +96,9 @@ Follow these steps to create a web service in OTRS:
 
 ## Configure redBorder Web UI to Use the OTRS API
 
-1. Go to `Tools -> General Settings`.
-2. Scroll down to the **"OTRS API Panel"**.
-3. Enter the **Created Ticket API endpoint**.
+1. Go to `Tools -> Integrations`.
+2. Click to the  **"OTRS API Integration"** card ("Get started" button).
+3. Enter the **Create ticket OTRS API Endpoint**.
 4. Press **"Update"** button to apply the changes.
 
 ![Configure redBorder Web UI to Use the OTRS API](images/otrs_step_10.png)
