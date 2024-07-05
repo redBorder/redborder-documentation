@@ -16,7 +16,7 @@ Para la planificación de la instalación de un proxy, se deberá seguir teniend
 - **Las interfaces de gestión** (en forma de bonding) para acceso remoto tanto desde equipos normales como desde el Manager.
 - **Las interfaces de acceso IPMI para la gestión remota del hardware** (conexión SOL ó Serial Over Lan, iKVM y comandos IPMI como inicio, reinicio y apagado).
 
-Para el **Proxy** es habitual contar con hardware específico, sin excesivas capacidades.  la única condición es **la existencia de una o más interfaces de red.**
+Para el **Proxy** es habitual contar con hardware específico, sin excesivas capacidades. La única condición es **la existencia de una o más interfaces de red.**
 
 !!! info "Ten en cuenta..."
 
