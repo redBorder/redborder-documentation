@@ -61,3 +61,10 @@ After, the SSO login system is enabled. You can check it by going to the login p
 
 === "SP Parameters"
     - **SP Entity ID**: This is the URL of the SP that will receive the metadata from the IdP.
+
+## Login and register
+
+After setting all the settings, SSO can be used. To use it, go to the login path and you will see a button referring to SSO. Click on it and will redirect you to the SSO configured service of the IdP.  
+
+!!! Warning
+    If it is the first time that an account logs into redBorder, you will need to enter the credentials twice: the first time for registering and then to logging in.

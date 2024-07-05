@@ -30,7 +30,7 @@ Primero, necesitas habilitar el sistema de inicio de sesión SSO. Para eso, ve a
 authentication_mode: saml
 ```
 
-!!! note
+!!! info "Ten en cuenta..."
 
     Si en lugar de `saml` está escrito `database`, modifícalo y reinicia el servicio.
 
@@ -61,3 +61,10 @@ Después, el sistema de inicio de sesión SSO estará habilitado. Puedes comprob
 
 === "Parámetros del SP"
     - **ID de Entidad del SP**: Esta es la URL del SP que recibirá los metadatos del IdP.
+
+## Registro e inicio de sesión
+
+Después de configurar todos los ajustes, se puede iniciar sesión mediante SSO. Para usarlo, vaya a la ruta de inicio de sesión y se verá un botón que se refiere a SSO. Tras hacerse click en él, la página se redirigirá al servicio SSO configurado del IdP.  
+
+!!! Warning
+    Si es la primera vez que se accede a redBorder, se necesitará iniciar sesión dos veces: la primera para el registro del usuario y la segunda para el inicio de sesión.
