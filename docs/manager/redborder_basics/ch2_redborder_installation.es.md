@@ -53,7 +53,7 @@ Ya con los paquetes descargados e instalados, el siguiente paso es configurar Re
 Esto actualizará las rutas a los scripts y así podremos ejecutar el comando de instalación:
 
 ``` bash title="Comando de instalación del programa de Redborder"
-    rb_setup_wizard
+rb_setup_wizard
 ```
 
 El cual iniciará el **asistente de instalación** de la plataforma en consola para funcionar como guía durante todo el proceso.
@@ -192,7 +192,7 @@ Pulse "OK" para volver a la vista de consola.
 
 Adicionalmente, puede observar los logs de la installación lanzando el siguiente comando: 
 ``` bash title="Print the setup logs"
-    journalctl -u rb-bootstrap -f
+journalctl -u rb-bootstrap -f
 ```
 
 !!! warning "Si está configurando un clúster..."

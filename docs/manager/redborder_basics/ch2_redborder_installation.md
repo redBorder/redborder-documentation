@@ -53,7 +53,7 @@ With the packages downloaded and installed, the next step is to configure RedBor
 This will update the script paths, allowing us to run the **installation wizard**:
 
 ``` bash title="Installation wizard command"
-    rb_setup_wizard
+rb_setup_wizard
 ```
 
 ## Setup wizard
@@ -191,7 +191,7 @@ Press "OK" to go back to the console.
 
 Additionally you can read the logs about the installation running this: 
 ``` bash title="Print the setup logs"
-    journalctl -u rb-bootstrap -f
+journalctl -u rb-bootstrap -f
 ```
 
 !!! warning "If you are configuring a cluster..."
