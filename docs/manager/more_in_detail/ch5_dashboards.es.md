@@ -170,6 +170,28 @@ Vista Comparar
 - **Gráfico**: El usuario puede elegir entre diferentes estilos gráficos disponibles dependiendo de la pantalla seleccionada.
 - **Próximo paso**: Luego ingrese la información solicitada en el formulario y presione Crear widget. En este momento, el nuevo widget se agrega a su dashboard.
 
+##### Widgets de módulo
+Para cada módulo existen widgets que son exclusivos de estos módulos. Vamos a ver qué es lo que hace cada uno y para que sirven:
+
+###### Tráfico
+Para tráfico tenemos los siguientes widgets:
+- *Bandwidth Line*
+- *Clientes*
+- *Floor Map*
+- *Bandwidth*
+- *Heatmap*
+- *Map*
+- *Clients Map*
+- *User Experience*
+- *Access Points*
+- *Channerls Load*
+
+###### Clients
+Leerá el campo clientes y mostrará información estadísticas sobre los encontrados en el tráfico de red.
+![alt text](images/clients.png)
+
+
+
 #### Personalizar un widget de estado
 
 **Infraestructura**: Esta opción le permite seleccionar el modo que mostrará información sobre la configuración y el estado de la infraestructura de red.
