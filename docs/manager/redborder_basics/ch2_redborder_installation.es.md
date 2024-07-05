@@ -167,7 +167,7 @@ Es posible también, configurar RedBorder para utilizar el servicio de Amazon RD
 
 ### Seleccionar el modo del manager
 
-Dependiendo de la instalación de RedBorder que desee realizar, puede indicar a la plataforma qué debe ejecutarse en el nodo que está instalando. El caso más común será la instalación en modo `full`, pero si desea ahorrar recursos, elija uno de los otros modos en su lugar. En caso de una instalación en clúster, uno de los nodos debe estar en modo `core`. Resumiendo la configuración para cada caso:
+Dependiendo de la instalación de RedBorder que desee realizar, puede indicar a la plataforma qué debe ejecutarse en el nodo que está instalando. El caso más común será la instalación en modo `full`, pero si desea ahorrar recursos, elija uno de los otros modos en su lugar. En caso de una instalación en clúster, uno de los nodos debe estar en modo `full`o `core`. Resumiendo la configuración para cada caso:
 
 === "Un sólo manager"
     Elija el modo `full`.

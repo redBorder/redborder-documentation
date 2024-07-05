@@ -166,7 +166,7 @@ It is also possible to configure RedBorder to use the Amazon RDS service or some
 
 ### Selecting Manager Mode
 
-Depending on the RedBorder installation you want to perform, you can indicate to the platform what should be executed on the node being installed. The most common case will be the installation the `full` mode, but in case you want to save performance, pick one of other modes instead. In case of a cluster installation, one node should've `core`mode. Sumerizing for each case:
+Depending on the RedBorder installation you want to perform, you can indicate to the platform what should be executed on the node being installed. The most common case will be the installation the `full` mode, but in case you want to save performance, pick one of other modes instead. In case of a cluster installation, one node should've `full`or `core`mode. Sumerizing for each case:
 
 === "Single node"
     Choose the `full` mode.
