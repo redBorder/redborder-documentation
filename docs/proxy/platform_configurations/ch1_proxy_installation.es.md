@@ -23,7 +23,7 @@ El primer paso para comenzar a monitorear su red con RedBorder es obtener los ú
 
 ## Installing the RPM
 
-``` bash title="Latest"
+``` bash title="Última versión"
 dnf install epel-release -y && rpm -ivh https://repo.redborder.com/ng/latest/rhel/9/x86_64/redborder-repo-latest-1.0.0-1.el9.rb.noarch.rpm
 ```
 
@@ -51,9 +51,13 @@ Habiendo iniciado el **asistente de instalación** para la plataforma en la cons
 
 ![Iniciando el asistente](/images/ch01_configure_wizard_start.png)
 
+Iniciando el asistente
+
 Si no está seguro sobre la configuración actual, puede cancelar con la opción "No", la cual mostrará la siguiente pantalla antes de volver a la vista de la consola.
 
 ![Cancelando el asistente](images/ch01_cancel_wizard.png)
+
+Cancelando el asistente
 
 !!! warning "Cancelación..."
     La opción "No" cancelará todo el proceso de instalación, lo que significa que se perderá toda la configuración realizada durante el proceso.
@@ -63,6 +67,8 @@ Si no está seguro sobre la configuración actual, puede cancelar con la opción
 Este paso es opcional. Si está seguro de que las interfaces de red ya están configuradas, puede omitir este paso. De lo contrario, entra en la configuración presionando "Sí".
 
 ![Inicio de la configuración de red](images/ch02_start_network_conf.png)
+
+Inicio de la configuración de red
 
 En el recuadro inferior se listan las interfaces de red existentes en el equipo en cuestión. Debajo de todas las interfaces que posee el equipo, está la opción `Finalize`, que podemos seleccionar **después de haber configurado** exitosamente las interfaces.
 
@@ -80,11 +86,15 @@ En caso de seleccionar la opción de IP estática, se deberá especificar la IP,
 
 ![Configuración de interfaz estática](images/ch01_img003.png)
 
+Configuración de interfaz estática
+
 ### Configuración de DNS
 
 El asistente de instalación le dará la opción de elegir si quiere o no configurar servidores DNS, si es que realmente se desea configurar un DNS.
 
 ![DNS Configuration](images/ch02_start_dns.png)
+
+DNS Configuration
 
 Si necesita configurar DNS, configura al menos un servidor. Esto se puede hacer en la pantalla siguiente:
 
@@ -98,17 +108,23 @@ El proxy se asociará a un manager o clúster con el que compartir los datos cap
 
 ![Configuración con el servidor remoto](images/ch01_cloud_config.png)
 
+Configuración con el servidor remoto
+
 ### Fin de la configuración
 
 Antes de aplicar la configuración, el asistente nos resumirá toda la información rellenada, a la espera de que el usuario la acepte.
 
 [!Aceptar configuración](images/ch01_apply_conf.png)
 
+Aceptar configuración
+
 ### Fin de la instalación
 
 La instalación casi ha terminado, sólo hay que esperar a que el proceso finalice.
 
 ![Aplicando Configuración](images/ch01_applying_conf.png)
+
+Aplicando Configuración
 
 Pulse "OK" para volver a la vista de consola.
 
