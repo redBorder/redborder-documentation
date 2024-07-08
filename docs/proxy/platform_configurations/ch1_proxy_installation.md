@@ -127,6 +127,10 @@ journalctl -u rb-bootstrap -f
 
 At the end of the installation process, the journal will show the following:
 
-![Final de la instalación](images/ch01_end_registration.png)
+![End of installation](images/ch01_end_registration.png)
 
-##
+End of installation
+
+## What's Next?
+
+In the next chapter, we will finish associating the proxy with the manager so that it can retransmit data.

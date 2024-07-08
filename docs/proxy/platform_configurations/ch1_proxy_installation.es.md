@@ -137,4 +137,6 @@ Al final del proceso de instalación journal mostrará lo siguiente:
 
 ![Final de la instalación](images/ch01_end_registration.png)
 
-##
+## ¿Qué es lo siguiente?
+
+En el siguiente capítulo terminaremos de asociar el proxy al manager para que pueda retransmitir datos.
