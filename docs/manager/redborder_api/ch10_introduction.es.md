@@ -1,9 +1,9 @@
 
-# Introducción a la API de RedBorder
+# Introducción a la *API* de RedBorder
 
-La API completa utiliza un estilo HTTP REST a través de una interfaz web HTTPS. La consulta debe expresarse en formato JSON para especificar qué valores se están solicitando. Por ejemplo:
+La *API* completa utiliza un estilo *HTTP REST* a través de una interfaz web *HTTPS*. La consulta debe expresarse en formato *JSON* para especificar qué valores se están solicitando. Por ejemplo:
 
-!!! example "Petición a la API"
+!!! example "Petición a la *API*"
 
         {
           "dataSource": "rb_flow",
@@ -26,7 +26,7 @@ La API completa utiliza un estilo HTTP REST a través de una interfaz web HTTPS.
 
 La petición anterior devolverá algo similar a esto (el resultado ha sido truncado):
 
-!!! example "Respuesta de la API"
+!!! example "Respuesta de la *API*"
 
         [
           {
@@ -75,21 +75,21 @@ La petición anterior devolverá algo similar a esto (el resultado ha sido trunc
 
 La *Rest API* utiliza una **Llave de Acceso** generada con la **Interfaz Gráfica Web**. Para obtener dicha llave, es necesario que haga click sobre su nombre de usuario, en el **Área de configuración**, ubicada en la parte derecha de la **Barra de menú**. Aquí dentro, veremos el espacio que indica la llave de acceso.
 
-![Configuración de usuario: llave de acceso API](images/ch10_img001.png)
+![Configuración de usuario: llave de acceso *API*](images/ch10_img001.png)
 
-Configuración de usuario: llave de acceso API
+Configuración de usuario: llave de acceso *API*
 
-Esta opción se debe incluir dentro de la URL de la petición a la API.
+Esta opción se debe incluir dentro de la URL de la petición a la *API*.
 
     https://<hostname>/api/data?auth_token=<API_key>
 
-Cada petición a la API deberá contener esta llave de acceso, y la petición tendrá los permisos que tiene el usuario que es dueño de la llave de acceso.
+Cada petición a la *API* deberá contener esta llave de acceso, y la petición tendrá los permisos que tiene el usuario que es dueño de la llave de acceso.
 
-El resto de los parámetros debe proporcionarse en los datos de carga útil del *POST*. El formato de la carga útil debe ser JSON como vimos en el ejemplo anterior. Por ejemplo, si guardamos la última consulta en un archivo llamado data.body, podemos hacer una petición simple como esta:
+El resto de los parámetros debe proporcionarse en los datos de carga útil del *POST*. El formato de la carga útil debe ser *JSON* como vimos en el ejemplo anterior. Por ejemplo, si guardamos la última consulta en un archivo llamado `data.body`, podemos hacer una petición simple como esta:
 
     curl --insecure -X POST 'https://<hostname>/api/data?auth_token=<API_key>' -H 'content-type: application/json' -d @data.body
 
-## Parámetros JSON
+## Parámetros *JSON*
 
 | Parámetro          | Descripción                            |
 | ------------------ | -------------------------------------- |
@@ -108,14 +108,14 @@ El resto de los parámetros debe proporcionarse en los datos de carga útil del 
 
 Para ver los diferentes valores que los campos pueden tomar, despliegue las pestañas correspondientes:
 
-??? note "dataSource"
+??? note "`dataSource`"
 
-    - `rb_flow`: base de datos de Netflow/sFlow con los datos del tráfico.
-    - `rb_state`: estado de salud de las estaciones inalámbricas, obtenido por NMSP.
-    - `rb_event`: base de datos de IDS/IPS con los datos de intrusiones.
-    - `rb_monitor`: base de datos para monitorización SNMP.
+    - `rb_flow`: base de datos de *Netflow/sFlow* con los datos del tráfico.
+    - `rb_state`: estado de salud de las estaciones inalámbricas, obtenido por *NMSP*.
+    - `rb_event`: base de datos de *IDS/IPS* con los datos de intrusiones.
+    - `rb_monitor`: base de datos para monitorización *SNMP*.
 
-??? note "granularity"
+??? note "`granularity`"
 
     Puede ser un intervalo ya definido como `second`, `minute`, `fifteen_minute`, `thirty_minute`, `hour` o `day`.
 
@@ -123,13 +123,13 @@ Para ver los diferentes valores que los campos pueden tomar, despliegue las pest
     
     En el ejemplo, se establece en el valor especial `all`, lo que significa agrupar todos los puntos de datos en el mismo *bucket* de tiempo.
 
-??? note "queryType"
+??? note "`queryType`"
 
     - `groupBy`: este es el tipo de petición más flexible, pero también es la que puede llegar a tener peor desempeño.
-    - `topN`: similar a una petición del anterior tipo, pero agrupando y sorteando por una sola dimensión. Esta es mucho más rápida que *groupBy*.
+    - `topN`: similar a una petición del anterior tipo, pero agrupando y sorteando por una sola dimensión. Esta es mucho más rápida que `groupBy`.
     - `timeseries`: esta es usada para generar series temporales, utilizando los agregadores especificados.
 
-??? note "aggregations"
+??? note "`aggregations`"
 
     Hay diferentes agregadores dependiendo del `dataSource` utilizado:
 
@@ -149,7 +149,7 @@ Para ver los diferentes valores que los campos pueden tomar, despliegue las pest
         * `{type: "min", name: "min", fieldName: "min_value"}` -> valor **mínimo** para el parámetro monitoreado
         * `{type: "max", name: "max", fieldName: "max_value"}` -> valor **máximo** para el parámetro monitoreado
 
-??? note "orderBy"
+??? note "`orderBy`"
 
     Este parámetro tiene los siguientes campos:
 
@@ -273,11 +273,11 @@ Para ver un listado de las dimensiones disponibles, despliega la siguiente pesta
 
 ## Filtros
 
-Un filtro es un objeto JSON que indica qué filas de datos deben incluirse en el cálculo de una petición. Es esencialmente el equivalente de la cláusula WHERE en SQL, así que será posible utilizar los filtros de una manera similar a como se haría con dicha cláusula.
+Un filtro es un objeto *JSON* que indica qué filas de datos deben incluirse en el cálculo de una petición. Es esencialmente el equivalente de la cláusula WHERE en SQL, así que será posible utilizar los filtros de una manera similar a como se haría con dicha cláusula.
 
 ### `selector`
 
-El filtro más simple es un filtro selector. El filtro selector coincidirá una dimensión específica con un valor específico. Los filtros selectores pueden usarse como filtros base para expresiones booleanas más complejas de filtros.
+El filtro más simple es un filtro `selector`. El filtro coincidirá una dimensión específica con un valor específico. Los filtros selectores pueden usarse como filtros base para expresiones booleanas más complejas de filtros.
 
 !!! example "Sintaxis para filtro `selector`"
 
@@ -289,7 +289,7 @@ El filtro más simple es un filtro selector. El filtro selector coincidirá una 
 
 ### `regex`
 
-El filtro de expresión regular es similar al filtro selector, pero utiliza expresiones regulares. Coincide la dimensión especificada con el patrón dado. El patrón puede ser cualquier expresión regular estándar de Java.
+Este filtro es similar al filtro `selector`, pero utiliza expresiones regulares. Coincide la dimensión especificada con el patrón dado. El patrón puede ser cualquier expresión regular estándar de Java.
 
 !!! example "Sintaxis para filtro `regex`"
 

@@ -1,5 +1,5 @@
 
-# Ejemplos de peticiones a la API
+# Ejemplos de peticiones a la *API*
 
 ## `rb_flow`
 
@@ -280,7 +280,7 @@
           }
         }
 
-??? example "Agrupar por IP de origen mostrando el conteo de eventos por IP de origen. Se mostrarán todas"
+??? example "Agrupar por IP de origen mostrando el conteo de eventos por IP de origen"
 
         {
           "dataSource": "rb_event",
