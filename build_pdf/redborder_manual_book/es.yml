@@ -35,3 +35,5 @@ nav:
   - manager/platform_configurations/ch6_sensors.es.md
   - manager/platform_configurations/ch7_tools_and_admin.es.md
   - manager/platform_configurations/ch7_4_general_config.es.md
+  - manager/redborder_api/ch10_introduction.es.md
+  - manager/redborder_api/ch10_use_examples.es.md
