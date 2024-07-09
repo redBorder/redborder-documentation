@@ -1,45 +1,45 @@
+# Definition
+## What is an IPS?
 
-# ¿Qué es un IDS?
+An **IPS** (Intrusion Prevention System) is a network intrusion prevention system for protecting an organization's network(s). It is usually a specific hardware device that is integrated into the network topology to block and protect against intrusions. This is done by analyzing traffic for anomalies, specific signatures, or suspicious behaviors. For each type of detected intrusion, the system can decide whether the intrusion should be ignored, logged, an alert triggered to notify the incident response team, or directly blocked.
 
-An IDS is an Intrusion Detection System in the network(s) to protect an organization. It tends to be a specific software that runs in the user space and that inspects the traffic reflected (Mirror/ SPAN port) in a system interface or circulates between two interfaces joined by a bridge (software switch). The said traffic is analyzed by searching for anomalies, specific signatures or suspicious behavior. 
-The objective of the IDS is to detect intrusions and issue alerts without interfering with the organization's traffic.
+In summary, the goal of an IPS is to **block** traffic packets that are considered **intrusions**.
 
-# What is an IPS?
-An IPS is an Intrusion Prevention System in the organization's network(s). Its operation is identical to that of the IDS (in fact it is usually the same software with an adapted behavior), except in this case it does interfere with the organization's traffic, such that when a communication related to a system attack is detected, you can choose not only to launch alerts but also to discard the said communication's packets, creating the same effect as a firewall.
+## Comparison with IDS
 
-## Escenario básico para la instalación del IPS
+- The goal of an IDS (Intrusion Detection System) is to **detect intrusions** and raise alerts without interfering with the organization's traffic, which means it will never block any packets, unlike an IPS.
+- Additionally, an IDS can be configured in parallel with the topology, making its interposition optional. It probes the traffic mirrored from a port (mirror port or SPAN) to an interface of the system or the traffic circulating between two interfaces connected in a bridge (software switch).
+- Like the IPS, the IDS can ignore the intrusion, log the incident, or trigger an alert. However, it cannot block traffic.
 
-A typical basic scenario proposed for the solution consists of a group of sensors arranged at different sensitive points in the organization's network that will connect to a Manager or cluster of Managers to be managed and monitored.
-The said points consist of network links, called segments, through which the sensitive traffic will circulate and which the sensor will analyze more or less transparently, according to the operating mode configured (IPS/IDS).
-Some fundamental aspects should be kept in mind in planning the installation of sensor equipment:
-The bypass segments (specific paired network interfaces, normally with bypass support) will be inserted in the middle of the traffic to be analyzed.
-				
-The management interfaces </emphasis> (bonding) for remote access both from normal machines and from the Manager.
-IPMIs for the remote management of the hardware (Serial Over Lan (SOL) connection, iKVM IPMI commands such as start, restart, and turn off).
-For the Manager, since specific hardware is not necessary, the only condition is the presence of at least two network interfaces. 
-This allows for, a bonding for the management and connection of sensors and another bonding (optional) for communications to other networks. Both systems support the 802.1q standard for virtual LAN (opctional when configuring).
-IT IS VERY IMPORTANT that the configuration of the Manager (or cluster of Managers) be performed first before configuring and registering the sensors. The Mangaer must be operational and in a network accesible to the sensors. Some of the sensor configuration processes depend on access to the Manager. The installation scenario for the redborder Manager is the same independently of the sensors being installed and registered (IPS, Flow, Malware (beta) or Vault (beta)).
+# What is Redborder IPS?
 
-![Escenario básico para la instalación del IPS](images/ch01_img001.png)
+The Redborder IPS can function as both an IPS and an IDS, depending on the operating mode and how it is integrated into the network topology. For brevity, we simply call it IPS in Redborder.
 
-Escenario básico para la instalación del Manager
-Basic scenario for the installation of the Manager
+## Basic Scenario for IPS Installation
 
-## Estructura de la interfaz de usuario del asistente de instalación
+A typical basic scenario proposed by the solution involves a set of sensors placed at various sensitive points in the organization's network, which will connect to a manager or cluster of managers for management and monitoring. These points consist of network links, called segments, through which sensitive traffic circulates and which the sensor will analyze more or less transparently, depending on the configured operating mode (IPS/IDS). For planning the installation of sensor equipment, some fundamental aspects should be considered:
+- Bypass segments (paired specific network interfaces, usually with bypass support) will be interposed in the middle of the traffic to be analyzed.
+- Management interfaces (in the form of bonding) for remote access from both normal equipment and the Manager.
+- IPMI access interfaces for remote hardware management (SOL or Serial Over LAN connection, iKVM, and IPMI commands like start, restart, and shutdown).
+For the **Manager**, specific hardware is not required; the only condition is the existence of at least two network interfaces.
+- This allows for the creation of a bonding for management and connection with the sensors and another bonding (optional) for communications to other networks. Both systems support the 802.1q standard for virtual LAN (optional when configuring).
 
-Para nuestra nueva versión de redborder NG hemos renovado por completo el asistente de instalación. Ahora contamos con un asistente más intuitivo y sencillo de utilizar, además de configuraciones nuevas para las nuevas adiciones a la plataforma.
+!!! warning=If you have not installed the manager...
+It is important to configure the Manager (or cluster of managers) before configuring and registering the first IPS sensor. The Manager must be operational and on a network accessible to the sensors. Some sensor configuration processes depend on access to the Manager. The installation scenario of the Redborder Manager is the same regardless of the sensors that are installed and registered (IPS, Flow, Malware (WIP), or Vault).
 
-![Pantalla inicial del asistente de instalación](images/ch01_img002.png)
+![Basic Scenario for IPS Installation](../../manager/redborder_basics/images/ch01_img001.png)
 
-Pantalla inicial del asistente de instalación
+Basic Scenario for IPS Installation
 
-!!! info "Ten en cuenta..."
-    De momento, solo está disponible el asistente de instalación en el **idioma inglés**
+## User Interface Structure of the Installation Assistant
 
-### Selección de opciones
+![Initial Screen of the Installation Assistant](../../manager/redborder_basics/images/ch01_img002.png)
 
-Navegar por nuestro nuevo asistente de instalación es muy sencillo:
+Initial Screen of the Installation Assistant
 
-- Moverse entre las opciones disponibles: pulsa las **flechas del teclado**
-- Marcar una casilla: pulsa la tecla de **espacio**.
-- Seleccionar una opción: pulsa la tecla de **enter**.
+### Option Selection
+
+Navigating through our installation assistant is very simple:
+- Move between the available options: press the **arrow keys**.
+- Check a box: press the **space** key.
+- Select an option: press the **enter** key.
