@@ -70,7 +70,15 @@ If you are not sure about the current setup you can cancel with the "No" option,
     In some steps, "No" option will cancel the full installation process, which means that all configuration during the setup process will be lost.
 
 !!! warning "If you are configuring a cluster..."
-    Make sure to complete this guide before running setup wizard on other nodes. 
+    Make sure to complete this guide before running setup wizard on other nodes.
+
+### Selection of Options
+
+Navigating through our installation assistant is very simple:
+
+- Move between the available options: press the **arrow keys**.
+- Check a box: press the **space** key.
+- Select an option: press the **enter** key.
 
 ### Network Configuration
 
