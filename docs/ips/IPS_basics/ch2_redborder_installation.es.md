@@ -1,6 +1,4 @@
-
 # Instalación del IPS de RedBorder
-
 
 ## Requisitos de la instalación
 
@@ -48,12 +46,18 @@ Habiendo iniciado el **asistente de instalación** para la plataforma en la cons
 
 ![Iniciando el asistente](images/ch02_configure_wizard_start.png)
 
+Iniciando el asistente
+
 Si no está seguro sobre la configuración actual, puede cancelar con la opción "No", la cual mostrará la siguiente pantalla antes de volver a la vista de la consola.
 
 ### Configuración de red
 
-Normalización del nombre de las interfaces
+#### Normalización del nombre de las interfaces
+
 ![Normalización del nombre de las interfaces](ch01_interface_naming_warn.png)
+
+Normalización del nombre de las interfaces
+
 Después de confirmar, el IPS se reiniciará y podremos reanudar lanzando de nuevo el asistente:
 
 ``` bash title="Comando de instalación del programa de Redborder"
@@ -87,14 +91,12 @@ El asistente de instalación nos dará la opción de elegir si quieremos configu
 Configuración de DNS
 
 <details>
-
 <summary> PASO OMITIDO COLAPSADO </summary>
 ### Selección de la interfaz de administración
-
 Se nos pedirá que seleccionamos una de las interfaces como interfaz de administración. Mientras que la interfaz de administración servirá para conectarse con otras máquinas de redborder o con equipos de administración, el resto de interfaces se ocuparán de leer y trasmitir tráfico.
 
 !!! info "Recomendación"
-Se recomienda utilizar la eth0 como interfaz de administración, y así queda claro qué la primera es la interfaz de administración
+    Se recomienda utilizar la eth0 como interfaz de administración, y así queda claro qué la primera es la interfaz de administración
 
 ![Selección de la interfaz de administración](images/ch01_select_management_interface.png)
 
@@ -155,6 +157,8 @@ Y desaparecerán de la lista previa:
 
 ![Configuración de segmentos](images/ch02_configure_segments.png)
 
+Configuración de segmentos
+
 #### Finalizar la configuración de segmentos
 
 Cuando hayamos configurado los segmentos deseados. Pulsamos **finalizar**.
@@ -163,7 +167,7 @@ Cuando hayamos configurado los segmentos deseados. Pulsamos **finalizar**.
 
 El ips se asociará a un manager o clúster con el que compartir los datos capturados. Para que se pueda asociar es necesario indicar la dirección del manager o clúster. Se puede indicar tanto una dirección de dominio como una IP.
 
-![Configuración con el servidor remoto](images/ch01_cloud_config.png)
+![Configuración con el servidor remoto](../../proxy/platform_configurations/images/ch01_cloud_config.png)
 
 Configuración con el servidor remoto
 
@@ -171,7 +175,7 @@ Configuración con el servidor remoto
 
 Antes de aplicar la configuración, el asistente nos resumirá toda la información rellenada, a la espera de que el usuario la acepte.
 
-[!Aceptar configuración](images/ch02_apply_conf.png)
+![Aceptar configuración](images/ch02_apply_conf.png)
 
 Aceptar configuración
 
@@ -185,15 +189,16 @@ Aplicando Configuración
 
 Pulse "OK" para volver a la vista de consola.
 
-Adicionalmente, puede observar los logs del proceso de registro con el manager mediante el siguiente comando: 
+Adicionalmente, puede observar los logs del proceso de registro con el manager mediante el siguiente comando:
+
 ``` bash title="Print the setup logs"
 journalctl -u rb-register -f
 ```
 
 Al final del proceso de instalación journal mostrará lo siguiente:
 
-![Final de la instalación](images/ch01_end_registration.png)
+![Final de la instalación](../../proxy/platform_configurations/images/ch01_end_registration.png)
 
 ## ¿Qué es lo siguiente?
 
-En el siguiente capítulo terminaremos de asociar el ips al manager para que pueda tomar el tráfico y alertar de las intrusiones detectadas en él.
+En el siguiente capítulo terminaremos de asociar el IPS al manager para que pueda tomar el tráfico y alertar de las intrusiones detectadas en él.
