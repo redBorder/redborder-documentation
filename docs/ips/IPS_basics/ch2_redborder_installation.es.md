@@ -155,26 +155,45 @@ Y desaparecerán de la lista previa:
 
 ![Configuración de segmentos](images/ch02_configure_segments.png)
 
-#### Finalizar
+#### Finalizar la configuración de segmentos
 
 Cuando hayamos configurado los segmentos deseados. Pulsamos **finalizar**.
 
-### Nombre de host y dominio
+### Configuración con el servidor remoto
 
-Durante la instalación, se da la opción de decidir cuál será el nombre de host para el nodo de RedBorder, así como también el dominio utilizado para la comunicación con posibles servidores Proxy de RedBorder o IPS de RedBorder.
+El ips se asociará a un manager o clúster con el que compartir los datos capturados. Para que se pueda asociar es necesario indicar la dirección del manager o clúster. Se puede indicar tanto una dirección de dominio como una IP.
 
-El nombre de host a escoger debe respetar el estandar **RFC1123**.
+![Configuración con el servidor remoto](images/ch01_cloud_config.png)
 
-!!! info "Ten en cuenta..."
-    El asistente de instalación genera automáticamente un nombre de host aleatorio para la máquina, así como también indica un nombre de dominio por defecto, que se recomienda no cambiar a menos que sea necesario, con el fin de que pueda registrarse contra los managers
+Configuración con el servidor remoto
 
-![Configurar hostname y dominio](images/ch02_img005.png)
+### Fin de la configuración
 
-Configuración de hostname y dominio
+Antes de aplicar la configuración, el asistente nos resumirá toda la información rellenada, a la espera de que el usuario la acepte.
 
-### Finalizando la configuración
+[!Aceptar configuración](images/ch02_apply_conf.png)
 
-Para finalizar el proceso de instalación, el IPS necesita un poco de tiempo, pero eventualmente nos devolverá a la consola, confirmando que se ha 
+Aceptar configuración
 
+### Fin de la instalación
 
-![Finalización de la configuración](images/ch01_finishing_configuration)
+La instalación casi ha terminado, sólo hay que esperar a que el proceso finalice.
+
+![Aplicando Configuración](images/ch02_finishing_configuration.png)
+
+Aplicando Configuración
+
+Pulse "OK" para volver a la vista de consola.
+
+Adicionalmente, puede observar los logs del proceso de registro con el manager mediante el siguiente comando: 
+``` bash title="Print the setup logs"
+journalctl -u rb-register -f
+```
+
+Al final del proceso de instalación journal mostrará lo siguiente:
+
+![Final de la instalación](images/ch01_end_registration.png)
+
+## ¿Qué es lo siguiente?
+
+En el siguiente capítulo terminaremos de asociar el ips al manager para que pueda tomar el tráfico y alertar de las intrusiones detectadas en él.
