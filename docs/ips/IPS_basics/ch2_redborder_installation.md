@@ -220,17 +220,27 @@ Applying Configuration
 
 Click "OK" to return to the console view.
 
-Additionally, you can view the registration process logs with the following command:
+Additionally, you can view the registration process logs with the related command:
+
+#### Proxy mode
 
 ``` bash title="Command run the setup wizard"
 journalctl -u rb-register -f
 ```
 
-At the end of the installation process, the journal will display the following:
+At the end of the installation process, the journal will display these logs:
 
 ![End of installation](images/ch01_end_registration.png)
 
-End of installation
+#### Manager mode
+
+``` bash title="Display logs register"
+cat /var/log/rb-register-common/register.log
+```
+
+At the end of the installation process, the journal will display these logs:
+
+![End of installation](images/ch01_end_registration_manager.png)
 
 ## What's Next?
 

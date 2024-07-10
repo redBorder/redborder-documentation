@@ -220,15 +220,26 @@ Aplicando Configuración
 
 Pulse "OK" para volver a la vista de consola.
 
-Adicionalmente, puede observar los logs del proceso de registro con el manager mediante el siguiente comando:
+Adicionalmente, puede observar los logs del proceso de registro con el manager mediante el comando correspondiente
 
-``` bash title="Print the setup logs"
+#### Modo Proxy
+
+``` bash title="Mostrar los logs de registro"
 journalctl -u rb-register -f
 ```
 
-Al final del proceso de instalación journal mostrará lo siguiente:
+Al final del proceso de instalación journal mostrará logs de registro:
 
 ![Final de la instalación](images/ch01_end_registration.png)
+
+#### Modo Manager
+
+``` bash title="Mostrar los logs de registro"
+cat /var/log/rb-register-common/register.log
+```
+Al final del proceso de instalación journal mostrará logs de registro:
+
+![Final de la instalación](images/ch01_end_registration_manager.png)
 
 ## ¿Qué es lo siguiente?
 
