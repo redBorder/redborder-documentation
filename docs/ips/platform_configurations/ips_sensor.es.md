@@ -1,5 +1,3 @@
-# Sensor IPS
-
 ## Identificar el sensor IPS
 
 En el caso de que el IPS se haya instalado en modo **proxy**, es necesario reclamar el sensor en el manager para empezar a retransmitir los datos provenientes del IPS. Para ello, hay que dirigirse a la web a la sección **Sensors**. En la lista de sensores deberíamos ver una sección llamada **Unclaimed**.

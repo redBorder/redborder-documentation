@@ -1,5 +1,3 @@
-## IPS sensor
-
 ## Identify the IPS sensor
 
 In case that IPS has been installed in **proxy** mode, it is necessary to claim the sensor in the manager to start retransmitting the data coming from the IPS. To do this, go to the **Sensors** section of the website. In the list of sensors you should see a section called **Unclaimed**.
