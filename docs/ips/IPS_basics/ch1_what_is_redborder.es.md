@@ -41,6 +41,7 @@ Pantalla inicial del asistente de instalación
 ### Selección de opciones
 
 Navegar por nuestro asistente de instalación es muy sencillo:
-- Moverse entre las opciones disponibles: pulsa las **flechas del teclado**
-- Marcar una casilla: pulsa la tecla de **espacio**.
-- Seleccionar una opción: pulsa la tecla de **enter**.
+
+* Moverse entre las opciones disponibles: pulsa las **flechas del teclado**
+* Marcar una casilla: pulsa la tecla de **espacio**.
+* Seleccionar una opción: pulsa la tecla de **enter**.

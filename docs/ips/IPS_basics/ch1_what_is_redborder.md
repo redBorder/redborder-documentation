@@ -41,6 +41,7 @@ Initial Screen of the Installation Assistant
 ### Option Selection
 
 Navigating through our installation assistant is very simple:
-- Move between the available options: press the **arrow keys**.
-- Check a box: press the **space** key.
-- Select an option: press the **enter** key.
+
+* Move between the available options: press the **arrow keys**.
+* Check a box: press the **space** key.
+* Select an option: press the **enter** key.
