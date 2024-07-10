@@ -1,3 +1,5 @@
+# Sensor IPS
+
 ## Identificar el sensor IPS
 
 Identificar el IPS será más o menos fácil dependiendo del modo en el que se haya instalado el IPS.
