@@ -1,4 +1,4 @@
 ---
 nav:
     - IPS basics: IPS_basics
-    - Platform_configurations: platform_configurations
+    - IPS configuration: platform_configurations
