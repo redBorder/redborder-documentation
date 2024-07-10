@@ -1,10 +1,14 @@
 # Instalación del IPS de RedBorder
 
+A continuación se detalla la instalación de base de un IPS de Redborder con el que poder analizar tráfico para detectar intrusiones en él. Debido a que es un trabajo específico y con una gran carga, se considera necesario tener una máquina instalada para ese propósito. 
+
+Existen dos modos de instalación para el IPS: la versión mínima que emula el comportamiento del **proxy** y la versión integrada en un nodo que actúa, además de IPS, como **manager**. En función de cómo vayamos a instalar el IPS, utilizaremos uno u otro.
+
 ## Requisitos de la instalación
 
-La implementación exitosa de RedBorder requiere una máquina con el sistema operativo **Rocky Linux 9** instalado. Los requisitos de hardware de la máquina deben ser como mínimo:
+La implementación exitosa del IPS de RedBorder requiere una máquina con el sistema operativo **Rocky Linux 9** instalado. Adicionalmente, será necesaria la preinstalación de un **Manager** de Redborder contra el que registrar el IPS. Estos son los especificaciones de este IPS:
 
-=== "IPS"
+=== "Recomendado"
 
     * Disco: 50 GB
     * RAM: 16 GB
@@ -163,13 +167,34 @@ Configuración de segmentos
 
 Cuando hayamos configurado los segmentos deseados. Pulsamos **finalizar**.
 
-### Configuración con el servidor remoto
+## Modo del nodo
+
+En este punto tenemos que elegir en qué modo va a actuar el IPS. En el caso de proxy, el asistente nos pedirá la dirección de un manager contra el que registrarse. Por otro lado, en modo manager, el asistente nos pedirá la dirección del manager **que hace de servidor web**; así que nos pedirá también las **credenciales** del usuario **administrador** que está registrando este IPS.
+
+!!! info "Tenga en cuenta..."
+    La configuración del IPS en modo manager supondrá el registro automático del sensor contra la web.
+
+### Modo proxy: Configuración con el servidor remoto
 
 El ips se asociará a un manager o clúster con el que compartir los datos capturados. Para que se pueda asociar es necesario indicar la dirección del manager o clúster. Se puede indicar tanto una dirección de dominio como una IP.
 
 ![Configuración con el servidor remoto](../../proxy/platform_configurations/images/ch01_cloud_config.png)
 
 Configuración con el servidor remoto
+
+### Modo manager: Registro contra la web
+
+El ips se asociará a un manager que aloje la web. Para que se pueda asociar es necesario indicar la dirección del manager y las credenciales de un usuario con permisos de administración. Adicionalmente, podemos modificar el nombre del sensor cuando se registre en la web:
+
+![Configuración de registro del IPS](images/ch02_ips_mode.png)
+
+Configuración de registro del IPS
+
+Al pulsar OK, nos pedirá la contraseña de administrador registrado en la **web**:
+
+![Contraseña de usuario web](images/ch02_pasword_config.png)
+
+Contraseña de usuario web
 
 ### Fin de la configuración
 
@@ -201,4 +226,7 @@ Al final del proceso de instalación journal mostrará lo siguiente:
 
 ## ¿Qué es lo siguiente?
 
-En el siguiente capítulo terminaremos de asociar el IPS al manager para que pueda tomar el tráfico y alertar de las intrusiones detectadas en él.
+En el siguiente capítulo terminaremos de asociar el IPS al manager para que pueda tomar el tráfico y alertar de las intrusiones detectadas en él. Todo ello gestionable desde la web.
+
+!!! info "Si instaló el IPS en modo manager..."
+    Recuerde que si ha instalado el ips en modo manager, el proceso de asociación ya debe haber finalizado

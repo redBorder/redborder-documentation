@@ -1,18 +1,14 @@
+# Installation of RedBorder IPS
 
-# Installation of the RedBorder IPS
+The following details the basic installation of a RedBorder IPS, which will be used to analyze traffic and detect intrusions. Due to the specific and heavy workload, it is necessary to have a dedicated machine for this purpose.
 
-Welcome to the RedBorder installation process. Thanks to this guide, anyone can prepare the platform **without specific programming knowledge in Linux**.
-
-Installing the RedBorder Manager is the first step to start monitoring and protecting your network information with RedBorder's solution. You should review the content of this chapter before starting the installation of the platform (also known as the RedBorder Manager).
-
-!!! tip "Recommendation..."
-    Have a minimal knowledge of networking, as well as basic networking concepts.
+There are two installation modes for the IPS: the minimal version that emulates the behavior of a **proxy** and the integrated version on a node that acts as both an IPS and a **manager**. Depending on how we plan to install the IPS, we will use one or the other.
 
 ## Installation Requirements
 
-A successful implementation of RedBorder requires a machine with the Rocky Linux 9 operating system installed. The machine's hardware requirements should be at a minimum:
+The successful implementation of the RedBorder IPS requires a machine with the **Rocky Linux 9** operating system installed. Additionally, the preinstallation of a RedBorder **Manager** against which to register the IPS is necessary. Here are the specifications for this IPS:
 
-=== "IPS"
+=== "Recommended"
 
     * Disk: 50 GB
     * RAM: 16 GB
@@ -171,13 +167,34 @@ Segment Configuration
 
 Once you have configured the desired segments, press **finalize**.
 
-### Configuration with the Remote Server
+## Node Mode
+
+At this point, we need to choose the mode in which the IPS will operate. In proxy mode, the wizard will ask for the address of a manager to register with. On the other hand, in manager mode, the wizard will request the address of the manager acting as the **web server**; therefore, it will also ask for the **credentials** of the **administrator** user who is registering this IPS.
+
+!!! info "Please note..."
+Configuring the IPS in manager mode will automatically register the sensor with the web.
+
+### Proxy Mode: Configuration with the Remote Server
 
 The IPS will be associated with a manager or cluster with which to share the captured data. To associate it, it is necessary to specify the manager or cluster address. You can specify either a domain address or an IP address.
 
 ![Configuration with Remote Server](../../proxy/platform_configurations/images/ch01_cloud_config.png)
 
 Configuration with Remote Server
+
+### Manager mode: Web registration
+
+The IPS will be associated with a manager that hosts the web interface. To enable this association, you need to provide the manager's address and the credentials of a user with administrative permissions. Additionally, you can modify the sensor's name when it is registered on the web:
+
+![IPS Registration Configuration](images/ch02_ips_mode.png)
+
+IPS Registration Configuration
+
+Upon clicking OK, you will be prompted for the password of the registered administrator on the **web**:
+
+![Web User Password](images/ch02_pasword_config.png)
+
+Web User Password
 
 ## End of Configuration
 
@@ -211,4 +228,7 @@ End of installation
 
 ## What's Next?
 
-In the next chapter, we will complete the association of the IPS with the manager so it can start capturing traffic and alerting on detected intrusions.
+In the following chapter, we will finish associating the IPS with the manager so that it can handle traffic and alert you to any detected intrusions. All of this will be manageable from the web.
+
+!!! info "If you installed the IPS in manager mode..."
+Remember that if you have installed the IPS in manager mode, the association process should already be complete.
