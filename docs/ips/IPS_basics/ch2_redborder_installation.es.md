@@ -169,7 +169,13 @@ Cuando hayamos configurado los segmentos deseados. Pulsamos **finalizar**.
 
 ## Modo del nodo
 
-En este punto tenemos que elegir en qué modo va a actuar el IPS. En el caso de proxy, el asistente nos pedirá la dirección de un manager contra el que registrarse. Por otro lado, en modo manager, el asistente nos pedirá la dirección del manager **que hace de servidor web**; así que nos pedirá también las **credenciales** del usuario **administrador** que está registrando este IPS.
+En este punto tenemos que elegir en qué modo va a actuar el IPS:
+
+![Configuración de registro del IPS](images/ch02_ips_mode.png)
+
+Configuración de registro del IPS
+
+En el caso de proxy, el asistente nos pedirá la dirección de un manager contra el que registrarse. Por otro lado, en modo manager, el asistente nos pedirá la dirección del manager **que hace de servidor web**; así que nos pedirá también las **credenciales** del usuario **administrador** que está registrando este IPS.
 
 !!! info "Tenga en cuenta..."
     La configuración del IPS en modo manager supondrá el registro automático del sensor contra la web.

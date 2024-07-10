@@ -169,7 +169,13 @@ Once you have configured the desired segments, press **finalize**.
 
 ## Node Mode
 
-At this point, we need to choose the mode in which the IPS will operate. In proxy mode, the wizard will ask for the address of a manager to register with. On the other hand, in manager mode, the wizard will request the address of the manager acting as the **web server**; therefore, it will also ask for the **credentials** of the **administrator** user who is registering this IPS.
+At this point, we need to choose the mode in which the IPS will operate:
+
+![IPS Registration Configuration](images/ch02_ips_mode.png)
+
+IPS Registration Configuration
+
+ In proxy mode, the wizard will ask for the address of a manager to register with. On the other hand, in manager mode, the wizard will request the address of the manager acting as the **web server**; therefore, it will also ask for the **credentials** of the **administrator** user who is registering this IPS.
 
 !!! info "Please note..."
 Configuring the IPS in manager mode will automatically register the sensor with the web.
