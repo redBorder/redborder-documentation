@@ -192,7 +192,7 @@ Configuration with Remote Server
 
 The IPS will be associated with a manager that hosts the web interface. To enable this association, you need to provide the manager's address and the credentials of a user with administrative permissions. Additionally, you can modify the sensor's name when it is registered on the web:
 
-![IPS Registration Configuration](images/ch02_ips_mode.png)
+![IPS Registration Configuration](images/ch02_sensor_reg.png)
 
 IPS Registration Configuration
 

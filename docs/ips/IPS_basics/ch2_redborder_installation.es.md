@@ -192,7 +192,7 @@ Configuración con el servidor remoto
 
 El ips se asociará a un manager que aloje la web. Para que se pueda asociar es necesario indicar la dirección del manager y las credenciales de un usuario con permisos de administración. Adicionalmente, podemos modificar el nombre del sensor cuando se registre en la web:
 
-![Configuración de registro del IPS](images/ch02_ips_mode.png)
+![Configuración de registro del IPS](images/ch02_sensor_reg.png)
 
 Configuración de registro del IPS
 
