@@ -94,19 +94,6 @@ El asistente de instalación nos dará la opción de elegir si quieremos configu
 
 Configuración de DNS
 
-<details>
-<summary> PASO OMITIDO COLAPSADO </summary>
-### Selección de la interfaz de administración
-Se nos pedirá que seleccionamos una de las interfaces como interfaz de administración. Mientras que la interfaz de administración servirá para conectarse con otras máquinas de redborder o con equipos de administración, el resto de interfaces se ocuparán de leer y trasmitir tráfico.
-
-!!! info "Recomendación"
-    Se recomienda utilizar la eth0 como interfaz de administración, y así queda claro qué la primera es la interfaz de administración
-
-![Selección de la interfaz de administración](images/ch01_select_management_interface.png)
-
-Selección de la interfaz de administración
-</details>
-
 ### Configuración de segmentos
 
 Los segmentos identifican aquellas redes a las que el IPS tiene acceso y sobre las cuales va a actuar como dispositivo de seguridad en red. Sobre las interfaces, es necesario declarar al menos un segmento, para que el IPS esté operativo.

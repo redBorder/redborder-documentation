@@ -17,29 +17,31 @@ El IPS de RedBorder puede actuar tanto como IPS como IDS, todo depende del modo 
 
 ## Escenario básico para la instalación del IPS
 
-Un escenario básico típico propuesto por la solución consiste en un conjunto de sensores dispuestos en diferentes puntos sensibles de la red de la organización que conectarán con un manager o cluster de managers para su gestión y monitorización. Dichos puntos están formados por enlaces de red, llamados segmentos, por los que circulará el tráfico sensible y que el sensor analizará de manera más o menos transparente, en función del modo de funcionamiento configurado (IPS/IDS). Para la planificación de la instalación de equipos sensores, se deberán tener en cuenta algunos aspectos fundamentales:				
-	- Los segmentos bypass (interfaces específicas de red pareadas, normalmente con soporte bypass) se interpondrán en medio del tráfico a analizar.
-	- Las interfaces de gestión (en forma de bonding) para acceso remoto tanto desde equipos normales como desde el Manager.
-	- Las interfaces de acceso IPMI para la gestión remota del hardware (conexión SOL o Serial Over Lan, iKVM y comandos IPMI como inicio, reinicio y apagado).
-Para el **Manager**, al no ser necesario un hardware específico, la única condición es la existencia de al menos, dos interfaces de red.
-	- De esta manera se permite la creación de un bonding para la gestión y conexión con los sensores y otro bonding (opcional) para sus comunicaciones hacia otras redes. Ambos sistemas soportan el estándar 802.1q para virtual LAN (opcional a la hora de configurar).
-	
-!!! warning=Si no ha instalado el manager...
-	Es importante haber relizado la configuración del Manager (o cluster de managers) antes de configurar y registrar el primer sensor IPS. El Manager debe estar operativo y en una red accesible a los sensores. Algunos de los procesos de configuración de los sensores dependen del acceso al Manager. El escenario de instalación del Manager redBorder es el mismo independientemente de los sensores que se instalen y registren en el mismo (IPS, Flow, Malware (WIP) o Vault
+Un escenario básico típico propuesto por la solución consiste en un conjunto de sensores dispuestos en diferentes puntos sensibles de la red de la organización que conectarán con un manager o cluster de managers para su gestión y monitorización. Dichos puntos están formados por enlaces de red, llamados segmentos, por los que circulará el tráfico sensible y que el sensor analizará de manera más o menos transparente, en función del modo de funcionamiento configurado (IPS/IDS). Para la planificación de la instalación de equipos sensores, se deberán tener en cuenta algunos aspectos fundamentales:
 
-![Escenario básico para la instalación del IPS](images/ch01_img001.png)
+* Los segmentos bypass (interfaces específicas de red pareadas, normalmente con soporte bypass) se interpondrán en medio del tráfico a analizar.
+* Las interfaces de gestión (en forma de bonding) para acceso remoto tanto desde equipos normales como desde el Manager.
+* Las interfaces de acceso IPMI para la gestión remota del hardware (conexión SOL o Serial Over Lan, iKVM y comandos IPMI como inicio, reinicio y apagado).
+Para el **Manager**, al no ser necesario un hardware específico, la única condición es la existencia de al menos, dos interfaces de red.
+* De esta manera se permite la creación de un bonding para la gestión y conexión con los sensores y otro bonding (opcional) para sus comunicaciones hacia otras redes. Ambos sistemas soportan el estándar 802.1q para virtual LAN (opcional a la hora de configurar).
+	
+!!! warning "Si no ha instalado el manager..."
+	Es importante haber relizado la configuración del Manager (o cluster de managers) antes de configurar y registrar el primer sensor IPS. El Manager debe estar operativo y en una red accesible a los sensores. Algunos de los procesos de configuración de los sensores dependen del acceso al Manager. El escenario de instalación del Manager redBorder es el mismo independientemente de los sensores que se instalen y registren en el mismo IPS, Flow, Malware (WIP) o Vault
+
+![Escenario básico para la instalación del IPS](../../manager/redborder_basics/images/ch01_img001.png)
 
 Escenario básico para la instalación del IPS
 
 ## Estructura de la interfaz de usuario del asistente de instalación
 
-![Pantalla inicial del asistente de instalación](images/ch01_img002.png)
+![Pantalla inicial del asistente de instalación](../../manager/redborder_basics/images/ch01_img002.png)
 
 Pantalla inicial del asistente de instalación
 
 ### Selección de opciones
 
 Navegar por nuestro asistente de instalación es muy sencillo:
-- Moverse entre las opciones disponibles: pulsa las **flechas del teclado**
-- Marcar una casilla: pulsa la tecla de **espacio**.
-- Seleccionar una opción: pulsa la tecla de **enter**.
+
+* Moverse entre las opciones disponibles: pulsa las **flechas del teclado**
+* Marcar una casilla: pulsa la tecla de **espacio**.
+* Seleccionar una opción: pulsa la tecla de **enter**.

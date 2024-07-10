@@ -91,20 +91,6 @@ The installation wizard will give you the option to choose whether to configure 
 
 DNS Configuration
 
-<details>
-<summary> OMITTED STEP COLLAPSED </summary>
-### Selection of the Management Interface
-You will be asked to select one of the interfaces as the management interface. While the management interface will be used to connect with other RedBorder machines or management systems, the other interfaces will be used to read and transmit traffic.
-
-!!! info "Recommendation"
-    It is recommended to use eth0 as the management interface to clearly identify it as the management interface.
-
-image
-
-Management Interface Selection
-
-</details>
-
 ### Segment Configuration
 
 Segments identify those networks to which the IPS has access and on which it will act as a network security device. For the IPS to be operational, at least one segment must be declared on the interfaces.
