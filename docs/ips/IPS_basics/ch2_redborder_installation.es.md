@@ -178,7 +178,7 @@ En este punto tenemos que elegir en qué modo va a actuar el IPS. En el caso de 
 
 El ips se asociará a un manager o clúster con el que compartir los datos capturados. Para que se pueda asociar es necesario indicar la dirección del manager o clúster. Se puede indicar tanto una dirección de dominio como una IP.
 
-![Configuración con el servidor remoto](../../proxy/platform_configurations/images/ch01_cloud_config.png)
+![Configuración con el servidor remoto](images/ch01_cloud_config.png)
 
 Configuración con el servidor remoto
 
@@ -222,7 +222,7 @@ journalctl -u rb-register -f
 
 Al final del proceso de instalación journal mostrará lo siguiente:
 
-![Final de la instalación](../../proxy/platform_configurations/images/ch01_end_registration.png)
+![Final de la instalación](images/ch01_end_registration.png)
 
 ## ¿Qué es lo siguiente?
 

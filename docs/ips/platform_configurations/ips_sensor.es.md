@@ -4,7 +4,7 @@
 
 Es necesario reclamar el sensor en el manager para empezar a retransmitir los datos provenientes del IPS. Para ello, hay que dirigirse a la web a la sección **Sensors**. En la lista de sensores deberíamos ver una sección llamada **Unclaimed**.
 
-![Sensores sin reclamar](../../proxy/platform_configurations/images/Unclaimed_loc.png)
+![Sensores sin reclamar](images/Unclaimed_loc.png)
 
 Sensores sin reclamar
 
@@ -23,19 +23,19 @@ El icono de **escudo** nos indica que este sensor ha sido identificado como un i
 
 A modo de nombre, el IPS se encuentra identificado con un identificador único de caracteres hexadecimales. Sirve como enlace para reclamar el sensor. Vamos a seleccionar el identificador:
 
-![Selección del UUID](../../proxy/platform_configurations/images/select_uuid.png)
+![Selección del UUID](images/select_uuid.png)
 
 Selección del UUID
 
 Copiamos pulsando CTRL + C, pulsamos 'Añadir Sensor' y 'Reclamar Sensor':
 
-![Acción de reclamar un sensor](../../proxy/platform_configurations/images/Claim_sensor.png)
+![Acción de reclamar un sensor](images/Claim_sensor.png)
 
 Acción de reclamar un sensor
 
 Esto nos mostrará la siguiente ventana:
 
-![Propiedades de reclamación](../../proxy/platform_configurations/images/Claim_sensor_fields.png)
+![Propiedades de reclamación](images/Claim_sensor_fields.png)
 
 Propiedades de reclamación
 

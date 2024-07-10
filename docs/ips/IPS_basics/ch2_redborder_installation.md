@@ -178,7 +178,7 @@ Configuring the IPS in manager mode will automatically register the sensor with 
 
 The IPS will be associated with a manager or cluster with which to share the captured data. To associate it, it is necessary to specify the manager or cluster address. You can specify either a domain address or an IP address.
 
-![Configuration with Remote Server](../../proxy/platform_configurations/images/ch01_cloud_config.png)
+![Configuration with Remote Server](images/ch01_cloud_config.png)
 
 Configuration with Remote Server
 
@@ -222,7 +222,7 @@ journalctl -u rb-register -f
 
 At the end of the installation process, the journal will display the following:
 
-![End of installation](../../proxy/platform_configurations/images/ch01_end_registration.png)
+![End of installation](images/ch01_end_registration.png)
 
 End of installation
 

@@ -4,7 +4,7 @@
 
 It is necessary to claim the sensor in the manager to start retransmitting the data coming from the IPS. To do this, go to the **Sensors** section of the website. In the list of sensors you should see a section called **Unclaimed**.
 
-![Unclaimed sensors](../../proxy/platform_configurations/images/Unclaimed_loc.png)
+![Unclaimed sensors](images/Unclaimed_loc.png)
 
 Unclaimed sensors
 
@@ -23,19 +23,19 @@ The **shield** icon indicates that this sensor has been identified as an ips.
 
 As a name, the IPS is identified with a unique identifier of hexadecimal characters. It serves as a link to claim the sensor. Let's select the identifier:
 
-![UUID selection](../.../proxy/platform_configurations/images/select_uuid.png).
+![UUID selection](images/select_uuid.png).
 
 UUID selection
 
 Copy by pressing CTRL + C, press 'Add Sensor' and 'Claim Sensor':
 
-![Action of claiming a sensor](../../proxy/platform_configurations/images/Claim_sensor.png).
+![Action of claiming a sensor](images/Claim_sensor.png).
 
 Action to claim a sensor
 
 This will show us the following window:
 
-![Claim properties](../../proxy/platform_configurations/images/Claim_sensor_fields.png).
+![Claim properties](images/Claim_sensor_fields.png).
 
 Claim properties
 
