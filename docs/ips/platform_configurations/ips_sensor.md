@@ -1,6 +1,16 @@
 ## Identify the IPS sensor
 
-In case that IPS has been installed in **proxy** mode, it is necessary to claim the sensor in the manager to start retransmitting the data coming from the IPS. To do this, go to the **Sensors** section of the website. In the list of sensors you should see a section called **Unclaimed**.
+Identifying the IPS will be more or less easy depending on the way the IPS was installed.
+
+### Modo manager
+
+In case the IPS has been installed in **manager** mode, we just need to verify that the sensor has been properly claimed:
+
+![IPS en modo manager reclamado](images/IPS_manager_claimed.png)
+
+IPS en modo manager reclamado
+
+### Modo proxy
 
 ![Unclaimed sensors](images/Unclaimed_loc.png)
 
@@ -16,10 +26,6 @@ The **shield** icon indicates that this sensor has been identified as an ips.
 
 !!! info "Please note..."
     The IP shown on the ips sensor corresponds to the management interface.
-
-![Claimed IPS in manager mode](images/IPS_manager_claimed.png)
-
-Claimed IPS in manager mode
 
 ## Reclaim the IPS sensor
 
