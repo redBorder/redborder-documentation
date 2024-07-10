@@ -6,9 +6,9 @@ Identifying the IPS will be more or less easy depending on the way the IPS was i
 
 In case the IPS has been installed in **manager** mode, we just need to verify that the sensor has been properly claimed:
 
-![IPS en modo manager reclamado](images/IPS_manager_claimed.png)
+![IPS in manager mode claimed](images/IPS_manager_claimed.png)
 
-IPS en modo manager reclamado
+IPS in manager mode claimed
 
 ### Modo proxy
 
