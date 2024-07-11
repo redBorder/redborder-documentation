@@ -11,14 +11,14 @@ theme:
   palette:   
     # Palette toggle for light mode
     - scheme: default
-      primary: red
+      primary: custom
       toggle:
         icon: material/brightness-7 
         name: Switch to dark mode
 
     # Palette toggle for dark mode
     - scheme: slate
-      primary: red
+      primary: custom
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -80,6 +80,9 @@ extra:
       link: https://github.com/redBorder
     - icon: material/home
       link: https://redborder.com
+
+extra_css:
+  - stylesheets/extra.css
 
 copyright: Copyright &copy; 2024 Eneo Tecnología S.L
 
