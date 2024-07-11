@@ -102,7 +102,7 @@ El resto de los parámetros debe proporcionarse en los datos de carga útil del 
 | metric             | (Solo para peticiones con *queryType* de *topN*) Debe ser el mismo valor que el especificado en *aggregations*. Es usado para ordenación.       |
 | dimensions         | (Solo para peticiones con *queryType* de *groupBy* o *timeseries*) Arreglo de cero o más valores. Estos se utilizan para restringir la agrupación. Si están vacíos, se solicita un valor por *bucket* de granularidad de tiempo en el *groupBy*.       |
 | dimension          | (Solo para peticiones con *queryType* de *topN*) Valor único. Todas las dimensiones disponibles las encontrará más adelante en esta página.     |
-| filter             | Especifica el filtro para la petición. Puede ver los filtros disponibles en más adelante, ne esta página     |
+| filter             | Especifica el filtro para la petición. Puede ver los filtros disponibles más adelante, en esta página     |
 | threshold          | (Solo para peticiones con *queryType* de *topN*) Valor único. Limita la cantidad de valores devueltos en las peticiones *topN*.      |
 | orderBy            | (Solo para peticiones con *queryType* de *groupBy*).      |
 
