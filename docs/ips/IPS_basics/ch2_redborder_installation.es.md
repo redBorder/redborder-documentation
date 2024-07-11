@@ -58,7 +58,7 @@ Si no está seguro sobre la configuración actual, puede cancelar con la opción
 
 #### Normalización del nombre de las interfaces
 
-![Normalización del nombre de las interfaces](ch01_interface_naming_warn.png)
+![Normalización del nombre de las interfaces](images/ch01_interface_naming_warn.png)
 
 Normalización del nombre de las interfaces
 
