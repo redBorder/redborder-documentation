@@ -2,7 +2,7 @@
 nav:
     - ... | index*.md
     - Guides: guides
-    - Manager: manage
+    - Manager: manager
     # - Proxy: index*.md
     - IPS: ips
     # - Release notes: index*.md
