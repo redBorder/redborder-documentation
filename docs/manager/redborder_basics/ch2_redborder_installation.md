@@ -11,9 +11,9 @@ Installing the RedBorder Manager is the first step to start monitoring and prote
 ## Installation Requirements
 
 !!! info "Please note..."
-    The following requirements are related to **the installation of a single node with light to moderate usage**. Keep in mind that if you run the platform in a virtual environment, **performance may decrease** compared to an implementation on a physical machine.
+    If you run the platform in a virtual environment, **performance may decrease** compared to an implementation on a physical machine.
 
-The successful deployment of RedBorder requires a machine with the **Rocky Linux 9** operating system installed. The minimum hardware requirements for the machine are:
+The successful implementation of RedBorder requires at least one machine with the Rocky Linux 9 operating system installed. The hardware requirements will depend on whether we install a single manager or a cluster. For each case, these requirements are:
 
 === "Manager"
 
@@ -22,25 +22,69 @@ The successful deployment of RedBorder requires a machine with the **Rocky Linux
     * CPU: 4 cores
     * Network Interface: At least one
 
+=== "Cluster"
+    * Three machines with following specifications each:
+        * Disk: 80 GB
+        * RAM: 16 GB
+        * CPU: 4 cores
+        * Network Interface: At least two
+
 ## Installation Process
 
 The first action to start monitoring your network with RedBorder is to obtain the latest official RedBorder packages for **Rocky Linux 9** available at [repo.redborder.com](https://repo.redborder.com).
 
-``` bash title="Latest"
-yum install epel-release && rpm -ivh https://repo.redborder.com/ng/latest/rhel/9/x86_64/redborder-repo-1.0.0-1.el9.rb.noarch.rpm
+!!! info "In the case of installing a cluster..."
+The entire installation process specified on this page must be repeated for each manager that will make up the cluster.
+
+``` bash title="Config of required repositories"
+dnf install epel-release && rpm -ivh https://repo.redborder.com/ng/latest/rhel/9/x86_64/redborder-repo-latest-1.0.0-1.el9.rb.noarch.rpm
 ```
 
-``` bash title="Manager"
-yum install redborder-manager
+``` bash title="Redborder Manager Package Installation Command"
+dnf install redborder-manager
 ```
 
-With the packages downloaded and installed, the next step is to configure RedBorder. To do this, log out of the console session and log back in; this will update the paths to the scripts, allowing us to execute the command:
+With the packages downloaded and installed, the next step is to configure RedBorder. To do this, we restart the console session:
 
-    rb_setup_wizard
+``` bash title="Console relogin command"
+/bin/bash --login
+```
 
-This command will start the **installation wizard** of the platform in the console to guide you through the entire process.
+This will update the script paths, allowing us to run the **installation wizard**:
+
+``` bash title="Installation wizard command"
+rb_setup_wizard
+```
+
+## Setup wizard
+
+This will start the **installation wizard** for the platform in the console, which will serve as a guide throughout the entire process. The very first screen is also guiding with the next steps.
+
+![Start wizard](images/ch02_configure_wizard_start.png)
+
+If you are not sure about the current setup you can cancel with the "No" option, which will show the following screen before returning back to the console view.
+
+![Cancel wizard](images/ch02_cancel_wizard.png)
+
+!!! warning "Cancelling..."
+    In some steps, "No" option will cancel the full installation process, which means that all configuration during the setup process will be lost.
+
+!!! warning "If you are configuring a cluster..."
+    Make sure to complete this guide before running setup wizard on other nodes.
+
+### Selection of Options
+
+Navigating through our installation assistant is very simple:
+
+- Move between the available options: press the **arrow keys**.
+- Check a box: press the **space** key.
+- Select an option: press the **enter** key.
 
 ### Network Configuration
+
+This step is optional. If you are sure the network interfaces are already configured, you can skip this step. Otherwise, get into the configuration pressing "Yes".
+
+![Start Network Configuration](images/ch02_start_network_conf.png)
 
 In the lower box, the existing network interfaces on the machine in question are listed. Underneath all the interfaces that the machine possesses, there is the `Finalize` option, which we can select **after successfully configuring the interfaces**.
 
@@ -60,11 +104,19 @@ If selecting the static IP option, you must specify the IP address, subnet mask,
 
 Static Interface Configuration
 
+### Selecting management interface
+
+In case of having multiple interfaces, you need to select which one is the main interface to operate with this manager. The purpose if this interface is to configure the manager as you are doing here and link it with different kind of sensors. 
+
+![Management Interface Selection](images/ch02_select_manage_interface.png)
+
 ### DNS Configuration
 
-The installation wizard will give you the option to choose whether or not to configure DNS servers. If you wish to configure DNS.
+The installation wizard will give you the option to choose whether or not to configure DNS servers. 
 
-Configuring at least one server is mandatory; however, it is currently possible to configure up to 3 DNS servers in the platform. This can be done on the following screen:
+![DNS Configuration](images/ch02_start_dns.png)
+
+If you need to configure DNS, configure at least one server. This can be done on the following screen:
 
 ![DNS Configuration](images/ch02_img004.png)
 
@@ -88,21 +140,29 @@ Hostname and Domain Configuration
 RedBorder has the ability to work in a distributed manner, distributing functions or workload among two or more nodes, through a synchronization network that allows nodes to communicate and operate. For this, we use **Serf**(1), this service is responsible for creating the manager cluster and defining the roles of the nodes.
 { .annotate }
 
-1. Serf is a decentralized solution for service discovery and orchestration that is lightweight, highly available, and fault-tolerant.
+![Start Serf Configuration](images/ch02_start_serf_configuration.png)
+
+Serf is a decentralized solution for service discovery and orchestration that is lightweight, highly available, and fault-tolerant.
 
 For Serf to work correctly, three parameters are required:
 
-- Sync network
+#### Sync network
+
+Sync network is the network for all managers to sync among them. In case you are really installing a cluster just make sure to select other interface different from management
 
 ![Configure Sync Network and Interface](images/ch02_img006.png)
 
-- Indicate the Serf mode (Unicast / Multicast)
+#### Indicate the Serf mode (Unicast / Multicast)
 
 ![Configure Serf Mode](images/ch02_img007.png)
 
-- Secret key to encrypt Serf network traffic
+#### Secret key to encrypt Serf network traffic
 
+Put a password from 6 to 20 characters for Serf.
 ![Configure Serf Key](images/ch02_img008.png)
+
+!!! warning "If you are configuring a cluster..."
+    This password should be the same among all managers that will join to the same cluster. In case of a second cluster being in the same network, use a diffent password to prevent managers join to the wrong cluster.
 
 ### Storage with Amazon S3 (WIP)
 
@@ -114,11 +174,37 @@ It is also possible to configure RedBorder to use the Amazon RDS service or some
 
 ### Selecting Manager Mode
 
-Depending on the RedBorder installation you want to perform, you can indicate to the platform what should be executed on the node being installed. The most common case will be the installation of a single manager in the network, for this, you must choose the `full` mode, indicating to the platform that it should run all services on the machine in question.
+Depending on the RedBorder installation you want to perform, you can indicate to the platform what should be executed on the node being installed. The most common case will be the installation the `full` mode, but in case you want to save performance, pick one of other modes instead. In case of a cluster installation, one node should've `full`or `core`mode. Sumerizing for each case:
 
-!!! tip "Please note..."
-    If a manager cluster will be installed, one of the nodes must operate in core mode while the other nodes must operate in `custom` mode and select which services they will maintain.
+=== "Single node"
+    Choose the `full` mode.
+
+=== "Leader node"
+    Choose the `full`mode as selected by default or `core` mode for minimal installation.
+
+=== "Follower node"
+    Choose the `full` mode as selected by default or any other mode for minimal installation.
 
 ![Manager Mode Selection](images/ch02_img009.png)
 
 Manager Mode Selection
+
+### Finising the installation
+
+The installation is almost ready, you have to wait until the setup process finish:
+
+![Applying Configuration](images/ch02_apply_conf.png)
+
+Press "OK" to go back to the console.
+
+Additionally you can read the logs about the installation running this: 
+``` bash title="Print the setup logs"
+journalctl -u rb-bootstrap -f
+```
+
+!!! warning "If you are configuring a cluster..."
+    Wait until bootstrap has finished the first node (the master node) installation before running rb_setup_wizard in the next nodes (the worker nodes) 
+
+At the end of the installation process you will see something like this:
+
+![End of installation](images/ch02_end_installation.png)
