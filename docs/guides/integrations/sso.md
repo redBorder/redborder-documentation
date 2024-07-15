@@ -45,11 +45,6 @@ After, the SSO login system is enabled. You can check it by going to the login p
     - **IdP Single Logout On Target URL**: This is the URL that redirects to the IdP when you want to log out. There are some IdPs that have not this configuration, then write the redBorder logout path: `<host>/users/logout`.  
     - **IdP Entity ID**: This is the URL used by the SP to verify the SAML responses coming from the IdP.  
     - **IdP Certificate**: The unique certificate provided by the IdP that allows decrypting the encrypted response of the authentication and get the user attributes.  
-    - **IdP Attributes**: These are the attribute names of the IdP response. It contains the necessary data for the login/register. There are a lot of schemes (see the most common [here](https://wiki.surfnet.nl/display/surfconextdev/Attributes+and+SAML#AttributesandSAML-Attributeschemas)).  
-        - Email: The user email.  
-        - Name: The user name.  
-        - Username: The id that will be registered or used to login.  
-
 
 === "SP Parameters"  
     - **SP Entity ID**: This is the URL of the SP that will receive the metadata from the IdP.  

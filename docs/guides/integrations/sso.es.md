@@ -45,10 +45,6 @@ Después, el sistema de inicio de sesión SSO estará habilitado. Puedes comprob
     - **URL de destino del IdP SLO**: Esta es la URL que redirige al IdP cuando deseas cerrar sesión. Hay algunos IdPs que no tienen esta configuración, entonces escribe la ruta de cierre de sesión de redBorder: `<host>/users/logout`.  
     - **ID de Entidad del IdP**: Esta es la URL usada por el SP para verificar las respuestas SAML recibidas por el IdP.  
     - **Certificado del IdP**: El certificado único proporcionado por el IdP que permite descifrar la respuesta encriptada de la autenticación y obtener los atributos del usuario.  
-    - **Atributos del IdP**: Estos son los nombres de los atributos de la respuesta del IdP. Contiene los datos necesarios para el inicio de sesión/registro. Hay muchos esquemas (ver los más comunes [aquí](https://wiki.surfnet.nl/display/surfconextdev/Attributes+and+SAML#AttributesandSAML-Attributeschemas)).  
-    - Correo electrónico: El correo electrónico del usuario.  
-    - Nombre: El nombre del usuario.  
-    - Nombre de usuario: El id que será registrado o usado para iniciar sesión.  
 
 === "Parámetros del SP"  
     - **ID de Entidad del SP**: Esta es la URL del SP que recibirá los metadatos del IdP.  
