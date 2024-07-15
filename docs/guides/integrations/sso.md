@@ -48,6 +48,7 @@ After, the SSO login system is enabled. You can check it by going to the login p
 
 === "SP Parameters"  
     - **SP Entity ID**: This is the URL of the SP that will receive the metadata from the IdP.  
+    - **SP Target URL**: This is the URL of the SP that check the SAML response and log in.  
 
 ## Login and register  
 

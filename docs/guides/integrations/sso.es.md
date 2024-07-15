@@ -48,6 +48,7 @@ Después, el sistema de inicio de sesión SSO estará habilitado. Puedes comprob
 
 === "Parámetros del SP"  
     - **ID de Entidad del SP**: Esta es la URL del SP que recibirá los metadatos del IdP.  
+    - **URL de destino del SP**: Esta es la URL del SP que comprueba la respuesta SAML y permite el inicio de sesión.  
 
 ## Registro e inicio de sesión  
 
