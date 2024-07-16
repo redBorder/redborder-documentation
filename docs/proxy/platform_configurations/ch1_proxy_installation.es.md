@@ -122,7 +122,7 @@ Configuración con el servidor remoto
 
 Antes de aplicar la configuración, el asistente nos resumirá toda la información rellenada, a la espera de que el usuario la acepte.
 
-[!Aceptar configuración](images/ch01_apply_conf.png)
+![Aceptar configuración](images/ch01_apply_conf.png)
 
 Aceptar configuración
 

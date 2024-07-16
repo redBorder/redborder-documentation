@@ -122,7 +122,7 @@ Configuration with remote server
 
 Before applying the configuration, the wizard will summarize all the filled-in information, waiting for the user to accept it.
 
-[!Accept configuration](images/ch01_apply_conf.png)
+![Accept configuration](images/ch01_apply_conf.png)
 
 Accept configuration
 
