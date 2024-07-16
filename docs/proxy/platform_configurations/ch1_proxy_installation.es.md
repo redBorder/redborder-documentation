@@ -49,7 +49,7 @@ El cual iniciará el **asistente de instalación** de la plataforma en consola p
 
 Habiendo iniciado el **asistente de instalación** para la plataforma en la consola, se puede utilizar como guía durante todo el proceso. La primera pantalla que se muestra nos ofrece también un índice de los próximos pasos.
 
-![Iniciando el asistente](/images/ch02_configure_wizard_start.png)
+![Iniciando el asistente](images/ch02_configure_wizard_start.png)
 
 Iniciando el asistente
 
@@ -100,7 +100,7 @@ Seleccionar interfaz de gestión
 
 El asistente de instalación le dará la opción de elegir si quiere o no configurar servidores DNS, si es que realmente se desea configurar un DNS.
 
-![Empezar la configuración de los DNS](images/ch02_start_dns.png)
+![Empezar la configuración de los DNS](../../manager/redborder_basics/images/ch02_start_dns.png)
 
 Empezar la configuración de los DNS
 

@@ -2,6 +2,6 @@
 title: Manual home
 ---
 
-## Redborder Proxy Intro (WIP)
+## Redborder Proxy Intro
 
 Welcome to the **Manual** section.
