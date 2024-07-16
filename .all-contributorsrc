@@ -35,6 +35,16 @@
         "content",
         "translation"
       ]
+    },
+    {
+      "login": "rgomezborder",
+      "name": "Rafa Gómez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/171669035?v=4",
+      "profile": "https://rafagomezguillen.github.io/portfolio/",
+      "contributions": [
+        "content",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
