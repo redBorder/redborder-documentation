@@ -1,6 +1,8 @@
 # Sensor de Proxy
 
-## INTRO (WIP)
+## INTRO
+
+Un sensor Proxy va a representar la sonda que exportará el tipo de información configurada desde una localización externa a la del propio manager.
 
 ## Identificar el sensor de proxy
 

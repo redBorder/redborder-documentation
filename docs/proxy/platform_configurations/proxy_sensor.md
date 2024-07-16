@@ -1,6 +1,8 @@
 # Proxy Sensor
 
-## INTRO (WIP)
+## INTRO
+
+A Proxy sensor will represent the device that exports the configured type of information from an external location to the manager's own location.
 
 ## Identifying the Proxy Sensor
 
