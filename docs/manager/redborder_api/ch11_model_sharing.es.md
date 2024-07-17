@@ -1,5 +1,5 @@
 
-# Compartiendo modelos de la base de datos
+# Compartiendo Modelos de la Base de Datos
 
 !!! info "Ten en cuenta..."
 
@@ -9,13 +9,13 @@
 
 !!! warning "Importante"
 
-    Se requieren permisos de gestión (o de lectura para listar) para poder crear, modificar, sobreescribir o eliminar los sensores, dominios, puntos de acceso o algún otro modelo de la base de datos. Si faltan estos permisos para alguna de estas operaciones, se devolverá el código de estado HTTP `401 Unauthorized` en la respuesta de la *API*. 
+    Se requieren permisos de gestión (o de lectura para listar) para poder crear, modificar, sobreescribir o eliminar los sensores, dominios, puntos de acceso o algún otro modelo de la base de datos. Si faltan estos permisos para alguna de estas operaciones, se devoklverá el código de estado HTTP `401 Unauthorized` en la respuesta de la *API*. 
     
     Si se especifica un sensor, dominio, punto de acceso o algún otro modelo de la base de datos que sea inexistente en la solicitud, se devolverá el código de estado HTTP `404 Not Found` en la respuesta de la *API*.
 
-## Trabajando con sensores
+## Trabajando con Sensores
 
-### Listado del árbol de sensores
+### Listado del Árbol de Sensores
 
 Para listar un sensor y todos sus sensores subordinados, realiza una petición `GET` a la siguiente URL:
 
@@ -39,7 +39,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
       
         Acción HTTP: GET
 
-        URI: https://<hostname>/api/v1/sensors/8726017729975087448/tree?auth_token=xxxxxx
+        URL: https://<hostname>/api/v1/sensors/8726017729975087448/tree?auth_token=xxxxxx
 
     **Respuesta**:
     
@@ -218,7 +218,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
           }
         }
 
-### Creación de dominios
+### Creación de Dominios
 
 Se pueden crear nuevos dominios haciendo una petición `POST` al siguiente URL:
 
@@ -228,14 +228,14 @@ Una carga útil en formato *JSON* debe enviarse junto con esta solicitud. Los pa
 
 | Parámetro          | Descripción                            |
 | ------------------ | -------------------------------------- |
-| uuid               | (Opcional) UUID que el nuevo dominio recibirá al crearse. No debe estar en uso por ningún dominio existente. Si no se especifica, se asignará uno aleatorio no utilizado.      |
+| uuid               |  UUID que el nuevo dominio recibirá al crearse. No debe estar en uso por ningún dominio existente. Si no se especifica, se asignará uno aleatorio no utilizado.      |
 | name               | (Necesario) Nombre del nuevo dominio      |
-| domain_type        | (Opcional) Número indicando el tipo de dominio. El tipo por defecto es genérico (1). Puede ver los tipos disponibles más adelante, en esta página     |
-| parent_uuid        | (Opcional) UUID del padre. Por defecto será el UUID del dominio *top* del usuario.     |
-| mac_hasing_salt    | (Opcional) Cadena de hash de MAC para un dominio de **Proveedor de Servicios**. Si el tipo de dominio no es igual a 6 (Proveedor de Servicios), este parámetro será ignorado.      |
-| visualization_range| (Opcional) Limita los días que los usuarios pueden visualizar los datos de una organización. Si el tipo de dominio no es igual a 2 (Organización), este parámetro será ignorado.     |
-| megabytes_limit    | (Opcional) Limita los megabytes de almacenamiento para los datos de una organización. Si el tipo de dominio no es igual a 2 (Organización), este parámetro será ignorado.      |
-| visualization_range| (Opcional) Limita los días que los usuarios pueden visualizar los datos de una organización. Si el tipo de dominio no es igual a 2 (Organización), este parámetro será ignorado.      |
+| domain_type        |  Número indicando el tipo de dominio. El tipo por defecto es genérico (1). Puede ver los tipos disponibles más adelante, en esta página     |
+| parent_uuid        |  UUID del padre. Por defecto será el UUID del dominio *top* del usuario.     |
+| mac_hasing_salt    |  Cadena de hash de MAC para un dominio de **Proveedor de Servicios**. Si el tipo de dominio no es igual a 6 (Proveedor de Servicios), este parámetro será ignorado.      |
+| visualization_range|  Limita los días que los usuarios pueden visualizar los datos de una organización. Si el tipo de dominio no es igual a 2 (Organización), este parámetro será ignorado.     |
+| megabytes_limit    |  Limita los megabytes de almacenamiento para los datos de una organización. Si el tipo de dominio no es igual a 2 (Organización), este parámetro será ignorado.      |
+| visualization_range|  Limita los días que los usuarios pueden visualizar los datos de una organización. Si el tipo de dominio no es igual a 2 (Organización), este parámetro será ignorado.      |
 
 Para ver los diferentes valores de `domain_type`, despliegue la pestaña:
 
@@ -260,7 +260,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
       
         Acción HTTP: POST
 
-        URI: https://<hostname>/api/v1/sensors/domain?auth_token=xxxxxx
+        URL: https://<hostname>/api/v1/sensors/domain?auth_token=xxxxxx
 
         Carga útil: { "domain_type":"2", "parent_uuid":"697893457705749905", "name":"new_domain" }
 
@@ -291,7 +291,7 @@ En la respuesta de la *API* hay un campo llamado `type` que indica el **tipo de 
     - "`4`" = IPS_BINDING (Enlace IPS)
     - "`5`" = FLOW
 
-### Creación de sensores de flow
+### Creación de Sensores de Flow
 
 Se pueden crear nuevos sensores haciendo una petición `POST` al siguiente URL:
 
@@ -303,17 +303,17 @@ Una carga útil en formato *JSON* debe enviarse junto con esta solicitud. Los pa
 | ------------------ | -------------------------------------- |
 | ip                 | (Necesario) Dirección IP del sensor.   |
 | name               | (Necesario) Nombre para el sensor.     |
-| parent_uuid        | (Opcional) Especifica el UUID del sensor padre. Si no se especifica ninguno, se especificará el UUID del sensor *root*     |
-| snmp_community     | (Opcional) Especifica el nombre de la comunidad SNMP     |
-| snmp_version       | (Opcional) Especifica la versión de SNMP a usar. Actualmente se soporta la `1` y la `2c`.     |
-| spanport           | (Opcional) Habilitar o deshabilitar el puerto SPAN.     |
-| nmsp               | (Opcional) Habilitar o deshabilitar el NMSP.     |
-|nmsp_wireless_health| (Opcional) Habilitar o deshabilitar la revisión de estado inalámbrico NMSP.     |
-| nmsp_client_stats  | (Opcional) Habilitar o deshabilitar las estadísticas de cliente NMSP.     |
-| dns_ptr_client     | (Opcional) Habilitar o deshabilitar la resolución DNS de cliente.     |
-| dns_ptr_target     | (Opcional) Habilitar o deshabilitar la resolución DNS de objetivo.    |
-| homenets           | (Opcional) Arreglo de uno o más valores que permite indicar las 'redes de casa' que tendrá el sensor. La sintaxis de este campo se explica más adelante.    |
-| router_macs        | (Opcional) Arreglo de uno o más valores que permite indicar las MAC de enrutador para este sensor. La sintaxis de este campo se explica más adelante.     |
+| parent_uuid        |  Especifica el UUID del sensor padre. Si no se especifica ninguno, se especificará el UUID del sensor *root*     |
+| snmp_community     |  Especifica el nombre de la comunidad SNMP     |
+| snmp_version       |  Especifica la versión de SNMP a usar. Actualmente se soporta la `1` y la `2c`.     |
+| spanport           |  Habilitar o deshabilitar el puerto SPAN.     |
+| nmsp               |  Habilitar o deshabilitar el NMSP.     |
+|nmsp_wireless_health|  Habilitar o deshabilitar la revisión de estado inalámbrico NMSP.     |
+| nmsp_client_stats  |  Habilitar o deshabilitar las estadísticas de cliente NMSP.     |
+| dns_ptr_client     |  Habilitar o deshabilitar la resolución DNS de cliente.     |
+| dns_ptr_target     |  Habilitar o deshabilitar la resolución DNS de objetivo.    |
+| homenets           |  Arreglo de uno o más valores que permite indicar las 'redes de casa' que tendrá el sensor. La sintaxis de este campo se explica más adelante.    |
+| router_macs        |  Arreglo de uno o más valores que permite indicar las MAC de enrutador para este sensor. La sintaxis de este campo se explica más adelante.     |
 
 !!! info "Ten en cuenta..."
 
@@ -354,7 +354,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
       
         Acción HTTP: POST
 
-        URI: https://<hostname>/api/v1/sensors/flow?auth_token=xxxxxx
+        URL: https://<hostname>/api/v1/sensors/flow?auth_token=xxxxxx
 
         Carga útil: {"name":"test_flow", "parent_uuid":"7549459708256671519", "ip":"10.0.2.10"}
 
@@ -374,7 +374,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
           }
         }
 
-### Creación de sensores de Meraki
+### Creación de Sensores de Meraki
 
 Se pueden crear nuevos sensores haciendo una petición `POST` al siguiente URL:
 
@@ -386,10 +386,10 @@ Una carga útil en formato *JSON* debe enviarse junto con esta solicitud. Los pa
 | ------------------ | -------------------------------------- |
 | ip                 | (Necesario) Dirección IP/Dominio del sensor de Meraki.      |
 | name               | (Necesario) Nombre para el sensor.      |
-| parent_uuid        | (Opcional) Especifica el UUID del sensor padre. Si no se especifica ninguno, se especificará el UUID del sensor *root*     |
-| meraki_validator   | (Opcional) Especifica el validador del sensor.     |
-| snmp_community     | (Opcional) Especifica el nombre de la comunidad SNMP.     |
-| snmp_version       | (Opcional) Especifica la versión de SNMP a usar. Actualmente se soporta la 1 y la 2c.     |
+| parent_uuid        |  Especifica el UUID del sensor padre. Si no se especifica ninguno, se especificará el UUID del sensor *root*     |
+| meraki_validator   |  Especifica el validador del sensor.     |
+| snmp_community     |  Especifica el nombre de la comunidad SNMP.     |
+| snmp_version       |  Especifica la versión de SNMP a usar. Actualmente se soporta la 1 y la 2c.     |
 
 Si la petición es exitosa, la respuesta *JSON* describirá el **sensor** creado y el campo `query` establecido en `true`.
 
@@ -401,12 +401,16 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
       
         Acción HTTP: POST
 
-        URI: https://<hostname>/api/v1/sensors/meraki?auth_token=xxxxxx
+        URL: https://<hostname>/api/v1/sensors/meraki?auth_token=xxxxxx
 
-        Carga útil: { "name":"test_meraki",
-                      "parent_uuid":"6396049722605916538",
-                      "ip":"10.0.2.10",
-                      "meraki_validator": "validator_frase" }
+        Carga útil: 
+ 
+        {
+            "name": "test_meraki",
+            "parent_uuid": "6396049722605916538",
+            "ip": "10.0.2.10",
+            "meraki_validator": "validator_frase"
+        }
 
     **Respuesta**:
 
@@ -426,7 +430,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
           }
         }
 
-### Creación de sensores de MSE
+### Creación de Sensores de MSE
 
 Se pueden crear nuevos sensores haciendo una petición `POST` al siguiente URL:
 
@@ -438,11 +442,11 @@ Una carga útil en formato *JSON* debe enviarse junto con esta solicitud. Los pa
 | ------------------ | -------------------------------------- |
 | stream             | (Necesario) Nombre del flujo MSE.      |
 | name               | (Necesario) Nombre para el sensor MSE.      |
-| parent_uuid        | (Opcional) Especifica el UUID del sensor padre. Si no se especifica ninguno, se especificará el UUID del sensor *root*     |
-| mse_version        | (Opcional) Especifica el validador del sensor.     |
-| snmp_community     | (Opcional) Especifica el nombre de la comunidad SNMP.     |
-| snmp_version       | (Opcional) Especifica la versión de SNMP a usar. Actualmente se soporta la 1 y la 2c.     |
-| homenets           | (Opcional) Arreglo de uno o más valores que permite indicar las 'redes de casa' que tendrá el sensor. La sintaxis de este campo debe ser la misma que la explicada en la [Creación de sensores de Flow](/es/manager/redborder_api/ch11_model_sharing/#creacion-de-sensores-de-flow).    |
+| parent_uuid        |  Especifica el UUID del sensor padre. Si no se especifica ninguno, se especificará el UUID del sensor *root*     |
+| mse_version        |  Especifica el validador del sensor.     |
+| snmp_community     |  Especifica el nombre de la comunidad SNMP.     |
+| snmp_version       |  Especifica la versión de SNMP a usar. Actualmente se soporta la 1 y la 2c.     |
+| homenets           |  Arreglo de uno o más valores que permite indicar las 'redes de casa' que tendrá el sensor. La sintaxis de este campo debe ser la misma que la explicada en la [Creación de sensores de Flow](/es/manager/redborder_api/ch11_model_sharing/#creacion-de-sensores-de-flow).    |
 
 Si la petición es exitosa, la respuesta *JSON* describirá el **sensor** creado y el campo `query` establecido en `true`.
 
@@ -454,13 +458,17 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
       
         Acción HTTP: POST
 
-        URI: https://<hostname>/api/v1/sensors/mse?auth_token=xxxxxx
+        URL: https://<hostname>/api/v1/sensors/mse?auth_token=xxxxxx
 
-        Carga útil: { "name": "test_mse",
-                      "parent_uuid": "7549459708256671519",
-                      "stream": "StreamB",
-                      "mse_version": "8",
-                      "port":"xxxx" }
+        Carga útil: 
+        
+        { 
+          "name": "test_mse",
+          "parent_uuid": "7549459708256671519",
+          "stream": "StreamB",
+          "mse_version": "8",
+          "port": "xxxx" 
+        }
 
     **Respuesta**:
 
@@ -479,7 +487,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
           }
         }
 
-#### Listado de sensores MSE para un dominio
+#### Listado de Sensores MSE para un Dominio
 
 Los sensores MSE de un dominio pueden ser listados haciendo una petición `GET` al siguiente URL:
 
@@ -497,12 +505,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
       
         Acción HTTP: POST
 
-        URI: https://<hostname>/api/v1/sensors/8726017729975087448/mse?auth_token=xxxxxx
-
-        Carga útil: { "name":"test_meraki",
-                      "parent_uuid":"6396049722605916538",
-                      "ip":"10.0.2.10",
-                      "meraki_validator": "validator_frase" }
+        URL: https://<hostname>/api/v1/sensors/8726017729975087448/mse?auth_token=xxxxxx
 
     **Respuesta**:
 
@@ -538,7 +541,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
             ]
           }
 
-### Eliminación de sensores
+### Eliminación de Sensores
 
 El usuario es capaz de indicar qué sensor desea eliminar con indicar el UUID de dicho sensor en una petición `DELETE` al siguiente URL:
 
@@ -556,7 +559,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
       
         Acción HTTP: DELETE
 
-        URI: https://<hostname>/api/v1/sensors/8726017729975087448?auth_token=xxxxxx
+        URL: https://<hostname>/api/v1/sensors/8726017729975087448?auth_token=xxxxxx
 
     **Respuesta**:
 
@@ -580,7 +583,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
       
         Acción HTTP: PATCH
 
-        URI: https://<hostname>/api/v1/sensors/86348645?auth_token=xxxxxx
+        URL: https://<hostname>/api/v1/sensors/86348645?auth_token=xxxxxx
 
         Carga útil: { "name": "new_name", "domain_type": "4" }
 
@@ -616,7 +619,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
       
         Acción HTTP: PATCH
 
-        URI: https://<hostname>/api/v1/sensors/86348645/flow?auth_token=xxxxxx
+        URL: https://<hostname>/api/v1/sensors/86348645/flow?auth_token=xxxxxx
 
         Carga útil: { "name": "flow_new", "nmsp": "1", "spanport": "0" }
 
@@ -671,7 +674,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
       
         Acción HTTP: POST
 
-        URI: https://<hostname>/api/v1/sensors/697893457705749905/override_all?auth_token=xxxxxx
+        URL: https://<hostname>/api/v1/sensors/697893457705749905/override_all?auth_token=xxxxxx
 
         Carga útil: 
         
@@ -732,9 +735,9 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
         "query": "true"
         }
 
-## Trabajando con puntos de acceso
+## Trabajando con Puntos de Acceso
 
-### Listado de puntos de acceso
+### Listado de Puntos de Acceso
 
 Es posible obtener una lista de todos los puntos de acceso a los que el usuario tiene accesso realizando una petición `GET` a la siguiente URL:
 
@@ -761,7 +764,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta
       
         Acción HTTP: GET
 
-        URI: https://<hostname>/api/v1/access_points.json?auth_token=xxxxxx
+        URL: https://<hostname>/api/v1/access_points.json?auth_token=xxxxxx
 
     **Respuesta**:
     
@@ -835,7 +838,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta
           ]
         }
 
-### Creación de puntos de acceso
+### Creación de Puntos de Acceso
 
 Se pueden crear nuevos puntos de acceso realizando una petición `POST` a la siguiente URL:
 
@@ -874,7 +877,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta
       
         Acción HTTP: POST
 
-        URI: https://<hostname>/api/v1/access_points?auth_token=xxxxxx
+        URL: https://<hostname>/api/v1/access_points?auth_token=xxxxxx
 
         Carga útil:
         
@@ -925,7 +928,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta
           }
         }
 
-### Modificación de puntos de acceso
+### Modificación de Puntos de Acceso
 
 Se pueden modificar puntos de acceso existentes haciendo una petición `PATCH` o `PUT` a los siguientes URLs:
 
@@ -938,7 +941,7 @@ Los parámetros modificables son los mismos que los indicados en la [Creación d
 
 Si la petición es exitosa, la respuesta *JSON* describirá el **punto de acceso** modificado y el campo `query` establecido en `true`.
 
-### Sobreescribir los puntos de acceso de un dominio
+### Sobreescribir los Puntos de Acceso de un Dominio
 
 Funciona similar a la sobreescritura del dominio, pero solo afecta a los puntos de acceso inalámbricos contenidos en el dominio especificado
 
@@ -968,7 +971,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
       
         Acción HTTP: POST
 
-        URI: https://<hostname>/api/v1/sensors/697893457705749905/access_point/override?auth_token=xxxxxx
+        URL: https://<hostname>/api/v1/sensors/697893457705749905/access_point/override?auth_token=xxxxxx
 
         Carga útil: 
     
@@ -1044,7 +1047,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta
       
         Acción HTTP: DELETE
 
-        URI: https://<hostname>/api/v1/access_points?auth_token=xxxxxx
+        URL: https://<hostname>/api/v1/access_points?auth_token=xxxxxx
 
         Carga útil:
 
@@ -1082,7 +1085,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta
       
         Acción HTTP: DELETE
 
-        URI: https://<hostname>/api/v1/sensors/697893457705749905/access_points?auth_token=xxxxxx
+        URL: https://<hostname>/api/v1/sensors/697893457705749905/access_points?auth_token=xxxxxx
 
     **Respuesta**:
     
@@ -1114,7 +1117,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta
       
         Acción HTTP: GET
 
-        URI: https://<hostname>/api/v1/users.json?auth_token=xxxxxx
+        URL: https://<hostname>/api/v1/users.json?auth_token=xxxxxx
 
     **Respuesta**:
     
@@ -1224,7 +1227,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta
           ]
         }
 
-## Renovación de llave de API
+## Renovación de llave de *API*
 
 Los usuarios pueden solicitar una renovación de su token de autenticación realizando una petición `GET` al siguiente URL:
 
@@ -1232,7 +1235,7 @@ Los usuarios pueden solicitar una renovación de su token de autenticación real
 
 Donde `user:id` debe ser reemplazado con el ID del usuario deseado.
 
-Si la petición es exitosa, la respuesta *JSON* contendrá el token de autenticación generado junto al campo `query` establecido en `true`.
+Si la petición es exitosa, la respuesta *JSON* contendrá el **token de autenticación** generado junto al campo `query` establecido en `true`.
 
 Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta *JSON*:
 
@@ -1242,7 +1245,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta
       
         Acción HTTP: GET
 
-        URI: https://<hostname>/api/v1/users/1/recreate_api_key?auth_token=xxxxxx
+        URL: https://<hostname>/api/v1/users/1/recreate_api_key?auth_token=xxxxxx
 
     **Respuesta**:
     
