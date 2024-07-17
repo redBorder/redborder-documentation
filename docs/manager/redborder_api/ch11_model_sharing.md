@@ -7,6 +7,12 @@
 
     This value will always be found in the root *JSON* response object and will always be a sibling of the response.
 
+!!! note "Values replacement"
+
+    To indicate the values that should be replaced as indicated in each case, the data name to be replaced is enclosed between `<` and `>` symbols.
+
+    For example, to specify that `sensor_uuid` should be replaced with its own value or the desired value, you would indicate it by enclosing the name between these symbols: `<sensor_uuid>`.
+
 !!! warning "Important"
 
     Management permissions (or read permissions to list) are required to create, modify, overwrite, or delete sensors, domains, access points, or any other model in the database. If these permissions are missing for any of these operations, the HTTP status code `401 Unauthorized` will be returned in the *API* response.
@@ -19,15 +25,15 @@
 
 To list a sensor and all its subordinate sensors, make a `GET` request to the following URL:
 
-    https://<hostname>/api/v1/sensors/<sensor_uuid>/tree?auth_token=<API_key>
+    https://<manager_IP>/api/v1/sensors/<sensor_uuid>/tree?auth_token=<API_key>
 
 Where `sensor_uuid` should be the UUID of the desired sensor tree. If you want to list all sensors of the user's *top* domain and their subordinate sensors, you can make a `GET` request to the following URL:
 
-    https://<hostname>/api/v1/sensors/tree?auth_token=<API_key>
+    https://<manager_IP>/api/v1/sensors/tree?auth_token=<API_key>
 
 !!! example "Example of `GET` request to list all sensors"
 
-    curl --insecure -X GET 'https://<hostname>/api/v1/sensors/tree?auth_token=<API_key>' -H 'content-type: application/json'
+    curl --insecure -X GET 'https://<manager_IP>/api/v1/sensors/tree?auth_token=<API_key>' -H 'content-type: application/json'
 
 If the request is successful, the response will contain the requested sensor tree and the `query` field will be set to `true`. Currently, only *JSON* format is supported for requests and responses.
 
@@ -39,7 +45,7 @@ Expand the following tab to see a complete execution example:
       
         HTTP Method: GET
 
-        URI: https://<hostname>/api/v1/sensors/8726017729975087448/tree?auth_token=xxxxxx
+        URI: https://<manager_IP>/api/v1/sensors/8726017729975087448/tree?auth_token=xxxxxx
 
     **Response**:
     
@@ -222,7 +228,7 @@ Expand the following tab to see a complete execution example:
 
 New domains can be created by making a `POST` request to the following URL:
 
-    https://<hostname>/api/v1/sensors/domain?auth_token=<API_key>
+    https://<manager_IP>/api/v1/sensors/domain?auth_token=<API_key>
 
 A *JSON* payload must be sent along with this request. The allowed parameters for the payload are:
 
@@ -259,9 +265,15 @@ Expand the following tab to see a complete execution example:
       
         HTTP Method: POST
 
-        URL: https://<hostname>/api/v1/sensors/domain?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/sensors/domain?auth_token=xxxxxx
 
-        Payload: { "domain_type": "2", "parent_uuid": "697893457705749905", "name": "new_domain" }
+        Payload: 
+        
+        {
+          "domain_type": "2",
+          "parent_uuid": "697893457705749905",
+          "name": "new_domain"
+        }
 
     **Response**:
 
@@ -294,7 +306,7 @@ In the *API* response, there is a field called `type` that indicates the **type 
 
 New sensors can be created by making a `POST` request to the following URL:
 
-    https://<hostname>/api/v1/sensors/flow?auth_token=<API_key>
+    https://<manager_IP>/api/v1/sensors/flow?auth_token=<API_key>
 
 A *JSON* payload must be sent along with this request. The allowed parameters for the payload are:
 
@@ -353,9 +365,15 @@ Expand the following tab to see a complete execution example:
       
         HTTP Method: POST
 
-        URL: https://<hostname>/api/v1/sensors/flow?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/sensors/flow?auth_token=xxxxxx
 
-        Payload: {"name":"test_flow", "parent_uuid":"7549459708256671519", "ip":"10.0.2.10"}
+        Payload: 
+        
+        {
+          "name": "test_flow",
+          "parent_uuid": "7549459708256671519",
+          "ip": "10.0.2.10"
+        }
 
     **Response**:
 
@@ -377,7 +395,7 @@ Expand the following tab to see a complete execution example:
 
 New sensors can be created by making a `POST` request to the following URL:
 
-    https://<hostname>/api/v1/sensors/meraki?auth_token=<API_key>
+    https://<manager_IP>/api/v1/sensors/meraki?auth_token=<API_key>
 
 A *JSON* payload must be sent along with this request. The allowed parameters for the payload are:
 
@@ -400,7 +418,7 @@ Expand the following tab to see a complete execution example:
       
         HTTP Method: POST
 
-        URL: https://<hostname>/api/v1/sensors/meraki?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/sensors/meraki?auth_token=xxxxxx
 
         Payload: 
         
@@ -433,7 +451,7 @@ Expand the following tab to see a complete execution example:
 
 New sensors can be created by making a `POST` request to the following URL:
 
-    https://<hostname>/api/v1/sensors/mse?auth_token=<API_key>
+    https://<manager_IP>/api/v1/sensors/mse?auth_token=<API_key>
 
 A *JSON* payload must be sent along with this request. The allowed parameters for the payload are:
 
@@ -457,7 +475,7 @@ Expand the following tab to see a complete execution example:
       
         HTTP Method: POST
 
-        URL: https://<hostname>/api/v1/sensors/mse?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/sensors/mse?auth_token=xxxxxx
 
         Payload: 
         
@@ -465,8 +483,7 @@ Expand the following tab to see a complete execution example:
           "name": "test_mse",
           "parent_uuid": "7549459708256671519",
           "stream": "StreamB",
-          "mse_version": "8",
-          "port": "xxxx" 
+          "mse_version": "8"
         }
 
     **Response**:
@@ -490,7 +507,7 @@ Expand the following tab to see a complete execution example:
 
 MSE sensors in a domain can be listed by making a `GET` request to the following URL:
 
-    https://<hostname>/api/v1/sensors/<sensor_uuid>/mse?auth_token=<API_key>
+    https://<manager_IP>/api/v1/sensors/<sensor_uuid>/mse?auth_token=<API_key>
 
 Where `sensor_uuid` should be the UUID of the domain from which you want to retrieve the sensors.
 
@@ -504,7 +521,7 @@ Expand the following tab to see a complete execution example:
       
         HTTP Method: GET
 
-        URL: https://<hostname>/api/v1/sensors/8726017729975087448/mse?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/sensors/8726017729975087448/mse?auth_token=xxxxxx
 
     **Response**:
 
@@ -544,7 +561,7 @@ Expand the following tab to see a complete execution example:
 
 The user can specify which sensor to delete by providing the UUID of that sensor in a `DELETE` request to the following URL:
 
-    https://<hostname>/api/v1/sensors/<uuid>/?auth_token=<API_key>
+    https://<manager_IP>/api/v1/sensors/<uuid>/?auth_token=<API_key>
 
 Where `uuid` should be replaced with the UUID of the sensor to be deleted.
 
@@ -558,7 +575,7 @@ Expand the following tab to see a complete execution example:
       
         HTTP Method: DELETE
 
-        URL: https://<hostname>/api/v1/sensors/8726017729975087448?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/sensors/8726017729975087448?auth_token=xxxxxx
 
     **Response**:
 
@@ -568,7 +585,7 @@ Expand the following tab to see a complete execution example:
 
 To update a domain, use the same parameters as in [Domain Creation](/manager/redborder_api/ch11_model_sharing/#domain-creation). You can update the name, type, domain type, UUID, and *MAC Hashing salt* (only for Service Providers). The payload must be in *JSON* format and the `PATCH` request should be made to the following URL:
 
-    https://<hostname>/api/v1/sensors/<sensor_uuid>/?auth_token=<API_key>
+    https://<manager_IP>/api/v1/sensors/<sensor_uuid>/?auth_token=<API_key>
 
 Where `sensor_uuid` should be replaced with the UUID of the domain to be updated.
 
@@ -582,10 +599,14 @@ Expand the following tab to see a complete execution example:
       
         HTTP Method: PATCH
 
-        URL: https://<hostname>/api/v1/sensors/86348645?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/sensors/86348645?auth_token=xxxxxx
 
-        Payload: { "name": "new_name", "domain_type": "4" }
+        Payload:    
 
+        {
+            "name": "new_name",
+            "domain_type": "4"
+        }
     **Response**:
 
         Status Code: 200 OK
@@ -604,7 +625,7 @@ Expand the following tab to see a complete execution example:
 
 Updating Flow, MSE, and Meraki sensors uses the same parameters as in their creation. All sensor properties will be updated with the new values. The request payload must be in *JSON* format, and the `PATCH` request should be made to the following URL:
 
-    https://<hostname>/api/v1/sensors/<sensor_uuid>/<type>/?auth_token=<API_key>
+    https://<manager_IP>/api/v1/sensors/<sensor_uuid>/<type>/?auth_token=<API_key>
 
 The `type` parameter should be replaced with the type of sensor to update (`flow`, `mse`, or `meraki`).
 
@@ -618,9 +639,15 @@ Expand the following tab to see a complete execution example:
       
         HTTP Method: PATCH
 
-        URL: https://<hostname>/api/v1/sensors/86348645/flow?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/sensors/86348645/flow?auth_token=xxxxxx
 
-        Payload: { "name": "flow_new", "nmsp": "1", "spanport": "0" }
+        Payload: 
+        
+        {
+            "name": "flow_new",
+            "nmsp": "1",
+            "spanport": "0"
+        }
 
     **Response**:
 
@@ -655,13 +682,13 @@ The usual rules for creating access points and domains apply, with the exception
 
 This request can be executed by issuing a `POST` request to the following URL:
 
-    https://<hostname>/api/v1/sensors/<sensor_uuid>/override_all/?auth_token=<API_key>
+    https://<manager_IP>/api/v1/sensors/<sensor_uuid>/override_all/?auth_token=<API_key>
 
 Where `sensor_uuid` should be replaced with the UUID of the domain to be overwritten.
 
 Alternatively, you can leave the `sensor_uuid` field blank. In this case, the domain to be overwritten is the top domain (main domain) of the user owning the `auth_token` specified in the request:
 
-    https://<hostname>/api/v1/sensors/override_all/?auth_token=<API_key>
+    https://<manager_IP>/api/v1/sensors/override_all/?auth_token=<API_key>
 
 If the request is successful, the *JSON* response will show the `query` field set to `true`.
 
@@ -673,7 +700,7 @@ Expand the following tab to see a complete execution example:
       
         HTTP Method: POST
 
-        URL: https://<hostname>/api/v1/sensors/697893457705749905/override_all?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/sensors/697893457705749905/override_all?auth_token=xxxxxx
 
         Payload: 
         
@@ -740,7 +767,7 @@ Expand the following tab to see a complete execution example:
 
 You can obtain a list of all access points that the user has access to by making a `GET` request to the following URL:
 
-    https://<hostname>/api/v1/access_points.<format>?auth_token=<API_key>
+    https://<manager_IP>/api/v1/access_points.<format>?auth_token=<API_key>
 
 Where `format` should be the desired response format, either `csv` or `json`.
 
@@ -763,7 +790,7 @@ Expand the following tab to see a complete execution example with a *JSON* respo
       
         HTTP Method: GET
 
-        URL: https://<hostname>/api/v1/access_points.json?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/access_points.json?auth_token=xxxxxx
 
     **Response**:
     
@@ -841,7 +868,7 @@ Expand the following tab to see a complete execution example with a *JSON* respo
 
 You can create new access points by making a `POST` request to the following URL:
 
-    https://<hostname>/api/v1/access_points?auth_token=<API_key>
+    https://<manager_IP>/api/v1/access_points?auth_token=<API_key>
 
 To successfully create a new access point, it is necessary to provide a `sensor_uuid` (UUID of the sensor under which the new AP will be a descendant). If this parameter is not provided, an HTTP status code `404 Not Found` will be returned.
 
@@ -876,7 +903,7 @@ Expand the following tab to see a complete execution example with a *JSON* respo
       
         HTTP Method: POST
 
-        URL: https://<hostname>/api/v1/access_points?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/access_points?auth_token=xxxxxx
 
         Payload:
         
@@ -931,8 +958,8 @@ Expand the following tab to see a complete execution example with a *JSON* respo
 
 Existing access points can be modified by making a `PATCH` or `PUT` request to the following URLs:
 
-    https://<hostname>/api/v1/access_points/:id
-    https://<hostname>/api/v1/access_points/:mac_address
+    https://<manager_IP>/api/v1/access_points/:id
+    https://<manager_IP>/api/v1/access_points/:mac_address
 
 Where `id` is the ID of the access point to modify. It is also possible to specify the access point to modify by including the MAC address of the access point instead of the ID.
 
@@ -946,7 +973,7 @@ Similar to domain override, this action affects only the wireless access points 
 
 To perform this action, make a `POST` request to the following URL:
 
-    https://<hostname>/api/v1/sensors/<sensor_uuid>/access_point/override/?auth_token=<API_key>
+    https://<manager_IP>/api/v1/sensors/<sensor_uuid>/access_point/override/?auth_token=<API_key>
 
 Replace `sensor_uuid` with the UUID of the domain for which you want to override the access points.
 
@@ -970,7 +997,7 @@ Expand the following tab to see a complete execution example with a *JSON* respo
       
         HTTP Method: POST
 
-        URL: https://<hostname>/api/v1/sensors/697893457705749905/access_point/override?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/sensors/697893457705749905/access_point/override?auth_token=xxxxxx
 
         Payload:
         
@@ -1028,7 +1055,7 @@ Expand the following tab to see a complete execution example with a *JSON* respo
 
 Access points can be deleted through different actions according to the user's needs. If you want to delete a list of access points by providing their MAC address, regardless of their hierarchy, you can send a `DELETE` request to the following URL:
 
-    https://<hostname>/api/v1/access_points
+    https://<manager_IP>/api/v1/access_points
 
 This request must be sent along with a *JSON* payload describing the array of access points you want to delete. Access points are identified by their MAC address or ID.
 
@@ -1046,7 +1073,7 @@ Expand the following tab to see a complete execution example with a *JSON* respo
       
         HTTP Method: DELETE
 
-        URL: https://<hostname>/api/v1/access_points?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/access_points?auth_token=xxxxxx
 
         Payload:
         
@@ -1070,7 +1097,7 @@ Expand the following tab to see a complete execution example with a *JSON* respo
 
 To delete all access points within a domain and its subdomains, a `DELETE` request should be sent to the following URL:
 
-    https://<hostname>/api/v1/sensors/<sensor_uuid>/access_points
+    https://<manager_IP>/api/v1/sensors/<sensor_uuid>/access_points
 
 Where `sensor_uuid` should be replaced with the UUID of the domain from which the **access points** are to be deleted.
 
@@ -1082,7 +1109,7 @@ If the request is successful, the JSON response will describe the `query` field 
       
         HTTP Method: DELETE
 
-        URL: https://<hostname>/api/v1/sensors/697893457705749905/access_points?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/sensors/697893457705749905/access_points?auth_token=xxxxxx
 
     **Response**:
     
@@ -1098,7 +1125,7 @@ If the request is successful, the JSON response will describe the `query` field 
 
 The super administrator has the ability to list all existing users. To do this, a `GET` request must be made to the following URL:
 
-    https://<hostname>/api/v1/users.<format>
+    https://<manager_IP>/api/v1/users.<format>
 
 Where `format` should be the desired format for the response, such as `csv` or `json`.
 
@@ -1114,7 +1141,7 @@ Expand the following tab to see a complete execution example with a *JSON* respo
       
         HTTP Method: GET
 
-        URL: https://<hostname>/api/v1/users.json?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/users.json?auth_token=xxxxxx
 
     **Response**:
     
@@ -1229,7 +1256,7 @@ Expand the following tab to see a complete execution example with a *JSON* respo
 
 Users can request a renewal of their authentication token by making a `GET` request to the following URL:
 
-    https://<hostname>/api/v1/users/<user_id>/recreate_api_key
+    https://<manager_IP>/api/v1/users/<user_id>/recreate_api_key
 
 Where `user:id` should be replaced with the ID of the desired user.
 
@@ -1243,7 +1270,7 @@ Please deploy the following tab to see a complete execution example with a *JSON
       
         HTTP Action: GET
 
-        URL: https://<hostname>/api/v1/users/1/recreate_api_key?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/users/1/recreate_api_key?auth_token=xxxxxx
 
     **Response**:
     
