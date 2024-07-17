@@ -24,6 +24,7 @@ nav:
   - index.md
   - guides/getting_started/first_steps.md
   - guides/integrations/otrs.md
+  - guides/integrations/sso.md
   - guides/use_cases/ch9_IP_tracking.md
   - guides/use_cases/ch9_untangle_remote_info.md
   - guides/use_cases/ch9_detect_eternalblue.md
