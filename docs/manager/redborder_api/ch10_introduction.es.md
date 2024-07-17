@@ -238,7 +238,7 @@ Dentro de `rb_state` tenemos datos sobre el estado de salud de las estaciones in
 
 Para ver un listado de las dimensiones disponibles, despliega la siguiente pestaña:
 
-??? info "Dimensiones" 28
+??? info "Dimensiones"
 
     |                      |                    |                     |
     |----------------------|--------------------|---------------------|
