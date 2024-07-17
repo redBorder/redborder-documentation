@@ -94,7 +94,7 @@ El resto de los parámetros debe proporcionarse en los datos de carga útil del 
 | Parámetro          | Descripción                            |
 | ------------------ | -------------------------------------- |
 | dataSource         | Base de datos a la que se accede.      |
-| namespace_uuids    | (Opcional) Arreglo de uno o más valores. Debe contener el *UUIDs* del *Namespace* donde los datos serán buscados. Si este valor no es indicado, el *dataSource* usado será el por defecto.  |
+| namespace_uuids    | Arreglo de uno o más valores. Debe contener el *UUIDs* del *Namespace* donde los datos serán buscados. Si este valor no es indicado, el *dataSource* usado será el por defecto.  |
 | granularity        | Especifica el tamaño del *bucket* para los valores.       |
 | intervals          | Especifica el(los) rango(s) de tiempo de la petición. El intervalo debe especificarse en formato ISO y puede incluir la zona horaria si se desea.       |
 | queryType          | Especifica qué tipo de operador de petición utilizar.       |
@@ -192,26 +192,26 @@ Para ver un listado de las dimensiones disponibles, despliega la siguiente pesta
 
 ??? info "Dimensiones"
 
-    |                      |                    |                       |                     |                  |
-    |----------------------|--------------------|-----------------------|---------------------|------------------|
-    | action               | client_latlong     | ethsrc                | src                 |                  |
-    | classification       | zone               | ethsrc_vendor         | src_as_name         |                  |
-    | service_provider_uuid| conversation       | file_hostname         | src_country_code    |                  |
-    | service_provider     | darklist_category  | file_size             | src_map             |                  |
-    | organization_uuid    | darklist_direction | file_uri              | src_net_name        |                  |
-    | organization         | darklist_protocol  | group_name            | src_port            |                  |
-    | namespace_uuid       | darklist_score     | icmptype              | tos                 |                  |
-    | namespace            | darklist_score_name| iplen_range           | ttl                 |                  |
-    | deployment_uuid      | domain_name        | l4_proto              | vlan                |                  |
-    | deployment           | dst                | msg                   | wireless_station    |                  |
-    | market_uuid          | dst_as_name        | priority              |                     |                  |
-    | market               | dst_country_code   | rev                   |                     |                  |
-    | building_uuid        | dst_map            | scatterplot           |                     |                  |
-    | building             | dst_net_name       | sensor_uuid           |                     |                  |
-    | campus_uuid          | dst_port           | sensor_name           |                     |                  |
-    | campus               | ethdst             | sha256                |                     |                  |
-    | floor_uuid           | ethdst_vendor      | sig_generator         |                     |                  |
-    | floor                | ethlength_range    | sig_id                |                     |                  |
+    |                      |                    |                       |                     |
+    |----------------------|--------------------|-----------------------|---------------------|
+    | action               | client_latlong     | ethsrc                | src                 |
+    | classification       | zone               | ethsrc_vendor         | src_as_name         |
+    | service_provider_uuid| conversation       | file_hostname         | src_country_code    |
+    | service_provider     | darklist_category  | file_size             | src_map             |
+    | organization_uuid    | darklist_direction | file_uri              | src_net_name        |
+    | organization         | darklist_protocol  | group_name            | src_port            |
+    | namespace_uuid       | darklist_score     | icmptype              | tos                 |
+    | namespace            | darklist_score_name| iplen_range           | ttl                 |
+    | deployment_uuid      | domain_name        | l4_proto              | vlan                |
+    | deployment           | dst                | msg                   | wireless_station    |
+    | market_uuid          | dst_as_name        | priority              |                     |
+    | market               | dst_country_code   | rev                   |                     |
+    | building_uuid        | dst_map            | scatterplot           |                     |
+    | building             | dst_net_name       | sensor_uuid           |                     |
+    | campus_uuid          | dst_port           | sensor_name           |                     |
+    | campus               | ethdst             | sha256                |                     |
+    | floor_uuid           | ethdst_vendor      | sig_generator         |                     |
+    | floor                | ethlength_range    | sig_id                |                     |
 
 ### Dimensiones para `rb_monitor`
 
@@ -221,26 +221,16 @@ Para ver un listado de las dimensiones disponibles, despliega la siguiente pesta
 
 ??? info "Dimensiones"
 
-    |                      |                    |                  |                  |
-    |----------------------|--------------------|------------------|------------------|
-    | service_provider_uuid| monitor            |                  |                  |
-    | service_provider     | sensor_uuid        |                  |                  |
-    | organization_uuid    | unit               |                  |                  |
-    | organization         | value              |                  |                  |
-    | namespace_uuid       |                    |                  |                  |
-    | namespace            |                    |                  |                  |
-    | deployment_uuid      |                    |                  |                  |
-    | deployment           |                    |                  |                  |
-    | market_uuid          |                    |                  |                  |
-    | market               |                    |                  |                  |
-    | building_uuid        |                    |                  |                  |
-    | building             |                    |                  |                  |
-    | campus_uuid          |                    |                  |                  |
-    | campus               |                    |                  |                  |
-    | floor_uuid           |                    |                  |                  |
-    | floor                |                    |                  |                  |
-    | group_name           |                    |                  |                  |
-    | instance             |                    |                  |                  |
+    |                      |                    |                  |
+    |----------------------|--------------------|------------------|
+    | service_provider_uuid| market_uuid        | group_name       |
+    | service_provider     | market             | instance         |
+    | organization_uuid    | building_uuid      | monitor          |
+    | organization         | building           | sensor_uuid      |
+    | namespace_uuid       | campus_uuid        | unit             |
+    | namespace            | campus             | value            |
+    | deployment_uuid      | floor_uuid         |                  |
+    | deployment           | floor              |                  |
 
 ### Dimensiones para `rb_state`
 
@@ -248,28 +238,20 @@ Dentro de `rb_state` tenemos datos sobre el estado de salud de las estaciones in
 
 Para ver un listado de las dimensiones disponibles, despliega la siguiente pestaña:
 
-??? info "Dimensiones"
+??? info "Dimensiones" 28
 
-    |                      |                    |                  |                  |
-    |----------------------|--------------------|------------------|------------------|
-    | service_provider_uuid| type               |                  |                  |
-    | service_provider     |wireless_admin_state|                  |                  |
-    | organization_uuid    | wireless_channel   |                  |                  |
-    | organization         | wireless_mode      |                  |                  |
-    | namespace_uuid       | wireless_op_state  |                  |                  |
-    | namespace            | wireless_slot      |                  |                  |
-    | deployment_uuid      |wireless_station_name|                  |                  |
-    | deployment           | wireless_station   |                  |                  |
-    | market_uuid          | wireless_tx_power  |                  |                  |
-    | market               | status             |                  |                  |
-    | building_uuid        |                    |                  |                  |
-    | building             |                    |                  |                  |
-    | campus_uuid          |                    |                  |                  |
-    | campus               |                    |                  |                  |
-    | floor_uuid           |                    |                  |                  |
-    | floor                |                    |                  |                  |
-    | sensor_uuid          |                    |                  |                  |
-    | sensor_name          |                    |                  |                  |
+    |                      |                    |                     |
+    |----------------------|--------------------|---------------------|
+    | service_provider_uuid| building_uuid      | wireless_channel    |
+    | service_provider     | building           | wireless_mode       |
+    | organization_uuid    | campus_uuid        | wireless_op_state   |
+    | organization         | campus             | wireless_slot       |
+    | namespace_uuid       | floor_uuid         |wireless_station_name|
+    | namespace            | floor              | wireless_station    |
+    | deployment_uuid      | sensor_uuid        | wireless_tx_power   |
+    | deployment           | sensor_name        | status              |
+    | market_uuid          | type               |                     |
+    | market               |wireless_admin_state|                     |
 
 ## Filtros
 
