@@ -1,6 +1,7 @@
-# Zabbix
 
-## Integrar Zabbix con la Plataforma Web redBorder Manager
+# Guía de Integración de Zabbix
+
+## Introducción
 
 Esta documentación proporciona una guía paso a paso para integrar [Zabbix](https://www.zabbix.com/) con la Plataforma Web redBorder. Al seguir estas instrucciones, podrás realizar solicitudes POST a la API de Zabbix para crear y gestionar elementos dentro de Zabbix desde la plataforma redBorder.
 
@@ -8,26 +9,37 @@ Esta documentación proporciona una guía paso a paso para integrar [Zabbix](htt
 
 Aquí tienes un ejemplo del endpoint de la API para la integración:
 
-```http
-http://<zabbix-server>/zabbix/api_jsonrpc.php
-```
+    http://<zabbix-server>/zabbix/api_jsonrpc.php
 
 ### Parámetros
 
-- `<zabbix-server>`: La dirección IP de tu instancia de Zabbix.
-- `Username`: El nombre de usuario de Zabbix para poder realizar consultas a la API.
-- `Password`: La contraseña del usuario especificado en `Username`.
-- `Token`: Token usado para acceder a la API de Zabbix.
+| Parámetro          | Descripción                                |
+| ------------------ | ------------------------------------------ |
+| Zabbix Endpoint    | La dirección IP de tu instancia de Zabbix. |
+| Zabbix Username    | El nombre de usuario para acceder a la API de Zabbix. |
+| Zabbix Password    | La contraseña del usuario especificado.    |
+| Zabbix Token       | Token usado para acceder a la API de Zabbix. |
 
-🚨 **Nota:** El `Username` y `Password` son las credenciales usadas para entrar en Zabbix.
-- Se tiene que tener en cuenta que el usuario debe tener permisos y haber creado un `Token` también con permisos adecuados para poder obtener los datos de la API de Zabbix. 
+!!! info "Ten en cuenta"
+    El `Zabbix Username` y `Zabbix Password` son las credenciales usadas para entrar en la interfaz web de Zabbix.
 
+!!! warning "Importante"
+    Asegúrate de que el usuario tenga permisos adecuados y haya creado un `Zabbix Token` también con los permisos necesarios para acceder a la API de Zabbix.
 
 ## Configurar la Interfaz Web de redBorder para Usar la API de Zabbix
 
 1. Ve a `Herramientas -> Integraciones`.
-2. Haz click en la carta llamada **"Integración con la API de Zabbix"** (en el botón de "Empezar").
-3. Rellena todos los campos.
+2. Haz clic en la tarjeta titulada **"Integración con la API de Zabbix"** (haz clic en el botón "Empezar").
+3. Rellena todos los campos requeridos.
 4. Presiona el botón **"Actualizar"** para aplicar los cambios.
 
-![Configure redBorder Web UI to Use the Zabbix API](images/zabbix_step_1.png)
+![Configurar la Interfaz Web de redBorder para Usar la API de Zabbix](images/zabbix_step_1.png)
+
+
+## Enriquecimiento de Assets.
+
+Para enriquecer los assets con los datos de Zabbix, debes seguir los siguientes pasos: 
+
+1. Una vez que tengamos los parametros de Zabbix introducidos, vamos a la seccion de 'Herramientas' -> 'Cola Tareas y Trabajadores'
+2. Ahora tendremos una nueva tarea, 'Inventario de Zabbix'. Esta tarea solo se podra ver si tenemos los parámetros de Zabbix establecidos.
+3. Al ejecutar esta tarea, los valores de las direcciones IP/MAC que tengamos en los objetos, se modificacran segun la información de Zabbix, es decir, si un valor de IP/MAC tiene un nombre o tipo de objeto diferente, este se modificara segun la informacion de Zabbix. 
