@@ -74,6 +74,17 @@ Si no está seguro sobre la configuración actual, puede cancelar con la opción
 !!! warning "Si está configurando un clúster..."
     Asegurese de completar esta guía *antes* de lanzar el asistente en los demás nodos.
 
+!!! info
+    De momento, solo está disponible el asistente de instalación en el **idioma inglés**
+
+### Selección de opciones
+
+Navegar por nuestro asistente de instalación es muy sencillo:
+
+- Moverse entre las opciones disponibles: pulsa las **flechas del teclado**
+- Marcar una casilla: pulsa la tecla de **espacio**.
+- Seleccionar una opción: pulsa la tecla de **enter**.
+
 ### Configuración de red
 
 Este paso es opcional. Si está seguro de que las interfaces de red ya están configuradas, puede omitir este paso. De lo contrario, entra en la configuración presionando "Sí".
