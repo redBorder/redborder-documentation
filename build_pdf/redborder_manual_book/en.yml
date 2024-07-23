@@ -38,3 +38,9 @@ nav:
   - manager/redborder_api/ch10_introduction.md
   - manager/redborder_api/ch10_use_examples.md
   - manager/redborder_api/ch11_model_sharing.md
+  - proxy/platform_configurations/ch1_proxy_installation.md
+  - proxy/platform_configurations/proxy_sensor.md
+  - ips/IPS_basics/ch1_what_is_redborder.md
+  - ips/IPS_basics/ch2_redborder_installation.md
+  - ips/platform_configurations/ips_sensor.md
+  
