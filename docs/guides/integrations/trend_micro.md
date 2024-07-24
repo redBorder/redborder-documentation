@@ -61,6 +61,4 @@ Next, create a role specifically for performing REST requests. This role will be
 
 ![Copy API Key View](images/trend_micro_step_8.png)
 
-```http title="Example of Deep Security Manager URL"
-https://dsm.example.com:4119
-```
+Once the form is completed and properly filled out, we will be able to communicate with your DSM.

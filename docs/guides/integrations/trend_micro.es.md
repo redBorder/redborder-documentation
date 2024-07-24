@@ -59,8 +59,4 @@ A continuación, cree un rol específico para realizar solicitudes REST. Este ro
 3. Complete el formulario.
 4. Presione el botón **"Actualizar"** para aplicar los cambios.
 
-![Copy API Key View](images/trend_micro_step_8.png)
-
-```http title="Ejemplo de Deep Security Manager URL"
-https://dsm.example.com:4119
-```
+Una vez que el formulario esté completo y correctamente completado, podremos comunicarnos con su DSM.
