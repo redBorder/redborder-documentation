@@ -4,6 +4,9 @@
 
 Esta documentación proporciona una guía paso a paso para integrar [GLPI](https://glpi-project.org/) con la Plataforma Web redBorder. Al seguir estas instrucciones, podrás realizar solicitudes POST a la API de GLPI para crear y gestionar elementos dentro de GLPI desde la plataforma redBorder.
 
+!!! note "Versión de la Integración"
+    Esta integración funciona con la versión 10.0.15 de GLPI.
+    
 ## Ejemplo del Endpoint de la API
 
 Aquí tienes un ejemplo del endpoint de la API para la integración:
