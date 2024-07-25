@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This documentation provides a step-by-step guide to integrating [GLPI](https://www.zglpi.com/) with the redBorder Web Platform. By following these instructions, you will be able to make POST requests to the GLPI API to create and manage items within GLPI from the redBorder platform.
+This documentation provides a step-by-step guide to integrating [GLPI](https://www.zglpi.com/) with the redBorder Web Platform. By following these instructions, you will be able to make POST requests to the GLPI API to create and manage assets within GLPI from the redBorder platform.
 
 !!! note "Integration Version"
     This integration works with GLPI version 10.0.15.
