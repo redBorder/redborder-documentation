@@ -5,6 +5,9 @@
 
 Esta documentación proporciona una guía paso a paso para integrar [Zabbix](https://www.zabbix.com/) con la Plataforma Web redBorder. Al seguir estas instrucciones, podrás realizar solicitudes POST a la API de Zabbix para crear y gestionar elementos dentro de Zabbix desde la plataforma redBorder.
 
+!!! note "Versión de la Integración"
+    Esta integración funciona con la versión 6.4.14 de Zabbix.
+
 ## Ejemplo del Endpoint de la API
 
 Aquí tienes un ejemplo del endpoint de la API para la integración:
