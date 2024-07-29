@@ -30,25 +30,6 @@ De esta manera se permite la creación de un bonding para la gestión y conexió
     
     El Manager debe estar operativo y en una red accesible a los sensores. Algunos de los procesos de configuración de los sensores dependen del acceso al Manager.
 
-![Escenario básico para la instalación del Manager](images/ch01_img001.png)
+![Escenario básico para la instalación del Manager](../../manager/redborder_basics/images/ch01_img001.png)
 
 Escenario básico para la instalación del Manager
-
-## Estructura de la interfaz de usuario del asistente de instalación
-
-Para nuestra nueva versión de redborder NG hemos renovado por completo el asistente de instalación. Ahora contamos con un asistente más intuitivo y sencillo de utilizar, además de configuraciones nuevas para las nuevas adiciones a la plataforma.
-
-![Pantalla inicial del asistente de instalación](images/ch01_img002.png)
-
-Pantalla inicial del asistente de instalación
-
-!!! info "Ten en cuenta..."
-    De momento, solo está disponible el asistente de instalación en el **idioma inglés**
-
-### Selección de opciones
-
-Navegar por nuestro nuevo asistente de instalación es muy sencillo:
-
-- Moverse entre las opciones disponibles: pulsa las **flechas del teclado**
-- Marcar una casilla: pulsa la tecla de **espacio**.
-- Seleccionar una opción: pulsa la tecla de **enter**.
