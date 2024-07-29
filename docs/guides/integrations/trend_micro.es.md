@@ -4,6 +4,8 @@
 
 Esta documentación proporciona una guía paso a paso para integrar [Trend Micro Deep Security Manager](https://www.trendmicro.com/es_es/business/products/hybrid-cloud/deep-security.html?utm_content=ent_cloud+security_lg_e_es_wg_ao_search&ent_cloud+one_lg_e_es_wg_ao_search&gad_source=1&gclid=Cj0KCQjwkdO0BhDxARIsANkNcrel8Dzy3FK5eq43xqTjoUjEzbPHWa83z9Di5gBm_DLFxWQUQGkY3g8aAjV-EALw_wcB) con la Plataforma Web de redBorder. Siguiendo estas instrucciones, podrá habilitar la [API de Servicios Web ](https://automation.deepsecurity.trendmicro.com/article/20_0/api-reference/) en Deep Security Manager, permitiéndole realizar solicitudes REST.
 
+Esta documentación está basada en la versión 20.0.926 de Deep Security Manager.
+
 ## Habilitar la API de Servicios Web
 
 Primero, habilite la API de Servicios Web para Deep Security Manager. Puede consultar la [Documentación del Centro de Ayuda de Deep Security](https://help.deepsecurity.trendmicro.com/20_0/on-premise/welcome.html) para obtener más detalles.

@@ -4,6 +4,8 @@
 
 Esta documentación proporciona una guía paso a paso para integrar [OTRS](https://otrs.com/) con la Plataforma Web redBorder. Al seguir estas instrucciones, podrás crear un [Servicio Web](https://academy.otrs.com/doc/admin/processes-automation/web-services/) en OTRS, lo que te permitirá realizar solicitudes POST para crear tickets.
 
+Esta documentación está basada en la versión 6.0.40 de OTRS Community Edition.
+
 ## Ejemplo del Endpoint de la API
 
 Aquí tienes un ejemplo del endpoint de la API que crearás:
