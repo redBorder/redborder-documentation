@@ -24,7 +24,7 @@ http://glpi-api-example/glpi/apirest.php/
 | GLPI APP Token         | Token used to make queries to the GLPI API. |
 
 !!! info "Nota"
-    El `API Token` es la credencial utilizada para poder autenticarse con la 
+    El `API Token` es la credencial utilizada para poder autenticarse con la API de GLPI.
 
 !!! warning "Importante"
     Asegúrate de que el usuario tenga los permisos apropiados y también haya creado un `APP Token` con los permisos necesarios para acceder a la API de GLPI.

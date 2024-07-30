@@ -22,7 +22,7 @@ Here is an example of the API endpoint for the integration:
 | GLPI Token       | Token used to access the GLPI API.       |
 
 !!! info "Note"
-    The `API Token` is the credential used to log in to the GLPI web interface.
+    The `API Token` is the credential used to log into GLPI API.
 
 !!! warning "Important"
     Ensure that the user has appropriate permissions and has also created a `APP Token` with the necessary permissions to access the GLPI API.
