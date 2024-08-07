@@ -43,3 +43,5 @@ To enrich assets with data from GLPI, follow these steps:
 1. Once the GLPI parameters are entered, go to the section `Tools -> Worker & Job Queue`.
 2. A new task, **"GLPI Inventory"**, will now be available. This task will only be visible if the GLPI parameters are set.
 3. When executing this task, the values of the MAC addresses in the objects will be modified according to the information from GLPI. That is, if an MAC value has a different name or object type, it will be updated based on the information from GLPI.
+
+![Configure redBorder Web UI to Use the GLPI API](images/glpi_step_2.png)
