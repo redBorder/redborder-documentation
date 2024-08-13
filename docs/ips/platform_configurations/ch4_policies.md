@@ -1,15 +1,18 @@
 # Policies
 
-Every IPS sensor need a set of rules to identify... In this chapter, you will set the rules the IPS needs to recognize traffic as intrusion. By default, there are no policies defined. It is considered that the administrator configure this based on determinant conditions: traffic volume, resources and requeriments of the hardware, customazation of the rules, etc...
+Every IPS sensor need a set of rules to identify as potential threat... In this chapter, you will set the rules the IPS needs to recognize traffic as intrusion. By default, there are no policies defined and it is considered that the administrator configure this based on determinant conditions like: traffic volume, resources and requeriments of the hardware, policies in the organazation, etc...
 
-The rules that are going to be appliyed on IPS are know as policies. There are two main policies:  **Signature policies** and **Reputation policies**. Signature policies those kind of rules that can be triggered by a match between the rule and one packet of the traffic. On the other hand, reputation policies identify IP address of the packet and trigger if is related with a specific network or country. 
+The rules that are going to be appliyed on IPS are know as policies. There are two main policies:  **Signature policies** and **Reputation policies**. Signature policies are those kind of rules that can be triggered by a match between the rule and one packet of the traffic. On the other hand, reputation policies identify IP address of the packet and trigger if is related with a specific network or country. 
 
 Both kind of policies are complementary, so you can exploit a single one of the features or both at the same time. On next steps, you are going to see how to configure the policies.
 
-This chapter is supposing that you already have an IPS claimed and running as a sensor.
+!!! warning "About the configuration"
+    This chapter is supposing that you already have an IPS claimed and running as a sensor.
 
-![IPS sensor claimed and running](images/IPS_configured.png)
-IPS sensor claimed and running
+    ![IPS sensor claimed and running](images/IPS_configured.png)
+    IPS sensor claimed and running
+
+    Please locate your IPS in the **Sensors** tab.
 
 ## Sensor properties
 
@@ -27,7 +30,7 @@ Each of the following fields can be expanded to configure.
 
 ### Exporter
 
-In case the IPS is going to also export the traffic captured, here you have to set the ip address of a flow sensor and the port based on the protocol:
+The IPS allows traffic exportation that any interface of IPS can capture. In this menu you can set the ip address **Destiny address** of a flow sensor and the port based on the protocol:
 
 ![Exporter](images/ips_exporter.png)
 Exporter
@@ -46,7 +49,7 @@ This field is mandatory if you really want to export the traffic. You can put he
 
 #### Obervation id
 
-Observation is just a new field included to have an extra way to filter the content on traffic view, splitting the information catched from different subnets. You can set a positive unique number or leave it empty you don't want to filter.
+Observation is just a new field included to have an extra way to filter the content on traffic view, splitting the information catched from different subnets. You can set a positive unique number or leave it empty if you don't want to filter by it.
 
 ## Groups
 
@@ -88,7 +91,7 @@ To finally apply the configuration, click on **Assign** button.
 
 ## Reputation policies
 
-By default, as it happended with signature policies, no policy is created for the ips. To add the first policy press **New Rep Policy**, it will appear a window to create one. Here you have to select a name, and one of the rules sources. After that, confirm clicking **Create Signature Policy**. A political map will appear:
+By default, as it happened with signature policies, no policy is created for the ips. To add the first policy press **New Rep Policy**, it will appear a window to create one. Here you have to select a name, and one of the rules sources. After that, confirm clicking **Create Signature Policy**. A political map will appear:
 
 ![Reputation map](images/map.png)
 Reputation map
@@ -107,8 +110,8 @@ Color map
 
 After the setup of the policy, go back to the **Reputation policy menu**. Here you will see the new policy created:
 
-![Signature Policies](images/rep_pol.png)
-Signature Policies
+![Reputation Policies](images/rep_pol.png)
+Reputation Policies
 
 To finally apply the configuration, click on **Assign** button.
 
@@ -126,8 +129,5 @@ In monitors you can check the resources consumed by every part of this sensor. H
 ![IPS monitor](images/ips_monitor.png)
 IPS monitor
 
-
-
-About Reputation policies:
-
-The edit menu in IPS sensor:
+# What's next
+Go to **Intrusion** tab and check if any alert have been triggered by any IPS sensor.
