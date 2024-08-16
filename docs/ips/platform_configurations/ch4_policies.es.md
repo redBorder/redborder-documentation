@@ -6,7 +6,7 @@ Las reglas que se van a aplicar en el IPS se conocen como políticas. Hay dos po
 
 Ambos tipos de políticas son complementarias, por lo que puedes explotar una sola de las características o ambas al mismo tiempo. En los próximos pasos, verás cómo configurar las políticas.
 
-!!! advertencia "Sobre la configuración"
+!!! warning "Sobre la configuración"
     Este capítulo supone que ya tienes un IPS reclamado y funcionando como sensor.
 
     ![Sensor IPS reclamado y funcionando](images/IPS_configured.png)
@@ -26,7 +26,7 @@ Menú de propiedades del IPS
 
 Cada uno de los siguientes campos se puede expandir para configurar.
 
-!!! advertencia "Si cambias alguna propiedad..."
+!!! warning "Si cambias alguna propiedad..."
     Recuerda presionar el botón **Actualizar** en la parte inferior 
 
 ### Exportador
@@ -44,7 +44,7 @@ Detalles del exportador
 !!! info "Relación entre puertos y protocolos de exportación de tráfico..."
     Normalmente, vas a usar el puerto 2055 para cualquier versión de netflow y el puerto 6343 para sflow.
 
-!!! advertencia "Si estás configurando un exportador..."
+!!! warning "Si estás configurando un exportador..."
     Es obligatorio configurar un sensor de flujo que va a recibir el flujo de tráfico.
 
 #### Dirección de destino
@@ -75,7 +75,7 @@ Para agregar la primera política, presiona **Nueva Política**, aparecerá una 
 ![Detalle de Política de Firma](images/signature_policy_detail.png)
 Detalle de Política de Firma
 
-!!! advertencia "Si no puedes ver ninguna **Fuente de Regla**..."
+!!! warning "Si no puedes ver ninguna **Fuente de Regla**..."
     No se está descargando ninguna **Regla** por defecto. Es obligatorio tener al menos una para definir una política de firma. Para hacerlo, ve a **Herramientas > Configuración General > Versiones de Regla**.
 
 ### Versiones de Regla
