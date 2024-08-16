@@ -18,8 +18,9 @@ Both kind of policies are complementary, so you can exploit a single one of the 
 
 Clicking on the *four-lines* icon you can expand the properties of the IPS
 
-![IPS sensor claimed and running](images/ips_properties.png)
-IPS sensor claimed and running
+![IPS properties menu](images/ips_properties.png)
+
+IPS properties menu
 
 ## IPS Edit
 
@@ -41,11 +42,14 @@ To do so, press the *four-lines* icon and edit the properties of the connection:
 Exporter details
 
 !!! info "Relation between ports and traffic exportation protocols..."
-    Normally, you are going to use port 2055 for any netflow protocol and port 6343 for sflow
+    Normally, you are going to use port 2055 for any netflow version and port 6343 for sflow.
+
+!!! warning "If you are configuring an exporter..."
+    It is mandatory to configure a flow sensor who's going to receive the traffic flow.
 
 #### Destiny address
 
-This field is mandatory if you really want to export the traffic. You can put here the ip of the flow sensor and the port based on the traffic protocol type.
+This is the address of the manager that is going to receive the traffic; and the port based on the exportation protocol. This field is mandatory if you really want to export the traffic.
 
 #### Obervation id
 
@@ -60,16 +64,27 @@ Groups
 
 ## Signature policies
 
-By default, no signature policy is created for the ips. That's what you can watch in **Signatures policy menu**.
+By default, no signature policy is created for the ips. That's what you can watch in **Signatures policy menu**. In fact, no **Rule** is got in **Rule Versions** and is mandatory to have at least one to create a signature policy.
 
 ![Signature Policies](images/signature_policy_view.png)
 Signature Policies
 
 To add the first policy press **New Policy**, it will appear a window to create one:
 
-![Signature Policiy Detail](images/signature_policy_detail.png)
-Signature Policiy Detail
+![Signature Policy Detail](images/signature_policy_detail.png)
+Signature Policy Detail
 
+!!! warning "If you can't see any **Rule Source**..."
+    No **Rule** is being downloaded by default. It is mandatory to have at least one to define a signature policy. To do so, go to **Tools > General Settings > Rule Versions**.
+
+### Rule Versions
+
+![Access to rule version](images/rule_version.png)
+
+Access to rule version
+
+### Back to signature policy
+    
 Here you have to select a name, and one of the rules sources. After that, confirm clicking **Create Signature Policy**. All rules in that policy will appear:
 
 ![Rules selection](images/snort_rule_select.png)
@@ -99,6 +114,7 @@ Reputation map
 You can configure the address by a set of networks or considering entire contries. Click on **+Add** on the corresponding category to add a network, or a location.
 
 ![Country](images/country.png)
+
 Country
 
 Here you can select the action to take into account for each rule defined: **analyze, bypass or drop**
