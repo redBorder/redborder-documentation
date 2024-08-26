@@ -87,8 +87,11 @@ Each *API* request must contain this access key, and the request will have the p
 
 The remaining parameters should be provided in the payload data of the *POST* request. The payload format should be *JSON*, as we saw in the previous example. For instance, if we save the last query in a file named `data.body`, we can make a simple request like this:
 
-    curl --insecure -X POST 'https://<hostname>/api/data?auth_token=<API_key>' -H 'content-type: application/json' -d @data.body
-
+```bash
+curl --insecure -X POST 'https://<hostname>/api/data?auth_token=<API_key>' \
+     -H 'content-type: application/json' \
+     -d @<input_json_path>
+```
 ## *JSON* parameters
 
 | Parameter          | Description                            |
@@ -163,26 +166,26 @@ To see a list of available dimensions, expand the following tab:
 
 ??? info "Dimensions"
 
-    |                      |                    |                       |                     |                  |
-    |----------------------|--------------------|-----------------------|---------------------|------------------|
-    | application_id_name  | service_provider   | dot11_status          | input_vrf           | tos              |
-    | biflow_direction     | organization_uuid  | dst                   | ip_protocol_version | type             |
-    | client_id            | organization       | dst_as_name           | dst_vlan            | wireless_id      |
-    | client_latlong       | namespace_uuid     | dst_country_code      | l4_proto            | wireless_station |
-    | client_mac           | namespace          | dst_map               | output_snmp         |                  |
-    | client_mac_vendor    | deployment_uuid    | dst_net_name          | output_vrf          |                  |
-    | client_rssi          | deployment         | dst_port              | rat                 |                  |
-    | client_rssi_num      | market_uuid        | dst_vlan              | scatterplot         |                  |
-    | client_snr           | market             | duration              | sensor_uuid         |                  |
-    | client_snr_num       | building_uuid      | engine_id_name        | sensor_name         |                  |
-    | conversation         | building           | hnbgeolocation        | src                 |                  |
-    | coordinates_map      | campus_uuid        | hnblocation           | src_as_name         |                  |
-    | darklist_category    | campus             | http_host             | src_country_code    |                  |
-    | darklist_direction   | floor_uuid         | http_referer_l1       | src_map             |                  |
-    | darklist_protocol    | floor              | http_social_media     | src_net_name        |                  |
-    | darklist_score       | zone               | http_social_user      | src_port            |                  |
-    | darklist_score_name  | direction          | http_user_agent_os    | src_vlan            |                  |
-    | service_provider_uuid| dot11_protocol     | input_snmp            | srv_port            |                  |
+| Column 1               | Column 2                  | Column 3                  | Column 4                | Column 5                  |
+|------------------------|---------------------------|---------------------------|-------------------------|---------------------------|
+| application_id_name    | darklist_category         | https_common_name         | namespace               | tos                       |
+| building               | darklist_direction        | interface_name            | namespace_uuid          | type                      |
+| building_uuid          | darklist_score_name       | ip_as_name                | organization            | url                       |
+| campus                 | darklist_score            | ip_country_code           | organization_uuid       | wan_interface_description |
+| campus_uuid            | deployment                | ip_protocol_version       | product_name            | wan_interface_name        |
+| client_accounting_type | deployment_uuid           | l4_proto                  | public_ip               | wan_ip                    |
+| client_auth_type       | direction                 | lan_interface_description | public_ip_mac           | wan_ip_as_name            |
+| client_fullname        | dot11_protocol            | lan_interface_name        | referer                 | wan_ip_country_code       |
+| client_gender          | dot11_status              | lan_ip                    | referer_l2              | wan_ip_map                |
+| client_id              | dst_map                   | lan_ip_as_name            | scatterplot             | wan_ip_net_name           |
+| client_latlong         | duration                  | lan_ip_country_code       | selector_name           | wan_l4_port               |
+| client_loyality        | engine_id_name            | lan_ip_name               | sensor_ip               | wan_name                  |
+| client_mac             | floor                     | lan_ip_net_name           | sensor_name             | wan_vlan                  |
+| client_mac_vendor      | floor_uuid                | lan_l4_port               | sensor_uuid             | wireless_id               |
+| client_rssi            | host                      | lan_name                  | service_provider        | wireless_operator         |
+| client_vip             | host_l2_domain            | lan_vlan                  | service_provider_uuid   | wireless_station          |
+| conversation           | http_social_media         | market                    | src_map                 | zone                      |
+| coordinates_map        | http_user_agent           | market_uuid               | tcp_flags               | zone_uuid                 |
 
 ### Dimensions for `rb_event`
 
@@ -192,26 +195,20 @@ To see a list of available dimensions, expand the following tab:
 
 ??? info "Dimensions"
 
-    |                      |                    |                       |                     |
-    |----------------------|--------------------|-----------------------|---------------------|
-    | action               | client_latlong     | ethsrc                | src                 |
-    | classification       | zone               | ethsrc_vendor         | src_as_name         |
-    | service_provider_uuid| conversation       | file_hostname         | src_country_code    |
-    | service_provider     | darklist_category  | file_size             | src_map             |
-    | organization_uuid    | darklist_direction | file_uri              | src_net_name        |
-    | organization         | darklist_protocol  | group_name            | src_port            |
-    | namespace_uuid       | darklist_score     | icmptype              | tos                 |
-    | namespace            | darklist_score_name| iplen_range           | ttl                 |
-    | deployment_uuid      | domain_name        | l4_proto              | vlan                |
-    | deployment           | dst                | msg                   | wireless_station    |
-    | market_uuid          | dst_as_name        | priority              |                     |
-    | market               | dst_country_code   | rev                   |                     |
-    | building_uuid        | dst_map            | scatterplot           |                     |
-    | building             | dst_net_name       | sensor_uuid           |                     |
-    | campus_uuid          | dst_port           | sensor_name           |                     |
-    | campus               | ethdst             | sha256                |                     |
-    | floor_uuid           | ethdst_vendor      | sig_generator         |                     |
-    | floor                | ethlength_range    | sig_id                |                     |
+| Column 1               | Column 2             | Column 3             | Column 4             | Column 5             |
+|------------------------|----------------------|----------------------|----------------------|----------------------|
+| action                 | campus               | campus_uuid          | classification       | conversation         |
+| building               | building_uuid        | darklist_category    | darklist_direction   | darklist_score       |
+| darklist_score_name    | deployment           | deployment_uuid      | domain_name          | dst                  |
+| dst_as_name            | dst_country_code     | dst_map              | dst_net_name         | dst_port             |
+| ethdst                 | ethdst_vendor        | ethlength_range      | ethsrc               | ethsrc_vendor        |
+| file_hostname          | file_size            | file_uri             | floor                | floor_uuid           |
+| group_name             | icmptype             | incident_uuid        | iplen_range          | l4_proto             |
+| market                 | market_uuid          | msg                  | namespace            | namespace_uuid       |
+| organization           | organization_uuid    | priority             | rev                  | scatterplot          |
+| sensor_name            | service_provider     | service_provider_uuid| sha256               | sig_generator        |
+| sig_id                 | src                  | src_as_name          | src_country_code     | src_map              |
+| src_net_name           | src_port             | tos                  | ttl                  | vlan                 |
 
 ### Dimensions for `rb_monitor`
 
