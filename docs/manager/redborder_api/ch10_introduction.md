@@ -215,13 +215,13 @@ Within `rb_monitor`, we have *SNMP* monitoring data, so we will find the informa
 To see a list of available dimensions, expand the following tab:
 
 ??? info "Dimensions"
-    |                    |                    |                    |                    |                       |
-    |--------------------|--------------------|--------------------|--------------------|-----------------------|
-    | building           | campus             | deployment         | deployment_uuid    | floor                 |
-    | building_uuid      | campus_uuid        | floor_uuid         | group_name         | instance              |
-    | market             | market_uuid        | monitor            | namespace          | namespace_uuid        |
-    | organization       | organization_uuid  | sensor_uuid        | service_provider   | service_provider_uuid |
-    | unit               | value              |                    |                    |                       |
+    |                       |                    |                    |                    |                       |
+    |-----------------------|--------------------|--------------------|--------------------|-----------------------|
+    | building              | campus             | deployment         | deployment_uuid    | floor                 |
+    | building_uuid         | campus_uuid        | floor_uuid         | group_name         | instance              |
+    | market                | market_uuid        | monitor            | namespace          | namespace_uuid        |
+    | organization          | organization_uuid  | sensor_name        | sensor_uuid        | service_provider      |
+    | service_provider_uuid | unit               | value              |                    |                       |
 
 ### Dimensions for `rb_state`
 
