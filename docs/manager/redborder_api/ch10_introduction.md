@@ -233,19 +233,13 @@ To see a list of available dimensions, expand the following tab:
 
 ??? info "Dimensions"
 
-    |                      |                    |                     |
-    |----------------------|--------------------|---------------------|
-    | service_provider_uuid| building_uuid      | wireless_channel    |
-    | service_provider     | building           | wireless_mode       |
-    | organization_uuid    | campus_uuid        | wireless_op_state   |
-    | organization         | campus             | wireless_slot       |
-    | namespace_uuid       | floor_uuid         |wireless_station_name|
-    | namespace            | floor              | wireless_station    |
-    | deployment_uuid      | sensor_uuid        | wireless_tx_power   |
-    | deployment           | sensor_name        | status              |
-    | market_uuid          | type               |                     |
-    | market               |wireless_admin_state|                     |
-
+    | building           | building_uuid       | campus             | campus_uuid          | client_count        |
+    | deployment         | deployment_uuid     | floor              | floor_uuid           | market              |
+    | market_uuid        | namespace           | namespace_uuid     | organization         | organization_uuid   |
+    | sensor_name        | sensor_uuid         | service_provider   | service_provider_uuid| status              |
+    | type               | wireless_admin_state| wireless_channel   | wireless_mode        | wireless_op_state   |
+    | wireless_slot      | wireless_station    | wireless_station_ip| wireless_station_name| wireless_tx_power   |
+    | zone               | zone_uuid           |                    |                      |                     |
 ## Filters
 
 A filter is a *JSON* object that specifies which data rows should be included in the computation of a request. It is essentially equivalent to the WHERE clause in SQL, allowing filters to be used similarly to how you would use such a clause.
