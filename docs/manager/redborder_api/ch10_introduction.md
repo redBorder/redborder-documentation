@@ -166,8 +166,6 @@ To see a list of available dimensions, expand the following tab:
 
 ??? info "Dimensions"
 
-| Column 1               | Column 2                  | Column 3                  | Column 4                | Column 5                  |
-|------------------------|---------------------------|---------------------------|-------------------------|---------------------------|
 | application_id_name    | darklist_category         | https_common_name         | namespace               | tos                       |
 | building               | darklist_direction        | interface_name            | namespace_uuid          | type                      |
 | building_uuid          | darklist_score_name       | ip_as_name                | organization            | url                       |
@@ -195,8 +193,6 @@ To see a list of available dimensions, expand the following tab:
 
 ??? info "Dimensions"
 
-| Column 1               | Column 2             | Column 3             | Column 4             | Column 5             |
-|------------------------|----------------------|----------------------|----------------------|----------------------|
 | action                 | campus               | campus_uuid          | classification       | conversation         |
 | building               | building_uuid        | darklist_category    | darklist_direction   | darklist_score       |
 | darklist_score_name    | deployment           | deployment_uuid      | domain_name          | dst                  |
