@@ -165,25 +165,26 @@ Within `rb_flow` we have *Netflow* and *sFlow* data, so we will find the informa
 To see a list of available dimensions, expand the following tab:
 
 ??? info "Dimensions"
-
-| application_id_name    | darklist_category         | https_common_name         | namespace               | tos                       |
-| building               | darklist_direction        | interface_name            | namespace_uuid          | type                      |
-| building_uuid          | darklist_score_name       | ip_as_name                | organization            | url                       |
-| campus                 | darklist_score            | ip_country_code           | organization_uuid       | wan_interface_description |
-| campus_uuid            | deployment                | ip_protocol_version       | product_name            | wan_interface_name        |
-| client_accounting_type | deployment_uuid           | l4_proto                  | public_ip               | wan_ip                    |
-| client_auth_type       | direction                 | lan_interface_description | public_ip_mac           | wan_ip_as_name            |
-| client_fullname        | dot11_protocol            | lan_interface_name        | referer                 | wan_ip_country_code       |
-| client_gender          | dot11_status              | lan_ip                    | referer_l2              | wan_ip_map                |
-| client_id              | dst_map                   | lan_ip_as_name            | scatterplot             | wan_ip_net_name           |
-| client_latlong         | duration                  | lan_ip_country_code       | selector_name           | wan_l4_port               |
-| client_loyality        | engine_id_name            | lan_ip_name               | sensor_ip               | wan_name                  |
-| client_mac             | floor                     | lan_ip_net_name           | sensor_name             | wan_vlan                  |
-| client_mac_vendor      | floor_uuid                | lan_l4_port               | sensor_uuid             | wireless_id               |
-| client_rssi            | host                      | lan_name                  | service_provider        | wireless_operator         |
-| client_vip             | host_l2_domain            | lan_vlan                  | service_provider_uuid   | wireless_station          |
-| conversation           | http_social_media         | market                    | src_map                 | zone                      |
-| coordinates_map        | http_user_agent           | market_uuid               | tcp_flags               | zone_uuid                 |
+    |                        |                           |                           |                         |                           |
+    |------------------------|---------------------------|---------------------------|-------------------------|---------------------------|
+    | application_id_name    | darklist_category         | https_common_name         | namespace               | tos                       |
+    | building               | darklist_direction        | interface_name            | namespace_uuid          | type                      |
+    | building_uuid          | darklist_score_name       | ip_as_name                | organization            | url                       |
+    | campus                 | darklist_score            | ip_country_code           | organization_uuid       | wan_interface_description |
+    | campus_uuid            | deployment                | ip_protocol_version       | product_name            | wan_interface_name        |
+    | client_accounting_type | deployment_uuid           | l4_proto                  | public_ip               | wan_ip                    |
+    | client_auth_type       | direction                 | lan_interface_description | public_ip_mac           | wan_ip_as_name            |
+    | client_fullname        | dot11_protocol            | lan_interface_name        | referer                 | wan_ip_country_code       |
+    | client_gender          | dot11_status              | lan_ip                    | referer_l2              | wan_ip_map                |
+    | client_id              | dst_map                   | lan_ip_as_name            | scatterplot             | wan_ip_net_name           |
+    | client_latlong         | duration                  | lan_ip_country_code       | selector_name           | wan_l4_port               |
+    | client_loyality        | engine_id_name            | lan_ip_name               | sensor_ip               | wan_name                  |
+    | client_mac             | floor                     | lan_ip_net_name           | sensor_name             | wan_vlan                  |
+    | client_mac_vendor      | floor_uuid                | lan_l4_port               | sensor_uuid             | wireless_id               |
+    | client_rssi            | host                      | lan_name                  | service_provider        | wireless_operator         |
+    | client_vip             | host_l2_domain            | lan_vlan                  | service_provider_uuid   | wireless_station          |
+    | conversation           | http_social_media         | market                    | src_map                 | zone                      |
+    | coordinates_map        | http_user_agent           | market_uuid               | tcp_flags               | zone_uuid                 |
 
 ### Dimensions for `rb_event`
 
@@ -192,19 +193,20 @@ Within `rb_event`, we have *IDS/IPS* data, so we will find the information typic
 To see a list of available dimensions, expand the following tab:
 
 ??? info "Dimensions"
-
-| action                 | campus               | campus_uuid          | classification       | conversation         |
-| building               | building_uuid        | darklist_category    | darklist_direction   | darklist_score       |
-| darklist_score_name    | deployment           | deployment_uuid      | domain_name          | dst                  |
-| dst_as_name            | dst_country_code     | dst_map              | dst_net_name         | dst_port             |
-| ethdst                 | ethdst_vendor        | ethlength_range      | ethsrc               | ethsrc_vendor        |
-| file_hostname          | file_size            | file_uri             | floor                | floor_uuid           |
-| group_name             | icmptype             | incident_uuid        | iplen_range          | l4_proto             |
-| market                 | market_uuid          | msg                  | namespace            | namespace_uuid       |
-| organization           | organization_uuid    | priority             | rev                  | scatterplot          |
-| sensor_name            | service_provider     | service_provider_uuid| sha256               | sig_generator        |
-| sig_id                 | src                  | src_as_name          | src_country_code     | src_map              |
-| src_net_name           | src_port             | tos                  | ttl                  | vlan                 |
+    |                        |                      |                      |                      |                      |
+    |------------------------|----------------------|----------------------|----------------------|----------------------|
+    | action                 | campus               | campus_uuid          | classification       | conversation         |
+    | building               | building_uuid        | darklist_category    | darklist_direction   | darklist_score       |
+    | darklist_score_name    | deployment           | deployment_uuid      | domain_name          | dst                  |
+    | dst_as_name            | dst_country_code     | dst_map              | dst_net_name         | dst_port             |
+    | ethdst                 | ethdst_vendor        | ethlength_range      | ethsrc               | ethsrc_vendor        |
+    | file_hostname          | file_size            | file_uri             | floor                | floor_uuid           |
+    | group_name             | icmptype             | incident_uuid        | iplen_range          | l4_proto             |
+    | market                 | market_uuid          | msg                  | namespace            | namespace_uuid       |
+    | organization           | organization_uuid    | priority             | rev                  | scatterplot          |
+    | sensor_name            | service_provider     | service_provider_uuid| sha256               | sig_generator        |
+    | sig_id                 | src                  | src_as_name          | src_country_code     | src_map              |
+    | src_net_name           | src_port             | tos                  | ttl                  | vlan                 |
 
 ### Dimensions for `rb_monitor`
 
@@ -213,17 +215,13 @@ Within `rb_monitor`, we have *SNMP* monitoring data, so we will find the informa
 To see a list of available dimensions, expand the following tab:
 
 ??? info "Dimensions"
-
-    |                      |                    |                  |
-    |----------------------|--------------------|------------------|
-    | service_provider_uuid| market_uuid        | group_name       |
-    | service_provider     | market             | instance         |
-    | organization_uuid    | building_uuid      | monitor          |
-    | organization         | building           | sensor_uuid      |
-    | namespace_uuid       | campus_uuid        | unit             |
-    | namespace            | campus             | value            |
-    | deployment_uuid      | floor_uuid         |                  |
-    | deployment           | floor              |                  |
+    |                    |                    |                    |                    |                       |
+    |--------------------|--------------------|--------------------|--------------------|-----------------------|
+    | building           | campus             | deployment         | deployment_uuid    | floor                 |
+    | building_uuid      | campus_uuid        | floor_uuid         | group_name         | instance              |
+    | market             | market_uuid        | monitor            | namespace          | namespace_uuid        |
+    | organization       | organization_uuid  | sensor_uuid        | service_provider   | service_provider_uuid |
+    | unit               | value              |                    |                    |                       |
 
 ### Dimensions for `rb_state`
 
@@ -232,14 +230,16 @@ Within `rb_state`, we have data on the health status of wireless stations obtain
 To see a list of available dimensions, expand the following tab:
 
 ??? info "Dimensions"
+    |                      |                     |                    |                      |                     |
+    |----------------------|---------------------|--------------------|----------------------|---------------------|
+    | building             | building_uuid       | campus             | campus_uuid          | client_count        |
+    | deployment           | deployment_uuid     | floor              | floor_uuid           | market              |
+    | market_uuid          | namespace           | namespace_uuid     | organization         | organization_uuid   |
+    | sensor_name          | sensor_uuid         | service_provider   | service_provider_uuid| status              |
+    | type                 | wireless_admin_state| wireless_channel   | wireless_mode        | wireless_op_state   |
+    | wireless_slot        | wireless_station    | wireless_station_ip| wireless_station_name| wireless_tx_power   |
+    | zone                 | zone_uuid           |                    |                      |                     |
 
-    | building           | building_uuid       | campus             | campus_uuid          | client_count        |
-    | deployment         | deployment_uuid     | floor              | floor_uuid           | market              |
-    | market_uuid        | namespace           | namespace_uuid     | organization         | organization_uuid   |
-    | sensor_name        | sensor_uuid         | service_provider   | service_provider_uuid| status              |
-    | type               | wireless_admin_state| wireless_channel   | wireless_mode        | wireless_op_state   |
-    | wireless_slot      | wireless_station    | wireless_station_ip| wireless_station_name| wireless_tx_power   |
-    | zone               | zone_uuid           |                    |                      |                     |
 ## Filters
 
 A filter is a *JSON* object that specifies which data rows should be included in the computation of a request. It is essentially equivalent to the WHERE clause in SQL, allowing filters to be used similarly to how you would use such a clause.
