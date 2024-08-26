@@ -208,21 +208,6 @@ To see a list of available dimensions, expand the following tab:
     | sig_id                 | src                  | src_as_name          | src_country_code     | src_map              |
     | src_net_name           | src_port             | tos                  | ttl                  | vlan                 |
 
-### Dimensions for `rb_monitor`
-
-Within `rb_monitor`, we have *SNMP* monitoring data, so we will find the information typically found in the **Monitor** module through the web interface.
-
-To see a list of available dimensions, expand the following tab:
-
-??? info "Dimensions"
-    |                    |                    |                    |                    |                       |
-    |--------------------|--------------------|--------------------|--------------------|-----------------------|
-    | building           | campus             | deployment         | deployment_uuid    | floor                 |
-    | building_uuid      | campus_uuid        | floor_uuid         | group_name         | instance              |
-    | market             | market_uuid        | monitor            | namespace          | namespace_uuid        |
-    | organization       | organization_uuid  | sensor_uuid        | service_provider   | service_provider_uuid |
-    | unit               | value              |                    |                    |                       |
-
 ### Dimensions for `rb_state`
 
 Within `rb_state`, we have data on the health status of wireless stations obtained via SNMP.
