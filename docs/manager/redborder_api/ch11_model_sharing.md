@@ -615,8 +615,7 @@ Expand the following tab to see a complete execution example:
         Payload:    
 
         {
-            "name": "new_name",
-            "domain_type": "4"
+            "name": "new_name"
         }
     **Response**:
 

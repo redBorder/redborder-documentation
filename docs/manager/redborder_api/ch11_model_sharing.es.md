@@ -605,8 +605,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
         Carga útil: 
         
         {
-            "name": "new_name",
-            "domain_type": "4"
+            "name": "new_name"
         }
 
     **Respuesta**:
