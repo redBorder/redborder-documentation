@@ -645,9 +645,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
         Carga útil:
         
         {
-            "name": "flow_new",
-            "nmsp": "1",
-            "spanport": "0"
+            "name": "flow_new"
         }
 
     **Respuesta**:

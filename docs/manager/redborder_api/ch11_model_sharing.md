@@ -654,9 +654,7 @@ Expand the following tab to see a complete execution example:
         Payload: 
         
         {
-            "name": "flow_new",
-            "nmsp": "1",
-            "spanport": "0"
+            "name": "flow_new"
         }
 
     **Response**:
