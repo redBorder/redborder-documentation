@@ -263,7 +263,6 @@ If the request is successful, the *JSON* response will describe the **domain** c
 Expand the following tab to see a complete execution example:
 
 ??? example "Complete Execution"
-
     **Request**:
       
         HTTP Method: POST
@@ -273,7 +272,6 @@ Expand the following tab to see a complete execution example:
     ``` bash
     curl --insecure -X GET 'https://<manager_IP>/api/v1/sensors/tree?auth_token=<API_key>' -H 'content-type: application/json'
     ```
-curl --insecure -X POST 'https://10.0.209.20/api/v1/sensors/domain?auth_token=DermX21o8M9gJM9aVANutVs6m5Z1LLujVy4Ck8y7' -H 'content-type: application/json' -d @docs/manager/redborder_api/sample_json/create_domain.json 
 
         Payload: 
         
@@ -281,6 +279,17 @@ curl --insecure -X POST 'https://10.0.209.20/api/v1/sensors/domain?auth_token=De
           "name": "new_domain"
         }
 
+    **Bash execution**:
+    ``` bash
+      curl --insecure -X POST 'https://<manager_IP>/api/v1/sensors/domain?auth_token=<API_key>' -H 'content-type: application/json' -d @<create_domain.json>
+    ```
+    where create_domain.json is:
+    ``` json
+    {
+      "name": "New Domain"
+    }
+    ```
+    
     **Response**:
 
         Status Code: 200 OK

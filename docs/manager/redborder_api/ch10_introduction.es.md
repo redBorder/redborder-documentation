@@ -87,8 +87,11 @@ Cada petición a la *API* deberá contener esta llave de acceso, y la petición 
 
 El resto de los parámetros debe proporcionarse en los datos de carga útil del *POST*. El formato de la carga útil debe ser *JSON* como vimos en el ejemplo anterior. Por ejemplo, si guardamos la última consulta en un archivo llamado `data.body`, podemos hacer una petición simple como esta:
 
-    curl --insecure -X POST 'https://<hostname>/api/data?auth_token=<API_key>' -H 'content-type: application/json' -d @data.body
-
+```bash
+curl --insecure -X POST 'https://<hostname>/api/data?auth_token=<API_key>' \
+     -H 'content-type: application/json' \
+     -d @<input_json_path>
+```
 ## Parámetros *JSON*
 
 | Parámetro          | Descripción                            |
