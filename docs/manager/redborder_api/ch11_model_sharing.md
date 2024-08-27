@@ -24,16 +24,19 @@
 ### Listing the Sensors Tree
 
 To list a sensor and all its subordinate sensors, make a `GET` request to the following URL:
-
-    https://<manager_IP>/api/v1/sensors/<sensor_uuid>/tree?auth_token=<API_key>
+```
+https://<manager_IP>/api/v1/sensors/<sensor_uuid>/tree?auth_token=<API_key>
+```
 
 Where `sensor_uuid` should be the UUID of the desired sensor tree. If you want to list all sensors of the user's *top* domain and their subordinate sensors, you can make a `GET` request to the following URL:
-
-    https://<manager_IP>/api/v1/sensors/tree?auth_token=<API_key>
+```
+https://<manager_IP>/api/v1/sensors/tree?auth_token=<API_key>
+```
 
 !!! example "Example of `GET` request to list all sensors"
-
+    ``` bash
     curl --insecure -X GET 'https://<manager_IP>/api/v1/sensors/tree?auth_token=<API_key>' -H 'content-type: application/json'
+    ```
 
 If the request is successful, the response will contain the requested sensor tree and the `query` field will be set to `true`. Currently, only *JSON* format is supported for requests and responses.
 
@@ -45,7 +48,7 @@ Expand the following tab to see a complete execution example:
       
         HTTP Method: GET
 
-        URI: https://<manager_IP>/api/v1/sensors/8726017729975087448/tree?auth_token=xxxxxx
+        URI: https://<manager_IP>/api/v1/sensors/8726017729975087448/tree?auth_token=<API_key>
 
     **Response**:
     
@@ -265,13 +268,16 @@ Expand the following tab to see a complete execution example:
       
         HTTP Method: POST
 
-        URL: https://<manager_IP>/api/v1/sensors/domain?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/sensors/domain?auth_token=<API_key>
+
+    ``` bash
+    curl --insecure -X GET 'https://<manager_IP>/api/v1/sensors/tree?auth_token=<API_key>' -H 'content-type: application/json'
+    ```
+curl --insecure -X POST 'https://10.0.209.20/api/v1/sensors/domain?auth_token=DermX21o8M9gJM9aVANutVs6m5Z1LLujVy4Ck8y7' -H 'content-type: application/json' -d @docs/manager/redborder_api/sample_json/create_domain.json 
 
         Payload: 
         
         {
-          "domain_type": "2",
-          "parent_uuid": "697893457705749905",
           "name": "new_domain"
         }
 
@@ -365,7 +371,7 @@ Expand the following tab to see a complete execution example:
       
         HTTP Method: POST
 
-        URL: https://<manager_IP>/api/v1/sensors/flow?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/sensors/flow?auth_token=<API_key>
 
         Payload: 
         
@@ -418,7 +424,7 @@ Expand the following tab to see a complete execution example:
       
         HTTP Method: POST
 
-        URL: https://<manager_IP>/api/v1/sensors/meraki?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/sensors/meraki?auth_token=<API_key>
 
         Payload: 
         
@@ -475,7 +481,7 @@ Expand the following tab to see a complete execution example:
       
         HTTP Method: POST
 
-        URL: https://<manager_IP>/api/v1/sensors/mse?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/sensors/mse?auth_token=<API_key>
 
         Payload: 
         
@@ -521,7 +527,7 @@ Expand the following tab to see a complete execution example:
       
         HTTP Method: GET
 
-        URL: https://<manager_IP>/api/v1/sensors/8726017729975087448/mse?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/sensors/8726017729975087448/mse?auth_token=<API_key>
 
     **Response**:
 
@@ -575,7 +581,7 @@ Expand the following tab to see a complete execution example:
       
         HTTP Method: DELETE
 
-        URL: https://<manager_IP>/api/v1/sensors/8726017729975087448?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/sensors/8726017729975087448?auth_token=<API_key>
 
     **Response**:
 
@@ -599,7 +605,7 @@ Expand the following tab to see a complete execution example:
       
         HTTP Method: PATCH
 
-        URL: https://<manager_IP>/api/v1/sensors/86348645?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/sensors/86348645?auth_token=<API_key>
 
         Payload:    
 
@@ -639,7 +645,7 @@ Expand the following tab to see a complete execution example:
       
         HTTP Method: PATCH
 
-        URL: https://<manager_IP>/api/v1/sensors/86348645/flow?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/sensors/86348645/flow?auth_token=<API_key>
 
         Payload: 
         
@@ -700,7 +706,7 @@ Expand the following tab to see a complete execution example:
       
         HTTP Method: POST
 
-        URL: https://<manager_IP>/api/v1/sensors/697893457705749905/override_all?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/sensors/697893457705749905/override_all?auth_token=<API_key>
 
         Payload: 
         
@@ -790,7 +796,7 @@ Expand the following tab to see a complete execution example with a *JSON* respo
       
         HTTP Method: GET
 
-        URL: https://<manager_IP>/api/v1/access_points.json?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/access_points.json?auth_token=<API_key>
 
     **Response**:
     
@@ -903,7 +909,7 @@ Expand the following tab to see a complete execution example with a *JSON* respo
       
         HTTP Method: POST
 
-        URL: https://<manager_IP>/api/v1/access_points?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/access_points?auth_token=<API_key>
 
         Payload:
         
@@ -997,7 +1003,7 @@ Expand the following tab to see a complete execution example with a *JSON* respo
       
         HTTP Method: POST
 
-        URL: https://<manager_IP>/api/v1/sensors/697893457705749905/access_point/override?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/sensors/697893457705749905/access_point/override?auth_token=<API_key>
 
         Payload:
         
@@ -1073,7 +1079,7 @@ Expand the following tab to see a complete execution example with a *JSON* respo
       
         HTTP Method: DELETE
 
-        URL: https://<manager_IP>/api/v1/access_points?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/access_points?auth_token=<API_key>
 
         Payload:
         
@@ -1109,7 +1115,7 @@ If the request is successful, the JSON response will describe the `query` field 
       
         HTTP Method: DELETE
 
-        URL: https://<manager_IP>/api/v1/sensors/697893457705749905/access_points?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/sensors/697893457705749905/access_points?auth_token=<API_key>
 
     **Response**:
     
@@ -1141,7 +1147,7 @@ Expand the following tab to see a complete execution example with a *JSON* respo
       
         HTTP Method: GET
 
-        URL: https://<manager_IP>/api/v1/users.json?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/users.json?auth_token=<API_key>
 
     **Response**:
     
@@ -1159,7 +1165,7 @@ Expand the following tab to see a complete execution example with a *JSON* respo
                   "admin": true,
                   "name": "John Doe",
                   "enabled": true,
-                  "authentication_token": "xxxxxx",
+                  "authentication_token": "<API_key>",
                   "sensor_id": 472,
                   "sensor_name": "redBorder",
                   "sensor_uuid": "4935760011107548256"
@@ -1171,7 +1177,7 @@ Expand the following tab to see a complete execution example with a *JSON* respo
                   "admin": true,
                   "name": "John Doe",
                   "enabled": true,
-                  "authentication_token": "xxxxxx",
+                  "authentication_token": "<API_key>",
                   "sensor_id": 472,
                   "sensor_name": "redBorder",
                   "sensor_uuid": "4935760011107548256"
@@ -1183,7 +1189,7 @@ Expand the following tab to see a complete execution example with a *JSON* respo
                   "admin": false,
                   "name": "User",
                   "enabled": true,
-                  "authentication_token": "xxxxxx",
+                  "authentication_token": "<API_key>",
                   "sensor_id": 1,
                   "sensor_name": "root",
                   "sensor_uuid": "2584761509592299795"
@@ -1195,7 +1201,7 @@ Expand the following tab to see a complete execution example with a *JSON* respo
                   "admin": false,
                   "name": "John Doe",
                   "enabled": true,
-                  "authentication_token": "xxxxxx",
+                  "authentication_token": "<API_key>",
                   "sensor_id": 260,
                   "sensor_name"{
           "query": "true"
@@ -1208,7 +1214,7 @@ Expand the following tab to see a complete execution example with a *JSON* respo
                   "admin": true,
                   "name": "Administrator",
                   "enabled": true,
-                  "authentication_token": "xxxxxx",
+                  "authentication_token": "<API_key>",
                   "sensor_id": 1,
                   "sensor_name": "root",
                   "sensor_uuid": "2584761509592299795"
@@ -1220,7 +1226,7 @@ Expand the following tab to see a complete execution example with a *JSON* respo
                   "admin": true,
                   "name": "John Dow",
                   "enabled": true,
-                  "authentication_token": "xxxxxx",
+                  "authentication_token": "<API_key>",
                   "sensor_id": 1,
                   "sensor_name": "root",
                   "sensor_uuid": "2584761509592299795"
@@ -1232,7 +1238,7 @@ Expand the following tab to see a complete execution example with a *JSON* respo
                   "admin": true,
                   "name": "John Dow",
                   "enabled": true,
-                  "authentication_token": "xxxxxx",
+                  "authentication_token": "<API_key>",
                   "sensor_id": 11,
                   "sensor_name": "Spain",
                   "sensor_uuid": "6396049722605916538"
@@ -1244,7 +1250,7 @@ Expand the following tab to see a complete execution example with a *JSON* respo
                   "admin": false,
                   "name": "John Dow",
                   "enabled": true,
-                  "authentication_token": "xxxxxx",
+                  "authentication_token": "<API_key>",
                   "sensor_id": 2,
                   "sensor_name": "Adamo",
                   "sensor_uuid": "796168482310467136"
@@ -1270,7 +1276,7 @@ Please deploy the following tab to see a complete execution example with a *JSON
       
         HTTP Action: GET
 
-        URL: https://<manager_IP>/api/v1/users/1/recreate_api_key?auth_token=xxxxxx
+        URL: https://<manager_IP>/api/v1/users/1/recreate_api_key?auth_token=<API_key>
 
     **Response**:
     
