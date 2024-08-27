@@ -269,10 +269,6 @@ Expand the following tab to see a complete execution example:
 
         URL: https://<manager_IP>/api/v1/sensors/domain?auth_token=<API_key>
 
-    ``` bash
-    curl --insecure -X GET 'https://<manager_IP>/api/v1/sensors/tree?auth_token=<API_key>' -H 'content-type: application/json'
-    ```
-
         Payload: 
         
         {
