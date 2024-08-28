@@ -97,13 +97,13 @@ curl --insecure -X POST 'https://<hostname>/api/data?auth_token=<API_key>' \
 | Parámetro          | Descripción                            |
 | ------------------ | -------------------------------------- |
 | dataSource         | Base de datos a la que se accede.      |
-| namespace_uuids    | Arreglo de uno o más valores. Debe contener el *UUIDs* del *Namespace* donde los datos serán buscados. Si este valor no es indicado, el *dataSource* usado será el por defecto.  |
+| namespace_uuids    | Lista de uno o más valores. Debe contener el *UUIDs* del *Namespace* donde los datos serán buscados. Si este valor no es indicado, el *dataSource* usado será el por defecto.  |
 | granularity        | Especifica el tamaño del *bucket* para los valores.       |
 | intervals          | Especifica el(los) rango(s) de tiempo de la petición. El intervalo debe especificarse en formato ISO y puede incluir la zona horaria si se desea.       |
 | queryType          | Especifica qué tipo de operador de petición utilizar.       |
-| aggregations       | Arreglo de uno o más valores. Estos campos se aplican a las columnas especificadas por *fieldName* y la salida de las agregaciones se nombrará de acuerdo con el valor en el campo *name*.       |
+| aggregations       | Lista de uno o más valores. Estos campos se aplican a las columnas especificadas por *fieldName* y la salida de las agregaciones se nombrará de acuerdo con el valor en el campo *name*.       |
 | metric             | (Solo para peticiones con *queryType* de *topN*) Debe ser el mismo valor que el especificado en *aggregations*. Es usado para ordenación.       |
-| dimensions         | (Solo para peticiones con *queryType* de *groupBy* o *timeseries*) Arreglo de cero o más valores. Estos se utilizan para restringir la agrupación. Si están vacíos, se solicita un valor por *bucket* de granularidad de tiempo en el *groupBy*.       |
+| dimensions         | (Solo para peticiones con *queryType* de *groupBy* o *timeseries*) Lista de cero o más valores. Estos se utilizan para restringir la agrupación. Si están vacíos, se solicita un valor por *bucket* de granularidad de tiempo en el *groupBy*.       |
 | dimension          | (Solo para peticiones con *queryType* de *topN*) Valor único. Todas las dimensiones disponibles las encontrará más adelante en esta página.     |
 | filter             | Especifica el filtro para la petición. Puede ver los filtros disponibles más adelante, en esta página     |
 | threshold          | (Solo para peticiones con *queryType* de *topN*) Valor único. Limita la cantidad de valores devueltos en las peticiones *topN*.      |
@@ -166,26 +166,26 @@ Para ver un listado de las dimensiones disponibles, despliega la siguiente pesta
 
 ??? info "Dimensiones"
 
-    |                      |                    |                       |                     |                  |
-    |----------------------|--------------------|-----------------------|---------------------|------------------|
-    | application_id_name  | service_provider   | dot11_status          | input_vrf           | tos              |
-    | biflow_direction     | organization_uuid  | dst                   | ip_protocol_version | type             |
-    | client_id            | organization       | dst_as_name           | dst_vlan            | wireless_id      |
-    | client_latlong       | namespace_uuid     | dst_country_code      | l4_proto            | wireless_station |
-    | client_mac           | namespace          | dst_map               | output_snmp         |                  |
-    | client_mac_vendor    | deployment_uuid    | dst_net_name          | output_vrf          |                  |
-    | client_rssi          | deployment         | dst_port              | rat                 |                  |
-    | client_rssi_num      | market_uuid        | dst_vlan              | scatterplot         |                  |
-    | client_snr           | market             | duration              | sensor_uuid         |                  |
-    | client_snr_num       | building_uuid      | engine_id_name        | sensor_name         |                  |
-    | conversation         | building           | hnbgeolocation        | src                 |                  |
-    | coordinates_map      | campus_uuid        | hnblocation           | src_as_name         |                  |
-    | darklist_category    | campus             | http_host             | src_country_code    |                  |
-    | darklist_direction   | floor_uuid         | http_referer_l1       | src_map             |                  |
-    | darklist_protocol    | floor              | http_social_media     | src_net_name        |                  |
-    | darklist_score       | zone               | http_social_user      | src_port            |                  |
-    | darklist_score_name  | direction          | http_user_agent_os    | src_vlan            |                  |
-    | service_provider_uuid| dot11_protocol     | input_snmp            | srv_port            |                  |
+    |                        |                           |                           |                         |                           |
+    |------------------------|---------------------------|---------------------------|-------------------------|---------------------------|
+    | application_id_name    | darklist_category         | https_common_name         | namespace               | tos                       |
+    | building               | darklist_direction        | interface_name            | namespace_uuid          | type                      |
+    | building_uuid          | darklist_score_name       | ip_as_name                | organization            | url                       |
+    | campus                 | darklist_score            | ip_country_code           | organization_uuid       | wan_interface_description |
+    | campus_uuid            | deployment                | ip_protocol_version       | product_name            | wan_interface_name        |
+    | client_accounting_type | deployment_uuid           | l4_proto                  | public_ip               | wan_ip                    |
+    | client_auth_type       | direction                 | lan_interface_description | public_ip_mac           | wan_ip_as_name            |
+    | client_fullname        | dot11_protocol            | lan_interface_name        | referer                 | wan_ip_country_code       |
+    | client_gender          | dot11_status              | lan_ip                    | referer_l2              | wan_ip_map                |
+    | client_id              | dst_map                   | lan_ip_as_name            | scatterplot             | wan_ip_net_name           |
+    | client_latlong         | duration                  | lan_ip_country_code       | selector_name           | wan_l4_port               |
+    | client_loyality        | engine_id_name            | lan_ip_name               | sensor_ip               | wan_name                  |
+    | client_mac             | floor                     | lan_ip_net_name           | sensor_name             | wan_vlan                  |
+    | client_mac_vendor      | floor_uuid                | lan_l4_port               | sensor_uuid             | wireless_id               |
+    | client_rssi            | host                      | lan_name                  | service_provider        | wireless_operator         |
+    | client_vip             | host_l2_domain            | lan_vlan                  | service_provider_uuid   | wireless_station          |
+    | conversation           | http_social_media         | market                    | src_map                 | zone                      |
+    | coordinates_map        | http_user_agent           | market_uuid               | tcp_flags               | zone_uuid                 |
 
 ### Dimensiones para `rb_event`
 
