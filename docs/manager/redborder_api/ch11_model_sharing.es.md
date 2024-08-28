@@ -791,7 +791,7 @@ También es posible filtrar puntos de acceso por algunos campos disponibles. Dic
 | ip_address         | Dirección IP del punto de acceso a filtrar.     |
 
     https://<manager_IP>/api/v1/access_points.<format>?auth_token=<API_key>&mac_address=<mac_address>&name=<name>
-    
+
 Si la petición es exitosa, la respuesta tendrá el listado de puntos de acceso solicitado y el campo `query` establecido en `true`.
 
 Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta *JSON*:
@@ -981,7 +981,7 @@ Si la petición es exitosa, la respuesta *JSON* describirá el **punto de acceso
 
 ### Sobreescribir los Puntos de Acceso de un Dominio
 
-Funciona similar a la sobreescritura del dominio, pero solo afecta a los puntos de acceso inalámbricos contenidos en el dominio especificado
+Funciona similar a la sobreescritura del dominio, pero sólo afecta a los puntos de acceso inalámbricos contenidos en el dominio especificado
 
 Esta acción se puede realizar haciendo una petición `POST` al siguiente URL:
 
