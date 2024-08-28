@@ -983,7 +983,7 @@ Si la petición es exitosa, la respuesta *JSON* describirá el **punto de acceso
 
 Funciona similar a la sobreescritura del dominio, pero sólo afecta a los puntos de acceso inalámbricos contenidos en el dominio especificado.
 
-Esta acción se puede realizar haciendo una petición `POST` al siguiente URL:
+Esta acción se puede realizar haciendo una petición `POST` a la siguiente URL:
 
     https://<IP_manager>/api/v1/sensors/<sensor_uuid>/access_point/override/?auth_token=<clave_API>
 
