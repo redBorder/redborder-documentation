@@ -235,7 +235,7 @@ Una carga útil en formato *JSON* debe enviarse junto con esta solicitud. Los pa
 | Parámetro          | Descripción                            |
 | ------------------ | -------------------------------------- |
 | uuid               |  UUID que el nuevo dominio recibirá al crearse. No debe estar en uso por ningún dominio existente. Si no se especifica, se asignará uno aleatorio no utilizado.      |
-| name               | (Necesario) Nombre del nuevo dominio      |
+| name               | (Obligatorio) Nombre del nuevo dominio      |
 | domain_type        |  Número indicando el tipo de dominio. El tipo por defecto es genérico (1). Puede ver los tipos disponibles más adelante, en esta página     |
 | parent_uuid        |  UUID del padre. Por defecto será el UUID del dominio *top* del usuario.     |
 | mac_hasing_salt    |  Cadena de hash de MAC para un dominio de **Proveedor de Servicios**. Si el tipo de dominio no es igual a 6 (Proveedor de Servicios), este parámetro será ignorado.      |
@@ -324,8 +324,8 @@ Una carga útil en formato *JSON* debe enviarse junto con esta solicitud. Los pa
 
 | Parámetro          | Descripción                            |
 | ------------------ | -------------------------------------- |
-| ip                 | (Necesario) Dirección IP del sensor.   |
-| name               | (Necesario) Nombre para el sensor.     |
+| ip                 | (Obligatorio) Dirección IP del sensor.   |
+| name               | (Obligatorio) Nombre para el sensor.     |
 | parent_uuid        |  Especifica el UUID del sensor padre. Si no se especifica ninguno, se especificará el UUID del sensor *root*     |
 | snmp_community     |  Especifica el nombre de la comunidad SNMP     |
 | snmp_version       |  Especifica la versión de SNMP a usar. Actualmente se soporta la `1` y la `2c`.     |
@@ -413,8 +413,8 @@ Una carga útil en formato *JSON* debe enviarse junto con esta solicitud. Los pa
 
 | Parámetro          | Descripción                            |
 | ------------------ | -------------------------------------- |
-| ip                 | (Necesario) Dirección IP/Dominio del sensor de Meraki.      |
-| name               | (Necesario) Nombre para el sensor.      |
+| ip                 | (Obligatorio) Dirección IP/Dominio del sensor de Meraki.      |
+| name               | (Obligatorio) Nombre para el sensor.      |
 | parent_uuid        |  Especifica el UUID del sensor padre. Si no se especifica ninguno, se especificará el UUID del sensor *root*     |
 | meraki_validator   |  Especifica el validador del sensor.     |
 | snmp_community     |  Especifica el nombre de la comunidad SNMP.     |
@@ -469,8 +469,8 @@ Una carga útil en formato *JSON* debe enviarse junto con esta solicitud. Los pa
 
 | Parámetro          | Descripción                            |
 | ------------------ | -------------------------------------- |
-| stream             | (Necesario) Nombre del flujo MSE.      |
-| name               | (Necesario) Nombre para el sensor MSE.      |
+| stream             | (Obligatorio) Nombre del flujo MSE.      |
+| name               | (Obligatorio) Nombre para el sensor MSE.      |
 | parent_uuid        |  Especifica el UUID del sensor padre. Si no se especifica ninguno, se especificará el UUID del sensor *root*     |
 | mse_version        |  Especifica el validador del sensor.     |
 | snmp_community     |  Especifica el nombre de la comunidad SNMP.     |
@@ -891,14 +891,14 @@ Los siguientes parámetros son aceptados en la carga útil:
 | Parámetro          | Descripción                            |
 | ------------------ | -------------------------------------- |
 | ip_address         | Dirección IP del punto de acceso a crear.     |
-| mac_address        | (Necesario) Dirección MAC del punto de acceso a crear.      |
+| mac_address        | (Obligatorio) Dirección MAC del punto de acceso a crear.      |
 | name               | Nombre del punto de acceso a crear.     |
 | status             | Representación númerica del estado del punto de acceso ("`1`"=levantado, "`0`"=caído).       |
 | latitude           | Coordenada latitudinal para localizar el punto de acceso.     |
 | longitude          | Coordenada longitudinal para localizar el punto de acceso.      |
 | x                  | Entero que representa la coordenada en el eje de las abcisas en un mapa de piso para localizar el punto de acceso.      |
 | y                  | Entero que representa la coordenada en el eje de las ordenadas en un mapa de piso para localizar el punto de acceso.      |
-| sensor_uuid        | (Necesario) UUID de la estructura padre. Debe ser siempre un dominio.   |
+| sensor_uuid        | (Obligatorio) UUID de la estructura padre. Debe ser siempre un dominio.   |
 | flow_uuid          | UUID del sensor de flow asociado.      |
 | description        | Descripción del punto de acceso a crear.      |
 | enrichment         | Es posible indicar algunos parámetros extra para enriquecer la información del punto de acceso como `market_uuid`, `campus_uuid`, `building_uuid` o  `floor_uuid`. Estos campos indicarían a dónde pertenece el punto de acceso a crear.      |
