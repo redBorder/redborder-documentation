@@ -690,7 +690,7 @@ Si el "sensor principal" o un hijo es un dominio o un sensor de *flow*, puede co
 
 Se aplican las reglas habituales para la creación de puntos de acceso y dominios, con la excepción de los IDs principales (`sensor_id` y `switch_id` para los puntos de acceso; `parent_id` para los dominios), que no están permitidos, ya que la herencia se describe mediante el anidamiento *JSON*.
 
-Esta solicitud se puede ejecutar emitiendo una petición `POST` al siguiente URL:
+Esta solicitud se puede ejecutar emitiendo una petición `POST` a la siguiente URL:
 
     https://<IP_manager>/api/v1/sensors/<sensor_uuid>/override_all/?auth_token=<clave_API>
 
