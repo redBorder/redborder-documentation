@@ -981,7 +981,7 @@ Si la petición es exitosa, la respuesta *JSON* describirá el **punto de acceso
 
 ### Sobreescribir los Puntos de Acceso de un Dominio
 
-Funciona similar a la sobreescritura del dominio, pero sólo afecta a los puntos de acceso inalámbricos contenidos en el dominio especificado
+Funciona similar a la sobreescritura del dominio, pero sólo afecta a los puntos de acceso inalámbricos contenidos en el dominio especificado.
 
 Esta acción se puede realizar haciendo una petición `POST` al siguiente URL:
 
