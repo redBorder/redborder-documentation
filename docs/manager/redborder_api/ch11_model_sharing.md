@@ -788,6 +788,9 @@ It is also possible to filter access points by certain available fields. This fi
 | name               | Name of the access point.     |
 | ip_address         | IP address of the access point to filter by.     |
 
+
+    https://<manager_IP>/api/v1/access_points.<format>?auth_token=<API_key>&mac_address=<mac_address>&name=<name>
+
 If the request is successful, the response will include the requested list of access points and the `query` field set to `true`.
 
 Expand the following tab to see a complete execution example with a *JSON* response:
@@ -966,8 +969,8 @@ Expand the following tab to see a complete execution example with a *JSON* respo
 
 Existing access points can be modified by making a `PATCH` or `PUT` request to the following URLs:
 
-    https://<manager_IP>/api/v1/access_points/:id
-    https://<manager_IP>/api/v1/access_points/:mac_address
+    https://<manager_IP>/api/v1/access_points/<accesss_point_id>
+    https://<manager_IP>/api/v1/access_points/<mac_address>
 
 Where `id` is the ID of the access point to modify. It is also possible to specify the access point to modify by including the MAC address of the access point instead of the ID.
 
