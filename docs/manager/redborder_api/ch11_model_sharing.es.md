@@ -1065,7 +1065,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
 
 ### Eliminación de puntos de acceso
 
-Los puntos de acceso pueden ser eliminados mediante diferentes acciones según las necesidades del usuario. Si desea eliminar una lista de puntos de acceso proporcionando su dirección MAC, sin importar dónde se encuentren en términos de jerarquía, puede enviar una solicitud `DELETE` al siguiente URL:
+Los puntos de acceso pueden ser eliminados mediante diferentes acciones según las necesidades del usuario. Si desea eliminar una lista de puntos de acceso proporcionando su dirección MAC, sin importar dónde se encuentren en términos de jerarquía, puede enviar una solicitud `DELETE` a la siguiente URL:
 
     https://<IP_manager>/api/v1/access_points
 
