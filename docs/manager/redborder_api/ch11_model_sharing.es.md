@@ -790,6 +790,8 @@ También es posible filtrar puntos de acceso por algunos campos disponibles. Dic
 | name               | Nombre del punto de acceso.     |
 | ip_address         | Dirección IP del punto de acceso a filtrar.     |
 
+    https://<manager_IP>/api/v1/access_points.<format>?auth_token=<API_key>&mac_address=<mac_address>&name=<name>
+    
 Si la petición es exitosa, la respuesta tendrá el listado de puntos de acceso solicitado y el campo `query` establecido en `true`.
 
 Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta *JSON*:
