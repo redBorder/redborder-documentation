@@ -475,7 +475,7 @@ Una carga útil en formato *JSON* debe enviarse junto con esta solicitud. Los pa
 | mse_version        |  Especifica el validador del sensor.     |
 | snmp_community     |  Especifica el nombre de la comunidad SNMP.     |
 | snmp_version       |  Especifica la versión de SNMP a usar. Actualmente se soporta la 1 y la 2c.     |
-| homenets           |  Arreglo de uno o más valores que permite indicar las 'redes de casa' que tendrá el sensor. La sintaxis de este campo debe ser la misma que la explicada en la [Creación de sensores de Flow](/es/manager/redborder_api/ch11_model_sharing/#creacion-de-sensores-de-flow).    |
+| homenets           |  Lista de uno o más valores que permite indicar las 'home networks' que tendrá el sensor. La sintaxis de este campo debe ser la misma que la explicada en la [Creación de sensores de Flow](/es/manager/redborder_api/ch11_model_sharing/#creacion-de-sensores-de-flow).    |
 
 Si la petición es exitosa, la respuesta *JSON* describirá el **sensor** creado y el campo `query` establecido en `true`.
 
@@ -571,7 +571,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
 
 ### Eliminación de Sensores
 
-El usuario es capaz de indicar qué sensor desea eliminar con indicar el UUID de dicho sensor en una petición `DELETE` al siguiente URL:
+El usuario es capaz de indicar qué sensor desea eliminar con indicar el UUID de dicho sensor en una petición `DELETE` a la siguiente URL:
 
     https://<IP_manager>/api/v1/sensors/<uuid>/?auth_token=<clave_API>
 
@@ -635,7 +635,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
 
 ### Modificación de sensores de flow, MSE y Meraki
 
-La actualización de los sensores de flow, MSE y Meraki reciben los mismos parámetros que en su creación. Toda slas propiedades de los sensores serán actualizadas con los nuevos valores. La carga útil de la petición debe estar en formato *JSON* y la petición `PATCH` se debe realizar a la siguiente URL:
+La actualización de los sensores de flow, MSE y Meraki reciben los mismos parámetros que en su creación. Todas las propiedades de los sensores serán actualizadas con los nuevos valores. La carga útil de la petición debe estar en formato *JSON* y la petición `PATCH` se debe realizar a la siguiente URL:
 
     https://<IP_manager>/api/v1/sensors/<sensor_uuid>/<type>/?auth_token=<clave_API>
 
