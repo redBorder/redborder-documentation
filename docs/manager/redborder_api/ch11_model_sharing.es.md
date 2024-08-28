@@ -5,7 +5,7 @@
 
     Cada petición que devuelve un cuerpo de respuesta en *JSON* tendrá un campo `query` con valor de tipo booleano. Dicho valor representa el estado de la consulta, por lo que si está establecido en `true` significa que la consulta fue exitosa y si está establecido en `false` significa que la consulta no lo fue.
     
-    Este valor siempre se encontrará en el objeto de respuesta *JSON* raíz y siempre será el hermano de la respuesta.
+    Este valor siempre se encontrará en la raíz de la respuesta *JSON* y siempre estará junto con la respuesta.
 
 !!! note "Reemplazo de valores"
 
@@ -15,7 +15,7 @@
 
 !!! warning "Importante"
 
-    Se requieren permisos de gestión (o de lectura para listar) para poder crear, modificar, sobreescribir o eliminar los sensores, dominios, puntos de acceso o algún otro modelo de la base de datos. Si faltan estos permisos para alguna de estas operaciones, se devoklverá el código de estado HTTP `401 Unauthorized` en la respuesta de la *API*. 
+    Se requieren permisos de gestión (o de lectura para listar) para poder crear, modificar, sobreescribir o eliminar los sensores, dominios, puntos de acceso o algún otro modelo de la base de datos. Si faltan estos permisos para alguna de estas operaciones, se devolverá el código de estado HTTP `401 Unauthorized` en la respuesta de la *API*. 
     
     Si se especifica un sensor, dominio, punto de acceso o algún otro modelo de la base de datos que sea inexistente en la solicitud, se devolverá el código de estado HTTP `404 Not Found` en la respuesta de la *API*.
 
@@ -25,15 +25,15 @@
 
 Para listar un sensor y todos sus sensores subordinados, realiza una petición `GET` a la siguiente URL:
 
-    https://<IP_manager>/api/v1/sensors/<sensor_uuid>/tree?auth_token=<llave_API>
+    https://<IP_manager>/api/v1/sensors/<sensor_uuid>/tree?auth_token=<clave_API>
 
 Donde `sensor_uuid` debe ser el UUID del árbol del sensor deseado. Si se desea listar todos los sensores del dominio *top* del usuario y sus sensores subordinados, es posible hacer una petición `GET` a la siguiente URL:
 
-    https://<IP_manager>/api/v1/sensors/tree?auth_token=<llave_API>
+    https://<IP_manager>/api/v1/sensors/tree?auth_token=<clave_API>
 
 !!! example "Ejemplo de petición `GET` para listar todos los sensores"
 
-    curl --insecure -X GET 'https://<IP_manager>/api/v1/sensors/tree?auth_token=<llave_API>' -H 'content-type: application/json'
+    curl --insecure -X GET 'https://<IP_manager>/api/v1/sensors/tree?auth_token=<clave_API>' -H 'content-type: application/json'
 
 Si la petición es exitosa, la respuesta tendrá el árbol de sensores solicitado y el campo `query` establecido en `true`. Actualmente solo se soporta el formato *JSON* para las peticiones y las respuestas.
 
@@ -45,7 +45,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
       
         Acción HTTP: GET
 
-        URL: https://<IP_manager>/api/v1/sensors/8726017729975087448/tree?auth_token=xxxxxx
+        URL: https://<IP_manager>/api/v1/sensors/8726017729975087448/tree?auth_token=<API_key>
 
     **Respuesta**:
     
@@ -228,7 +228,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
 
 Se pueden crear nuevos dominios haciendo una petición `POST` al siguiente URL:
 
-    https://<IP_manager>/api/v1/sensors/domain?auth_token=<llave_API>
+    https://<IP_manager>/api/v1/sensors/domain?auth_token=<clave_API>
 
 Una carga útil en formato *JSON* debe enviarse junto con esta solicitud. Los parámetros permitidos para la carga útil son:
 
@@ -266,7 +266,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
       
         Acción HTTP: POST
 
-        URL: https://<IP_manager>/api/v1/sensors/domain?auth_token=xxxxxx
+        URL: https://<IP_manager>/api/v1/sensors/domain?auth_token=<API_key>
 
         Carga útil: 
 
@@ -275,6 +275,11 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
           "parent_uuid": "697893457705749905",
           "name": "new_domain"
         }
+
+    **Ejecución en Bash**:
+    ``` bash
+      curl --insecure -X POST 'https://<manager_IP>/api/v1/sensors/domain?auth_token=<API_key>' -H 'content-type: application/json' -d @<create_domain.json>
+    ```
 
     **Respuesta**:
 
@@ -307,7 +312,7 @@ En la respuesta de la *API* hay un campo llamado `type` que indica el **tipo de 
 
 Se pueden crear nuevos sensores haciendo una petición `POST` al siguiente URL:
 
-    https://<IP_manager>/api/v1/sensors/flow?auth_token=<llave_API>
+    https://<IP_manager>/api/v1/sensors/flow?auth_token=<clave_API>
 
 Una carga útil en formato *JSON* debe enviarse junto con esta solicitud. Los parámetros permitidos para la carga útil son:
 
@@ -366,7 +371,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
       
         Acción HTTP: POST
 
-        URL: https://<IP_manager>/api/v1/sensors/flow?auth_token=xxxxxx
+        URL: https://<IP_manager>/api/v1/sensors/flow?auth_token=<API_key>
 
         Carga útil:
 
@@ -396,7 +401,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
 
 Se pueden crear nuevos sensores haciendo una petición `POST` al siguiente URL:
 
-    https://<IP_manager>/api/v1/sensors/meraki?auth_token=<llave_API>
+    https://<IP_manager>/api/v1/sensors/meraki?auth_token=<clave_API>
 
 Una carga útil en formato *JSON* debe enviarse junto con esta solicitud. Los parámetros permitidos para la carga útil son:
 
@@ -419,7 +424,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
       
         Acción HTTP: POST
 
-        URL: https://<IP_manager>/api/v1/sensors/meraki?auth_token=xxxxxx
+        URL: https://<IP_manager>/api/v1/sensors/meraki?auth_token=<API_key>
 
         Carga útil: 
  
@@ -452,7 +457,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
 
 Se pueden crear nuevos sensores haciendo una petición `POST` al siguiente URL:
 
-    https://<IP_manager>/api/v1/sensors/mse?auth_token=<llave_API>
+    https://<IP_manager>/api/v1/sensors/mse?auth_token=<clave_API>
 
 Una carga útil en formato *JSON* debe enviarse junto con esta solicitud. Los parámetros permitidos para la carga útil son:
 
@@ -476,7 +481,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
       
         Acción HTTP: POST
 
-        URL: https://<IP_manager>/api/v1/sensors/mse?auth_token=xxxxxx
+        URL: https://<IP_manager>/api/v1/sensors/mse?auth_token=<API_key>
 
         Carga útil: 
         
@@ -508,7 +513,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
 
 Los sensores MSE de un dominio pueden ser listados haciendo una petición `GET` al siguiente URL:
 
-    https://<IP_manager>/api/v1/sensors/<sensor_uuid>/mse?auth_token=<llave_API>
+    https://<IP_manager>/api/v1/sensors/<sensor_uuid>/mse?auth_token=<clave_API>
 
 Donde `sensor_uuid` debe ser el UUID del dominio del que se desea obtener los sensores.
 
@@ -522,7 +527,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
       
         Acción HTTP: POST
 
-        URL: https://<IP_manager>/api/v1/sensors/8726017729975087448/mse?auth_token=xxxxxx
+        URL: https://<IP_manager>/api/v1/sensors/8726017729975087448/mse?auth_token=<API_key>
 
     **Respuesta**:
 
@@ -562,7 +567,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
 
 El usuario es capaz de indicar qué sensor desea eliminar con indicar el UUID de dicho sensor en una petición `DELETE` al siguiente URL:
 
-    https://<IP_manager>/api/v1/sensors/<uuid>/?auth_token=<llave_API>
+    https://<IP_manager>/api/v1/sensors/<uuid>/?auth_token=<clave_API>
 
 Donde `uuid` debe ser reemplazado por el UUID del sensor a eliminar.
 
@@ -576,7 +581,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
       
         Acción HTTP: DELETE
 
-        URL: https://<IP_manager>/api/v1/sensors/8726017729975087448?auth_token=xxxxxx
+        URL: https://<IP_manager>/api/v1/sensors/8726017729975087448?auth_token=<API_key>
 
     **Respuesta**:
 
@@ -586,7 +591,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
 
 Para actualizar el dominio, se utilizan los mismos parámetros que en la [Creación de dominios](/es/manager/redborder_api/ch11_model_sharing/#creacion-de-dominios). Podemos actualizar el nombre, el tipo, el tipo de dominio, el UUID y *MAC Hashing salt* (solo para Proveedores de Servicios). La carga útil debe estar en formato *JSON* y la petición `PATCH` se debe realizar a la siguiente URL:
 
-    https://<IP_manager>/api/v1/sensors/<sensor_uuid>/?auth_token=<llave_API>
+    https://<IP_manager>/api/v1/sensors/<sensor_uuid>/?auth_token=<clave_API>
 
 Donde `sensor_uuid` debe ser reemplazado por el UUID del dominio a actualizar.
 
@@ -600,7 +605,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
       
         Acción HTTP: PATCH
 
-        URL: https://<IP_manager>/api/v1/sensors/86348645?auth_token=xxxxxx
+        URL: https://<IP_manager>/api/v1/sensors/86348645?auth_token=<API_key>
 
         Carga útil: 
         
@@ -626,7 +631,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
 
 La actualización de los sensores de flow, MSE y Meraki reciben los mismos parámetros que en su creación. Toda slas propiedades de los sensores serán actualizadas con los nuevos valores. La carga útil de la petición debe estar en formato *JSON* y la petición `PATCH` se debe realizar a la siguiente URL:
 
-    https://<IP_manager>/api/v1/sensors/<sensor_uuid>/<type>/?auth_token=<llave_API>
+    https://<IP_manager>/api/v1/sensors/<sensor_uuid>/<type>/?auth_token=<clave_API>
 
 El parámetro `type` debe ser reemplazado con el tipo de sensor a actualizar (`flow`, `mse` o `meraki`)
 
@@ -640,7 +645,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
       
         Acción HTTP: PATCH
 
-        URL: https://<IP_manager>/api/v1/sensors/86348645/flow?auth_token=xxxxxx
+        URL: https://<IP_manager>/api/v1/sensors/86348645/flow?auth_token=<API_key>
 
         Carga útil:
         
@@ -681,13 +686,13 @@ Se aplican las reglas habituales para la creación de puntos de acceso y dominio
 
 Esta solicitud se puede ejecutar emitiendo una petición `POST` al siguiente URL:
 
-    https://<IP_manager>/api/v1/sensors/<sensor_uuid>/override_all/?auth_token=<llave_API>
+    https://<IP_manager>/api/v1/sensors/<sensor_uuid>/override_all/?auth_token=<clave_API>
 
 Donde `sensor_uuid` debe ser reemplazado por el UUID del dominio a sobreescribir.
 
 Otra opción es no darle un valor al campo `sensor_uuid`. En este caso, el dominio que se va a sobreescribir es el dominio *top* (dominio principal) del usuario dueño del `auth_token` especificado en la petición:
 
-    https://<IP_manager>/api/v1/sensors/override_all/?auth_token=<llave_API>
+    https://<IP_manager>/api/v1/sensors/override_all/?auth_token=<clave_API>
 
 Si la petición es exitosa, la respuesta *JSON* mostrará el campo `query` establecido en `true`..
 
@@ -699,7 +704,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
       
         Acción HTTP: POST
 
-        URL: https://<IP_manager>/api/v1/sensors/697893457705749905/override_all?auth_token=xxxxxx
+        URL: https://<IP_manager>/api/v1/sensors/697893457705749905/override_all?auth_token=<API_key>
 
         Carga útil: 
         
@@ -766,7 +771,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
 
 Es posible obtener una lista de todos los puntos de acceso a los que el usuario tiene accesso realizando una petición `GET` a la siguiente URL:
 
-    https://<IP_manager>/api/v1/access_points.<format>?auth_token=<llave_API>
+    https://<IP_manager>/api/v1/access_points.<format>?auth_token=<clave_API>
 
 Donde `format` debe ser el formato deseado para la respuesta. Es posible indicar `csv` y `json`.
 
@@ -789,7 +794,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta
       
         Acción HTTP: GET
 
-        URL: https://<IP_manager>/api/v1/access_points.json?auth_token=xxxxxx
+        URL: https://<IP_manager>/api/v1/access_points.json?auth_token=<API_key>
 
     **Respuesta**:
     
@@ -867,7 +872,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta
 
 Se pueden crear nuevos puntos de acceso realizando una petición `POST` a la siguiente URL:
 
-    https://<IP_manager>/api/v1/access_points?auth_token=<llave_API>
+    https://<IP_manager>/api/v1/access_points?auth_token=<clave_API>
 
 Para crear con éxito un nuevo punto de acceso, es necesario proporcionar un `sensor_uuid` (UUID del sensor del cual el nuevo AP será descendiente). Si dicho parámetro no se proporciona, se devolverá un código de estado HTTP `404 Not Found`. Recuerde que puede obtener el UUID **listando el árbol de sensores**.
 
@@ -902,7 +907,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta
       
         Acción HTTP: POST
 
-        URL: https://<IP_manager>/api/v1/access_points?auth_token=xxxxxx
+        URL: https://<IP_manager>/api/v1/access_points?auth_token=<API_key>
 
         Carga útil:
         
@@ -972,7 +977,7 @@ Funciona similar a la sobreescritura del dominio, pero solo afecta a los puntos 
 
 Esta acción se puede realizar haciendo una petición `POST` al siguiente URL:
 
-    https://<IP_manager>/api/v1/sensors/<sensor_uuid>/access_point/override/?auth_token=<llave_API>
+    https://<IP_manager>/api/v1/sensors/<sensor_uuid>/access_point/override/?auth_token=<clave_API>
 
 Donde `sensor_uuid` se debe reemplazar por el UUID del dominio del cual se quieren sobreescribir los puntos de acceso.
 
@@ -996,7 +1001,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
       
         Acción HTTP: POST
 
-        URL: https://<IP_manager>/api/v1/sensors/697893457705749905/access_point/override?auth_token=xxxxxx
+        URL: https://<IP_manager>/api/v1/sensors/697893457705749905/access_point/override?auth_token=<API_key>
 
         Carga útil: 
     
@@ -1072,7 +1077,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta
       
         Acción HTTP: DELETE
 
-        URL: https://<IP_manager>/api/v1/access_points?auth_token=xxxxxx
+        URL: https://<IP_manager>/api/v1/access_points?auth_token=<API_key>
 
         Carga útil:
 
@@ -1110,7 +1115,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta
       
         Acción HTTP: DELETE
 
-        URL: https://<IP_manager>/api/v1/sensors/697893457705749905/access_points?auth_token=xxxxxx
+        URL: https://<IP_manager>/api/v1/sensors/697893457705749905/access_points?auth_token=<API_key>
 
     **Respuesta**:
     
@@ -1142,7 +1147,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta
       
         Acción HTTP: GET
 
-        URL: https://<IP_manager>/api/v1/users.json?auth_token=xxxxxx
+        URL: https://<IP_manager>/api/v1/users.json?auth_token=<API_key>
 
     **Respuesta**:
     
@@ -1252,7 +1257,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta
           ]
         }
 
-## Renovación de llave de *API*
+## Renovación de clave de *API*
 
 Los usuarios pueden solicitar una renovación de su token de autenticación realizando una petición `GET` al siguiente URL:
 
@@ -1270,7 +1275,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta
       
         Acción HTTP: GET
 
-        URL: https://<IP_manager>/api/v1/users/1/recreate_api_key?auth_token=xxxxxx
+        URL: https://<IP_manager>/api/v1/users/1/recreate_api_key?auth_token=<API_key>
 
     **Respuesta**:
     
