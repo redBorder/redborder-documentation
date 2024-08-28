@@ -869,7 +869,7 @@ Se pueden crear nuevos puntos de acceso realizando una petición `POST` a la sig
 
     https://<IP_manager>/api/v1/access_points?auth_token=<llave_API>
 
-Para crear con éxito un nuevo punto de acceso, es necesario proporcionar un `sensor_uuid` (UUID del sensor del cual el nuevo AP será descendiente). Si dicho parámetro no se proporciona, se devolverá un código de estado HTTP `404 Not Found`.
+Para crear con éxito un nuevo punto de acceso, es necesario proporcionar un `sensor_uuid` (UUID del sensor del cual el nuevo AP será descendiente). Si dicho parámetro no se proporciona, se devolverá un código de estado HTTP `404 Not Found`. Recuerde que puede obtener el UUID **listando el árbol de sensores**.
 
 También se requiere que el usuario que envía la solicitud pueda gestionar el sensor especificado. Si el usuario no tiene permiso, se devolverá un código de estado HTTP `401 Unauthorized`.
 
@@ -957,8 +957,8 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta
 
 Se pueden modificar puntos de acceso existentes haciendo una petición `PATCH` o `PUT` a los siguientes URLs:
 
-    https://<IP_manager>/api/v1/access_points/:id
-    https://<IP_manager>/api/v1/access_points/:mac_address
+    https://<IP_manager>/api/v1/access_points/<sensor_id>
+    https://<IP_manager>/api/v1/access_points/<mac_address>
 
 Donde `id` es el ID del punto de acceso a modificar. También es posible indicar el punto de acceso a modificar incluyendo la dirección MAC del punto de acceso, en lugar del ID.
 

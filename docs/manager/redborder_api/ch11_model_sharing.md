@@ -881,7 +881,7 @@ You can create new access points by making a `POST` request to the following URL
 
     https://<manager_IP>/api/v1/access_points?auth_token=<API_key>
 
-To successfully create a new access point, it is necessary to provide a `sensor_uuid` (UUID of the sensor under which the new AP will be a descendant). If this parameter is not provided, an HTTP status code `404 Not Found` will be returned.
+To successfully create a new access point, it is necessary to provide a `sensor_uuid` (UUID of the sensor under which the new AP will be a descendant). If this parameter is not provided, an HTTP status code `404 Not Found` will be returned. Remember you can get the UUID from **listing the sensors tree**.
 
 Additionally, the user making the request must be able to manage the specified sensor. If the user does not have permission, an HTTP status code `401 Unauthorized` will be returned.
 
