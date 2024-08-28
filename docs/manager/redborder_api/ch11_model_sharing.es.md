@@ -1267,11 +1267,11 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta
 
 ## Renovación de clave de *API*
 
-Los usuarios pueden solicitar una renovación de su token de autenticación realizando una petición `GET` al siguiente URL:
+Los usuarios pueden solicitar una renovación de su token de autenticación realizando una petición `GET` a la siguiente URL:
 
     https://<IP_manager>/api/v1/users/<user_id>/recreate_api_key
 
-Donde `user:id` debe ser reemplazado con el ID del usuario deseado.
+Donde `user_id` debe ser reemplazado con el ID del usuario deseado.
 
 Si la petición es exitosa, la respuesta *JSON* contendrá el **token de autenticación** generado junto al campo `query` establecido en `true`.
 

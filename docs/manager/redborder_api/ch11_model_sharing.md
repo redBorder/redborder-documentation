@@ -1269,7 +1269,7 @@ Users can request a renewal of their authentication token by making a `GET` requ
 
     https://<manager_IP>/api/v1/users/<user_id>/recreate_api_key
 
-Where `user:id` should be replaced with the ID of the desired user.
+Where `user_id` should be replaced with the ID of the desired user.
 
 If the request is successful, the *JSON* response will contain the generated **authentication token** along with the `query` field set to `true`.
 
