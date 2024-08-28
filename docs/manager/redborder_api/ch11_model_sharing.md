@@ -279,7 +279,7 @@ Expand the following tab to see a complete execution example:
     ``` bash
       curl --insecure -X POST 'https://<manager_IP>/api/v1/sensors/domain?auth_token=<API_key>' -H 'content-type: application/json' -d @<create_domain.json>
     ```
-    where create_domain.json is:
+    where *create_domain.json* is:
     ``` json
     {
       "name": "New Domain"

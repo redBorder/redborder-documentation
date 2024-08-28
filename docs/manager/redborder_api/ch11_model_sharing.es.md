@@ -280,6 +280,12 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
     ``` bash
       curl --insecure -X POST 'https://<manager_IP>/api/v1/sensors/domain?auth_token=<API_key>' -H 'content-type: application/json' -d @<create_domain.json>
     ```
+    donde el archivo *create_domain.json* sería:
+    ``` json
+    {
+      "name": "New Domain"
+    }
+    ```
 
     **Respuesta**:
 
