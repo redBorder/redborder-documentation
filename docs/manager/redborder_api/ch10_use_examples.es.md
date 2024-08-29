@@ -65,7 +65,7 @@
           ],
           "filter": {
             "type": "regex",
-            "dimension": "http_host",
+            "dimension": "application_id_name",
             "pattern": "(?i)^.*youtube.com.*$"
           },
           "queryType": "groupBy",
@@ -104,12 +104,12 @@
             "fields": [
               {
                 "type": "regex",
-                "dimension": "http_host",
+                "dimension": "application_id_name",
                 "pattern": "(?i)^.*youtube.com.*$"
               },
               {
                 "type": "regex",
-                "dimension": "http_host",
+                "dimension": "application_id_name",
                 "pattern": "(?i)^.*instagram.*$"
               }
             ]
@@ -155,12 +155,12 @@
             "fields": [
               {
                 "type": "regex",
-                "dimension": "http_host",
+                "dimension": "application_id_name",
                 "pattern": "(?i)^.*youtube.com.*$"
               },
               {
                 "type": "regex",
-                "dimension": "http_host",
+                "dimension": "application_id_name",
                 "pattern": "(?i)^.*instagram.*$"
               }
             ]
@@ -192,7 +192,7 @@
                 "type": "not",
                 "field": {
                   "type": "selector",
-                  "dimension": "http_host",
+                  "dimension": "application_id_name",
                   "value": ""
                 }
               },
@@ -212,7 +212,7 @@
             }
           ],
           "dimensions": [
-            "http_host"
+            "application_id_name"
           ],
           "orderBy": {
             "type": "default",
@@ -297,7 +297,7 @@
             }
           ],
           "dimensions": [
-            "src"
+            "lan_ip"
           ]
         }
 
@@ -376,7 +376,7 @@
             }
           ],
           "dimensions": [
-            "src"
+            "lan_ip"
           ],
           "orderBy": {
             "type": "default",
