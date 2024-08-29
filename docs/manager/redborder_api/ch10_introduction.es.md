@@ -268,8 +268,8 @@ Este filtro es similar al filtro `selector`, pero utiliza expresiones regulares.
 
         {
             "type": "regex",
-            "dimension": "http_host",
-            "pattern": "youtube\.com"            
+            "dimension": "application_id_name",
+            "pattern": "youtube"            
         }
 
 ### Filtros de expresiones lógicas

@@ -264,8 +264,8 @@ This filter is similar to the `selector` filter but uses regular expressions. It
 
         {
             "type": "regex",
-            "dimension": "http_host",
-            "pattern": "youtube\.com"            
+            "dimension": "application_id_name",
+            "pattern": "youtube"            
         }
 
 ### Logical Expression Filters
