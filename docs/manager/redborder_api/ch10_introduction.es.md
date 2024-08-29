@@ -288,7 +288,7 @@ Es posible utilizar las expresiones lógicas AND, OR y NOT para combinar filtros
                 },
                 {
                     "type": "regex",
-                    "dimension": "src",
+                    "dimension": "lan_ip",
                     "pattern": "^10\\.13\\."
                 }
             ]
