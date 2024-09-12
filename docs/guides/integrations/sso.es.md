@@ -49,6 +49,8 @@ Después, el sistema de inicio de sesión SSO estará habilitado. Puedes comprob
 === "Parámetros del SP"  
     - **ID de Entidad del SP**: Esta es la URL del SP que recibirá los metadatos del IdP.  
     - **URL de destino del SP**: Esta es la URL del SP que comprueba la respuesta SAML y permite el inicio de sesión.  
+    - - **SP Certifcate**: Este es el archivo que contiene la clave pública que encriptará la comunicación con el IdP. Debe ser un archivo con extensión `.pub` o `.crt`.  
+    - **SP Private Key**: Este es el archivo que contiene la clave privada que encriptará la comunicación con el IdP. Debe ser un archivo con extensión `.key`.  
 
 ## Registro e inicio de sesión  
 

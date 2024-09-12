@@ -48,7 +48,3 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 ## Building the documentation locally
 
 mkdocs serve
-
-## Update documentation in the server
-
-mkdocs gh-deploy
