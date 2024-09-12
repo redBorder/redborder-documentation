@@ -3,3 +3,6 @@ site/
 public/
 build_pdf/pdf
 docs/manager/redborder_api/sample_json/**/*
+docs/manager/redborder_api/sample_json/rb_event.json
+docs/manager/redborder_api/sample_json/rb_flow_00.json
+docs/manager/redborder_api/sample_json/rb_flow_01.json
