@@ -66,3 +66,10 @@ Al finalizar todo el proceso de de registro, el indicador del sensor actualizar�
 ![Proxy configurado](images/Proxy_configured.png)
 
 Proxy configurado
+
+## ¿Qué es lo siguiente?
+
+Ahora tenemos un sensor Proxy configurado en el manager. Podemos agregar sensores al sensor Proxy de la misma manera que lo haríamos directamente en el manager.
+
+![Añadiendo sensores al proxy](images/proxy_add_sensor.png)
+Añadiendo sensores al proxy
