@@ -12,7 +12,7 @@ Esta documentación proporciona una guía paso a paso para integrar [Zabbix](htt
 
 Aquí tienes un ejemplo del endpoint de la API para la integración:
 
-    http://<zabbix-server>/zabbix/api_jsonrpc.php
+    http://<zabbix-server-ip>/zabbix/api_jsonrpc.php
 
 ### Parámetros
 

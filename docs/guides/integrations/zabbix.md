@@ -11,7 +11,7 @@ This documentation provides a step-by-step guide to integrating [Zabbix](https:/
 
 Here is an example of the API endpoint for the integration:
 
-    http://<zabbix-server>/zabbix/api_jsonrpc.php
+    http://<zabbix-server-ip>/zabbix/api_jsonrpc.php
 
 ### Parameters
 
