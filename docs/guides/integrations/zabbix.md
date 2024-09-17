@@ -15,12 +15,12 @@ Here is an example of the API endpoint for the integration:
 
 ### Parameters
 
-| Parameter          | Description                                |
-| ------------------ | ------------------------------------------ |
-| Zabbix Endpoint    | The IP address of your Zabbix instance.    |
-| Zabbix Username    | The username for accessing the Zabbix API. |
-| Zabbix Password    | The password for the specified username.   |
-| Zabbix Token       | Token used to access the Zabbix API.       |
+| Parameter          | Description                                      |
+| ------------------ | ------------------------------------------------ |
+| Zabbix Endpoint    | The Endpoint address of your Zabbix instance.    |
+| Zabbix Username    | The username for accessing the Zabbix API.       |
+| Zabbix Password    | The password for the specified username.         |
+| Zabbix Token       | Token used to access the Zabbix API.             |
 
 !!! info "Note"
     The `Zabbix Username` and `Zabbix Password` are the credentials used to log in to the Zabbix web interface.
