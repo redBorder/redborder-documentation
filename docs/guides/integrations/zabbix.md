@@ -54,3 +54,6 @@ To enrich assets with data from Zabbix, follow these steps:
 
 ![List of workers to start](images/workers_to_start.png)
 List of workers to start
+
+![Jobs running and stored](images/jobs_running_and_added.png)
+Jobs running and stored

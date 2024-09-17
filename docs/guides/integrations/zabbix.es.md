@@ -55,3 +55,6 @@ Para enriquecer los assets con los datos de Zabbix, debe seguir los siguientes p
 
 ![Lista de trabajadores para iniciar](images/workers_to_start.png)
 Lista de trabajadores para iniciar
+
+![Trabajos en ejecución y almacenados](images/jobs_running_and_added.png)
+Trabajos en ejecución y almacenados
