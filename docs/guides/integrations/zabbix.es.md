@@ -16,6 +16,8 @@ Aquí tienes un ejemplo del endpoint de la API para la integración:
 
 ### Parámetros
 
+Para integrar Zabbix, se requiere conocer los siguientes parámetros para su configuración:
+
 | Parámetro          | Descripción                                           |
 | ------------------ | ----------------------------------------------------- |
 | Zabbix Endpoint    | La dirección del Endpoint de la instancia de Zabbix.  |
