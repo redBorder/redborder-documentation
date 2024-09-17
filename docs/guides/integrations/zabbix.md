@@ -36,10 +36,6 @@ To configure Zabbix in Redborder Web, follow these steps:
 
 1. Navigate to `Tools -> Integrations`.
 2. Click on the card titled **"Zabbix API Integration"** (click the "Start" button).
-
-![List of workers to start](images/workers_to_start.png)
-List of workers to start
-
 3. Fill in all required fields.
 4. Click the **"Update"** button to apply the changes.
 
@@ -53,5 +49,9 @@ List of workers to start
 To enrich assets with data from Zabbix, follow these steps:
 
 1. Once the Zabbix parameters are entered, go to the section `Tools -> Worker & Job Queue`.
+
+![List of workers to start](images/workers_to_start.png)
+List of workers to start
+
 2. A new task, **"Zabbix Inventory"**, will now be available. This task will only be visible if the Zabbix parameters are set.
 3. When executing this task, the values of the IP/MAC addresses in the objects will be modified according to the information from Zabbix. That is, if an IP/MAC value has a different name or object type, it will be updated based on the information from Zabbix.
