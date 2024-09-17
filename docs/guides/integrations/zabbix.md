@@ -42,7 +42,7 @@ To configure Zabbix in Redborder Web, follow these steps:
 ![Configuring redBorder Web UI to Use the Zabbix API](images/zabbix_step_1.png)
 
 !!! warning "About period configuration"
-    Zabbix integration is designed to be executed periodically. Once the worker is started, it will run periodically. However, on the start of the worker, the process will be executed immediately.
+    Zabbix integration is designed to be executed periodically. Once the worker is started, it will run **periodically**. However, on the start of the worker, the process will be executed **immediately**.
 
 ## Asset Enrichment
 
