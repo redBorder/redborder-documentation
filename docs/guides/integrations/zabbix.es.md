@@ -46,6 +46,8 @@ Lista de trabajadores para iniciar
 
 ![Configurar la Interfaz Web de redBorder para Usar la API de Zabbix](images/zabbix_step_1.png)
 
+!!! warning "Acerca de la configuración del periodo"
+    La integración de Zabbix está diseñada para ejecutarse periódicamente. Una vez que el trabajador se inicia, se ejecutará periódicamente. Sin embargo, al inicio del trabajador, el proceso se ejecutará inmediatamente.
 
 ## Enriquecimiento de Assets.
 
