@@ -29,7 +29,7 @@ Para integrar Zabbix, se requiere conocer los siguientes parámetros para su con
     El `Zabbix Username` y `Zabbix Password` son las credenciales usadas para entrar en la interfaz web de Zabbix.
 
 !!! warning "Importante"
-    Asegúrate de que el usuario tenga permisos adecuados y haya creado un `Zabbix Token` también con los permisos necesarios para acceder a la API de Zabbix.
+    Asegúrese de que el usuario tenga permisos adecuados y haya creado un `Zabbix Token` también con los permisos necesarios para acceder a la API de Zabbix. (Lea la documentación sobre cómo generar un token de API en la documentación oficial de Zabbix).
 
 ## Configurar la Interfaz Web de redBorder para Usar la API de Zabbix
 
