@@ -33,6 +33,8 @@ Para integrar Zabbix, se requiere conocer los siguientes parámetros para su con
 
 ## Configurar la Interfaz Web de redBorder para Usar la API de Zabbix
 
+Para configurar Zabbix en la Web de Redborder, siga estos pasos:
+
 1. Ve a `Herramientas -> Integraciones`.
 2. Haz clic en la tarjeta titulada **"Integración con la API de Zabbix"** (haz clic en el botón "Empezar").
 3. Rellena todos los campos requeridos.

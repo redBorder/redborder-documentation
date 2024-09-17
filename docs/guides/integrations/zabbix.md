@@ -28,9 +28,11 @@ To integrate Zabbix, this parameters are required to know for the configuration:
     The `Zabbix Username` and `Zabbix Password` are the credentials used to log in to the Zabbix web interface.
 
 !!! warning "Important"
-    Ensure that the user has appropriate permissions and has also created a `Zabbix Token` with the necessary permissions to access the Zabbix API.
+    Ensure that the user has appropriate permissions and has also created a `Zabbix Token` with the necessary permissions to access the Zabbix API. (Search how to generate API token in official Zabbix documentation).
 
 ## Configuring redBorder Web UI to Use the Zabbix API
+
+To configure Zabbix in Redborder Web, follow these steps:
 
 1. Navigate to `Tools -> Integrations`.
 2. Click on the card titled **"Zabbix API Integration"** (click the "Start" button).
