@@ -36,6 +36,10 @@ To configure Zabbix in Redborder Web, follow these steps:
 
 1. Navigate to `Tools -> Integrations`.
 2. Click on the card titled **"Zabbix API Integration"** (click the "Start" button).
+
+![List of workers to start](images/workers_to_start.png)
+List of workers to start
+
 3. Fill in all required fields.
 4. Click the **"Update"** button to apply the changes.
 

@@ -37,6 +37,10 @@ Para configurar Zabbix en la Web de Redborder, siga estos pasos:
 
 1. Ve a `Herramientas -> Integraciones`.
 2. Haz clic en la tarjeta titulada **"Integración con la API de Zabbix"** (haz clic en el botón "Empezar").
+
+![Lista de trabajadores para iniciar](images/workers_to_start.png)
+Lista de trabajadores para iniciar
+
 3. Rellena todos los campos requeridos.
 4. Presiona el botón **"Actualizar"** para aplicar los cambios.
 
@@ -45,7 +49,7 @@ Para configurar Zabbix en la Web de Redborder, siga estos pasos:
 
 ## Enriquecimiento de Assets.
 
-Para enriquecer los assets con los datos de Zabbix, debes seguir los siguientes pasos: 
+Para enriquecer los assets con los datos de Zabbix, debe seguir los siguientes pasos: 
 
 1. Una vez que tengamos los parametros de Zabbix introducidos, vamos a la seccion de 'Herramientas' -> 'Cola Tareas y Trabajadores'
 2. Ahora tendremos una nueva tarea, 'Inventario de Zabbix'. Esta tarea solo se podra ver si tenemos los parámetros de Zabbix establecidos.
