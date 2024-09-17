@@ -57,3 +57,11 @@ List of workers to start
 
 ![Jobs running and stored](images/jobs_running_and_added.png)
 Jobs running and stored
+
+## Results
+
+If the jobs have finished correctly, the assets will be enriched with the information from Zabbix. You can notice the improvement in Tools/Objects menu and in any module that uses the following fields:
+- LAN IP
+- WAN IP
+- Client MAC
+- ...or even related that object types.

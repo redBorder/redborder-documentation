@@ -58,3 +58,11 @@ Lista de trabajadores para iniciar
 
 ![Trabajos en ejecución y almacenados](images/jobs_running_and_added.png)
 Trabajos en ejecución y almacenados
+
+## Results
+
+Si los trabajos han finalizado correctamente, los assets se enriquecerán con la información de Zabbix. Podrá encontrar la información extendida en el menú de Herramientas/Objectos y en cualquier módulo que utilice los siguientes campos:
+- IP LAN
+- IP WAN
+- MAC del cliente
+- ...o incluso relacionados con esos tipos de objetos.
