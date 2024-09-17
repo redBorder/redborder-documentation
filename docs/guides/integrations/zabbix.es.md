@@ -50,9 +50,8 @@ Para configurar Zabbix en la Web de Redborder, siga estos pasos:
 Para enriquecer los assets con los datos de Zabbix, debe seguir los siguientes pasos: 
 
 1. Una vez que tengamos los parametros de Zabbix introducidos, vamos a la seccion de 'Herramientas' -> 'Cola Tareas y Trabajadores'
+2. Ahora tendremos una nueva tarea, 'Inventario de Zabbix'. Esta tarea solo se podra ver si tenemos los parámetros de Zabbix establecidos.
+3. Al ejecutar esta tarea, los valores de las direcciones IP/MAC que tengamos en los objetos, se modificacran segun la información de Zabbix, es decir, si un valor de IP/MAC tiene un nombre o tipo de objeto diferente, este se modificara segun la informacion de Zabbix. 
 
 ![Lista de trabajadores para iniciar](images/workers_to_start.png)
 Lista de trabajadores para iniciar
-
-2. Ahora tendremos una nueva tarea, 'Inventario de Zabbix'. Esta tarea solo se podra ver si tenemos los parámetros de Zabbix establecidos.
-3. Al ejecutar esta tarea, los valores de las direcciones IP/MAC que tengamos en los objetos, se modificacran segun la información de Zabbix, es decir, si un valor de IP/MAC tiene un nombre o tipo de objeto diferente, este se modificara segun la informacion de Zabbix. 
