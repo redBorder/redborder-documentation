@@ -49,6 +49,8 @@ After, the SSO login system is enabled. You can check it by going to the login p
 === "SP Parameters"  
     - **SP Entity ID**: This is the URL of the SP that will receive the metadata from the IdP.  
     - **SP Target URL**: This is the URL of the SP that check the SAML response and log in.  
+    - **SP Certifcate**: This is the file which contains the public certificate that encrypts the communication with the IdP. It must be a `.crt` or `.pub` file.  
+    - **SP Private Key**: This is the private key of the certificate that encrypts the communication with the IdP. It must be a `.key` file.  
 
 ## Login and register  
 
