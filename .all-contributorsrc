@@ -75,6 +75,16 @@
         "content",
         "translation"
       ]
+    },
+    {
+      "login": "jsotofernandez",
+      "name": "Juan Soto",
+      "avatar_url": "https://avatars.githubusercontent.com/u/127120525?v=4",
+      "profile": "https://github.com/jsotofernandez",
+      "contributions": [
+        "content",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
