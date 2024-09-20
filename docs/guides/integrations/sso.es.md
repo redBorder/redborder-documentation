@@ -40,6 +40,8 @@ Después, el sistema de inicio de sesión SSO estará habilitado. Puedes comprob
 
 ![SSO Config Parameters](images/sso_config.png)  
 
+- **Bloquear Nuevos Ususarios Recién Creados**: Este ajuste activa la opción de bloquear la cuenta al crearse.  
+
 === "Parámetros del IdP"  
     - **URL de destino del IdP SSO**: Esta es la URL que redirige al IdP cuando deseas iniciar sesión.  
     - **URL de destino del IdP SLO**: Esta es la URL que redirige al IdP cuando deseas cerrar sesión. Hay algunos IdPs que no tienen esta configuración, entonces escribe la ruta de cierre de sesión de redBorder: `<host>/users/logout`.  
@@ -55,6 +57,3 @@ Después, el sistema de inicio de sesión SSO estará habilitado. Puedes comprob
 ## Registro e inicio de sesión  
 
 Después de configurar todos los ajustes, se puede iniciar sesión mediante SSO. Para usarlo, vaya a la ruta de inicio de sesión y se verá un botón que se refiere a SSO. Tras hacerse click en él, la página se redirigirá al servicio SSO configurado del IdP.  
-
-!!! Warning  
-    Si es la primera vez que se accede a redBorder, se necesitará iniciar sesión dos veces: la primera para el registro del usuario y la segunda para el inicio de sesión.  
