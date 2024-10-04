@@ -66,6 +66,12 @@ Vamos a realizar una descripción rápida de las opciones que se pueden encontra
 
 Dashboard
 
+*Incidentes*: Actúa como un gestor de tareas donde los usuarios pueden ver y gestionar eventos marcados como incidentes. Cada usuario puede tener asignados incidentes que requieren investigación, permitiendo un seguimiento y resolución eficiente de los eventos de seguridad.
+
+![Vista de Incidentes](../more_in_detail/images/ch05_1_incidents_view.png)
+
+*Vista de Incidentes*
+
 *Eventos*: A continuación, el usuario podrá ver eventos cuya información proviene de los sensores registrados en su sección correspondiente. Más adelante, se explicará en detalle qué función tiene cada uno y cómo se registran estos sensores. En la captura de pantalla adjunta: Vault
 
 ![Eventos](images/ch03_img005.png)
