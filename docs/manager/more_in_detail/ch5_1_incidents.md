@@ -25,7 +25,16 @@ The fields of an incident are the following:
 * Source: The datasource from which the incident was generated.
 * Created at: The date and time when the incident was detected.
 * Assigned: The user of the web that currently has the incident assigned.
-
+* Status: The current state of the incident. Possible values include:
+  - New: The incident has been created but not yet reviewed.
+  - Open: The incident is currently being investigated.
+  - Closed: The incident investigation is complete and no further action is required.
+  - Containment Achieved: The incident has been contained and prevented from spreading further.
+  - Incident Reported: The incident has been officially reported to relevant stakeholders or authorities.
+  - Rejected: The incident has been determined to be a false positive or not requiring further action.
+  - Restoration Achieved: Systems and data affected by the incident have been successfully restored.
+  - Stalled: The investigation or resolution of the incident has been temporarily halted due to various factors.
+  
 ## Actions on an incident
 
 The actions that can be performed on an incident are the following:
@@ -36,7 +45,7 @@ The actions that can be performed on an incident are the following:
 * Click on the settings icon to start managing the incident.
 * Click on trash icon to delete the incident.
 
-Clicking on the name of the incident will show the details of the incident, expanding the explanation of it. Clicking on **View Incident Detail** will have the same effect as clicking on the settings icon. In both cases, if the incident's status was **New**, it will change to **Open**; and the user will be assigned to yourself.
+Clicking on the name of the incident will explanain the incident. Clicking on **View Incident Detail** will have the same effect as clicking on the settings icon. In both cases, if the incident's status was **New**, it will change to **Open**; and the user will be assigned to yourself.
 
 ![Incident summary](images/ch05_1_incident_sum.png)
 
@@ -44,7 +53,7 @@ Clicking on the name of the incident will show the details of the incident, expa
 
 ## Getting into the incident
 
-The main purpose of this view is to provide the user with all the information about the incident and the possibility to document the process of **detection** and **response**.
+The main purpose of this view is to provide the user with all the information about the incident and the possibility to document the process.
 
 ![Incident detail](images/ch05_1_incident_detail.png)
 
