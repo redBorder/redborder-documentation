@@ -42,7 +42,7 @@ Clicking on the name of the incident will show the details of the incident, expa
 
 ## Getting into the incident
 
-The main purpose of this view is to provide the user with all the information about the incident and the possibility to document the process of investigation (**detection**) and **response**.
+The main purpose of this view is to provide the user with all the information about the incident and the possibility to document the process of **detection** and **response**.
 
 ![Incident detail](images/ch05_1_incident_detail.png)
 
@@ -63,7 +63,7 @@ Moreover, the information is summarized in an interactive graph view that allows
 
 ### Detection
 
-The detection section is a log of the actions performed by every user who worked on the incident. Any change to it will be registered and can be filtered and shown here. Additionally, any user can add comments manually to the detection as necessary.
+The detection section shows the list of related alerts (messages), observables and assets that makes the incident up.
 
 ![Detection](images/ch05_1_detection.png)
 
@@ -71,6 +71,12 @@ The detection section is a log of the actions performed by every user who worked
 
 ### Response
 
+The response section displays a **playbook**, which is a structured guide for handling the incident. A playbook provides a systematic approach to incident response, ensuring that all necessary steps are followed in a consistent manner. There are different types of playbooks, which are defined by the type of incident. The playbook is divided by phases. Each phase can have different tasks to be performed, and each task have a description of it and a specific space for writing the comments of response process. Phases and tasks are suppoused to be executed in order.
+
+![Response](images/ch05_1_response.png)
+*Response of the incident*
+
+In this example, the playbook has four phases: **Identification**, **Containment**, **Eradication** and **Recovery**. Each chapter has a list of tasks to be performed in order. The user can add comments to the tasks and mark them as completed.
 
 ### Worklog
 
