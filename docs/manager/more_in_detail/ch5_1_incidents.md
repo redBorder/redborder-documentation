@@ -48,7 +48,21 @@ The main purpose of this view is to provide the user with all the information ab
 Incident detail
 
 ### Overview
+
+The overview of the incident shows the following related information with the incident:
+* The list of **assets**.
+* The list of **observables**.
+* The list of **indicators**.
+
+Moreover, the information is summarized in a graph interactive view that allows the user to see the connection between the observables.
+
+![Overview of the incident](images/ch05_1_overview.png)
+
+Overview of the incident
+
 ### Detection
+
+
 ### Response
 ### Worklog
 
