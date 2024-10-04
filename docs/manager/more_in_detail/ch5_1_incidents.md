@@ -103,3 +103,8 @@ Additionally, the user can add notes to the worklog. By clicking on **Add Note**
 ![Add note](images/ch05_1_add_note.png)
 
 *Add note*
+
+# What's next?
+
+Go to **Incidents** section to start managing an incident. The playbook will probably guide you to watch the source of the incident.
+Or go to **Tools/Playbooks** to define new playbooks for new types of incidents.
