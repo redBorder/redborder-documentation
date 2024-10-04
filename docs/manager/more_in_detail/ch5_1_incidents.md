@@ -38,14 +38,15 @@ Clicking on the name of the incident will show the details of the incident, expa
 
 ![Incident summary](images/ch05_1_incident_sum.png)
 
-Incident summary
+*Incident summary*
 
 ## Getting into the incident
 
 The main purpose of this view is to provide the user with all the information about the incident and the possibility to document the process of investigation (**detection**) and **response**.
 
 ![Incident detail](images/ch05_1_incident_detail.png)
-Incident detail
+
+*Incident detail*
 
 ### Overview
 
@@ -58,10 +59,15 @@ Moreover, the information is summarized in an interactive graph view that allows
 
 ![Overview of the incident](images/ch05_1_overview.png)
 
-Overview of the incident
+*Overview of the incident*
 
 ### Detection
 
+The detection section is a log of the actions performed by every user who worked on the incident. Any change to it will be registered and can be filtered and shown here. Additionally, any user can add comments manually to the detection as necessary.
+
+![Detection](images/ch05_1_detection.png)
+
+*Detection of the incident*
 
 ### Response
 
@@ -72,7 +78,7 @@ The worklog is a log of the actions performed by every user who worked on the in
 
 ![Worklog](images/ch05_1_worklog.png)
 
-Worklog
+*Worklog*
 
 #### Searching in the worklog
 
@@ -90,4 +96,4 @@ Additionally, the user can add notes to the worklog. By clicking on **Add Note**
 
 ![Add note](images/ch05_1_add_note.png)
 
-Add note
+*Add note*
