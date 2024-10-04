@@ -26,14 +26,17 @@ The fields of an incident are the following:
 * Created at: The date and time when the incident was detected.
 * Assigned: The user of the web that currently has the incident assigned.
 * Status: The current state of the incident. Possible values include:
-  - New: The incident has been created but not yet reviewed.
-  - Open: The incident is currently being investigated.
-  - Closed: The incident investigation is complete and no further action is required.
-  - Containment Achieved: The incident has been contained and prevented from spreading further.
-  - Incident Reported: The incident has been officially reported to relevant stakeholders or authorities.
-  - Rejected: The incident has been determined to be a false positive or not requiring further action.
-  - Restoration Achieved: Systems and data affected by the incident have been successfully restored.
-  - Stalled: The investigation or resolution of the incident has been temporarily halted due to various factors.
+
+Possible status are:
+
+* New: The incident has been created but not yet reviewed.
+* Open: The incident is currently being investigated.
+* Closed: The incident investigation is complete and no further action is required.
+* Containment Achieved: The incident has been contained and prevented from spreading further.
+* Incident Reported: The incident has been officially reported to relevant stakeholders or authorities.
+* Rejected: The incident has been determined to be a false positive or not requiring further action.
+* Restoration Achieved: Systems and data affected by the incident have been successfully restored.
+* Stalled: The investigation or resolution of the incident has been temporarily halted due to various factors.
   
 ## Actions on an incident
 
