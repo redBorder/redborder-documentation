@@ -4,7 +4,7 @@ site_url: "https://docs.redborder.com/"
 docs_dir: "docs"
 repo_url: https://github.com/redBorder/redborder-documentation
 repo_name: redBorder/redborder-documentation
-edit_url: "edit/master/docs"
+edit_uri: edit/master/docs
 
 theme:
   name: material
