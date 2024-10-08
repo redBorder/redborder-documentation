@@ -39,7 +39,7 @@ The platform features a comprehensive search function. You can use it to quickly
 
 To open a page in the search results, simply click (or tap on mobile) on the desired page in the displayed list.
 
-## First steps
+### What's next
 
 If this is your first time visiting this documentation platform, you can visit the [getting started](guides/getting_started/first_steps.md) page to see initial information when learning about RedBorder.
 
