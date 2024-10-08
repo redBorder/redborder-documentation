@@ -19,17 +19,11 @@ jobs:
       
       - name: Install MkDocs and required plugins
         run: |
-          pip install mkdocs mkdocs-material mkdocs-pdf-export-plugin
+          pip install mkdocs
+          pip install -r plugins.yml
       
-      - name: Build MkDocs site and generate PDF (English)
-        run: |
-          mkdocs build -f mkdocs.yml
-          mv site/pdf/document.pdf documentation_en.pdf
-
-      - name: Build MkDocs site and generate PDF (Spanish)
-        run: |
-          mkdocs build -f mkdocs.es.yml
-          mv site/pdf/document.pdf documentation_es.pdf
+      - name: Build PDFs
+        run: bash build_all.sh
 
       - name: Upload PDF artifacts
         uses: actions/upload-artifact@v4
