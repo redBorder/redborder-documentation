@@ -21,16 +21,15 @@ jobs:
         run: |
           pandoc -o documentation_en.pdf --pdf-engine=xelatex \
           docs/index.md \
-          docs/manager/redborder_basics/*.md \
-          docs/manager/more_in_detail/*.md \
-          docs/manager/platform_configurations/*.md \
-          docs/proxy/*.md \
-          docs/ips/IPS_basics/*.md \
-          docs/ips/platform_configurations/*.md \
-          docs/guides/getting_started/*.md \
-          docs/guides/use_cases/*.md \
-          docs/guides/integrations/*.md \
-          --exclude-pattern='*.es.md'      
+          $(find docs/manager/redborder_basics        -name '*.md' ! -name '*.es.md') \
+          $(find docs/manager/more_in_detail          -name '*.md' ! -name '*.es.md') \
+          $(find docs/manager/platform_configurations -name '*.md' ! -name '*.es.md') \
+          $(find docs/proxy                           -name '*.md' ! -name '*.es.md') \
+          $(find docs/ips/IPS_basics                  -name '*.md' ! -name '*.es.md') \
+          $(find docs/ips/platform_configurations     -name '*.md' ! -name '*.es.md') \
+          $(find docs/guides/getting_started          -name '*.md' ! -name '*.es.md') \
+          $(find docs/guides/use_cases                -name '*.md' ! -name '*.es.md') \
+          $(find docs/guides/integrations             -name '*.md' ! -name '*.es.md')
 
       - name: Convert MD to PDF (Spanish)
         run: |
