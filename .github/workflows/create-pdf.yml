@@ -29,8 +29,9 @@ jobs:
           docs/ips/platform_configurations/*.md \
           docs/guides/getting_started/*.md \
           docs/guides/use_cases/*.md \
-          docs/guides/integrations/*.md
-      
+          docs/guides/integrations/*.md \
+          --exclude-pattern='*.es.md'      
+
       - name: Convert MD to PDF (Spanish)
         run: |
           find docs -name "*.es.md" -type f -print0 | xargs -0 pandoc -o documentation_es.pdf --pdf-engine=xelatex
