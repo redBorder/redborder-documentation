@@ -25,8 +25,11 @@ jobs:
           docs/manager/more_in_detail/*.md \
           docs/manager/platform_configurations/*.md \
           docs/proxy/*.md \
-          docs/ips/*.md \
-          docs/guides/*.md
+          docs/ips/IPS_basics/*.md \
+          docs/ips/platform_configurations/*.md \
+          docs/guides/getting_started/*.md \
+          docs/guides/use_cases/*.md \
+          docs/guides/integrations/*.md
       
       - name: Convert MD to PDF (Spanish)
         run: |
