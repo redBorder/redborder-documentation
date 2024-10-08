@@ -3,7 +3,7 @@ name: Create PDF
 on:
   push:
     branches:
-      - ${{ github.ref_name }}
+      - Feature/#18124_autobuild_pdf
       # - main
 
 jobs:
