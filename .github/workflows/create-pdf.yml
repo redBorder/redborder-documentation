@@ -19,7 +19,14 @@ jobs:
       
       - name: Convert MD to PDF (English)
         run: |
-          find docs -name "*.md" -type f ! -name "*.es.md" -print0 | xargs -0 pandoc -o documentation_en.pdf --pdf-engine=xelatex
+          pandoc -o documentation_en.pdf --pdf-engine=xelatex \
+          docs/index.md \
+          docs/manager/redborder_basics/*.md \
+          docs/manager/more_in_detail/*.md \
+          docs/manager/platform_configurations/*.md \
+          docs/proxy/*.md \
+          docs/ips/*.md \
+          docs/guides/*.md
       
       - name: Convert MD to PDF (Spanish)
         run: |
