@@ -19,7 +19,7 @@ This module is disabled by default, to activate it, run the following command fr
 
 BI module
 
-## Malware (WIP)
+<!-- ## Malware (WIP)
 
 The **Malware** module is a complete solution for detecting malicious files, IP addresses, and URLs. Multiple detection engines and reputation services are employed, going beyond signature-based policies and similar techniques.
 
@@ -29,7 +29,7 @@ This module is disabled by default, to activate it, run the following command fr
 
 ![Malware Module](images/ch04_img002.png)
 
-Malware Module
+Malware Module -->
 
 ## Traffic
 

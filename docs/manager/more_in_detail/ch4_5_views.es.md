@@ -77,7 +77,7 @@ Mediante la vista **Único** el usuario puede obtener información sobre los dif
 
 Vista *único*
 
-## Analizar (Módulo Malware, WIP)
+<!-- ## Analizar (Módulo Malware, WIP)
 
 En esta vista se puede obtener un análisis detallado de una URL, IP, Hash o bien, de un fichero bajo demanda, como si este hubiera entrado por otros canales.
 
@@ -87,4 +87,4 @@ Puede saltar de una vista a otra sin necesidad de regresar a la interfaz de even
 
 ![Vista analizar](images/ch04_img047.png)
 
-Vista *analizar*
+Vista *analizar* -->

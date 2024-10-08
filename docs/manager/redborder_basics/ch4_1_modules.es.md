@@ -19,7 +19,7 @@ Este módulo viene desactivado por defecto, para activarlo ejecute el siguiente 
 
 Módulo de BI
 
-## Malware (WIP)
+<!-- ## Malware (WIP)
 
 El módulo **Malware** es una solución completa para la detección de archivos, direcciones IP y direcciones URL maliciosas. Para ello se emplean múltiples motores de detección y servicios de reputación que van más allá de las políticas basadas en firmas y técnicas similares.
 
@@ -29,7 +29,7 @@ Este módulo viene desactivado por defecto, para activarlo ejecute el siguiente 
 
 ![Módulo de Malware](images/ch04_img002.png)
 
-Módulo de Malware
+Módulo de Malware -->
 
 ## Tráfico
 

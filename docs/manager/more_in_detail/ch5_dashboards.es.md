@@ -95,7 +95,7 @@ El primer paso es seleccionar el tipo de widget que desea agregar. Existen tres 
     - Tráfico
     - Intrusión
     - Movilidad
-    - Malware
+    <!-- - Malware -->
     - Vault
     - Wireless
     - Combinación
@@ -197,7 +197,7 @@ Para ingresar cualquiera de estos elementos a los widgets, simplemente complete 
 
 ![Edición de widgets de formato](images/ch05_img013.png)
 
-### Widgets de malware
+<!-- ### Widgets de malware
 
 Los widget de tipo Malware se asocian al análisis de eventos Malware ocurridos en cualquier parte de la infraestructura redborder.
 
@@ -209,7 +209,7 @@ Pueden resumirse en la siguiente lista:
 
 1. *Score average per hour*: puntuación media de los eventos de malware detectados en las últimas 24 horas.
 - *Malware Fast Search*: widget que permite la busqueda de un evento malware por hash, url o ip.
-- *Recent Malware*: muestra eventos de malware detectados en las últimas 24 horas.
+- *Recent Malware*: muestra eventos de malware detectados en las últimas 24 horas. -->
 
 ### Máquina del tiempo
 
