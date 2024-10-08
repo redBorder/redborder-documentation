@@ -85,3 +85,7 @@ And report that the next user need to review those hosts to start the next phase
 ![Confirm incident notes](images/eternalblue_confirm_notes.png)
 
 *Confirm incident notes*
+
+# What's next?
+
+It is expected that the reported user is picking up the incident on this state and start the containment phase fo the malware.
