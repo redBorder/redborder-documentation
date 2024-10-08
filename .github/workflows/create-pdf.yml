@@ -45,7 +45,7 @@ jobs:
 
       - name: Convert MD to PDF (Spanish)
         run: |
-          find docs -name "*.es.md" -type f -print0 | xargs -0 pandoc -o documentation_es.pdf --pdf-engine=xelatex \
+          pandoc -o documentation_es.pdf --pdf-engine=xelatex \
           --from markdown+yaml_metadata_block+raw_html \
           --lua-filter=<(echo '
           function Block (elem)
@@ -58,6 +58,16 @@ jobs:
             end
           end
           ')
+          docs/index.es.md \
+          docs/manager/redborder_basics/*.es.md \
+          docs/manager/more_in_detail/*.es.md \       
+          docs/manager/platform_configurations/*.es.md \ 
+          docs/proxy/*.es.md \                           
+          docs/ips/IPS_basics/*.es.md \                  
+          docs/ips/platform_configurations/*.es.md \     
+          docs/guides/getting_started/*.es.md \         
+          docs/guides/use_cases/*.es.md \                
+          docs/guides/integrations/*.es.md              
       
       - name: Upload PDF artifacts
         uses: actions/upload-artifact@v4
