@@ -12,62 +12,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Install pandoc and texlive
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y pandoc texlive-latex-base texlive-fonts-recommended texlive-extra-utils texlive-latex-extra texlive-xetex
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
       
-      - name: Convert MD to PDF (English)
+      - name: Install MkDocs and required plugins
         run: |
-          pandoc -o documentation_en.pdf --pdf-engine=xelatex \
-          --from markdown+yaml_metadata_block+raw_html \
-          --lua-filter=<(echo '
-          function Block (elem)
-            if elem.t == "Div" and elem.classes[1] == "info" then
-              return {
-                pandoc.RawBlock("latex", "\\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=Info]"),
-                elem,
-                pandoc.RawBlock("latex", "\\end{tcolorbox}")
-              }
-            end
-          end
-          ') \
-          docs/index.md \
-          $(find docs/manager/redborder_basics        -name '*.md' ! -name '*.es.md') \
-          $(find docs/manager/more_in_detail          -name '*.md' ! -name '*.es.md') \
-          $(find docs/manager/platform_configurations -name '*.md' ! -name '*.es.md') \
-          $(find docs/proxy                           -name '*.md' ! -name '*.es.md') \
-          $(find docs/ips/IPS_basics                  -name '*.md' ! -name '*.es.md') \
-          $(find docs/ips/platform_configurations     -name '*.md' ! -name '*.es.md') \
-          $(find docs/guides/getting_started          -name '*.md' ! -name '*.es.md') \
-          $(find docs/guides/use_cases                -name '*.md' ! -name '*.es.md') \
-          $(find docs/guides/integrations             -name '*.md' ! -name '*.es.md')
+          pip install mkdocs mkdocs-material mkdocs-pdf-export-plugin
+      
+      - name: Build MkDocs site and generate PDF (English)
+        run: |
+          mkdocs build -f mkdocs.yml
+          mv site/pdf/document.pdf documentation_en.pdf
 
-      - name: Convert MD to PDF (Spanish)
+      - name: Build MkDocs site and generate PDF (Spanish)
         run: |
-          pandoc -o documentation_es.pdf --pdf-engine=xelatex \
-          --from markdown+yaml_metadata_block+raw_html \
-          --lua-filter=<(echo '
-          function Block (elem)
-            if elem.t == "Div" and elem.classes[1] == "info" then
-              return {
-                pandoc.RawBlock("latex", "\\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=Info]"),
-                elem,
-                pandoc.RawBlock("latex", "\\end{tcolorbox}")
-              }
-            end
-          end
-          ') \
-          docs/index.es.md \
-          $(find docs/manager/redborder_basics -name '*.es.md') \
-          $(find docs/manager/more_in_detail -name '*.es.md') \
-          $(find docs/manager/platform_configurations -name '*.es.md') \
-          $(find docs/proxy -name '*.es.md') \
-          $(find docs/ips/IPS_basics -name '*.es.md') \
-          $(find docs/ips/platform_configurations -name '*.es.md') \
-          $(find docs/guides/getting_started -name '*.es.md') \
-          $(find docs/guides/use_cases -name '*.es.md') \
-          $(find docs/guides/integrations -name '*.es.md')      
+          mkdocs build -f mkdocs.es.yml
+          mv site/pdf/document.pdf documentation_es.pdf
+
       - name: Upload PDF artifacts
         uses: actions/upload-artifact@v4
         with:
