@@ -20,6 +20,18 @@ jobs:
       - name: Convert MD to PDF (English)
         run: |
           pandoc -o documentation_en.pdf --pdf-engine=xelatex \
+          --from markdown+yaml_metadata_block+raw_html \
+          --lua-filter=<(echo '
+          function Block (elem)
+            if elem.t == "Div" and elem.classes[1] == "info" then
+              return {
+                pandoc.RawBlock("latex", "\\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=Info]"),
+                elem,
+                pandoc.RawBlock("latex", "\\end{tcolorbox}")
+              }
+            end
+          end
+          ') \
           docs/index.md \
           $(find docs/manager/redborder_basics        -name '*.md' ! -name '*.es.md') \
           $(find docs/manager/more_in_detail          -name '*.md' ! -name '*.es.md') \
@@ -33,7 +45,19 @@ jobs:
 
       - name: Convert MD to PDF (Spanish)
         run: |
-          find docs -name "*.es.md" -type f -print0 | xargs -0 pandoc -o documentation_es.pdf --pdf-engine=xelatex
+          find docs -name "*.es.md" -type f -print0 | xargs -0 pandoc -o documentation_es.pdf --pdf-engine=xelatex \
+          --from markdown+yaml_metadata_block+raw_html \
+          --lua-filter=<(echo '
+          function Block (elem)
+            if elem.t == "Div" and elem.classes[1] == "info" then
+              return {
+                pandoc.RawBlock("latex", "\\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=Info]"),
+                elem,
+                pandoc.RawBlock("latex", "\\end{tcolorbox}")
+              }
+            end
+          end
+          ')
       
       - name: Upload PDF artifacts
         uses: actions/upload-artifact@v4
