@@ -2,6 +2,9 @@
 
 In this case, we will see how to manage an *Eternalblue* attack incident. 
 
+!!! info "Please note..."
+    This case is based on a real incident, but captures taken corresponds entirely to a simulation.
+
 ## Context
 
 It all starts with a malicious phishing email which contains a *dropper* that installs *ransomware*.

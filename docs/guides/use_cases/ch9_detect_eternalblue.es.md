@@ -2,6 +2,9 @@
 
 En este caso, veremos cómo gestionar un incidente de ataque *Eternalblue*.
 
+!!! info "Tenga en cuenta..."
+    Este caso está basado en un incidente real, pero las capturas tomadas corresponden enteramente a una simulación.
+
 ## Contexto
 
 Todo comienza con un correo electrónico de phishing malicioso que contiene un *dropper* que instala un *ransomware*.
