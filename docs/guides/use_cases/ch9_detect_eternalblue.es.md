@@ -89,6 +89,6 @@ E informar que el siguiente usuario necesita revisar esos hosts para iniciar la 
 
 *Confirmar notas del incidente*
 
-# ¿Qué sigue?
+## ¿Qué sigue?
 
 Se espera que el usuario informado recoja el incidente en este estado e inicie la fase de contención del malware, empezando por aislar las máquinas afectadas.

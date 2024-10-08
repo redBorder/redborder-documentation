@@ -89,6 +89,6 @@ And report that the next user need to review those hosts to start the next phase
 
 *Confirm incident notes*
 
-# What's next?
+## What's next?
 
 It is expected that the reported user is picking up the incident on this state and start the containment phase fo the malware, starting with the affected hosts.
