@@ -19,7 +19,16 @@ jobs:
       
       - name: Install MkDocs and required plugins
         run: |
-          pip install mkdocs materialx.emoji
+          pip install mkdocs \
+              mkdocs-awesome-pages-plugin \
+              mkdocs-git-revision-date-localized-plugin \
+              mkdocs-localsearch \
+              mkdocs-material \
+              mkdocs-redirects \
+              mkdocs-static-i18n \
+              jieba \
+              mkdocs-with-pdf \
+              qrcode 
       
       - name: Build PDFs
         run: bash build_pdf/build_all.sh
