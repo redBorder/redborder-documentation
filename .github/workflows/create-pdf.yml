@@ -59,16 +59,15 @@ jobs:
           end
           ') \
           docs/index.es.md \
-          docs/manager/redborder_basics/*.es.md \
-          docs/manager/more_in_detail/*.es.md \       
-          docs/manager/platform_configurations/*.es.md \ 
-          docs/proxy/*.es.md \                           
-          docs/ips/IPS_basics/*.es.md \                  
-          docs/ips/platform_configurations/*.es.md \     
-          docs/guides/getting_started/*.es.md \         
-          docs/guides/use_cases/*.es.md \                
-          docs/guides/integrations/*.es.md              
-      
+          $(find docs/manager/redborder_basics -name '*.es.md') \
+          $(find docs/manager/more_in_detail -name '*.es.md') \
+          $(find docs/manager/platform_configurations -name '*.es.md') \
+          $(find docs/proxy -name '*.es.md') \
+          $(find docs/ips/IPS_basics -name '*.es.md') \
+          $(find docs/ips/platform_configurations -name '*.es.md') \
+          $(find docs/guides/getting_started -name '*.es.md') \
+          $(find docs/guides/use_cases -name '*.es.md') \
+          $(find docs/guides/integrations -name '*.es.md')      
       - name: Upload PDF artifacts
         uses: actions/upload-artifact@v4
         with:
