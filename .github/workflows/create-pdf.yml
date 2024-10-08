@@ -3,7 +3,8 @@ name: Create PDF
 on:
   push:
     branches:
-      - main
+      - ${{ github.ref_name }}
+      # - main
 
 jobs:
   convert_to_pdf:
