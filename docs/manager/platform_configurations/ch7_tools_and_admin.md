@@ -103,6 +103,36 @@ Expand the following tabs to read a description of the options found in the tool
 
     ![Correlation Engine Rules](images/ch07_img007.png)
 
+??? note "Mitre matrix"
+
+    ## Mitre matrix
+
+    The Mitre matrix is a threat intelligence framework that allows us to identify the different types of attacks that can be carried out against a system. This information can be imported into the platform to be used to complement other sections of the platform, like **Incidents** or **Dashboards**.
+
+    By default, the mitre matrix is needed to be downloaded from the official website. 
+
+    ![No Mitre downloaded](images/mitre_empty.png)
+    
+    *No Mitre downloaded*
+
+    ### Mitre Tactics overview
+
+    Just press the download button and come back in a minute. After that, you can see the **Mitre Tactics** list.
+
+    ![Mitre Tactics](images/mitre_tactics.png)
+
+    *Mitre Tactics*
+
+    The default list will show all the tactics that the MITRE framework has defined with the number of IPS rules associated with each one.
+
+    ### Mitre Matrix view
+
+    The Mitre matrix is a table that shows the different techniques that have been triggered by any intrusion event during a certain period of time. Like other modules, the time frame can be edited to filter the information you are looking for; as other unique fiels lique **tactics** and **techniques**.
+
+    ![Mitre Matrix](images/mitre_matrix.png)
+
+    *Mitre Matrix*
+
 ??? note "Monitor Categories"
 
     ## Monitor Categories
