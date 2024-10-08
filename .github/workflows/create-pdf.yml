@@ -19,11 +19,11 @@ jobs:
       
       - name: Convert MD to PDF (English)
         run: |
-          find docs/en -name "*.md" -type f -print0 | xargs -0 pandoc -o documentation_en.pdf --pdf-engine=xelatex
+          find docs -name "*.md" -type f ! -name "*.es.md" -print0 | xargs -0 pandoc -o documentation_en.pdf --pdf-engine=xelatex
       
       - name: Convert MD to PDF (Spanish)
         run: |
-          find docs/es -name "*.md" -type f -print0 | xargs -0 pandoc -o documentation_es.pdf --pdf-engine=xelatex
+          find docs -name "*.es.md" -type f -print0 | xargs -0 pandoc -o documentation_es.pdf --pdf-engine=xelatex
       
       - name: Upload PDF artifacts
         uses: actions/upload-artifact@v4
