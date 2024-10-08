@@ -57,7 +57,7 @@ jobs:
               }
             end
           end
-          ')
+          ') \
           docs/index.es.md \
           docs/manager/redborder_basics/*.es.md \
           docs/manager/more_in_detail/*.es.md \       
