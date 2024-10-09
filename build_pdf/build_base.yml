@@ -50,6 +50,7 @@ markdown_extensions:
 plugins:
   - awesome-pages
   - tags
+  - macros
 
 copyright: Copyright &copy; 2023 Eneo Tecnología S.L
 extra:

@@ -2,3 +2,4 @@
 site/
 public/
 build_pdf/pdf
+__pycache__/*

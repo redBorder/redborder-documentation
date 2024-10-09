@@ -3,4 +3,5 @@ nav:
     - ... | index*.md
     - RedBorder basics: redborder_basics
     - Seeing data in more detail: more_in_detail
-    - Platform configurations: platform_configurations
+    # - Platform configurations: platform_configurations
+    - Platform configurations: ... | !tools/**

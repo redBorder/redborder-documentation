@@ -75,6 +75,7 @@ plugins:
           locale: es
           name: Español
   - tags
+  - macros
 
 extra:
   social:
@@ -89,4 +90,3 @@ extra_css:
   - stylesheets/extra.css
 
 copyright: Copyright &copy; 2024 Eneo Tecnología S.L
-
