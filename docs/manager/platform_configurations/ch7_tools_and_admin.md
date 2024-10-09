@@ -103,7 +103,7 @@ Expand the following tabs to read a description of the options found in the tool
 
     ![Correlation Engine Rules](images/ch07_img007.png)
 
-??? note "Mitre matrix"
+??? note "Mitre ATT&CK"
 
     ## Mitre matrix
 
@@ -136,7 +136,7 @@ Expand the following tabs to read a description of the options found in the tool
     The cells of the matrix are colored according to the highest of the severities defined on the triggered rules, which indicates the level of impact that the attack can have on the system. On the other hand, the number indicates the number of rules that have been triggered by the attack.
 
     It is useful to have a global view of the attacks that have been carried out against the system, especially when different techniques are used to carry out the attack because it can mean that the attack may have a high impact on the system. It is also useful to prioritize the actions to be taken to mitigate the attack, or simply cover the vulnerabilities that can be exploited.
-    
+
 ??? note "Monitor Categories"
 
     ## Monitor Categories
