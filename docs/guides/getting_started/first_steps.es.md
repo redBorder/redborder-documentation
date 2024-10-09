@@ -34,7 +34,7 @@ Paquetes oficiales más recientes de redBorder para Rocky Linux 9 disponibles en
 === "Latest"
 
     ``` sh
-    yum install epel-release && rpm -ivh https://repo.redborder.com/ng/latest/rhel/9/x86_64/redborder-repo-1.0.0-1.el9.rb.noarch.rpm
+    yum install epel-release && rpm -ivh https://repo.redborder.com/ng/24.10/rhel/9/x86_64/redborder-repo-24.10-0.0.1-1.el9.rb.noarch.rpm
     ```
 
 ### redBorder package { #install-package data-toc-label="redBorder package" }
