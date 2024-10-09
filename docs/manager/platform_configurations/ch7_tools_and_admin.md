@@ -127,7 +127,7 @@ Expand the following tabs to read a description of the options found in the tool
 
     ### Mitre Matrix view
 
-    The Mitre matrix is a table that shows the different techniques that have been triggered by any intrusion event during a certain period of time. Like other modules, the time frame can be edited to filter the information you are looking for; as other unique fiels lique **tactics** and **techniques**.
+    The Mitre matrix is a table that shows the different techniques that have been triggered by any intrusion event during a certain period of time. Like other modules, the time frame can be edited to filter the information you are looking for; as other unique fields like **tactics** and **techniques**.
 
     ![Mitre Matrix](images/mitre_matrix.png)
 
