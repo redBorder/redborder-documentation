@@ -109,7 +109,7 @@ Expand the following tabs to read a description of the options found in the tool
 
     The Mitre matrix is a threat intelligence framework that allows us to identify the different types of attacks that can be carried out against a system. This information can be imported into the platform to be used to complement other sections of the platform, like **Incidents** or **Dashboards**.
 
-    By default, the mitre matrix is needed to be downloaded from the official website. 
+    By default, the Mitre matrix needs to be downloaded from the official website. 
 
     ![No Mitre downloaded](images/mitre_empty.png)
     
@@ -127,16 +127,16 @@ Expand the following tabs to read a description of the options found in the tool
 
     ### Mitre Matrix view
 
-    The Mitre matrix is a table that shows the different techniques that have been triggered by any intrusion event during a certain period of time. Like other modules, the time frame can be edited to filter the information you are looking for; as other unique fields like **tactics** and **techniques**.
+    The Mitre matrix is a table that shows the different techniques that have been triggered by any intrusion event during a certain period of time. Like other modules, the time frame can be edited to filter the information you are looking for, as well as other unique fields like **tactics** and **techniques**.
 
     ![Mitre Matrix](images/mitre_matrix.png)
 
     *Mitre Matrix*
 
-    The cells of the matrix are colored according to highest of the severities defined on the triggered rules, which indicates the level of impact that the attack can have on the system. On the other hand, the number indicates the number of rules that have been triggered by the attack.
+    The cells of the matrix are colored according to the highest of the severities defined on the triggered rules, which indicates the level of impact that the attack can have on the system. On the other hand, the number indicates the number of rules that have been triggered by the attack.
 
-    It is useful to have a global view of the attacks that have been carried out against the system, especially when different techniques are used to carry out the attack because it can mean that the attack may have a high impact on the system. Also is useful to prioritize the actions to be taken to mitigate the attack, or simply covering the vulnerabilities that can be exploited.
-
+    It is useful to have a global view of the attacks that have been carried out against the system, especially when different techniques are used to carry out the attack because it can mean that the attack may have a high impact on the system. It is also useful to prioritize the actions to be taken to mitigate the attack, or simply cover the vulnerabilities that can be exploited.
+    
 ??? note "Monitor Categories"
 
     ## Monitor Categories
