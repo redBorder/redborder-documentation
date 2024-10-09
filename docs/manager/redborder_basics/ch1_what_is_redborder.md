@@ -14,7 +14,7 @@ Probes are located outside the platform but are managed from it, and their funct
 Depending on the applications integrated into the platform, the user will see different options in the menu bar. The applications available in this new version of Redborder are as follows:
 
 - Business Intelligence
-- Malware
+<!-- - Malware -->
 - Traffic
 - Intrusion
 - Monitor

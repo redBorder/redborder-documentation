@@ -170,13 +170,13 @@ Si desea ver las categorías de atributos disponibles, despliegue esta pestaña:
         - Red
         - Transporte
         - UUIDs
-
+<!-- 
     === "Categorías de Malware"
 
         - Email
         - Archivo
         - Malware
-        - Red
+        - Red -->
 
 ![Atributos](images/ch04_img022.png)
 

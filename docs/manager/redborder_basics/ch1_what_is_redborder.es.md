@@ -14,7 +14,7 @@ Las sondas se sitúan fuera de la plataforma, pero se gestionan desde ella y su 
 Dependiendo de las aplicaciones integradas en la plataforma, el usuario verá una u otras opciones en la barra de menú. Las aplicaciones que están disponibles en esta nueva versión de Redborder son las siguientes:
 
 - Business Intelligence
-- Malware
+<!-- - Malware -->
 - Tráfico
 - Intrusión
 - Monitor

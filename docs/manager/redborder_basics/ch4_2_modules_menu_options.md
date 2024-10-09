@@ -172,13 +172,13 @@ If you want to see the available attribute categories, expand this tab:
         - Network
         - Transport
         - UUIDs
-
+<!-- 
     === "Malware Categories"
 
         - Email
         - File
         - Malware
-        - Network
+        - Network -->
 
 ![Attributes](images/ch04_img022.png)
 

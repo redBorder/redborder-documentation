@@ -26,7 +26,7 @@ For the **Manager**, specific hardware is not required; the only condition is th
 * This allows for the creation of a bonding for management and connection with the sensors and another bonding (optional) for communications to other networks. Both systems support the 802.1q standard for virtual LAN (optional when configuring).
 
 !!! warning "If you have not installed the manager..."
-    It is important to configure the Manager (or cluster of managers) before configuring and registering the first IPS sensor. The Manager must be operational and on a network accessible to the sensors. Some sensor configuration processes depend on access to the Manager. The installation scenario of the Redborder Manager is the same regardless of the sensors that are installed and registered (IPS, Flow, Malware (WIP), or Vault).
+    It is important to configure the Manager (or cluster of managers) before configuring and registering the first IPS sensor. The Manager must be operational and on a network accessible to the sensors. Some sensor configuration processes depend on access to the Manager. The installation scenario of the Redborder Manager is the same regardless of the sensors that are installed and registered (IPS, Flow, or Vault).
 
 ![Basic Scenario for IPS Installation](../../manager/redborder_basics/images/ch01_img001.png)
 

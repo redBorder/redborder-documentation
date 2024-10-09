@@ -77,7 +77,7 @@ Through the **Unique** view, the user can obtain information about the different
 
 *Unique* view
 
-## Analyze (Malware module, WIP)
+<!-- ## Analyze (Malware module, WIP)
 
 In this view, you can get a detailed analysis of a URL, IP, Hash, or a file, as if it had entered through other channels.
 
@@ -87,4 +87,4 @@ You can jump from one view to another without needing to go back to the Malware 
 
 ![Analyze View](images/ch04_img047.png)
 
-*Analyze* view
+*Analyze* view -->
