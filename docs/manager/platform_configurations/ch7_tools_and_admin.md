@@ -133,6 +133,10 @@ Expand the following tabs to read a description of the options found in the tool
 
     *Mitre Matrix*
 
+    The cells of the matrix are colored according to the level of impact that the attack can have on the system.
+
+    It is useful to have a global view of the attacks that have been carried out against the system, especially when different techniques are used to carry out the attack because it can mean that the attack may have a high impact on the system. Also is useful to prioritize the actions to be taken to mitigate the attack, or simply covering the vulnerabilities that can be exploited.
+
 ??? note "Monitor Categories"
 
     ## Monitor Categories
