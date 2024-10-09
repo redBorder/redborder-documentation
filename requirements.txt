@@ -9,5 +9,3 @@ jieba
 mkdocs-with-pdf
 qrcode
 WeasyPrint == 52.5
-# mkdocs-include-markdown-plugin
-mkdocs-macros-plugin
