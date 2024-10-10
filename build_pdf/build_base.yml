@@ -51,6 +51,6 @@ plugins:
   - awesome-pages
   - tags
 
-copyright: Copyright &copy; 2023 Eneo Tecnología S.L
+copyright: Copyright © 2024 Eneo Tecnología S.L
 extra:
   version: !ENV [VERSION, 'Custom version']
