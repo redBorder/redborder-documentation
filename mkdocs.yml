@@ -4,7 +4,7 @@ site_url: "https://docs.redborder.com/"
 docs_dir: "docs"
 repo_url: https://github.com/redBorder/redborder-documentation
 repo_name: redBorder/redborder-documentation
-edit_url: "edit/master/docs"
+edit_uri: edit/master/docs
 
 theme:
   name: material
@@ -40,10 +40,14 @@ markdown_extensions:
   - toc:
       permalink: true
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.keys
   - pymdownx.tabbed:
       alternate_style: true

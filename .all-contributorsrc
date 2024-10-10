@@ -35,6 +35,56 @@
         "content",
         "translation"
       ]
+    },
+    {
+      "login": "dcastro-redBorder",
+      "name": "Daniel Castro",
+      "avatar_url": "https://avatars.githubusercontent.com/u/163022833?v=4",
+      "profile": "https://github.com/dcastro-redBorder",
+      "contributions": [
+        "content",
+        "translation"
+      ]
+    },
+    {
+      "login": "rgomezborder",
+      "name": "Rafa Gómez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/171669035?v=4",
+      "profile": "https://rafagomezguillen.github.io/portfolio/",
+      "contributions": [
+        "content",
+        "translation"
+      ]
+    },
+    {
+      "login": "pperezredborder",
+      "name": "Pablo Pérez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/172259536?v=4",
+      "profile": "https://github.com/pperezredborder",
+      "contributions": [
+        "content",
+        "translation"
+      ]
+    },
+    {
+      "login": "ViMesTor",
+      "name": "Vimesa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/93142944?v=4",
+      "profile": "https://github.com/ViMesTor",
+      "contributions": [
+        "content",
+        "translation"
+      ]
+    },
+    {
+      "login": "jsotofernandez",
+      "name": "Juan Soto",
+      "avatar_url": "https://avatars.githubusercontent.com/u/127120525?v=4",
+      "profile": "https://github.com/jsotofernandez",
+      "contributions": [
+        "content",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
