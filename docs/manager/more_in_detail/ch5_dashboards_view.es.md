@@ -1,4 +1,3 @@
-
 # Vista de Dashboards y Widgets
 
 En este capítulo se explica cómo visualizar los dashboards y qué información contienen los widgets que los componen. No obstante, las instrucciones para la administración de los dashboards y los widgets se explicará en la sección de configuración de la plataforma.
