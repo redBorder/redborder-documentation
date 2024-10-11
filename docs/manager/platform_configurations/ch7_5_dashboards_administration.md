@@ -1,25 +1,98 @@
+# Administración de Dashboards y Widgets
 
-# Dashboards
+En la sección ***Dashboards*** el usuario puede crear una gran variedad de **widgets** que muestren información específica que capture la plataforma, ya sea para llevar a cabo una monitorización eficiente o por mera organización de estos componentes. La idea es que tanto usuario como organización puedan tener un mejor control del análisis de datos desde una única pantalla.
 
-## Opciones de dashboards
+## Requerimientos
 
-La primera opción que encontramos en la barra de menú en el área de análisis es *Dashboard*. Esta es la opción seleccionada por defecto que verá tan pronto como inicie sesión en el Manager de Redborder.
+La mayoría de los widgets van a requerir de algún tipo de sensor operativo para que sean funcionales. Sabremos cuál en base a que los widgets están categorizados por módulos. Implicitamente, para que un sensor se encuentre operativo, es necesario que el módulo correspondiente se encuentre habilitado.
 
-![Vista general del dashboard](images/ch05_img001.png)
+!!! warning "En caso de que un administrador de la máquina deshabilite un módulo por consola..."
+    La deshabilitación de un módulo causará un **error** si el usuario intenta acceder a un dashboard donde exista un widget de esa categoría. Por lo tanto, antes de deshabilitar dicho módulo, se recomienda exportar el dashboard y/o eliminarlo.
 
-Vista general del dashboard
+Además, para acceder a los widgets, hace falta tener permisos de edición sobre el dashboard que se pretende editar, ya que es el contenedor que albergará los widgets.
 
-La sección de Dashboard presenta diferentes opciones:
+## Crear un dashboard
 
-- **Lista de dashboards disponibles**: en la parte superior, el usuario verá los dashboards creados y disponibles para su perfil. Junto a cada dashboard, hay dos iconos; el primero (llave inglesa) nos permite ver y editar la configuración general del dashboard. El ícono "Copiar" a la derecha nos permitirá clonar el dashboard seleccionado.
-- **Añadir dashboard/Importar dashboard**: permiten añadir un nuevo dashboard personalizado e importar otros ya creados. El proceso de creación e importación del dashboard se verá más adelante.
-- **Añadir Widget**: añada los widgets que desea personalizar en el dashboard.
-- **URL del dashboard**: da al usuario una manera rápida de copiar la URL del dashboard actual para compartirla.
-- **Tiempo de actualización**: los datos en los dashboards se actualizan cada 300 segundos (5 minutos), este tiempo es personalizable desde *General Settings*. Verá una cuenta regresiva del tiempo restante hasta la próxima actualización. Puede restablecer la cuenta haciendo clic en la figura que se muestra. En ese momento, aparecerá la palabra "Detenido". Haga clic nuevamente para iniciar la cuenta regresiva.
-- **Desbloquear**: El usuario tiene la opción de bloquear / desbloquear el dashboard que está consultando para que ningún otro usuario con permisos pueda editar el dashboard.
-- **Máquina del tiempo**: permite al usuario ver los resultados de las métricas de un día y hora en particular como si fuese ese su tiempo real.
+Ya sea porque la organización ha restringido los permisos de los usuarios, porque la organización no tiene ningún dashboard o porque el usuario simplemente quiere gestionar su propio dashboard, el usuario va a llegar a la conclusión de crear uno nuevo.
 
-![Opciones de dashboard](images/ch05_img002.png)
+### Añadir un dashboard
+
+Justo después de la lista de dashboards, se encuentra el botón **Añadir dashboard**.
+
+![Añadir un dashboard](images/create_dashboard_action.png)
+
+*Añadir un dashboard*
+
+Al pulsarlo se nos abrirá la siguiente ventana: 
+
+![Editar un dashboard](images/edit_dashboard.png)
+
+*Editar un dashboard*
+
+Existen múltiples propiedades que se pueden rellenar:
+
+* Nombre: Nombre del dashboard. Este nombre se mostrará en la lista de dashboards y es el único valor que es obligatorio rellenar.
+* Descripción: Descripción adicional para el dashboard, que se puede utilizar para listar los widgets que se pretenden incluir o justificaciones sobre las restricciones sobre sus usuarios.
+* Diseño: La opción **basado en columnas** es la opción por defecto y restringirá la posición y las dimensiones de los widgets para ajustarse a una cuadrícula. En el caso de seleccionar la opción **posición fija**, no habrá restricción natural sobre dónde colocar los widgets sobre el dashboard.
+* Color de Fondo: El dashboard puede ser personalizado con un color de fondo dentro de una paleta de colores.
+* Usuarios dashboard: Por defecto, sólo el usuario que creó el dashboard puede verlo y editarlo. Sin embargo, la lista **Usuarios dashboard** se puede ampliar para añadir usuarios adicionales que tengan permisos de edición sobre el dashboard.
+* Dominios dashboard: Si se quiere dar acceso a un grupo de usuarios que compartan un dominio en común, es mejor añadirlo a la lista de **Dominios dashboard**. Así, todos los usuarios que tengan acceso al dominio también tendrán acceso al dashboard.
+
+!!! note "En caso de introducir un nombre que ya exista..."
+    El sistema permite la duplicidad de nombres de dashboard, pero se recomienda no hacerlo, ya que puede dar lugar a confusión.
+
+#### Añadir un usuario al dashboard
+
+
+
+### Exportar e importar un dashboard
+
+
+
+## Categorías disponibles
+
+    - *Tráfico*: 
+    - *Intrusión*:
+    - *Mobilidad*:
+    - *Escáner*:
+    - *Vault*:
+    - *Wireless*:
+    - *Infrastructure*:
+    - *Shapes*:
+    - *Combination*:
+
+Podremos seleccionar una de estas categorías cada vez que creemos un widget.
+
+## Creación de un widget
+
+Para crear un widget, habrá situarse en un dashboard y expandir sus opciones de edición.
+
+![Creación de widgets](create_widget_action.png)
+
+Esto nos mostrará las categorías presentes.
+
+![Creación de widgets](images/main_create_widget.png)
+
+Al hacer click a una de ellas podremos acceder a la lista de widgets para esa categoría.
+
+![Creación de widgets](images/create_widget_2.png)
+
+A continuación se describe la variedad de widgets que existe en cada categoría
+
+### Formas
+
+Esta categoría actúa como miscelánea, porque lo que permite configurar no está asociado a ningún modelo. A parte, la información que van aportar estos widgets son organizativos y no llevan una monitorización particular.
+
+#### Texto
+
+Este widget actúa como cuadro de texto. Sirve para relatar partes concretas del dashboard. Al acceder a su configuración, podemos modificar el texto a representar, el tamaño y su alineación dentro del widget.
+
+![alt text](images/widget_texto.png)
+
+#### Imagen
+#### Cuadrado
+#### URL Personalizada
+
 
 ## Editar dashboard
 
@@ -89,25 +162,6 @@ Importar dashboard
 El usuario puede crear y agregar widgets a sus dashboards para personalizar completamente la visualización de los datos obtenidos por diferentes módulos. Es posible incorporar ambos widgets preconfigurados, así como crear widgets 100% personalizados.
 
 El primer paso es seleccionar el tipo de widget que desea agregar. Existen tres tipos de widgets, según el tipo de información que desea mostrar:
-
-1. **Modulos**: visualización de datos recibida por los diferentes módulos.
-
-    - Tráfico
-    - Intrusión
-    - Movilidad
-    - Malware
-    - Vault
-    - Wireless
-    - Combinación
-
-- **Estado**: mostrar la configuración y el estado de las máquinas y la infraestructura de red.
-
-    - Infraestructura
-
-- **Formato**: configura el contenido y el formato de los widgets: texto, imágenes, URL, etc.
-
-    - Formas
-
 ![Seleccionar tipo de widget](images/ch05_img006.png)
 
 Seleccionar tipo de widget
@@ -211,13 +265,6 @@ Pueden resumirse en la siguiente lista:
 - *Malware Fast Search*: widget que permite la busqueda de un evento malware por hash, url o ip.
 - *Recent Malware*: muestra eventos de malware detectados en las últimas 24 horas.
 
-### Máquina del tiempo
-
-Esta opción vuelve al estado de la máquina durante el día y la hora que haya determinado. El usuario verá los datos como si estuvieran en tiempo real.
-
-Este "viaje en el tiempo" nos ofrece un grado máximo de precisión en el análisis porque puede indicar el minuto exacto que desea consultar.
-
-![Máquina del tiempo](images/ch05_img015.png)
 
 ### Clonar, editar, recargar y eliminar widgets
 
@@ -233,3 +280,8 @@ El usuario puede acceder directamente a los widgets desde el dashboard. En la es
 !!! warning "Importante"
 
     Cuando seleccionas la opción Eliminar, el sistema no mostrará un mensaje de confirmación, por lo que debe asegurarse de que desea eliminar ese widget. En caso de que elimine accidentalmente un widget, recuerde que siempre puede ir a "Añadir widget" para reinsertar o duplicar cualquiera de las características similares, y luego editarlo.
+
+- **Añadir dashboard/Importar dashboard**: permiten añadir un nuevo dashboard personalizado e importar otros ya creados. El proceso de creación e importación del dashboard se verá más adelante.
+- **Añadir Widget**: añada los widgets que desea personalizar en el dashboard.
+- **Tiempo de actualización**: los datos en los dashboards se actualizan cada 300 segundos (5 minutos), este tiempo es personalizable desde *General Settings*. Verá una cuenta regresiva del tiempo restante hasta la próxima actualización. Puede restablecer la cuenta haciendo clic en la figura que se muestra. En ese momento, aparecerá la palabra "Detenido". Haga clic nuevamente para iniciar la cuenta regresiva.
+- **Desbloquear**: El usuario tiene la opción de bloquear / desbloquear el dashboard que está consultando para que ningún otro usuario con permisos pueda editar el dashboard.

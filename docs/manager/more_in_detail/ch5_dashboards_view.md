@@ -1,0 +1,171 @@
+# Dashboards and Widgets View
+
+This chapter explains how to view dashboards and what information is contained in the widgets that compose them. However, instructions for managing dashboards and widgets will be explained in the platform configuration section.
+
+Dashboards are visual control panels that provide an overview and summary of important data on a single screen. In the context of Redborder Manager, dashboards allow users to visualize and monitor key information quickly and efficiently.
+
+![Redborder default dashboard](../redborder_basics/images/ch03_img002.png)
+
+*Redborder default dashboard*
+
+## Accessing dashboards
+
+Dashboards are accessible directly from the first menu in the header: Initially, it will display the name of the dashboard that has been set as default, and it will always show the name of the currently selected dashboard. The default one is called **General View** and shows a map of the sensors' location.
+
+When expanding the menu, the **options menu** will appear, which will be explained in the next section.
+
+Additionally, you can access specific dashboards in the following ways:
+
+- Using the direct URL of the dashboard, which you can copy from the *Dashboard URL* option in the interface.
+- If you have set a dashboard as default, it will automatically load when you log in.
+- Through permissions granted by the administrator, which will determine which dashboards are available for viewing.
+
+## Dashboard options
+
+The first option we find in the menu bar in the analysis area is *Dashboard*. This is the default selected option that you will see as soon as you log into the Redborder Manager.
+
+![Dashboard overview](images/ch05_img001.png)
+
+*Dashboard overview*
+
+The Dashboard section presents different options:
+
+- **List of available dashboards**: at the top, the user will see the dashboards created and available for their profile. Next to each dashboard, there are two icons; the first one (wrench) allows us to view and edit the general configuration of the dashboard. The "Copy" icon on the right will allow us to clone the selected dashboard.
+- **Dashboard URL**: gives the user a quick way to copy the URL of the current dashboard to share it.
+- **Time machine**: allows the user to view the results of metrics from a particular day and time as if it were their real-time.
+
+The rest of the options will be explained in detail in another chapter.
+
+![Dashboard options](images/ch05_img002.png)
+
+*Dashboard options*
+
+## Types of widgets
+
+Widgets are individual and modular components that form part of a dashboard. Each widget represents a specific set of data or metrics, usually in the form of graphs, tables, indicators, or any other visual representation. Widgets are customizable and can be added, removed, or rearranged within a dashboard to suit the specific needs of each user or team.
+
+Widgets are categorized into different types as there is a wide variety of them. Most relate directly to a specific module; the rest either display advanced information or simply enhance the visualization of the dashboard itself. The categories of these widgets have been organized into two in this explanation, module widgets and the rest:
+
+![Clients Widget (no data)](images/clients.png)
+
+*Clients Widget (no data)*
+
+### Module widgets
+
+Widgets associated with modules display specific information from the respective module in question.
+
+- Traffic
+- Intrusion
+- Mobility
+- Scanner
+- Vault
+- Wireless
+
+### Advanced widgets
+
+The rest of the widgets do not interact directly with a single module, but rather focus on providing context to the visualization in general.
+
+- **Infrastructure**: Used to show the configuration and status of machines and associated network infrastructure, providing a diagnostic view of the platform itself.
+- **Mitre**: Summarizes triggered rules according to their relationship with MITRE terminology (tactics, techniques, and procedures).
+- **Shapes**: Completes the structure of dashboards with uncategorized elements, such as shapes, images, text, or URLs.
+- **Combination**: Allows visualization of data from other modules when the specific widget is not defined in the rest of the modules.
+
+![Select widget type](images/ch05_img006.png)
+
+Select widget type
+
+### Module widgets
+
+For each module, there are widgets generically extracted from the views and others that are exclusive to those modules. Let's see what each one does and what they are used for:
+
+#### Generic widgets
+
+Generic widgets are found in more than one module and can be explained as a whole:
+
+- **Raw**: Shows the configurable and determined view of the raw view.
+- **Tops**: Shows the configurable and determined view of the tops view.
+- **Compare**: Shows the configurable and determined view of the Compare view.
+- **Individual indicator**: Shows the number of unique values that have been found for the selected field.
+These widgets have the additional advantage that they can use other types of graphs to display information differently from the views within the modules.
+<!-- - Grouped indicators -->
+- **Performance Index**: Shows a 3-level categorization of the value of an aggregation for samples in a specific time interval, without delving into the widget type.
+
+#### Traffic
+
+For traffic, we have the following specific widgets:
+
+<!-- - *Bandwidth Line* -->
+- **Clients**: Shows the clients associated with the network, especially useful when wanting to visualize access points.
+- **Floor map**: Shows the floor plan of a building, and on it, the location of network architecture elements, such as access points or other network devices.
+- **Heat map**: Shows a section of the global map on which information about network devices can be overlaid, such as the coverage provided by access points.
+- **Map**: Shows a section of the global map.
+- **Clients Map**: Shows a section of the global map. With information on clients connected to geolocated **access points**.
+<!-- - *Access Points*: Shows information associated with access points associated with a traffic sensor. -->
+<!-- - *Channel load*: Shows the load that network devices have. -->
+
+###### Clients
+
+It will read the clients field and display statistical information about those found in network traffic.
+
+![Clients Widget](images/clients.png)
+
+*Clients Widget*
+
+###### Floor maps
+
+Floor maps have an associated **floor**. This, in turn, has an architectural image of the floor, which is shown in the widget.
+
+![Floor map widget](images/floor_map.png)
+
+*Floor map widget*
+
+###### Geographic maps
+
+The map, heat map, and client map widgets are part of the geographic maps set. They can be displayed in both satellite and photographic views.
+
+![Map widget](images/map.png)
+
+*Map widget*
+
+#### Intrusion
+
+There are no specific widgets for this module.
+
+<!-- #### Mobility -->
+
+<!-- - Movements: -->
+<!-- - Heat map: Shows a map -->
+
+#### Scanner
+
+There are no specific widgets for this module.
+
+#### Vault
+
+There are no specific widgets for this module.
+
+#### Wireless
+
+There are no specific widgets for this module.
+
+#### Infrastructure
+
+- **Sensor**: Shows the configuration of the sensors.
+- **Cluster**: Shows the status of services in each **manager** associated with the platform.
+- **Alarm**: Shows the set of alarms that have been activated at some point.
+- **Hardware info and status**: Shows the current status of a specific network device.
+- **Monitor**: Monitors a specific hardware property of network devices.
+
+## Time machine
+
+This option returns to the state of the machine during the day and time that has been determined. The user will see the data as if it were in real-time, but in reality, only the temporal reference has been changed to the one indicated in the **time machine**.
+
+This *time travel* offers us a maximum degree of precision in the analysis because it can indicate the exact minute you want to consult.
+
+![Time machine](images/ch05_img015.png)
+
+*Time machine*
+
+## What's next?
+
+If you want to configure your own dashboards, see the documentation section titled **Dashboard and Widget Administration** in **platform configuration**.
