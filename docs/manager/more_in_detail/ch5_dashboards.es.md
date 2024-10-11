@@ -1,5 +1,21 @@
 
-# Dashboards
+# Introducción a Dashboards y widgets
+
+
+Los dashboards son paneles de control visuales que proporcionan una vista general y resumida de datos importantes en una sola pantalla. En el contexto de Redborder Manager, los dashboards permiten a los usuarios visualizar y monitorear información clave de manera rápida y eficiente.
+
+Los widgets son componentes individuales y modulares que forman parte de un dashboard. Cada widget representa un conjunto específico de datos o métricas, generalmente en forma de gráficos, tablas, indicadores o cualquier otra representación visual. Los widgets son personalizables y se pueden agregar, eliminar o reorganizar dentro de un dashboard para adaptarse a las necesidades específicas de cada usuario o equipo.
+
+En este capítulo se explica cómo visualizar los dashboards y qué información contienen los widgets que los componen. No obstante, las instrucciones para la administración de los dashboards y los widgets se explicará en la sección de configuración de la plataforma.
+## Acceso a los dashboards
+
+Los dashboards se encuentran accesibles directamente desde el primer menú en la cabecera: Mostrará el nombre del dashboard que se haya definido por defecto, que por defecto es **Visión General**. Al expandir el menú, aparecerá una lista de dashboards disponibles, ya sean de propósito general o específicos del usuario. 
+
+Además, puede acceder a dashboards específicos de las siguientes maneras:
+
+- Utilizando la URL directa del dashboard, que puede copiar desde la opción "URL del dashboard" en la interfaz.
+- Si ha establecido un dashboard como predeterminado, este se cargará automáticamente al iniciar sesión.
+- A través de los permisos otorgados por el administrador, que determinarán qué dashboards están disponibles para su visualización.
 
 ## Opciones de dashboards
 
@@ -21,237 +37,122 @@ La sección de Dashboard presenta diferentes opciones:
 
 ![Opciones de dashboard](images/ch05_img002.png)
 
-## Editar dashboard
+## Tipos de widgets
 
-El usuario puede modificar la información asociada con cada uno de los dashboard disponibles seleccionando "Configuración general", haciendo clic en el icono de la herramienta.
+Los widgets están categorizados en diferentes tipos ya que existe una amplia variedad de ellos. La mayoría se relacionan directamente con un módulo específico; el resto o bien muestra información avanzada o simplemente mejora la visualización del propio dashboard. Las categorías de estos widgets se han ordenado en dos en esta explicación, los widgets de módulo y el resto:
 
-Información editable en la configuración del dashboard:
+### Widgets de módulo
 
-- Nombre
-- Establecer este dashboard por defecto
-- Diseño
-- Descripción
-- Color de fondo
-- Usuarios del dashboard: añadir y borrar
-- Dominios del dashboard: añadir y borrar
+Los widgets asociados a los módulos muestran la información específica del respectivo módulo en cuestión.
 
-Además, en la parte inferior de la pantalla, el usuario verá una serie de opciones disponibles:
+- Tráfico
+- Intrusión
+- Movilidad
+- Scanner
+- Vault
+- Wireless
 
-- Actualizar dashboard
-- Cancelar
-- Borrar
-- Convertir en informe
-- Exportar dashboard: el sistema creará un archivo comprimido u lo descargará; **este es un paso necesario si posteriormente se quiere importar.**
+### Widgets avanzados
 
-![Editar dashboard](images/ch05_img003.png)
+El resto de wigets no interactúan directamente con un sólo módulo, sino que se centran en aportar contexto a la visualización en general.
 
-Editar dashboard
-
-## Clonar dashboard
-
-Es posible clonar (duplicar) dashboards para tenerlos disponibles a diferentes usuarios, importaciones, etc. Para ello, simplemente se debe asignar un nombre al panel copiado.
-
-![Clonar dashboard](images/ch05_img004.png)
-
-Clonar dashboard
-
-## Añadir dashboard
-
-Los dashboards le permiten tener un resumen visual que incluye los principales KPIs (*Key Performance Indicator*) que son necesarios para analizar la infraestructura de la red. El usuario puede combinar widgets para obtener información valiosa sobre tendencias, cambios y excepciones asociadas al tráfico que ocurre en la red o que pasan por ella.
-
-!!! info "Ten en cuenta..."
-
-    En la versión community, **hay límite de un único dashboard**.
-
-Para crear un nuevo dashboard debe seleccionar la opción **Añadir dashboard**, luego ingresar los datos en la configuración general y guardar los cambios con el botón **Crear dashboard**.
-
-El primer paso para crear un dashboard personalizado es crear un panel en blanco para luego agregar los widgets que satisfagan las necesidades de visualización.
-
-![Añadir dashboard](images/ch05_img005.png)
-
-Añadir dashboard
-
-## Importar dashboard
-
-La opción *Importar dashboard* es muy útil para compartirlos con otros usuarios, incorporar información de Redborder de otras aplicaciones compatibles o realizar copias de seguridad para los dashboards creados.
-
-!!! info "Ten en cuenta..."
-    Para importar un dashboard, es necesario que este haya sido exportado y guardado localmente como un archivo comprimido.
-
-Seleccione el archivo que desea importar y luego haga clic en la opción "Importar dashboard". Una vez que haya hecho esta importación, encontrará el nuevo dashboard en la lista de dashboards disponibles.
-
-![Importar dashboard](images/ch05_img005.png)
-
-Importar dashboard
-
-## Añadir widget, personalizar dashboards
-
-El usuario puede crear y agregar widgets a sus dashboards para personalizar completamente la visualización de los datos obtenidos por diferentes módulos. Es posible incorporar ambos widgets preconfigurados, así como crear widgets 100% personalizados.
-
-El primer paso es seleccionar el tipo de widget que desea agregar. Existen tres tipos de widgets, según el tipo de información que desea mostrar:
-
-1. **Modulos**: visualización de datos recibida por los diferentes módulos.
-
-    - Tráfico
-    - Intrusión
-    - Movilidad
-    - Malware
-    - Vault
-    - Wireless
-    - Combinación
-
-- **Estado**: mostrar la configuración y el estado de las máquinas y la infraestructura de red.
-
-    - Infraestructura
-
-- **Formato**: configura el contenido y el formato de los widgets: texto, imágenes, URL, etc.
-
-    - Formas
+- **Infraestructura**: Sirve para mostrar la configuración y el estado de las máquinas y la infraestructura de red asociada, proporcionando una visión de diagnóstico de la propia plataforma.
+- **Mitre**: Resume las reglas disparadas según la relación que tengan con la terminología MITRE (tácticas, técnicas y procedimientos).
+- **Formas**: Completa la estructura de los dashboards con elementos no categorizados, como formas, imágenes, texto o URLs.
+- **Combinación**: Permite visualizar los datos de otros módulos cuando el widget concreto no está definido en el resto de módulos.
 
 ![Seleccionar tipo de widget](images/ch05_img006.png)
 
 Seleccionar tipo de widget
 
-### Personalización de widgets
+### Widgets de módulo
 
-- **Widgets preconfigurados**: algunos de los widgets que el usuario puede seleccionar haciendo doble clic contienen información preconfigurada, que se puede agregar al dashboard en el que está trabajando.
-- **Widgets semi personalizados**: algunos widgets contienen una cantidad de datos indicados por defecto, sin embargo, el usuario tendrá que completar algunos detalles de información general sobre el widget.
-- **Widgets personalizados**: 100% personalizados. Esto significa que el usuario tendrá que definir toda la información contenida en el widget.
+Para cada módulo existen widgets extraídos de manera genérica desde las vistas y otros que son exclusivos de esos módulos. Vamos a ver qué es lo que hace cada uno y para que sirven:
 
-![Widgets de tráfico](images/ch05_img007.png)
+#### Wigets genéricos
 
-Widgets de tráfico
+Los widgets genéricos se encuentran en más de un módulo y se pueden explicar en su conjunto:
 
-![Personalizar widget](images/ch05_img008.png)
+- **Raw**: Muestra la vista configurable y determinada de la vista de raw.
+- **Tops**: Muestra la vista configurable y determinada de la vista de tops.
+- **Comparar**: Muestra la vista configurable y determinada de la vista de Compare.
+- **Indicador individual**: Muestra la cantidad de valores únicos que se han encontrado sobre el campo seleccionado.
+Estos widgets tienen como ventaja adicional que se pueden utilizar otro tip de gráficos para mostrar la información de una manera diferente a la de las vistas dentro de los módulos.
+<!-- - Inidicadores agrupados -->
+- **Índice Rendimiento**: Muestra una categorización a 3 niveles del valor de una agregación para las muestras en un intervalo de tiempo concreto, sin ahondar en el tipo de widget.
 
-Personalizar widget
+#### Tráfico
 
-#### Personalizar un widget de módulo
+Para tráfico tenemos los siguientes widgets específicos:
 
-Algunos de los widgets que el usuario encuentra disponibles para agregar al dashboard de la plataforma Redborder permiten una personalización completa.
+<!-- - *Bandwidth Line* -->
+- **Clientes**: Muestra los clientes asociados a la red, especialmente útil cuando se quiere visualizar puntos de acceso. 
+- **Mapa de planta**: Muestra la planta de un edificio, y sobre ella, la localización de elementos de la arquitectura de red, como puede ser los access point o el resto de dispositivos de red.
+- **Mapa de calor**: Muestra una sección del mapa global sobre el que se le puede solapar información sobre los dispositivos de red, como la cobertura proporcionada por los access point.
+- **Mapa**: Muestra una sección del mapa global.
+- **Clients Map**: Muestra una sección del mapa global. Con la información de los clientes conectados a los **puntos de acceso** geolocalizados.
+<!-- - *Access Points*: Muestra la información asociada a los puntos de acceso asociados a algún sensor de tráfico. -->
+<!-- - *Carga canales*: Muestra la carga que tienen los dispositivos de red. -->
 
-Primero, veamos qué opciones de personalización se incluyen en este tipo de widget.
+###### Clientes
 
-El primer paso para personalizar un widget es seleccionar el modo de visualización de datos o la cardinalidad, es decir, cómo queremos mostrar los valores o datos en una columna en particular.
-
-!!! info "Ten en cuenta..."
-    Los eventos recibidos por el manager consisten en pares **"clave: valor"**. Los valores dados en cada columna pueden entenderse como los propios datos del evento, que en realidad nos pueden proporcionar información.
-
-    El primer paso para personalizar un widget es seleccionar el modo de visualización de los datos, y también puede elegir vistas en las que se representa la cardinalidad.
-
-![Opciones de personalización de widgets](images/ch05_img009.png)
-
-Opciones de personalización de widgets
-
-**Configurar widgets de acuerdo con las vistas de eventos:**
-
-**Raw**: muestra eventos Raw (sin agregación).
-
-![Vista Raw](images/ch05_img009.png)
-
-Vista Raw
-
-**Tops**: añade eventos basados en una unidad para mostrar los más destacados de manera que muestra la suma total de datos de diferentes eventos mostrados como uno.
-
-![Vista Tops](images/ch05_img010.png)
-
-Vista Tops
-
-**Comparar**: comparación en el tiempo (horas, días, semanas y meses) de los más destacados. Un ejemplo de uso sería comparar diferentes días en la evolución del tráfico para una aplicación en particular. A diferencia de la vista Tops, esto solo permite el estilo gráfico "Serie".
-
-![Vista Comparar](images/ch05_img011.png)
-
-Vista Comparar
-
-**Cardinalidad:**
-
-- **Único**: con esta opción, las ocurrencias o eventos de una columna se aíslan en un momento específico.
-- **Agrupados**: con esta opción, las ocurrencias o eventos de una columna se aíslan a un tiempo específico agrupado de acuerdo con los criterios determinados.
-- **Gráfico**: El usuario puede elegir entre diferentes estilos gráficos disponibles dependiendo de la pantalla seleccionada.
-- **Próximo paso**: Luego ingrese la información solicitada en el formulario y presione Crear widget. En este momento, el nuevo widget se agrega a su dashboard.
-
-##### Widgets de módulo
-Para cada módulo existen widgets que son exclusivos de estos módulos. Vamos a ver qué es lo que hace cada uno y para que sirven:
-
-###### Tráfico
-Para tráfico tenemos los siguientes widgets:
-- *Bandwidth Line*
-- *Clientes*
-- *Floor Map*
-- *Bandwidth*
-- *Heatmap*
-- *Map*
-- *Clients Map*
-- *User Experience*
-- *Access Points*
-- *Channerls Load*
-
-###### Clients
 Leerá el campo clientes y mostrará información estadísticas sobre los encontrados en el tráfico de red.
-![alt text](images/clients.png)
 
+![Widget Clientes](images/clients.png)
 
+*Widget Clientes*
 
-#### Personalizar un widget de estado
+###### Mapas de planta
 
-**Infraestructura**: Esta opción le permite seleccionar el modo que mostrará información sobre la configuración y el estado de la infraestructura de red.
+Los mapas de planta tienen una **planta** asociada. Esta a su vez tiene una imagen arquitectónica de la planta, la cual se muestra en el widget.
 
-1. *Sensor*: Mapa/Árbol
-- *Clúster*: Diagrama/Tabla
-- *Alarma*: Permite insertar los detalles de configuración en el formulario correspondiente.
-- *Info Hardware*: Permite insertar los detalles de configuración en el formulario correspondiente (con respecto al estado de un sensor de dispositivo seleccionado). Muestra información referente al dispositivo (chasis, procesador, pcie).
-- *Estado Hardware*: Permite insertar los detalles de configuración en el formulario correspondiente (con respecto al filtro de estado de un sensor de dispositivo seleccionado). Indica si el funcionamiento del dispositivo es el correcto junto con una imágen identificativa del mismo.
-- *Monitor*: Serie/Valor.
+![Widget mapa de planta](images/floor_map.png)
 
-![Widgets de estado](images/ch05_img012.png)
+*Widget mapa de planta*
 
-Widgets de estado
+###### Mapas geográficos
 
-### Widgets de formato
+Los widgets de mapa, mapa de calor y mapa de clientes son parte del conjunto de mapas geográficos. Se pueden mostrar tanto en vista satelital como fotográfica 
 
-**Formas**: Esta opción le permite editar e insertar elementos auxiliares en sus widgets como texto, imagen, forma de widget e incrustar una URL personalizada.
+![Widget mapa](images/map.png)
 
-![Widgets de formato](images/ch05_img013.png)
+*Widget mapa*
 
-Widgets de formato
+#### Intrusión
 
-Para ingresar cualquiera de estos elementos a los widgets, simplemente complete el formulario que aparece en cada caso y aplique los cambios con la opción **Crear widget**.
+No hay widgets específicos para este módulo.
 
-![Edición de widgets de formato](images/ch05_img013.png)
+<!-- #### Movilidad -->
 
-### Widgets de malware
+<!-- - Movimientos:  -->
+<!-- - Mapa de calor: Muestra un mapa  -->
 
-Los widget de tipo Malware se asocian al análisis de eventos Malware ocurridos en cualquier parte de la infraestructura redborder.
+#### Scanner
 
-![Widgets de malware](images/ch05_img014.png)
+No hay widgets específicos para este módulo.
 
-Widgets de malware
+#### Vault
 
-Pueden resumirse en la siguiente lista:
+No hay widgets específicos para este módulo.
 
-1. *Score average per hour*: puntuación media de los eventos de malware detectados en las últimas 24 horas.
-- *Malware Fast Search*: widget que permite la busqueda de un evento malware por hash, url o ip.
-- *Recent Malware*: muestra eventos de malware detectados en las últimas 24 horas.
+#### Wireless
+
+No hay widgets específicos para este módulo.
+
+#### Infraestructura
+
+- **Sensor**: Muestra la configuración de los sensores.
+- **Cluster**: Muestra el estado de los servicios en cada **manager** asociado con la plataforma.
+- **Alarma**: Muestra el conjunto de alarmas que se han activado en algún momento.
+- **Hardware info y status**: Muestra el estado actual de un dispositivo concreto de red.
+- **Monitor**: Monitoriza una propiedad de hardware concreta de los dispositivos de red.
 
 ### Máquina del tiempo
 
-Esta opción vuelve al estado de la máquina durante el día y la hora que haya determinado. El usuario verá los datos como si estuvieran en tiempo real.
+Esta opción vuelve al estado de la máquina durante el día y la hora que haya determinado. El usuario verá los datos como si estuvieran en tiempo real, pero en realidad sólo se ha cambiado la referencia temporal a la indicada en la **máquina del tiempo**.
 
-Este "viaje en el tiempo" nos ofrece un grado máximo de precisión en el análisis porque puede indicar el minuto exacto que desea consultar.
+Este *viaje en el tiempo* nos ofrece un grado máximo de precisión en el análisis porque puede indicar el minuto exacto que desea consultar.
 
 ![Máquina del tiempo](images/ch05_img015.png)
 
-### Clonar, editar, recargar y eliminar widgets
-
-El usuario puede acceder directamente a los widgets desde el dashboard. En la esquina superior derecha aparece un menú que da acceso directo a las siguientes acciones:
-
-- **Clonar**: permite duplicar el widget e incorporarlo directamente en el dashboard que el usuario seleccione.
-- **Editar**: da acceso a la configuración general del widget para editar los campos que desee.
-- **Recargar**: actualiza la información mostrada en el widget.
-- **Eliminar**: elimina el widget del dashboard.
-
-![Máquina del tiempo](images/ch05_img016.png)
-
-!!! warning "Importante"
-
-    Cuando seleccionas la opción Eliminar, el sistema no mostrará un mensaje de confirmación, por lo que debe asegurarse de que desea eliminar ese widget. En caso de que elimine accidentalmente un widget, recuerde que siempre puede ir a "Añadir widget" para reinsertar o duplicar cualquiera de las características similares, y luego editarlo.
+*Máquina del tiempo*
