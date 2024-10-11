@@ -1,4 +1,4 @@
-# Dashboards y Widgets
+# Administración de Dashboards y Widgets
 
 En la sección ***Dashboards*** el usuario puede crear una gran variedad de **widgets** que muestren información específica que capture la plataforma, ya sea para llevar a cabo una monitorización eficiente o por mera organización de estos componentes. La idea es que tanto usuario como organización puedan tener un mejor control del análisis de datos desde una única pantalla.
 
@@ -280,3 +280,8 @@ El usuario puede acceder directamente a los widgets desde el dashboard. En la es
 !!! warning "Importante"
 
     Cuando seleccionas la opción Eliminar, el sistema no mostrará un mensaje de confirmación, por lo que debe asegurarse de que desea eliminar ese widget. En caso de que elimine accidentalmente un widget, recuerde que siempre puede ir a "Añadir widget" para reinsertar o duplicar cualquiera de las características similares, y luego editarlo.
+
+- **Añadir dashboard/Importar dashboard**: permiten añadir un nuevo dashboard personalizado e importar otros ya creados. El proceso de creación e importación del dashboard se verá más adelante.
+- **Añadir Widget**: añada los widgets que desea personalizar en el dashboard.
+- **Tiempo de actualización**: los datos en los dashboards se actualizan cada 300 segundos (5 minutos), este tiempo es personalizable desde *General Settings*. Verá una cuenta regresiva del tiempo restante hasta la próxima actualización. Puede restablecer la cuenta haciendo clic en la figura que se muestra. En ese momento, aparecerá la palabra "Detenido". Haga clic nuevamente para iniciar la cuenta regresiva.
+- **Desbloquear**: El usuario tiene la opción de bloquear / desbloquear el dashboard que está consultando para que ningún otro usuario con permisos pueda editar el dashboard.

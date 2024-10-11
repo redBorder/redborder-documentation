@@ -1,26 +1,20 @@
 
-# Introducción a Dashboards y widgets
+# Vista de Dashboards y Widgets
+
+En este capítulo se explica cómo visualizar los dashboards y qué información contienen los widgets que los componen. No obstante, las instrucciones para la administración de los dashboards y los widgets se explicará en la sección de configuración de la plataforma.
 
 Los dashboards son paneles de control visuales que proporcionan una vista general y resumida de datos importantes en una sola pantalla. En el contexto de Redborder Manager, los dashboards permiten a los usuarios visualizar y monitorear información clave de manera rápida y eficiente.
-
-Los widgets son componentes individuales y modulares que forman parte de un dashboard. Cada widget representa un conjunto específico de datos o métricas, generalmente en forma de gráficos, tablas, indicadores o cualquier otra representación visual. Los widgets son personalizables y se pueden agregar, eliminar o reorganizar dentro de un dashboard para adaptarse a las necesidades específicas de cada usuario o equipo.
 
 ![Dashboard por defecto de Redborder](../redborder_basics/images/ch03_img002.png)
 
 *Dashboard por defecto de Redborder*
 
-En este capítulo se explica cómo visualizar los dashboards y qué información contienen los widgets que los componen. No obstante, las instrucciones para la administración de los dashboards y los widgets se explicará en la sección de configuración de la plataforma.
 ## Acceso a los dashboards
 
 Los dashboards se encuentran accesibles directamente desde el primer menú en la cabecera: Inicialmente mostrará el nombre del dashboard que se haya definido por defecto, y siempre mostrará el nombre del dashboard que se tenga seleccionado. El que existe por defecto se llama **Visión General** y muestra un mapa de la localización de los sensores. 
 
 
-
-Al expandir el menú, aparecerá una lista de dashboards disponibles, ya sean de propósito general o específicos del usuario.
-
-![Lista de dashboards](../platform_configurations/images/dashboard_list.png)
-
-*Lista de dashboards*
+Al expandir el menú, aparecerá el **menú de opciones** que se explicará en el siguiente apartado..
 
 Además, puede acceder a dashboards específicos de las siguientes maneras:
 
@@ -34,23 +28,29 @@ La primera opción que encontramos en la barra de menú en el área de análisis
 
 ![Vista general del dashboard](images/ch05_img001.png)
 
-Vista general del dashboard
+*Vista general del dashboard*
 
 La sección de Dashboard presenta diferentes opciones:
 
 - **Lista de dashboards disponibles**: en la parte superior, el usuario verá los dashboards creados y disponibles para su perfil. Junto a cada dashboard, hay dos iconos; el primero (llave inglesa) nos permite ver y editar la configuración general del dashboard. El ícono "Copiar" a la derecha nos permitirá clonar el dashboard seleccionado.
-- **Añadir dashboard/Importar dashboard**: permiten añadir un nuevo dashboard personalizado e importar otros ya creados. El proceso de creación e importación del dashboard se verá más adelante.
-- **Añadir Widget**: añada los widgets que desea personalizar en el dashboard.
 - **URL del dashboard**: da al usuario una manera rápida de copiar la URL del dashboard actual para compartirla.
-- **Tiempo de actualización**: los datos en los dashboards se actualizan cada 300 segundos (5 minutos), este tiempo es personalizable desde *General Settings*. Verá una cuenta regresiva del tiempo restante hasta la próxima actualización. Puede restablecer la cuenta haciendo clic en la figura que se muestra. En ese momento, aparecerá la palabra "Detenido". Haga clic nuevamente para iniciar la cuenta regresiva.
-- **Desbloquear**: El usuario tiene la opción de bloquear / desbloquear el dashboard que está consultando para que ningún otro usuario con permisos pueda editar el dashboard.
 - **Máquina del tiempo**: permite al usuario ver los resultados de las métricas de un día y hora en particular como si fuese ese su tiempo real.
+
+El resto de opciones serán explicadas en detalle en otro capítulo.
 
 ![Opciones de dashboard](images/ch05_img002.png)
 
+*Opciones de dashboard*
+
 ## Tipos de widgets
 
+Los widgets son componentes individuales y modulares que forman parte de un dashboard. Cada widget representa un conjunto específico de datos o métricas, generalmente en forma de gráficos, tablas, indicadores o cualquier otra representación visual. Los widgets son personalizables y se pueden agregar, eliminar o reorganizar dentro de un dashboard para adaptarse a las necesidades específicas de cada usuario o equipo.
+
 Los widgets están categorizados en diferentes tipos ya que existe una amplia variedad de ellos. La mayoría se relacionan directamente con un módulo específico; el resto o bien muestra información avanzada o simplemente mejora la visualización del propio dashboard. Las categorías de estos widgets se han ordenado en dos en esta explicación, los widgets de módulo y el resto:
+
+![Widget Clientes (sin datos)](images/clients.png)
+
+*Widget Clientes (sin datos)*
 
 ### Widgets de módulo
 
@@ -158,7 +158,7 @@ No hay widgets específicos para este módulo.
 - **Hardware info y status**: Muestra el estado actual de un dispositivo concreto de red.
 - **Monitor**: Monitoriza una propiedad de hardware concreta de los dispositivos de red.
 
-### Máquina del tiempo
+## Máquina del tiempo
 
 Esta opción vuelve al estado de la máquina durante el día y la hora que haya determinado. El usuario verá los datos como si estuvieran en tiempo real, pero en realidad sólo se ha cambiado la referencia temporal a la indicada en la **máquina del tiempo**.
 
