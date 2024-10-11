@@ -92,12 +92,18 @@ En cuanto a los permisos existen 3 opciones:
 
 ### Borrar
 
-Durante la edición, el botón borrar permite borrar el widget. Al pulsarlo, pedirá una confirmación.
+Durante la edición, el botón borrar permite borrar el dashboard. Al pulsarlo, pedirá una confirmación.
 
 ### Exportar e importar un dashboard
+
+Al pulsar el botón **Exportar Dashboard** se abrirá el navegador de ficheros para que el usuario descarge el dashboard actual en formato *.csv*. Cuando que se quiera importar, se podrá hacer pulsando **Importar Dashboard** en el **menú de dashboards**.
+
+### Generar reporte
+
+Los dashboards también se pueden utilizar como plantillas. Luego esas plantillas se pueden utilizar para generar reportes de manera automática. Para generar la plantilla hay que pulsar **Convertir a Informe** y se guardará en la sección **Informes**.
 ## Creación de un widget
 
-Para crear un widget, habrá situarse en un dashboard y expandir sus opciones de edición.
+Para crear un widget, habrá que situarse en un dashboard y expandir sus opciones de edición.
 
 ![Creación de widgets](images/create_widget_action.png)
 
@@ -109,24 +115,30 @@ Al hacer click a una de ellas podremos acceder a la lista de widgets para esa ca
 
 ![Creación de widgets](images/create_widget_2.png)
 
-A continuación se describe la variedad de widgets que existe en cada categoría
+### Propiedades del widget
 
-### Formas
+Durante la creación o edición de un widget, habrá varias propiedades que definir para ese widget, como son:
 
-Esta categoría actúa como miscelánea, porque lo que permite configurar no está asociado a ningún modelo. A parte, la información que van aportar estos widgets son organizativos y no llevan una monitorización particular.
+- **Tipo de gráfico**: Tipo de visualización con la que se quiere mostrar los datos.
+- **Nombre**: Título del widget
+- **Dashboard destino**: Dashboard que alojará el widget. Por defecto será el dashboard en el que nos encontremos actualmente.
+- **Click action**: Los widgets son elementos que responden al hacer click sobre ellos. Aquí se define que acción realizan: como dirigirse a la **vista** particular o ir a otro dashboard.
+- **Rango**: Ventana de tiempo de la que mostrar datos.
+- **Agregación**: Agregación sobre la que se valora la gráfica.
+- **Tipo Serie**: Propiedad para decidir cómo se muestran múltiples lineas en un mismo gráfico.
+- **Granularidad**: La distancia en tiempo entre dos muestras de la gráfica.
+- **Análisis**: Detalles estadísticos que se pueden añadir a la gráfica.
+- **Zona horaria**: Para definir el contexto del widget un función de su localización (si representa alguna).
+- **Color**: El primer color de línea que se usará para el gráfico.
+<!-- Referencia -->
+- **Filtros**: Al igual que en las **vistas** los widgets también se pueden filtrar para mostrar exactamente los datos de interés.
+- **Número de elementos**: Número máximo de elementos a mostrar en el gráfico.
+- **Columns**: Listado de campos que se quieren añadir al gráfico. Al hacer click sobre la caja se desplegará la lista.
 
-#### Texto
+![Columnas](images/columns.png)
 
-Este widget actúa como cuadro de texto. Sirve para relatar partes concretas del dashboard. Al acceder a su configuración, podemos modificar el texto a representar, el tamaño y su alineación dentro del widget.
-
-![alt text](images/widget_texto.png)
-
-#### Imagen
-#### Cuadrado
-#### URL Personalizada
-
-
-## Editar dashboard
+*Columnas*
+- **Siempre mostrar texto**: Si se quiere que se muestre el texto del widget, independientemente de si el ratón se encuentra sobre el widget o no.
 
 El usuario puede modificar la información asociada con cada uno de los dashboard disponibles seleccionando "Configuración general", haciendo clic en el icono de la herramienta.
 
