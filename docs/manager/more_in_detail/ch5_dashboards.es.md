@@ -167,3 +167,7 @@ Este *viaje en el tiempo* nos ofrece un grado máximo de precisión en el análi
 ![Máquina del tiempo](images/ch05_img015.png)
 
 *Máquina del tiempo*
+
+## ¿Qué sigue?
+
+Si desea configurar sus propios dashboards, consulte la sección de la documentación tituladas **Adminstración de Dashboards y Widgets** en **configuración de la plataforma**.
