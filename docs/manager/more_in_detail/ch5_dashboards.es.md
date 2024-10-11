@@ -1,29 +1,36 @@
 
 # Introducción a Dashboards y widgets
 
-
 Los dashboards son paneles de control visuales que proporcionan una vista general y resumida de datos importantes en una sola pantalla. En el contexto de Redborder Manager, los dashboards permiten a los usuarios visualizar y monitorear información clave de manera rápida y eficiente.
 
 Los widgets son componentes individuales y modulares que forman parte de un dashboard. Cada widget representa un conjunto específico de datos o métricas, generalmente en forma de gráficos, tablas, indicadores o cualquier otra representación visual. Los widgets son personalizables y se pueden agregar, eliminar o reorganizar dentro de un dashboard para adaptarse a las necesidades específicas de cada usuario o equipo.
 
-En este capítulo se explica cómo visualizar los dashboards y qué información contienen los widgets que los componen. No obstante, las instrucciones para la administración de los dashboards y los widgets se explicará en la sección de configuración de la plataforma.
-
 ![Dashboard por defecto de Redborder](../redborder_basics/images/ch03_img002.png)
 
 *Dashboard por defecto de Redborder*
+
+En este capítulo se explica cómo visualizar los dashboards y qué información contienen los widgets que los componen. No obstante, las instrucciones para la administración de los dashboards y los widgets se explicará en la sección de configuración de la plataforma.
 ## Acceso a los dashboards
 
-Los dashboards se encuentran accesibles directamente desde el primer menú en la cabecera: Mostrará el nombre del dashboard que se haya definido por defecto, que por defecto es **Visión General**. Al expandir el menú, aparecerá una lista de dashboards disponibles, ya sean de propósito general o específicos del usuario. 
+Los dashboards se encuentran accesibles directamente desde el primer menú en la cabecera: Inicialmente mostrará el nombre del dashboard que se haya definido por defecto, y siempre mostrará el nombre del dashboard que se tenga seleccionado. El que existe por defecto se llama **Visión General** y muestra un mapa de la localización de los sensores. 
+
+
+
+Al expandir el menú, aparecerá una lista de dashboards disponibles, ya sean de propósito general o específicos del usuario.
+
+![Lista de dashboards](../platform_configurations/images/dashboard_list.png)
+
+*Lista de dashboards*
 
 Además, puede acceder a dashboards específicos de las siguientes maneras:
 
-- Utilizando la URL directa del dashboard, que puede copiar desde la opción "URL del dashboard" en la interfaz.
+- Utilizando la URL directa del dashboard, que puede copiar desde la opción *URL del dashboard* en la interfaz.
 - Si ha establecido un dashboard como predeterminado, este se cargará automáticamente al iniciar sesión.
 - A través de los permisos otorgados por el administrador, que determinarán qué dashboards están disponibles para su visualización.
 
 ## Opciones de dashboards
 
-La primera opción que encontramos en la barra de menú en el área de análisis es *Dashboard*. Esta es la opción seleccionada por defecto que verá tan pronto como inicie sesión en el Manager de Redborder.
+La primera opción que encontramos en la barra de menú en el área de análisis es *Dashboard*. Esta es la opción seleccionada por defecto que se verá tan pronto como inicie sesión en el Manager de Redborder.
 
 ![Vista general del dashboard](images/ch05_img001.png)
 
