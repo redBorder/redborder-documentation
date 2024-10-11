@@ -7,6 +7,10 @@ Los dashboards son paneles de control visuales que proporcionan una vista genera
 Los widgets son componentes individuales y modulares que forman parte de un dashboard. Cada widget representa un conjunto específico de datos o métricas, generalmente en forma de gráficos, tablas, indicadores o cualquier otra representación visual. Los widgets son personalizables y se pueden agregar, eliminar o reorganizar dentro de un dashboard para adaptarse a las necesidades específicas de cada usuario o equipo.
 
 En este capítulo se explica cómo visualizar los dashboards y qué información contienen los widgets que los componen. No obstante, las instrucciones para la administración de los dashboards y los widgets se explicará en la sección de configuración de la plataforma.
+
+![Dashboard por defecto de Redborder](../redborder_basics/images/ch03_img002.png)
+
+*Dashboard por defecto de Redborder*
 ## Acceso a los dashboards
 
 Los dashboards se encuentran accesibles directamente desde el primer menú en la cabecera: Mostrará el nombre del dashboard que se haya definido por defecto, que por defecto es **Visión General**. Al expandir el menú, aparecerá una lista de dashboards disponibles, ya sean de propósito general o específicos del usuario. 
