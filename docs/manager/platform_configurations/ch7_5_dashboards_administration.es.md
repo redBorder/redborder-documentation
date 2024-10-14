@@ -94,6 +94,10 @@ En cuanto a los permisos existen 3 opciones:
 
 Durante la edición, el botón borrar permite borrar el dashboard. Al pulsarlo, pedirá una confirmación.
 
+![Confirmar borrado](images/confirm.png)
+
+*Confirmar borrado*
+
 ### Exportar e importar un dashboard
 
 Al pulsar el botón **Exportar Dashboard** se abrirá el navegador de ficheros para que el usuario descarge el dashboard actual en formato *.csv*. Cuando que se quiera importar, se podrá hacer pulsando **Importar Dashboard** en el **menú de dashboards**.
