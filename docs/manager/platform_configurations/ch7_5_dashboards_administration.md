@@ -1,287 +1,234 @@
-# Administración de Dashboards y Widgets
+# Dashboard and Widget Administration
 
-En la sección ***Dashboards*** el usuario puede crear una gran variedad de **widgets** que muestren información específica que capture la plataforma, ya sea para llevar a cabo una monitorización eficiente o por mera organización de estos componentes. La idea es que tanto usuario como organización puedan tener un mejor control del análisis de datos desde una única pantalla.
+In the **Dashboards** section, users can create a wide variety of **Widgets** that display specific information captured by the platform, either for efficient monitoring or for mere organization of these components. The idea is that both users and organizations can have better control of data analysis from a single screen.
 
-## Requerimientos
+## Requirements
 
-La mayoría de los widgets van a requerir de algún tipo de sensor operativo para que sean funcionales. Sabremos cuál en base a que los widgets están categorizados por módulos. Implicitamente, para que un sensor se encuentre operativo, es necesario que el módulo correspondiente se encuentre habilitado.
+Most widgets will require some type of operational **sensor** or **tool** to be functional. We will know which one based on the fact that widgets are categorized by modules. Implicitly, for a sensor to be operational, it is necessary for the corresponding module to be enabled.
 
-!!! warning "En caso de que un administrador de la máquina deshabilite un módulo por consola..."
-    La deshabilitación de un módulo causará un **error** si el usuario intenta acceder a un dashboard donde exista un widget de esa categoría. Por lo tanto, antes de deshabilitar dicho módulo, se recomienda exportar el dashboard y/o eliminarlo.
+!!! warning "In case a machine administrator disables a module via console..."
+    Disabling a module will cause an **error** if the user tries to access a dashboard where a widget of that category exists. Therefore, before disabling said module, it is recommended to export the dashboard and/or delete it.
 
-Además, para acceder a los widgets, hace falta tener permisos de edición sobre el dashboard que se pretende editar, ya que es el contenedor que albergará los widgets.
+Additionally, to access the widgets, it is necessary to have editing permissions on the dashboard you intend to edit, as it is the container that will host the widgets.
 
-## Crear un dashboard
+## Dashboard and Widget Menu
 
-Ya sea porque la organización ha restringido los permisos de los usuarios, porque la organización no tiene ningún dashboard o porque el usuario simplemente quiere gestionar su propio dashboard, el usuario va a llegar a la conclusión de crear uno nuevo.
+Apart from the list of available dashboards, an administrator can access the following actions:
 
-### Añadir un dashboard
+- **Add dashboard/Import dashboard**: allow adding a new custom dashboard and importing others already created. The process of creating and importing the dashboard will be seen later.
+- **Add Widget**: add the widgets you want to customize in the dashboard.
+- **Update time**: data in the dashboards is updated every 300 seconds (5 minutes), this time is customizable from *General Settings*. You will see a countdown of the remaining time until the next update. You can reset the count by clicking on the figure shown. At that moment, the word "Stopped" will appear. Click again to start the countdown.
+- **Unlock**: The user has the option to lock/unlock the dashboard they are viewing so that no other user with permissions can edit the dashboard.
 
-Justo después de la lista de dashboards, se encuentra el botón **Añadir dashboard**.
+![Dashboard action menu](../more_in_detail/images/dashboard_list.png)
 
-![Añadir un dashboard](images/create_dashboard_action.png)
+Dashboard action menu
 
-*Añadir un dashboard*
+## Create and configure a dashboard
 
-Al pulsarlo se nos abrirá la siguiente ventana: 
+Whether because the organization has restricted user permissions, because the organization doesn't have any dashboard, or because the user simply wants to manage their own dashboard, the user will come to the conclusion of creating a new one. In the dashboard menu, there is the **Add dashboard** button.
 
-![Editar un dashboard](images/edit_dashboard.png)
+The first step will be to create a blank panel and then add the widgets that meet the visualization needs.
 
-*Editar un dashboard*
+![Locate add a dashboard](images/create_dashboard_action.png)
 
-Existen múltiples propiedades que se pueden rellenar:
+*Locate add a dashboard*
 
-* Nombre: Nombre del dashboard. Este nombre se mostrará en la lista de dashboards y es el único valor que es obligatorio rellenar.
-* Descripción: Descripción adicional para el dashboard, que se puede utilizar para listar los widgets que se pretenden incluir o justificaciones sobre las restricciones sobre sus usuarios.
-* Diseño: La opción **basado en columnas** es la opción por defecto y restringirá la posición y las dimensiones de los widgets para ajustarse a una cuadrícula. En el caso de seleccionar la opción **posición fija**, no habrá restricción natural sobre dónde colocar los widgets sobre el dashboard.
-* Color de Fondo: El dashboard puede ser personalizado con un color de fondo dentro de una paleta de colores.
-* Usuarios dashboard: Por defecto, sólo el usuario que creó el dashboard puede verlo y editarlo. Sin embargo, la lista **Usuarios dashboard** se puede ampliar para añadir usuarios adicionales que tengan permisos de edición sobre el dashboard.
-* Dominios dashboard: Si se quiere dar acceso a un grupo de usuarios que compartan un dominio en común, es mejor añadirlo a la lista de **Dominios dashboard**. Así, todos los usuarios que tengan acceso al dominio también tendrán acceso al dashboard.
+When clicked, the form to edit the dashboard properties will open:
 
-!!! note "En caso de introducir un nombre que ya exista..."
-    El sistema permite la duplicidad de nombres de dashboard, pero se recomienda no hacerlo, ya que puede dar lugar a confusión.
+![Edit a new dashboard](images/edit_dashboard.png)
 
-#### Añadir un usuario al dashboard
+*Edit a new dashboard*
 
+The dashboard can be reconfigured by clicking the edit button (wrench icon) next to the dashboard you intend to edit.
 
+The appearance is similar to editing an already created dashboard, except for the **delete**, **convert to report**, and **export dashboard** actions.
 
-### Exportar e importar un dashboard
+![Edit a dashboard](images/edit_old_dashboard.png)
 
+*Edit a dashboard*
 
+### Edit dashboard properties
 
-## Categorías disponibles
+There are multiple properties that can be filled:
 
-    - *Tráfico*: 
-    - *Intrusión*:
-    - *Mobilidad*:
-    - *Escáner*:
-    - *Vault*:
-    - *Wireless*:
-    - *Infrastructure*:
-    - *Shapes*:
-    - *Combination*:
+- **Name**: Dashboard name. This name will be shown in the dashboard list and is the only value that is **mandatory** to fill.
+- **Set this Dashboard as default**: There is always a default assigned dashboard. It is the dashboard that is displayed after completing the **login** process. If you want to change it to this dashboard, just check the box.
+- **Description**: Additional description for the dashboard, which can be used to list the widgets intended to be included or justifications about restrictions on its users.
+- **Layout**: The **column-based** option is the default option and will restrict the position and dimensions of widgets to fit a grid. In the case of selecting the **fixed position** option, there will be no natural restriction on where to place widgets on the dashboard.
+- **Background Color**: The dashboard can be customized with a background color within a color palette. Just click the box you like.
+- **Dashboard Users**: By default, only the user who created the dashboard can view and edit it. However, the **Dashboard Users** list can be expanded to add additional users who have editing permissions on the dashboard.
+- **Dashboard Domains**: If you want to give access to a group of users who share a common domain, it's better to add it to the **Dashboard Domains** list. Thus, all users who have access to the domain will also have access to the dashboard.
 
-Podremos seleccionar una de estas categorías cada vez que creemos un widget.
+!!! note "In case of entering a name that already exists..."
+    The system allows duplicate dashboard names, but it is not recommended to do so, as it can lead to confusion.
 
-## Creación de un widget
+!!! warning "If you update any parameter"
+    Remember to press **Update Dashboard** to register the changes or they will be lost.
 
-Para crear un widget, habrá situarse en un dashboard y expandir sus opciones de edición.
+### Clone a dashboard
 
-![Creación de widgets](create_widget_action.png)
+The other button (icon of two sheets) is used to clone the dashboard. When pressed, it will only ask you to change the name of the new dashboard:
 
-Esto nos mostrará las categorías presentes.
+![Name a dashboard clone](images/clone_dashboard.png)
 
-![Creación de widgets](images/main_create_widget.png)
+*Name a dashboard clone*
 
-Al hacer click a una de ellas podremos acceder a la lista de widgets para esa categoría.
+### Add a user to the dashboard
 
-![Creación de widgets](images/create_widget_2.png)
+To add a user with permissions, we press the **Add** button and select the users we want from the displayed list:
 
-A continuación se describe la variedad de widgets que existe en cada categoría
+![User list](images/users_list.png)
 
-### Formas
+*User list*
 
-Esta categoría actúa como miscelánea, porque lo que permite configurar no está asociado a ningún modelo. A parte, la información que van aportar estos widgets son organizativos y no llevan una monitorización particular.
+These users will have permissions to view and interact with the widgets of the dashboard itself. If you want to add editing permissions, you must check the **Edit permissions** box.
 
-#### Texto
+### Add a domain to the dashboard
 
-Este widget actúa como cuadro de texto. Sirve para relatar partes concretas del dashboard. Al acceder a su configuración, podemos modificar el texto a representar, el tamaño y su alineación dentro del widget.
+Alternatively, permissions can be based on the level of access in terms of domains. In such a way that all users who have access to the domain in question will also have access to that dashboard.
+To add a domain with permissions, we press the **Add** button and select the domains we want from the expanded tree:
 
-![alt text](images/widget_texto.png)
+![Domain to add to the list](images/domain_list.png)
 
-#### Imagen
-#### Cuadrado
-#### URL Personalizada
+*Domain to add to the list*
 
+Once the domains you want to add have been selected, you must press **Add Domains**
 
-## Editar dashboard
+![Domains added to the list](images/domain_list2.png)
 
-El usuario puede modificar la información asociada con cada uno de los dashboard disponibles seleccionando "Configuración general", haciendo clic en el icono de la herramienta.
+*Domains added to the list*
 
-Información editable en la configuración del dashboard:
+Regarding permissions, there are 3 options:
 
-- Nombre
-- Establecer este dashboard por defecto
-- Diseño
-- Descripción
-- Color de fondo
-- Usuarios del dashboard: añadir y borrar
-- Dominios del dashboard: añadir y borrar
+- **None**: By default, only users included in the domain will be able to view and interact with the widgets on this dashboard.
+- **Only by Admins**: Only those users who are included in the domain and have administrator level will be able to configure the dashboard.
+- **All**: Only users included in the domain will be able to configure the dashboard.
 
-Además, en la parte inferior de la pantalla, el usuario verá una serie de opciones disponibles:
+### Delete dashboard
 
-- Actualizar dashboard
-- Cancelar
-- Borrar
-- Convertir en informe
-- Exportar dashboard: el sistema creará un archivo comprimido u lo descargará; **este es un paso necesario si posteriormente se quiere importar.**
+During editing, the delete button allows you to delete the dashboard. When pressed, it will ask for confirmation.
 
-![Editar dashboard](images/ch05_img003.png)
+![Confirm deletion](images/confirm.png)
 
-Editar dashboard
+*Confirm deletion*
 
-## Clonar dashboard
+### Export and import a dashboard
 
-Es posible clonar (duplicar) dashboards para tenerlos disponibles a diferentes usuarios, importaciones, etc. Para ello, simplemente se debe asignar un nombre al panel copiado.
+Pressing the **Export Dashboard** button will open the file browser for the user to download the current dashboard in *.csv* format. When you want to import, you can do so by pressing **Import Dashboard** in the **dashboard menu**. It is a very useful tool for sharing dashboards or for saving them in a safe place.
 
-![Clonar dashboard](images/ch05_img004.png)
+### Generate report
 
-Clonar dashboard
+Dashboards can also be used as templates. Then these templates can be used to generate **reports** automatically. To generate the template, you must press **Convert to Report** and it will be saved in the **Reports** section.
 
-## Añadir dashboard
+![Confirm add report](images/confirm.png)
 
-Los dashboards le permiten tener un resumen visual que incluye los principales KPIs (*Key Performance Indicator*) que son necesarios para analizar la infraestructura de la red. El usuario puede combinar widgets para obtener información valiosa sobre tendencias, cambios y excepciones asociadas al tráfico que ocurre en la red o que pasan por ella.
+*Confirm add report*
 
-!!! info "Ten en cuenta..."
+## Creating a widget
 
-    En la versión community, **hay límite de un único dashboard**.
+To create a widget, you will need to be on a dashboard and expand its editing options.
 
-Para crear un nuevo dashboard debe seleccionar la opción **Añadir dashboard**, luego ingresar los datos en la configuración general y guardar los cambios con el botón **Crear dashboard**.
+![Widget creation: location](images/create_widget_action.png)
 
-El primer paso para crear un dashboard personalizado es crear un panel en blanco para luego agregar los widgets que satisfagan las necesidades de visualización.
+*Widget creation: location*
 
-![Añadir dashboard](images/ch05_img005.png)
+This will show us the present categories.
 
-Añadir dashboard
+![Widget creation: categories](../more_in_detail/images/ch05_img007.png)
 
-## Importar dashboard
+*Widget creation: categories*
 
-La opción *Importar dashboard* es muy útil para compartirlos con otros usuarios, incorporar información de Redborder de otras aplicaciones compatibles o realizar copias de seguridad para los dashboards creados.
+By clicking on one of them, we can access the list of widgets for that category.
 
-!!! info "Ten en cuenta..."
-    Para importar un dashboard, es necesario que este haya sido exportado y guardado localmente como un archivo comprimido.
+![Widget creation: selection](images/create_widget_2.png)
 
-Seleccione el archivo que desea importar y luego haga clic en la opción "Importar dashboard". Una vez que haya hecho esta importación, encontrará el nuevo dashboard en la lista de dashboards disponibles.
+*Widget creation: selection*
 
-![Importar dashboard](images/ch05_img005.png)
+Clicking on one of the options will open the widget creation form.
 
-Importar dashboard
+![Widget creation: configuration](../more_in_detail/images/ch05_img008.png)
 
-## Añadir widget, personalizar dashboards
+*Widget creation: configuration*
 
-El usuario puede crear y agregar widgets a sus dashboards para personalizar completamente la visualización de los datos obtenidos por diferentes módulos. Es posible incorporar ambos widgets preconfigurados, así como crear widgets 100% personalizados.
+### Widget properties
 
-El primer paso es seleccionar el tipo de widget que desea agregar. Existen tres tipos de widgets, según el tipo de información que desea mostrar:
-![Seleccionar tipo de widget](images/ch05_img006.png)
+During the creation or editing of a widget, there will be several properties to define for that widget. Depending on the widget, you will need to adjust some properties or others. The set of properties is:
 
-Seleccionar tipo de widget
+- **Name**: Widget title
+- **Chart type**: Type of visualization with which you want to display the data.
 
-### Personalización de widgets
+![Chart type selection](../more_in_detail/images/ch05_img009.png)
 
-- **Widgets preconfigurados**: algunos de los widgets que el usuario puede seleccionar haciendo doble clic contienen información preconfigurada, que se puede agregar al dashboard en el que está trabajando.
-- **Widgets semi personalizados**: algunos widgets contienen una cantidad de datos indicados por defecto, sin embargo, el usuario tendrá que completar algunos detalles de información general sobre el widget.
-- **Widgets personalizados**: 100% personalizados. Esto significa que el usuario tendrá que definir toda la información contenida en el widget.
+*Chart type selection*
 
-![Widgets de tráfico](images/ch05_img007.png)
+- **Destination dashboard**: Dashboard that will host the widget. By default, it will be the dashboard we are currently on.
+- **Click action**: Widgets are elements that respond when clicked. Here you define what action they perform: such as going to the particular **view** or going to another dashboard.
+- **Range**: Time window from which to show data.
+- **Aggregation**: Metric that will be used to calculate the values represented in the graph.
+- **Series Type**: Property to decide how multiple lines of the same graph are displayed.
+- **Granularity**: The time distance between two samples of the graph. Low granularity means higher definition in the graph.
+- **Analysis**: Statistical details that can be added to the graph about the values to be measured.
+- **Time zone**: To define the context of the widget based on its geolocation (if that widget represents any).
+- **Color**: The first line color that will be used for the graph.
+<!-- Reference -->
+- **Filters**: Like in **views**, widgets can also be filtered to show exactly the data of interest.
+- **Number of elements**: Maximum number of elements to show in the graph.
+- **Columns**: List of fields you want to add to the graph. Clicking on the box will display the list.
 
-Widgets de tráfico
+![Columns](images/columns.png)
 
-![Personalizar widget](images/ch05_img008.png)
+*Columns*
 
-Personalizar widget
+- **Always show text**: If you want the widget text to be displayed, regardless of whether the mouse is over the widget or not.
+- **Invert colors**: If the value to be represented is coded as a color, the color map can be inverted based on that value.
 
-#### Personalizar un widget de módulo
+![Balls graph with threshold of 1](images/balls.png)
 
-Algunos de los widgets que el usuario encuentra disponibles para agregar al dashboard de la plataforma Redborder permiten una personalización completa.
+*Balls graph with threshold of 1*
 
-Primero, veamos qué opciones de personalización se incluyen en este tipo de widget.
+- **Font size**: Alters the size of the text in the widget.
+- **Alignment**: Positions the text within the widget.
+- **Image**: Reference of the image you want to show in the widget.
+- **Maintain aspect ratio**: If you want the image not to be distorted as a result of widget sizing.
+- **URL**: Link to the page you want to load within the widget.
+<!-- - **Widget height (pixels)** -->
+- **Unique**: with this option, occurrences or events of a column are isolated at a specific time.
+- **Grouped**: with this option, occurrences or events of a column are isolated at a specific time grouped according to determined criteria.
 
-El primer paso para personalizar un widget es seleccionar el modo de visualización de datos o la cardinalidad, es decir, cómo queremos mostrar los valores o datos en una columna en particular.
+The user can modify the information associated with each of the available dashboards by selecting "General Settings", clicking on the tool icon.
 
-!!! info "Ten en cuenta..."
-    Los eventos recibidos por el manager consisten en pares **"clave: valor"**. Los valores dados en cada columna pueden entenderse como los propios datos del evento, que en realidad nos pueden proporcionar información.
+## Actions on the widget
 
-    El primer paso para personalizar un widget es seleccionar el modo de visualización de los datos, y también puede elegir vistas en las que se representa la cardinalidad.
+The user can access the actions of each widget on the dashboard by expanding the menu in the right corner of the widget, indicated by the **three vertical dots** icon. The following actions are available:
 
-![Opciones de personalización de widgets](images/ch05_img009.png)
+- **Clone**: Allows duplicating the widget and incorporating it directly into the dashboard that the user selects.
+- **Edit**: Allows modifying the properties and configuration of the widget.
+- **Export to PNG**: Allows downloading the information currently shown in the widget in PNG format.
+- **Reload**: Reloads the widget data to show the most recent information.
+- **Delete**: Deletes the widget from the current dashboard.
+- **Expand**: Shows the widget in full screen for better visualization.
+- **Export data**: Allows downloading the widget data in CSV or JSON format.
 
-Opciones de personalización de widgets
+![Actions on the widget](images/widget_actions.png)
 
-**Configurar widgets de acuerdo con las vistas de eventos:**
+*Actions on the widget*
 
-**Raw**: muestra eventos Raw (sin agregación).
+Apart from that, the widget is a draggable element, so it can be moved anywhere within the dashboard. To do this, you must click on the widget title and drag it. A shadow will show where the widget will be positioned when the button is released.
 
-![Vista Raw](images/ch05_img009.png)
+![Reposition the widget](images/widget_move.png)
 
-Vista Raw
+*Reposition the widget*
 
-**Tops**: añade eventos basados en una unidad para mostrar los más destacados de manera que muestra la suma total de datos de diferentes eventos mostrados como uno.
+Finally, the user can also scale the widget within the dashboard by dragging the bottom right corner of the widget.
 
-![Vista Tops](images/ch05_img010.png)
+![Widget resizing](images/widget_resize.png)
 
-Vista Tops
+*Widget resizing*
 
-**Comparar**: comparación en el tiempo (horas, días, semanas y meses) de los más destacados. Un ejemplo de uso sería comparar diferentes días en la evolución del tráfico para una aplicación en particular. A diferencia de la vista Tops, esto solo permite el estilo gráfico "Serie".
+!!!warning "If there is a configured click action..."
+    Remember that if the widget has a configured click action, clicking on the widget will execute and redirect to the view or dashboard that has been configured.
 
-![Vista Comparar](images/ch05_img011.png)
+## What's next?
 
-Vista Comparar
-
-**Cardinalidad:**
-
-- **Único**: con esta opción, las ocurrencias o eventos de una columna se aíslan en un momento específico.
-- **Agrupados**: con esta opción, las ocurrencias o eventos de una columna se aíslan a un tiempo específico agrupado de acuerdo con los criterios determinados.
-- **Gráfico**: El usuario puede elegir entre diferentes estilos gráficos disponibles dependiendo de la pantalla seleccionada.
-- **Próximo paso**: Luego ingrese la información solicitada en el formulario y presione Crear widget. En este momento, el nuevo widget se agrega a su dashboard.
-
-#### Personalizar un widget de estado
-
-**Infraestructura**: Esta opción le permite seleccionar el modo que mostrará información sobre la configuración y el estado de la infraestructura de red.
-
-1. *Sensor*: Mapa/Árbol
-- *Clúster*: Diagrama/Tabla
-- *Alarma*: Permite insertar los detalles de configuración en el formulario correspondiente.
-- *Info Hardware*: Permite insertar los detalles de configuración en el formulario correspondiente (con respecto al estado de un sensor de dispositivo seleccionado). Muestra información referente al dispositivo (chasis, procesador, pcie).
-- *Estado Hardware*: Permite insertar los detalles de configuración en el formulario correspondiente (con respecto al filtro de estado de un sensor de dispositivo seleccionado). Indica si el funcionamiento del dispositivo es el correcto junto con una imágen identificativa del mismo.
-- *Monitor*: Serie/Valor.
-
-![Widgets de estado](images/ch05_img012.png)
-
-Widgets de estado
-
-### Widgets de formato
-
-**Formas**: Esta opción le permite editar e insertar elementos auxiliares en sus widgets como texto, imagen, forma de widget e incrustar una URL personalizada.
-
-![Widgets de formato](images/ch05_img013.png)
-
-Widgets de formato
-
-Para ingresar cualquiera de estos elementos a los widgets, simplemente complete el formulario que aparece en cada caso y aplique los cambios con la opción **Crear widget**.
-
-![Edición de widgets de formato](images/ch05_img013.png)
-
-### Widgets de malware
-
-Los widget de tipo Malware se asocian al análisis de eventos Malware ocurridos en cualquier parte de la infraestructura redborder.
-
-![Widgets de malware](images/ch05_img014.png)
-
-Widgets de malware
-
-Pueden resumirse en la siguiente lista:
-
-1. *Score average per hour*: puntuación media de los eventos de malware detectados en las últimas 24 horas.
-- *Malware Fast Search*: widget que permite la busqueda de un evento malware por hash, url o ip.
-- *Recent Malware*: muestra eventos de malware detectados en las últimas 24 horas.
-
-
-### Clonar, editar, recargar y eliminar widgets
-
-El usuario puede acceder directamente a los widgets desde el dashboard. En la esquina superior derecha aparece un menú que da acceso directo a las siguientes acciones:
-
-- **Clonar**: permite duplicar el widget e incorporarlo directamente en el dashboard que el usuario seleccione.
-- **Editar**: da acceso a la configuración general del widget para editar los campos que desee.
-- **Recargar**: actualiza la información mostrada en el widget.
-- **Eliminar**: elimina el widget del dashboard.
-
-![Máquina del tiempo](images/ch05_img016.png)
-
-!!! warning "Importante"
-
-    Cuando seleccionas la opción Eliminar, el sistema no mostrará un mensaje de confirmación, por lo que debe asegurarse de que desea eliminar ese widget. En caso de que elimine accidentalmente un widget, recuerde que siempre puede ir a "Añadir widget" para reinsertar o duplicar cualquiera de las características similares, y luego editarlo.
-
-- **Añadir dashboard/Importar dashboard**: permiten añadir un nuevo dashboard personalizado e importar otros ya creados. El proceso de creación e importación del dashboard se verá más adelante.
-- **Añadir Widget**: añada los widgets que desea personalizar en el dashboard.
-- **Tiempo de actualización**: los datos en los dashboards se actualizan cada 300 segundos (5 minutos), este tiempo es personalizable desde *General Settings*. Verá una cuenta regresiva del tiempo restante hasta la próxima actualización. Puede restablecer la cuenta haciendo clic en la figura que se muestra. En ese momento, aparecerá la palabra "Detenido". Haga clic nuevamente para iniciar la cuenta regresiva.
-- **Desbloquear**: El usuario tiene la opción de bloquear / desbloquear el dashboard que está consultando para que ningún otro usuario con permisos pueda editar el dashboard.
+Whether as an administrator or as a user, configure the dashboards you consider necessary for your organization and for your users.
