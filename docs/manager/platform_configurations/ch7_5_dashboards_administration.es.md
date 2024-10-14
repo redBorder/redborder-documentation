@@ -35,6 +35,8 @@ Al pulsarlo se nos abrirá la siguiente ventana:
 
 *Editar un dashboard*
 
+### Propiedades del dashboard
+
 Existen múltiples propiedades que se pueden rellenar:
 
 - **Nombre**: Nombre del dashboard. Este nombre se mostrará en la lista de dashboards y es el único valor que es **obligatorio** rellenar.
@@ -86,9 +88,9 @@ Una vez se hayan seleccionado los dominios que se quieran añadir, hay que pulsa
 
 En cuanto a los permisos existen 3 opciones:
 
-**Ninguno**: Por defecto, sólo los usuarios incluidos en el dominio van a poder ver e interactuar con los widgets de este dashboard.
-**Solo por Admins**: Sólo aquellos usuarios que estén incluidos en el dominio y tengan nivel de administrador van a poder configurar el dashboard.
-**Todo**: Sólo los usuarios incluidos en el dominio van a poder configurar el dashboard.
+- **Ninguno**: Por defecto, sólo los usuarios incluidos en el dominio van a poder ver e interactuar con los widgets de este dashboard.
+- **Solo por Admins**: Sólo aquellos usuarios que estén incluidos en el dominio y tengan nivel de administrador van a poder configurar el dashboard.
+- **Todo**: Sólo los usuarios incluidos en el dominio van a poder configurar el dashboard.
 
 ### Borrar
 
@@ -158,15 +160,7 @@ Durante la creación o edición de un widget, habrá varias propiedades que defi
 
 El usuario puede modificar la información asociada con cada uno de los dashboard disponibles seleccionando "Configuración general", haciendo clic en el icono de la herramienta.
 
-Información editable en la configuración del dashboard:
 
-- Nombre
-- Establecer este dashboard por defecto
-- Diseño
-- Descripción
-- Color de fondo
-- Usuarios del dashboard: añadir y borrar
-- Dominios del dashboard: añadir y borrar
 
 Además, en la parte inferior de la pantalla, el usuario verá una serie de opciones disponibles:
 
@@ -176,7 +170,7 @@ Además, en la parte inferior de la pantalla, el usuario verá una serie de opci
 - Convertir en informe
 - Exportar dashboard: el sistema creará un archivo comprimido u lo descargará; **este es un paso necesario si posteriormente se quiere importar.**
 
-![Editar dashboard](images/ch05_img003.png)
+![Editar dashboard](../more_in_detail/images/ch05_img003.png)
 
 Editar dashboard
 
@@ -184,7 +178,7 @@ Editar dashboard
 
 Es posible clonar (duplicar) dashboards para tenerlos disponibles a diferentes usuarios, importaciones, etc. Para ello, simplemente se debe asignar un nombre al panel copiado.
 
-![Clonar dashboard](images/ch05_img004.png)
+![Clonar dashboard](../more_in_detail/images/ch05_img004.png)
 
 Clonar dashboard
 
@@ -200,7 +194,7 @@ Para crear un nuevo dashboard debe seleccionar la opción **Añadir dashboard**,
 
 El primer paso para crear un dashboard personalizado es crear un panel en blanco para luego agregar los widgets que satisfagan las necesidades de visualización.
 
-![Añadir dashboard](images/ch05_img005.png)
+![Añadir dashboard](../more_in_detail/images/ch05_img005.png)
 
 Añadir dashboard
 
