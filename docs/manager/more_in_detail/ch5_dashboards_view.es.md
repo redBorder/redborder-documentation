@@ -1,6 +1,6 @@
 # Vista de Dashboards y Widgets
 
-En este capítulo se explica cómo visualizar los dashboards y qué información contienen los widgets que los componen. No obstante, las instrucciones para la administración de los dashboards y los widgets se explicará en la sección de configuración de la plataforma.
+En este capítulo se explica cómo visualizar los dashboards y qué información contienen los widgets que los componen. No obstante, las instrucciones para la administración de los dashboards y los widgets se explicará en la sección de [configuración de la plataforma](../platform_configurations/ch7_5_dashboards_administration.es.md).
 
 Los dashboards le permiten tener un resumen visual que incluye los principales KPIs (*Key Performance Indicator*) que son necesarios para analizar la infraestructura de la red. El usuario puede combinar widgets para obtener información valiosa sobre tendencias, cambios y excepciones asociadas al tráfico que ocurre en la red o que pasan por ella. Estos paneles de control visuales proporcionan una vista general y resumida de datos importantes en una sola pantalla, permitiendo a los usuarios visualizar y monitorear información clave de manera rápida y eficiente en el contexto de Redborder Manager.
 
