@@ -117,18 +117,18 @@ Al hacer click a una de ellas podremos acceder a la lista de widgets para esa ca
 
 ### Propiedades del widget
 
-Durante la creación o edición de un widget, habrá varias propiedades que definir para ese widget, como son:
+Durante la creación o edición de un widget, habrá varias propiedades que definir para ese widget. Dependiendo del widget, habrá que ajustar unas propiedades u otras. El conjunto de propiedades es:
 
-- **Tipo de gráfico**: Tipo de visualización con la que se quiere mostrar los datos.
 - **Nombre**: Título del widget
+- **Tipo de gráfico**: Tipo de visualización con la que se quiere mostrar los datos.
 - **Dashboard destino**: Dashboard que alojará el widget. Por defecto será el dashboard en el que nos encontremos actualmente.
-- **Click action**: Los widgets son elementos que responden al hacer click sobre ellos. Aquí se define que acción realizan: como dirigirse a la **vista** particular o ir a otro dashboard.
+- **Click action**: Los widgets son elementos que responden al hacer click sobre ellos. Aquí se define qué acción realizan: como dirigirse a la **vista** particular o ir a otro dashboard.
 - **Rango**: Ventana de tiempo de la que mostrar datos.
-- **Agregación**: Agregación sobre la que se valora la gráfica.
-- **Tipo Serie**: Propiedad para decidir cómo se muestran múltiples lineas en un mismo gráfico.
-- **Granularidad**: La distancia en tiempo entre dos muestras de la gráfica.
-- **Análisis**: Detalles estadísticos que se pueden añadir a la gráfica.
-- **Zona horaria**: Para definir el contexto del widget un función de su localización (si representa alguna).
+- **Agregación**: Métrica que se utilizará para calcular los valores representados en la gráfica.
+- **Tipo Serie**: Propiedad para decidir cómo se muestran las múltiples lineas de un mismo gráfico.
+- **Granularidad**: La distancia en tiempo entre dos muestras de la gráfica. Una baja granularidad significa una mayor definición en el gráfico.
+- **Análisis**: Detalles estadísticos que se pueden añadir a la gráfica sobre los valores a medir.
+- **Zona horaria**: Para definir el contexto del widget un función de su geolocalización (si es que ese widget representa alguna).
 - **Color**: El primer color de línea que se usará para el gráfico.
 <!-- Referencia -->
 - **Filtros**: Al igual que en las **vistas** los widgets también se pueden filtrar para mostrar exactamente los datos de interés.
@@ -138,7 +138,19 @@ Durante la creación o edición de un widget, habrá varias propiedades que defi
 ![Columnas](images/columns.png)
 
 *Columnas*
+
 - **Siempre mostrar texto**: Si se quiere que se muestre el texto del widget, independientemente de si el ratón se encuentra sobre el widget o no.
+- **Invertir colores**: Si el valor a representar está codificado como un color, se puede invertir el mapa de colores en función de ese valor.
+- **Tamaño de fuente**: Altera el tamaño del texto en el widget.
+- **Alineamiento**: Posiciona el texto dentro del widget.
+- **Image**: Referencia de la imagen que se quiere mostrar en el widget.
+- **Mantener la relación de aspecto**: Si se quiere que la imagen no se deforme como consecuencia del dimensionamiento del widget.
+- **URL**: Link the la página que se quiere cargar dentro del widget.
+<!-- - **Altura del wideget (pixeles)** -->
+
+![Balls graph with threshold of 1](images/balls.png)
+
+*Balls graph with threshold of 1*
 
 El usuario puede modificar la información asociada con cada uno de los dashboard disponibles seleccionando "Configuración general", haciendo clic en el icono de la herramienta.
 
