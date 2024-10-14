@@ -21,7 +21,7 @@ Permiten a los usuarios aislar una porción de la información para detallarla. 
 - *Crear una alarma.*
 - *Crear un widget.*
 
-Para más información sobre los filtros de eventos, puede consultar el artículo [Filtrado de eventos](/manager/more_in_detail/ch4_3_filtering_events)
+Para más información sobre los filtros de eventos, puede consultar el artículo [Filtrado de eventos](../more_in_detail/ch4_3_filtering_events.md)
 
 ![Filtros](images/ch04_img012.png)
 
@@ -29,7 +29,7 @@ Filtros
 
 ### Vistas
 
-Ofrece diferentes opciones para mostrar la información. Para más información, puede consultar el artículo [Vistas, varias opciones para visualizar datos](/manager/more_in_detail/ch4_5_views)
+Ofrece diferentes opciones para mostrar la información. Para más información, puede consultar el artículo [Vistas, varias opciones para visualizar datos](../more_in_detail/ch4_5_views.md)
 
 - *Raw*: eventos en bruto.
 - *Tops*: muestra la suma total de datos de diferentes eventos para mostrarlos como uno solo.
