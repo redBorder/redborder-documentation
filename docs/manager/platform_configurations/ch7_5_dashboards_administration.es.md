@@ -223,3 +223,10 @@ Por último, el usuario también puede escalar el widget dentro del dashboard, a
 ![Redimensionado del widget](images/widget_resize.png)
 
 *Redimensionado del widget*
+
+!!!warning "Si hay un click action configurado..."
+    Recuerde que si el widget tiene un click action configurado, al hacer click sobre el widget se ejecutará redireccionará a la vista o dashboard que se haya configurado.
+
+## ¿Qué hacer a continuación?
+
+Ya sea como administrador o como usuario, configure los dashboards que considere necesarios para su organización y para sus usuarios.
