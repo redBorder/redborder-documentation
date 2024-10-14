@@ -2,7 +2,7 @@
 
 This chapter explains how to view dashboards and what information is contained in the widgets that compose them. However, instructions for managing dashboards and widgets will be explained in the platform configuration section.
 
-Dashboards are visual control panels that provide an overview and summary of important data on a single screen. In the context of Redborder Manager, dashboards allow users to visualize and monitor key information quickly and efficiently.
+Dashboards allow you to have a visual summary that includes the main KPIs (Key Performance Indicators) that are necessary to analyze the network infrastructure. The user can combine widgets to obtain valuable information about trends, changes, and exceptions associated with the traffic that occurs on or passes through the network. These visual control panels provide an overview and summary of important data on a single screen, allowing users to visualize and monitor key information quickly and efficiently in the context of Redborder Manager.
 
 ![Redborder default dashboard](../redborder_basics/images/ch03_img002.png)
 
@@ -65,7 +65,6 @@ Widgets associated with modules display specific information from the respective
 
 The rest of the widgets do not interact directly with a single module, but rather focus on providing context to the visualization in general.
 
-- **Infrastructure**: Used to show the configuration and status of machines and associated network infrastructure, providing a diagnostic view of the platform itself.
 - **Mitre**: Summarizes triggered rules according to their relationship with MITRE terminology (tactics, techniques, and procedures).
 - **Shapes**: Completes the structure of dashboards with uncategorized elements, such as shapes, images, text, or URLs.
 - **Combination**: Allows visualization of data from other modules when the specific widget is not defined in the rest of the modules.
@@ -82,9 +81,9 @@ For each module, there are widgets generically extracted from the views and othe
 
 Generic widgets are found in more than one module and can be explained as a whole:
 
-- **Raw**: Shows the configurable and determined view of the raw view.
-- **Tops**: Shows the configurable and determined view of the tops view.
-- **Compare**: Shows the configurable and determined view of the Compare view.
+- **Raw**: Shows a customizable view of raw, which has disaggregated data.
+- **Tops**: Displays a customizable view of the most prominent events, aggregating data to show totals for different events as a single entry.
+- **Compare**: Presents a customizable view for comparing data over time (hours, days, weeks, and months). For example, it can be used to compare traffic evolution for a particular application across different **days**.
 - **Individual indicator**: Shows the number of unique values that have been found for the selected field.
 These widgets have the additional advantage that they can use other types of graphs to display information differently from the views within the modules.
 <!-- - Grouped indicators -->
@@ -136,6 +135,20 @@ There are no specific widgets for this module.
 <!-- - Movements: -->
 <!-- - Heat map: Shows a map -->
 
+<!-- #### Malware
+
+Los widget de tipo Malware se asocian al análisis de eventos Malware ocurridos en cualquier parte de la infraestructura redborder.
+
+![Widgets de malware](images/ch05_img014.png)
+
+Widgets de malware
+
+Pueden resumirse en la siguiente lista:
+
+1. *Score average per hour*: puntuación media de los eventos de malware detectados en las últimas 24 horas.
+- *Malware Fast Search*: widget que permite la busqueda de un evento malware por hash, url o ip.
+- *Recent Malware*: muestra eventos de malware detectados en las últimas 24 horas. -->
+
 #### Scanner
 
 There are no specific widgets for this module.
@@ -152,8 +165,9 @@ There are no specific widgets for this module.
 
 - **Sensor**: Shows the configuration of the sensors.
 - **Cluster**: Shows the status of services in each **manager** associated with the platform.
-- **Alarm**: Shows the set of alarms that have been activated at some point.
-- **Hardware info and status**: Shows the current status of a specific network device.
+- **Alarm**: Shows the set of alarms that have been activated at some point. Also, provides direct access to the alarm configuration panel.
+- **Hardware info**: Displays information regarding the device (chassis, processor, pcie).
+- **Hardware status**: Indicates if the device is functioning correctly along with an identifying image of it.
 - **Monitor**: Monitors a specific hardware property of network devices.
 
 ## Time machine

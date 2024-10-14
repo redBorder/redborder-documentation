@@ -2,7 +2,7 @@
 
 En este capítulo se explica cómo visualizar los dashboards y qué información contienen los widgets que los componen. No obstante, las instrucciones para la administración de los dashboards y los widgets se explicará en la sección de configuración de la plataforma.
 
-Los dashboards son paneles de control visuales que proporcionan una vista general y resumida de datos importantes en una sola pantalla. En el contexto de Redborder Manager, los dashboards permiten a los usuarios visualizar y monitorear información clave de manera rápida y eficiente.
+Los dashboards le permiten tener un resumen visual que incluye los principales KPIs (*Key Performance Indicator*) que son necesarios para analizar la infraestructura de la red. El usuario puede combinar widgets para obtener información valiosa sobre tendencias, cambios y excepciones asociadas al tráfico que ocurre en la red o que pasan por ella. Estos paneles de control visuales proporcionan una vista general y resumida de datos importantes en una sola pantalla, permitiendo a los usuarios visualizar y monitorear información clave de manera rápida y eficiente en el contexto de Redborder Manager.
 
 ![Dashboard por defecto de Redborder](../redborder_basics/images/ch03_img002.png)
 
@@ -11,7 +11,6 @@ Los dashboards son paneles de control visuales que proporcionan una vista genera
 ## Acceso a los dashboards
 
 Los dashboards se encuentran accesibles directamente desde el primer menú en la cabecera: Inicialmente mostrará el nombre del dashboard que se haya definido por defecto, y siempre mostrará el nombre del dashboard que se tenga seleccionado. El que existe por defecto se llama **Visión General** y muestra un mapa de la localización de los sensores. 
-
 
 Al expandir el menú, aparecerá el **menú de opciones** que se explicará en el siguiente apartado..
 
@@ -66,7 +65,7 @@ Los widgets asociados a los módulos muestran la información específica del re
 
 El resto de wigets no interactúan directamente con un sólo módulo, sino que se centran en aportar contexto a la visualización en general.
 
-- **Infraestructura**: Sirve para mostrar la configuración y el estado de las máquinas y la infraestructura de red asociada, proporcionando una visión de diagnóstico de la propia plataforma.
+- **Infraestructura**: Sirve para mostrar la configuración y el estado de la infraestructura de red asociada, proporcionando una visión de diagnóstico de la propia plataforma y de las máquinas que monitorizan.
 - **Mitre**: Resume las reglas disparadas según la relación que tengan con la terminología MITRE (tácticas, técnicas y procedimientos).
 - **Formas**: Completa la estructura de los dashboards con elementos no categorizados, como formas, imágenes, texto o URLs.
 - **Combinación**: Permite visualizar los datos de otros módulos cuando el widget concreto no está definido en el resto de módulos.
@@ -83,9 +82,9 @@ Para cada módulo existen widgets extraídos de manera genérica desde las vista
 
 Los widgets genéricos se encuentran en más de un módulo y se pueden explicar en su conjunto:
 
-- **Raw**: Muestra la vista configurable y determinada de la vista de raw.
-- **Tops**: Muestra la vista configurable y determinada de la vista de tops.
-- **Comparar**: Muestra la vista configurable y determinada de la vista de Compare.
+- **Raw**: Muestra una vista personalizable de datos en bruto, que contiene información desagregada.
+- **Tops**: Presenta una vista personalizable de los eventos más destacados, agregando datos para mostrar totales de diferentes eventos como una sola entrada.
+- **Comparar**: Ofrece una vista personalizable para comparar datos a lo largo del tiempo (horas, días, semanas y meses). Por ejemplo, se puede utilizar para comparar la evolución del tráfico de una aplicación particular en diferentes **días**.
 - **Indicador individual**: Muestra la cantidad de valores únicos que se han encontrado sobre el campo seleccionado.
 Estos widgets tienen como ventaja adicional que se pueden utilizar otro tip de gráficos para mostrar la información de una manera diferente a la de las vistas dentro de los módulos.
 <!-- - Inidicadores agrupados -->
@@ -137,6 +136,21 @@ No hay widgets específicos para este módulo.
 <!-- - Movimientos:  -->
 <!-- - Mapa de calor: Muestra un mapa  -->
 
+
+<!-- #### Malware
+
+Los widget de tipo Malware se asocian al análisis de eventos Malware ocurridos en cualquier parte de la infraestructura redborder.
+
+![Widgets de malware](images/ch05_img014.png)
+
+Widgets de malware
+
+Pueden resumirse en la siguiente lista:
+
+1. *Score average per hour*: puntuación media de los eventos de malware detectados en las últimas 24 horas.
+- *Malware Fast Search*: widget que permite la busqueda de un evento malware por hash, url o ip.
+- *Recent Malware*: muestra eventos de malware detectados en las últimas 24 horas. -->
+
 #### Scanner
 
 No hay widgets específicos para este módulo.
@@ -153,8 +167,9 @@ No hay widgets específicos para este módulo.
 
 - **Sensor**: Muestra la configuración de los sensores.
 - **Cluster**: Muestra el estado de los servicios en cada **manager** asociado con la plataforma.
-- **Alarma**: Muestra el conjunto de alarmas que se han activado en algún momento.
-- **Hardware info y status**: Muestra el estado actual de un dispositivo concreto de red.
+- **Alarma**: Muestra el conjunto de alarmas que se han activado en algún momento. Da acceso directo al panel de configuración de alarmas.
+- **Hardware info**: Muestra información referente al dispositivo (chasis, procesador, pcie).
+- **Hardware status**: Indica si el funcionamiento del dispositivo es el correcto junto con una imagen identificativa del mismo.
 - **Monitor**: Monitoriza una propiedad de hardware concreta de los dispositivos de red.
 
 ## Máquina del tiempo
