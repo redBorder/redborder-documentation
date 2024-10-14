@@ -4,7 +4,7 @@ En la sección **Dashboards** el usuario puede crear una gran variedad de **Widg
 
 ## Requerimientos
 
-La mayoría de los widgets van a requerir de algún tipo de sensor operativo para que sean funcionales. Sabremos cuál en base a que los widgets están categorizados por módulos. Implicitamente, para que un sensor se encuentre operativo, es necesario que el módulo correspondiente se encuentre habilitado.
+La mayoría de los widgets van a requerir de algún tipo de **sensor** o **herramienta** operativos para que sean funcionales. Sabremos cuál en base a que los widgets están categorizados por módulos. Implicitamente, para que un sensor se encuentre operativo, es necesario que el módulo correspondiente se encuentre habilitado.
 
 !!! warning "En caso de que un administrador de la máquina deshabilite un módulo por consola..."
     La deshabilitación de un módulo causará un **error** si el usuario intenta acceder a un dashboard donde exista un widget de esa categoría. Por lo tanto, antes de deshabilitar dicho módulo, se recomienda exportar el dashboard y/o eliminarlo.
@@ -21,21 +21,29 @@ Además, para acceder a los widgets, hace falta tener permisos de edición sobre
 ![Menú de acciones en dashboard](../more_in_detail/images/dashboard_list.png)
 
 Menú de acciones en dashboard
-## Crear, editar, clonar y borrar un dashboard
+## Configurar un dashboard
 
 Ya sea porque la organización ha restringido los permisos de los usuarios, porque la organización no tiene ningún dashboard o porque el usuario simplemente quiere gestionar su propio dashboard, el usuario va a llegar a la conclusión de crear uno nuevo. En el menú de dashboard se encuentra el botón **Añadir dashboard**.
 
-![Añadir un dashboard](images/create_dashboard_action.png)
+![Localizar añadir un dashboard](images/create_dashboard_action.png)
 
-*Añadir un dashboard*
+*Localizar añadir un dashboard*
 
 Al pulsarlo se nos abrirá la siguiente ventana: 
 
-![Editar un dashboard](images/edit_dashboard.png)
+![Editar un nuevo dashboard](images/edit_dashboard.png)
+
+*Editar un nuevo dashboard*
+
+El dashboard puede ser reconfigurado pulsando el botón de edición (icono de llave inglesa) al lado del dashboard que se pretende editar.
+
+La aparencia es similar a la de editar un dashboard ya creado, a escepción de las acciones de **borrado**, **convertir en informe** y **exportar dashboard**.
+
+![Editar un dashboard](images/edit_old_dashboard.png)
 
 *Editar un dashboard*
 
-### Propiedades del dashboard
+### Editar las propiedades del dashboard
 
 Existen múltiples propiedades que se pueden rellenar:
 
@@ -50,14 +58,14 @@ Existen múltiples propiedades que se pueden rellenar:
 !!! note "En caso de introducir un nombre que ya exista..."
     El sistema permite la duplicidad de nombres de dashboard, pero se recomienda no hacerlo, ya que puede dar lugar a confusión.
 
-El dashboard puede ser reconfigurado pulsando el botón de edición (icono de llave inglesa) al lado del dashboard que se pretende editar. El cuál volverá a abrir las propiedades anteriores.
-
 !!! warning "Si actualiza algún parámetro"
     Recuerde pulsar **Actualizar Dashboard** para registrar los cambios o se perderán.
 
-El otro botón (icono de dos hojas) sirve para clonar el dashboard. Al pulsarlo, tan sólo pedirá que se le cambie el nombre al nuevo widget:
+### Clonar un dashboard
 
-![Nombrar un clon de dashboard](images/edit_dashboard.png)
+El otro botón (icono de dos hojas) sirve para clonar el dashboard. Al pulsarlo, tan sólo pedirá que se le cambie el nombre al nuevo dashboard:
+
+![Nombrar un clon de dashboard](images/clone_dashboard.png)
 
 *Nombrar un clon de dashboard*
 
@@ -92,7 +100,7 @@ En cuanto a los permisos existen 3 opciones:
 - **Solo por Admins**: Sólo aquellos usuarios que estén incluidos en el dominio y tengan nivel de administrador van a poder configurar el dashboard.
 - **Todo**: Sólo los usuarios incluidos en el dominio van a poder configurar el dashboard.
 
-### Borrar
+### Borrar dashboard
 
 Durante la edición, el botón borrar permite borrar el dashboard. Al pulsarlo, pedirá una confirmación.
 
@@ -102,24 +110,40 @@ Durante la edición, el botón borrar permite borrar el dashboard. Al pulsarlo, 
 
 ### Exportar e importar un dashboard
 
-Al pulsar el botón **Exportar Dashboard** se abrirá el navegador de ficheros para que el usuario descarge el dashboard actual en formato *.csv*. Cuando que se quiera importar, se podrá hacer pulsando **Importar Dashboard** en el **menú de dashboards**.
+Al pulsar el botón **Exportar Dashboard** se abrirá el navegador de ficheros para que el usuario descarge el dashboard actual en formato *.csv*. Cuando que se quiera importar, se podrá hacer pulsando **Importar Dashboard** en el **menú de dashboards**. Es una herramienta muy útil para compartir dashboards o para guardarlos en un lugar seguro.
 
-### Generar reporte
+### Generar informe
 
-Los dashboards también se pueden utilizar como plantillas. Luego esas plantillas se pueden utilizar para generar reportes de manera automática. Para generar la plantilla hay que pulsar **Convertir a Informe** y se guardará en la sección **Informes**.
+Los dashboards también se pueden utilizar como plantillas. Luego esas plantillas se pueden utilizar para generar **informes** de manera automática. Para generar la plantilla hay que pulsar **Convertir a Informe** y se guardará en la sección **Informes**.
+
+![Confirmar añadir informe](images/confirm.png)
+
+*Confirmar añadir informe*
 ## Creación de un widget
 
 Para crear un widget, habrá que situarse en un dashboard y expandir sus opciones de edición.
 
-![Creación de widgets](images/create_widget_action.png)
+![Creación de widgets: localización](images/create_widget_action.png)
+
+*Creación de widgets: localización*
 
 Esto nos mostrará las categorías presentes.
 
-![Creación de widgets](images/main_create_widget.png)
+![Creación de widgets: categorías](images/main_create_widget.png)
+
+*Creación de widgets: categorías*
 
 Al hacer click a una de ellas podremos acceder a la lista de widgets para esa categoría.
 
-![Creación de widgets](images/create_widget_2.png)
+![Creación de widgets: selección](images/create_widget_2.png)
+
+*Creación de widgets: selección*
+
+Al hacer click sobre una de las opciones, se abrirá el formulario de creación del widget.
+
+![Creación de widgets: configuración](images/widget_edition.png)
+
+*Creación de widgets: configuración*
 
 ### Propiedades del widget
 
@@ -127,6 +151,11 @@ Durante la creación o edición de un widget, habrá varias propiedades que defi
 
 - **Nombre**: Título del widget
 - **Tipo de gráfico**: Tipo de visualización con la que se quiere mostrar los datos.
+
+![Selección del tipo de gráfico](images/graph_selection.png)
+
+*Selección del tipo de gráfico*
+
 - **Dashboard destino**: Dashboard que alojará el widget. Por defecto será el dashboard en el que nos encontremos actualmente.
 - **Click action**: Los widgets son elementos que responden al hacer click sobre ellos. Aquí se define qué acción realizan: como dirigirse a la **vista** particular o ir a otro dashboard.
 - **Rango**: Ventana de tiempo de la que mostrar datos.
@@ -147,16 +176,17 @@ Durante la creación o edición de un widget, habrá varias propiedades que defi
 
 - **Siempre mostrar texto**: Si se quiere que se muestre el texto del widget, independientemente de si el ratón se encuentra sobre el widget o no.
 - **Invertir colores**: Si el valor a representar está codificado como un color, se puede invertir el mapa de colores en función de ese valor.
+
+![Balls graph with threshold of 1](images/balls.png)
+
+*Balls graph with threshold of 1*
+
 - **Tamaño de fuente**: Altera el tamaño del texto en el widget.
 - **Alineamiento**: Posiciona el texto dentro del widget.
 - **Image**: Referencia de la imagen que se quiere mostrar en el widget.
 - **Mantener la relación de aspecto**: Si se quiere que la imagen no se deforme como consecuencia del dimensionamiento del widget.
 - **URL**: Link the la página que se quiere cargar dentro del widget.
-<!-- - **Altura del wideget (pixeles)** -->
-
-![Balls graph with threshold of 1](images/balls.png)
-
-*Balls graph with threshold of 1*
+<!-- - **Altura del widget (pixeles)** -->
 
 El usuario puede modificar la información asociada con cada uno de los dashboard disponibles seleccionando "Configuración general", haciendo clic en el icono de la herramienta.
 
