@@ -23,7 +23,7 @@ Allow users to isolate a portion of the information for detailed inspection. In 
 - *Create an alarm.*
 - *Create a widget.*
 
-For more information about event filters, you can refer to the article [Event Filtering](../more_in_detail/ch4_3_filtering_events.md)
+For more information about event filters, you can refer to the article [Event Filtering](/manager/more_in_detail/ch4_3_filtering_events)
 
 ![Filters](images/ch04_img012.png)
 
@@ -31,7 +31,7 @@ Filters
 
 ### Views
 
-Offers different options for displaying information. For more information, you can refer to the article [Views, multiple options for visualizing data](../more_in_detail/ch4_5_views.md)
+Offers different options for displaying information. For more information, you can refer to the article [Views, multiple options for visualizing data](/manager/more_in_detail/ch4_5_views)
 
 - *Raw*: Raw events.
 - *Tops*: Shows the total sum of data from different events to display them as one.
