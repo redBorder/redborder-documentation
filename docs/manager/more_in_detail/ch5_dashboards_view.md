@@ -122,7 +122,7 @@ Floor maps have an associated **floor**. This, in turn, has an architectural ima
 
 The map, heat map, and client map widgets are part of the geographic maps set. They can be displayed in both satellite and photographic views.
 
-![Map widget](images/map.png)
+![Widget mapa](images/widget_map.png)
 
 *Map widget*
 

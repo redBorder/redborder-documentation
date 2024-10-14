@@ -123,7 +123,7 @@ Los mapas de planta tienen una **planta** asociada. Esta a su vez tiene una imag
 
 Los widgets de mapa, mapa de calor y mapa de clientes son parte del conjunto de mapas geográficos. Se pueden mostrar tanto en vista satelital como fotográfica 
 
-![Widget mapa](images/map.png)
+![Widget mapa](images/widget_map.png)
 
 *Widget mapa*
 
