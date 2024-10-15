@@ -35,6 +35,9 @@ nav:
   - manager/platform_configurations/ch6_sensors.es.md
   - manager/platform_configurations/ch7_tools_and_admin.es.md
   - manager/platform_configurations/ch7_4_general_config.es.md
+  - manager/redborder_api/ch10_introduction.es.md
+  - manager/redborder_api/ch10_use_examples.es.md
+  - manager/redborder_api/ch11_model_sharing.es.md
   - proxy/platform_configurations/ch1_proxy_installation.es.md
   - proxy/platform_configurations/proxy_sensor.es.md
   - ips/IPS_basics/ch1_what_is_redborder.es.md
