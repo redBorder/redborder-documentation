@@ -14,11 +14,17 @@ Dashboards are accessible directly from the first menu in the header: Initially,
 
 When expanding the menu, the **options menu** will appear, which will be explained in the next section.
 
+![Dashboard options menu](../platform_configurations/images/create_dashboard_action.png)
+
+*Dashboard options menu*
+
 Additionally, you can access specific dashboards in the following ways:
 
-- Using the direct URL of the dashboard, which you can copy from the *Dashboard URL* option in the interface.
-- If you have set a dashboard as default, it will automatically load when you log in.
-- Through permissions granted by the administrator, which will determine which dashboards are available for viewing.
+- Using the **Dashboard URL**, which you can copy from the *Dashboard URL* option in the interface.
+- If you have set a dashboard as **default**, it will automatically load when you log in.
+
+!!! warning "You will only be able to view if..."
+    You will only be able to view certain dashboards if the dashboard owners have granted you access and if you belong to the allowed domain.
 
 ## Dashboard options
 
@@ -34,7 +40,7 @@ The Dashboard section presents different options:
 - **Dashboard URL**: gives the user a quick way to copy the URL of the current dashboard to share it.
 - **Time machine**: allows the user to view the results of metrics from a particular day and time as if it were their real-time.
 
-The rest of the options will be explained in detail in another chapter.
+The rest of the options will be explained in detail in [platform configuration](../platform_configurations/ch7_5_dashboards_administration.md).
 
 ![Dashboard options](images/ch05_img002.png)
 
@@ -75,7 +81,7 @@ Select widget type
 
 ### Module widgets
 
-For each module, there are widgets generically extracted from the views and others that are exclusive to those modules. Let's see what each one does and what they are used for:
+For each module, there are widgets extracted generically from the views and others that are exclusive to those modules. Let's see what each one does and what they are used for.
 
 #### Generic widgets
 
@@ -88,6 +94,10 @@ Generic widgets are found in more than one module and can be explained as a whol
 These widgets have the additional advantage that they can use other types of graphs to display information differently from the views within the modules.
 <!-- - Grouped indicators -->
 - **Performance Index**: Shows a 3-level categorization of the value of an aggregation for samples in a specific time interval, without delving into the widget type.
+
+![Generic widgets](images/generic_widgets.png)
+
+*Generic widgets*
 
 #### Traffic
 
@@ -169,6 +179,41 @@ There are no specific widgets for this module.
 - **Hardware info**: Displays information regarding the device (chassis, processor, pcie).
 - **Hardware status**: Indicates if the device is functioning correctly along with an identifying image of it.
 - **Monitor**: Monitors a specific hardware property of network devices.
+
+##### Sensor
+
+The available sensor tree can be viewed and its configuration can be accessed directly.
+
+![Sensor widget](images/sensor_widget.png)
+
+*Sensor widget*
+
+##### Cluster
+
+The status of services for each **manager** can be viewed and it provides direct access to the **cluster configuration**.
+
+![Cluster widget](images/cluster_widget.png)
+
+*Cluster widget*
+
+##### Alarm
+
+Alarms that have been triggered at some point can be viewed and it provides direct access to the **alarm configuration**.
+
+![Alarm widget](images/alarms_widget.png)
+
+*Alarm widget* 
+
+<!-- ##### Hardware info -->
+
+<!-- ##### Hardware status -->
+
+##### Monitor
+
+Based on the chosen graph type, it will display
+![Monitor widget](images/monitor_widget.png)
+
+*Monitor widget*
 
 ## Time machine
 
