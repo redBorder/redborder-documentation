@@ -1,6 +1,6 @@
 # Administración de Dashboards y Widgets
 
-En la sección **Dashboards** el usuario puede crear una gran variedad de **Widgets** que muestren información específica que capture la plataforma, ya sea para llevar a cabo una monitorización eficiente o por mera organización de estos componentes. La idea es que tanto usuario como organización puedan tener un mejor control del análisis de datos desde una única pantalla.
+En la sección **Dashboards** el usuario puede crear una gran variedad de **widgets** que muestren información específica que capture la plataforma, ya sea para llevar a cabo una monitorización eficiente o por mera organización de estos componentes. La idea es que tanto usuario como organización puedan tener un mejor control del análisis de datos desde una única pantalla.
 
 ## Requerimientos
 
@@ -22,12 +22,12 @@ A parte de la lista de los dashboards disponibles, un administrador puede accede
 
 ![Menú de acciones en dashboard](../more_in_detail/images/dashboard_list.png)
 
-Menú de acciones en dashboard
+*Menú de acciones en dashboard*
 ## Crear y configurar un dashboard
 
 Ya sea porque la organización ha restringido los permisos de los usuarios, porque la organización no tiene ningún dashboard o porque el usuario simplemente quiere gestionar su propio dashboard, el usuario va a llegar a la conclusión de crear uno nuevo. En el menú de dashboard se encuentra el botón **Añadir dashboard**.
 
-El primer paso será crear un panel en blanco para luego agregar los widgets que satisfagan las necesidades de visualización.
+El primer paso será crear un panel en blanco. Luego habrá que agregar los widgets que satisfagan las necesidades de visualización.
 
 ![Localizar añadir un dashboard](images/create_dashboard_action.png)
 
@@ -40,6 +40,10 @@ Al pulsarlo se nos abrirá el formulario para editar las propiedades del dashboa
 *Editar un nuevo dashboard*
 
 El dashboard puede ser reconfigurado pulsando el botón de edición (icono de llave inglesa) al lado del dashboard que se pretende editar.
+
+![Localización de las acciones para el dashboard](images/dashboard_list_2.png)
+
+*Localización de las acciones para el dashboard*
 
 La aparencia es similar a la de editar un dashboard ya creado, a escepción de las acciones de **borrado**, **convertir en informe** y **exportar dashboard**.
 
@@ -85,14 +89,14 @@ Estos usuarios tendrán permisos para ver e interactuar con los widgets del prop
 
 ### Añadir un dominio al dashboard
 
-Alternativamente, se pueden basar los permisos en función del nivel de acceso en cuanto a dominios se refiere. De tal manera que todos los usuarios que tengan acceso al dominio en cuestión, también lo tendrán a ese dashboard.
+Alternativamente, los permisos pueden basarse en el nivel de acceso en términos de **dominio**. De tal manera que todos los usuarios que tengan acceso a ese **dominio** también tendrán acceso a ese **dashboard**.
 Para añadir un dominio con permisos pulsamos el botón **Añadir** y seleccionamos los dominios que queramos del árbol desplegado:
 
 ![Dominio a añadir a la lista](images/domain_list.png)
 
 *Dominio a añadir la lista*
 
-Una vez se hayan seleccionado los dominios que se quieran añadir, hay que pulsar **Añadir los Dominios**
+Una vez seleccionados los dominios que desea añadir, debe pulsar el botón **Añadir Dominios** para confirmar la operación. Así, los nuevos dominios se añadirán a la lista:
 
 ![Dominios añadidos a la lista](images/domain_list2.png)
 
@@ -100,7 +104,7 @@ Una vez se hayan seleccionado los dominios que se quieran añadir, hay que pulsa
 
 En cuanto a los permisos existen 3 opciones:
 
-- **Ninguno**: Por defecto, sólo los usuarios incluidos en el dominio van a poder ver e interactuar con los widgets de este dashboard.
+- **Ninguno (opción por defecto)**: Por defecto, sólo los usuarios incluidos en el dominio van a poder ver e interactuar con los widgets de este dashboard.
 - **Solo por Admins**: Sólo aquellos usuarios que estén incluidos en el dominio y tengan nivel de administrador van a poder configurar el dashboard.
 - **Todo**: Sólo los usuarios incluidos en el dominio van a poder configurar el dashboard.
 
@@ -131,17 +135,13 @@ Para crear un widget, habrá que situarse en un dashboard y expandir sus opcione
 
 *Creación de widgets: localización*
 
-Esto nos mostrará las categorías presentes.
+Esto nos mostrará las categorías presentes. Al hacer clic en una de ellas, podremos acceder a la lista de widgets para esa categoría.
 
 ![Creación de widgets: categorías](../more_in_detail/images/ch05_img007.png)
 
 *Creación de widgets: categorías*
 
 Al hacer click a una de ellas podremos acceder a la lista de widgets para esa categoría.
-
-![Creación de widgets: selección](images/create_widget_2.png)
-
-*Creación de widgets: selección*
 
 Al hacer click sobre una de las opciones, se abrirá el formulario de creación del widget.
 
@@ -187,7 +187,7 @@ Durante la creación o edición de un widget, habrá varias propiedades que defi
 
 - **Tamaño de fuente**: Altera el tamaño del texto en el widget.
 - **Alineamiento**: Posiciona el texto dentro del widget.
-- **Image**: Referencia de la imagen que se quiere mostrar en el widget.
+- **Imagen**: Referencia de la imagen que desea mostrar en el widget. Úselo para cargar una imagen desde su disco local.
 - **Mantener la relación de aspecto**: Si se quiere que la imagen no se deforme como consecuencia del dimensionamiento del widget.
 - **URL**: Link the la página que se quiere cargar dentro del widget.
 <!-- - **Altura del widget (pixeles)** -->

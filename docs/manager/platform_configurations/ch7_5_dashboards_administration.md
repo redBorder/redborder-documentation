@@ -1,6 +1,6 @@
 # Dashboard and Widget Administration
 
-In the **Dashboards** section, users can create a wide variety of **Widgets** that display specific information captured by the platform, either for efficient monitoring or for mere organization of these components. The idea is that both users and organizations can have better control of data analysis from a single screen.
+In the **Dashboards** section, users can create a wide variety of **widgets** that display specific information captured by the platform, either for efficient monitoring or for simply organization of these components. The idea is that both users and organizations can have better control of data analysis from a single screen.
 
 ## Requirements
 
@@ -22,13 +22,13 @@ Apart from the list of available dashboards, an administrator can access the fol
 
 ![Dashboard action menu](../more_in_detail/images/dashboard_list.png)
 
-Dashboard action menu
+*Dashboard action menu*
 
 ## Create and configure a dashboard
 
 Whether because the organization has restricted user permissions, because the organization doesn't have any dashboard, or because the user simply wants to manage their own dashboard, the user will come to the conclusion of creating a new one. In the dashboard menu, there is the **Add dashboard** button.
 
-The first step will be to create a blank panel and then add the widgets that meet the visualization needs.
+The first step will be to create a blank panel. Then add the widgets that meet the visualization needs.
 
 ![Locate add a dashboard](images/create_dashboard_action.png)
 
@@ -41,6 +41,10 @@ When clicked, the form to edit the dashboard properties will open:
 *Edit a new dashboard*
 
 The dashboard can be reconfigured by clicking the edit button (wrench icon) next to the dashboard you intend to edit.
+
+![Locate dashboard actions](images/dashboard_list_2.png)
+
+*Locate dashboard actions*
 
 The appearance is similar to editing an already created dashboard, except for the **delete**, **convert to report**, and **export dashboard** actions.
 
@@ -86,14 +90,14 @@ These users will have permissions to view and interact with the widgets of the d
 
 ### Add a domain to the dashboard
 
-Alternatively, permissions can be based on the level of access in terms of domains. In such a way that all users who have access to the domain in question will also have access to that dashboard.
+Alternatively, permissions can be based on the level of access in terms of domains. In such a way that all users who have access to that domain will also have access to that dashboard.
 To add a domain with permissions, we press the **Add** button and select the domains we want from the expanded tree:
 
 ![Domain to add to the list](images/domain_list.png)
 
 *Domain to add to the list*
 
-Once the domains you want to add have been selected, you must press **Add Domains**
+Once the domains you want to add have been selected, you must press **Add Domains** button to cofirm the operation. So now the new domains will be added to the list:
 
 ![Domains added to the list](images/domain_list2.png)
 
@@ -101,7 +105,7 @@ Once the domains you want to add have been selected, you must press **Add Domain
 
 Regarding permissions, there are 3 options:
 
-- **None**: By default, only users included in the domain will be able to view and interact with the widgets on this dashboard.
+- **None (default option)**: Only users included in the domain will be able to view and interact with the widgets on this dashboard.
 - **Only by Admins**: Only those users who are included in the domain and have administrator level will be able to configure the dashboard.
 - **All**: Only users included in the domain will be able to configure the dashboard.
 
@@ -109,9 +113,9 @@ Regarding permissions, there are 3 options:
 
 During editing, the delete button allows you to delete the dashboard. When pressed, it will ask for confirmation.
 
-![Confirm deletion](images/confirm.png)
+![Confirm removal](images/confirm.png)
 
-*Confirm deletion*
+*Confirm removal*
 
 ### Export and import a dashboard
 
@@ -133,17 +137,11 @@ To create a widget, you will need to be on a dashboard and expand its editing op
 
 *Widget creation: location*
 
-This will show us the present categories.
+This will show us the present categories. By clicking on one of them, we can access the list of widgets for that category.
 
 ![Widget creation: categories](../more_in_detail/images/ch05_img007.png)
 
 *Widget creation: categories*
-
-By clicking on one of them, we can access the list of widgets for that category.
-
-![Widget creation: selection](images/create_widget_2.png)
-
-*Widget creation: selection*
 
 Clicking on one of the options will open the widget creation form.
 
@@ -189,7 +187,7 @@ During the creation or editing of a widget, there will be several properties to 
 
 - **Font size**: Alters the size of the text in the widget.
 - **Alignment**: Positions the text within the widget.
-- **Image**: Reference of the image you want to show in the widget.
+- **Image**: Reference of the image you want to show in the widget. Use it to load an image from your local disk.
 - **Maintain aspect ratio**: If you want the image not to be distorted as a result of widget sizing.
 - **URL**: Link to the page you want to load within the widget.
 <!-- - **Widget height (pixels)** -->
