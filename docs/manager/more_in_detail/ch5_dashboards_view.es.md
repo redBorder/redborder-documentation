@@ -67,21 +67,6 @@ Los widgets asociados a los módulos muestran la información específica del re
 - Vault
 - Wireless
 
-### Widgets contextuales
-
-El resto de wigets no interactúan directamente con un sólo módulo, sino que se centran en aportar contexto a la visualización en general.
-
-- **Infraestructura**: Sirve para mostrar la configuración y el estado de la infraestructura de red asociada, proporcionando una visión de diagnóstico de la propia plataforma y de las máquinas que monitorizan.
-- **Mitre**: Resume las reglas disparadas según la relación que tengan con la terminología MITRE (tácticas, técnicas y procedimientos).
-- **Formas**: Completa la estructura de los dashboards con elementos no categorizados, como formas, imágenes, texto o URLs.
-- **Combinación**: Permite visualizar los datos de otros módulos cuando el widget concreto no está definido en el resto de módulos.
-
-![Seleccionar tipo de widget](images/ch05_img006.png)
-
-Seleccionar tipo de widget
-
-### Widgets de módulo
-
 Para cada módulo existen widgets extraídos de manera genérica desde las vistas y otros que son exclusivos de esos módulos. Vamos a ver qué es lo que hace cada uno y para que sirven.
 
 #### Wigets genéricos
@@ -217,6 +202,18 @@ A raíz del tipo de gráfico escogido, se mostrará
 
 *Widget de monitor*
 
+### Widgets contextuales
+
+El resto de wigets no interactúan directamente con un sólo módulo, sino que se centran en aportar contexto a la visualización en general.
+
+- **Infraestructura**: Sirve para mostrar la configuración y el estado de la infraestructura de red asociada, proporcionando una visión de diagnóstico de la propia plataforma y de las máquinas que monitorizan.
+- **Mitre**: Resume las reglas disparadas según la relación que tengan con la terminología MITRE (tácticas, técnicas y procedimientos).
+- **Formas**: Completa la estructura de los dashboards con elementos no categorizados, como formas, imágenes, texto o URLs.
+- **Combinación**: Permite visualizar los datos de otros módulos cuando el widget concreto no está definido en el resto de módulos.
+
+![Seleccionar tipo de widget](images/ch05_img006.png)
+
+Seleccionar tipo de widget
 ## Copiar la URL del dashboard
 
 Con un dashboard abierto, podemos volcar la URL del dashboard en el portapapeles del sistema operativo, para luego compartirlo con otros usuarios o guardarlo a menester.

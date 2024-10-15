@@ -67,20 +67,6 @@ Widgets associated with modules display specific information from the respective
 - Vault
 - Wireless
 
-### Contextual widgets
-
-The rest of the widgets do not interact directly with a single module, but rather focus on providing context to the visualization in general.
-
-- **Mitre**: Summarizes triggered rules according to their relationship with MITRE terminology (tactics, techniques, and procedures).
-- **Shapes**: Completes the structure of dashboards with uncategorized elements, such as shapes, images, text, or URLs.
-- **Combination**: Allows visualization of data from other modules when the specific widget is not defined in the rest of the modules.
-
-![Select widget type](images/ch05_img006.png)
-
-Select widget type
-
-### Module widgets
-
 For each module, there are widgets extracted generically from the views and others that are exclusive to those modules. Let's see what each one does and what they are used for.
 
 #### Generic widgets
@@ -215,6 +201,17 @@ Based on the chosen graph type, it will display
 
 *Monitor widget*
 
+### Contextual widgets
+
+The rest of the widgets do not interact directly with a single module, but rather focus on providing context to the visualization in general.
+
+- **Mitre**: Summarizes triggered rules according to their relationship with MITRE terminology (tactics, techniques, and procedures).
+- **Shapes**: Completes the structure of dashboards with uncategorized elements, such as shapes, images, text, or URLs.
+- **Combination**: Allows visualization of data from other modules when the specific widget is not defined in the rest of the modules.
+
+![Select widget type](images/ch05_img006.png)
+
+Select widget type
 ## Copy the dashboard URL
 
 With an open dashboard, we can copy the dashboard URL to the operating system's clipboard, to later share it with other users or save it as needed.
