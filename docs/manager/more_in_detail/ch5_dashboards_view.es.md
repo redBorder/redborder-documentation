@@ -18,17 +18,17 @@ Al expandir el menú, aparecerá el **menú de opciones** que se explicará en e
 
 *Menú de opciones de dashboards*
 
-Además, puede acceder a dashboards específicos de las siguientes maneras:
-
-- Utilizando la **Dashboard URL**, que puede copiar desde la opción *URL del dashboard* en la interfaz.
-- Si ha establecido un dashboard como **predeterminado**, este se cargará automáticamente al iniciar sesión.
+!!! note "Otros métodos de acceso"
+    Puede acceder a dashboards específicos de las siguientes maneras:
+    - Utilizando la **Dashboard URL** compartida por otro usuario.
+    - Si ha establecido un dashboard como **predeterminado**, este se cargará automáticamente al iniciar sesión.
 
 !!! warning "Sólo podrá visualizar si..."
-    Sólo podrá ver determinados dashboards si los usuarios propietarios del dashboard le han otorgado acceso y si pertenece al dominio permitido.
+    Sólo podrá ver determinados dashboards si los **usuarios** propietarios del dashboard le han otorgado acceso y si pertenece al **dominio** permitido.
 
 ## Opciones de dashboards
 
-La primera opción que encontramos en la barra de menú en el área de análisis es *Dashboard*. Esta es la opción seleccionada por defecto que se verá tan pronto como inicie sesión en el Manager de Redborder.
+Una vez accedemos a un dashboard, podemos ver La primera opción que encontramos en la barra de menú en el área de análisis es *Dashboard*. Esta es la opción seleccionada por defecto que se verá tan pronto como inicie sesión en el Manager de Redborder.
 
 ![Vista general del dashboard](images/ch05_img001.png)
 
@@ -50,7 +50,7 @@ El resto de opciones serán explicadas en detalle en [configuración de la plata
 
 Los widgets son componentes individuales y modulares que forman parte de un dashboard. Cada widget representa un conjunto específico de datos o métricas, generalmente en forma de gráficos, tablas, indicadores o cualquier otra representación visual. Los widgets son personalizables y se pueden agregar, eliminar o reorganizar dentro de un dashboard para adaptarse a las necesidades específicas de cada usuario o equipo.
 
-Los widgets están categorizados en diferentes tipos ya que existe una amplia variedad de ellos. La mayoría se relacionan directamente con un módulo específico; el resto o bien muestra información avanzada o simplemente mejora la visualización del propio dashboard. Las categorías de estos widgets se han ordenado en dos en esta explicación, los widgets de módulo y el resto:
+Los widgets están categorizados en diferentes tipos ya que existe una amplia variedad de ellos. La mayoría se relacionan directamente con un módulo específico; el resto o bien muestra información avanzada o simplemente mejora la visualización del propio dashboard. Las categorías de estos widgets se han ordenado en dos en esta explicación, los widgets de módulo y los widgets contextuales:
 
 ![Widget Clientes (sin datos)](images/clients.png)
 
@@ -67,7 +67,7 @@ Los widgets asociados a los módulos muestran la información específica del re
 - Vault
 - Wireless
 
-### Widgets avanzados
+### Widgets contextuales
 
 El resto de wigets no interactúan directamente con un sólo módulo, sino que se centran en aportar contexto a la visualización en general.
 
@@ -202,7 +202,7 @@ Se puede ver el estado de los servicios para cada **manager** y proporciona un a
 
 Se puede ver las alarmas que se han disparado alguna vez y proporciona un acceso directo a la **configuración de alarmas**.
 
-![Widget de alarmas](images/alarms_widget.png)
+![Widget de alarmas](images/alarm_widget.png)
 
 *Widget de alarmas* 
 
@@ -216,6 +216,14 @@ A raíz del tipo de gráfico escogido, se mostrará
 ![Widget de monitor](images/monitor_widget.png)
 
 *Widget de monitor*
+
+## Copiar la URL del dashboard
+
+Con un dashboard abierto, podemos volcar la URL del dashboard en el portapapeles del sistema operativo, para luego compartirlo con otros usuarios o guardarlo a menester.
+
+![Acción de copiar la URL del dashboard](images/dashboard_list.png)
+
+*Acción de copiar la URL del dashboard*
 
 ## Máquina del tiempo
 

@@ -18,17 +18,17 @@ When expanding the menu, the **options menu** will appear, which will be explain
 
 *Dashboard options menu*
 
-Additionally, you can access specific dashboards in the following ways:
-
-- Using the **Dashboard URL**, which you can copy from the *Dashboard URL* option in the interface.
-- If you have set a dashboard as **default**, it will automatically load when you log in.
+!!! note "Other access methods"
+    You can access specific dashboards in the following ways:
+    - Using the **Dashboard URL** shared by another user.
+    - If you have set a dashboard as **default**, it will automatically load when you log in.
 
 !!! warning "You will only be able to view if..."
-    You will only be able to view certain dashboards if the dashboard owners have granted you access and if you belong to the allowed domain.
+    You will only be able to view certain dashboards if the **users** who own the dashboard have granted you access and if you belong to the allowed **domain**.
 
 ## Dashboard options
 
-The first option we find in the menu bar in the analysis area is *Dashboard*. This is the default selected option that you will see as soon as you log into the Redborder Manager.
+Once we access a dashboard, we can see the first option we find in the menu bar in the analysis area is *Dashboard*. This is the default selected option that will be seen as soon as you log in to the Redborder Manager.
 
 ![Dashboard overview](images/ch05_img001.png)
 
@@ -50,7 +50,7 @@ The rest of the options will be explained in detail in [platform configuration](
 
 Widgets are individual and modular components that form part of a dashboard. Each widget represents a specific set of data or metrics, usually in the form of graphs, tables, indicators, or any other visual representation. Widgets are customizable and can be added, removed, or rearranged within a dashboard to suit the specific needs of each user or team.
 
-Widgets are categorized into different types as there is a wide variety of them. Most relate directly to a specific module; the rest either display advanced information or simply enhance the visualization of the dashboard itself. The categories of these widgets have been organized into two in this explanation, module widgets and the rest:
+Widgets are categorized into different types as there is a wide variety of them. Most are directly related to a specific module; the rest either display advanced information or simply enhance the visualization of the dashboard itself. The categories of these widgets have been organized into two in this explanation: module widgets and contextual widgets:
 
 ![Clients Widget (no data)](images/clients.png)
 
@@ -67,7 +67,7 @@ Widgets associated with modules display specific information from the respective
 - Vault
 - Wireless
 
-### Advanced widgets
+### Contextual widgets
 
 The rest of the widgets do not interact directly with a single module, but rather focus on providing context to the visualization in general.
 
@@ -200,7 +200,7 @@ The status of services for each **manager** can be viewed and it provides direct
 
 Alarms that have been triggered at some point can be viewed and it provides direct access to the **alarm configuration**.
 
-![Alarm widget](images/alarms_widget.png)
+![Alarm widget](images/alarm_widget.png)
 
 *Alarm widget* 
 
@@ -214,6 +214,14 @@ Based on the chosen graph type, it will display
 ![Monitor widget](images/monitor_widget.png)
 
 *Monitor widget*
+
+## Copy the dashboard URL
+
+With an open dashboard, we can copy the dashboard URL to the operating system's clipboard, to later share it with other users or save it as needed.
+
+![Action to copy the dashboard URL](images/dashboard_list.png)
+
+*Action to copy the dashboard URL*
 
 ## Time machine
 
