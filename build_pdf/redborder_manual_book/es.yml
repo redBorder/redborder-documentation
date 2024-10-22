@@ -23,7 +23,6 @@ plugins:
 nav:
   - index.es.md
   - manager/redborder_basics/ch1_what_is_redborder.es.md
-  - manager/redborder_basics/ch2_redborder_installation.es.md
   - manager/redborder_basics/ch3_web_platform.es.md
   - manager/redborder_basics/ch4_1_modules.es.md
   - manager/redborder_basics/ch4_2_modules_menu_options.es.md

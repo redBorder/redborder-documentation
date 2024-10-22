@@ -8,6 +8,55 @@ Installing the RedBorder Manager is the first step to start monitoring and prote
 !!! tip "Recommendation..."
     Have a minimal knowledge of networking, as well as basic networking concepts.
 
+## Basic scenario for Redborder installation
+
+A typical basic scenario proposed by the solution consists of a set of sensors arranged at different sensitive points of the organization's network that will connect to a Manager or manager cluster for management and monitoring.
+
+These points are formed by network links, called segments, through which sensitive traffic will flow and which the sensor will analyze more or less transparently, depending on the configured operating mode (IPS/IDS or Flow).
+
+For the planning of sensor installation, some fundamental aspects should be taken into account:
+
+- **Bypass segments** (specific network interfaces paired, usually with bypass support) will be placed in the middle of the traffic to be analyzed.
+- **Management interfaces** (in bonding form) for remote access both from normal equipment and from the Manager.
+- **IPMI access interfaces for remote hardware management** (SOL or Serial Over LAN connection, iKVM, and IPMI commands such as start, restart, and shutdown).
+
+For the **Manager**, specific hardware is not necessary; **the only condition is the existence of one or more network interfaces.**
+
+!!! info "Keep in mind..."
+
+    In case a **cluster** has been created, two network interfaces are necessary: one for the management network (Management IP Address) and another for the synchronization network (Sync IP address).
+
+In this way, it allows the creation of a bonding for management and connection with the sensors and another bonding (optional) for their communications towards other networks. Both systems support the 802.1q standard for virtual LAN (optional when configuring).
+
+!!! warning "Important"
+
+    It is **important** to first configure the Manager (or manager cluster) before configuring the sensors.
+
+    The Manager must be operational and in a network accessible to the sensors. Some of the sensor configuration processes depend on access to the Manager.
+
+![Basic scenario for Manager installation](images/ch01_img001.png)
+
+Basic scenario for Manager installation
+
+## User Interface Structure of the Installation Menu
+
+For our new version of Redborder NG, we have completely revamped the installation wizard. Now we have a more intuitive and easier-to-use wizard, as well as new configurations for the new additions to the platform.
+
+![Initial screen of the installation wizard](images/ch01_img002.png)
+
+Initial screen of the installation wizard
+
+!!! info "Keep in mind..."
+    At the moment, the installation wizard is **only available in English.**
+
+### Option Selection
+
+Navigating through our new installation wizard is very straightforward:
+
+- Move between available options: use the **arrow keys**.
+- Check a checkbox: press the **space** key.
+- Select an option: press the **enter** key.
+
 ## Installation Requirements
 
 !!! info "Please note..."
