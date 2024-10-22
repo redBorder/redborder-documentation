@@ -39,7 +39,7 @@ La plataforma cuenta con una función de búsqueda integral. Puede utilizarla pa
 
 Para abrir una página en los resultados de la búsqueda simplemente haga clic (o toque en el móvil) en la página deseada en la lista mostrada.
 
-## Primeros Pasos
+### ¿Qué es lo siguiente?
 
 Si esta es su primera vez visitando esta plataforma de documentación, puede visitar la página [primeros pasos](guides/getting_started/first_steps.es.md) para ver la información inicial para aprender sobre RedBorder.
 
