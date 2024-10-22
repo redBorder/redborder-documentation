@@ -20,7 +20,7 @@ La implementación exitosa del IPS de RedBorder requiere una máquina con el sis
 La primera acción para comenzar a monitorizar tu red con RedBorder es obtener los paquetes oficiales más recientes de redBorder para **Rocky Linux 9** disponibles en [repo.redborder.com](https://repo.redborder.com).
 
 ``` bash title="Latest"
-dnf install epel-release -y && rpm -ivh https://repo.redborder.com/ng/24.10/rhel/9/x86_64/redborder-repo-24.10-0.0.1-1.el9.rb.noarch.rpm
+dnf install epel-release -y && rpm -ivh https://repo.redborder.com/ng/24.11/rhel/9/x86_64/redborder-repo-24.11-0.0.1-1.el9.rb.noarch.rpm
 ```
 
 ``` bash title="IPS"

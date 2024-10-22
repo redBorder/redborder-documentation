@@ -24,7 +24,7 @@ The first step to start monitoring your network with RedBorder is to obtain the 
 ## Installing the RPM
 
 ``` bash title="Latest"
-dnf install epel-release -y && rpm -ivh https://repo.redborder.com/ng/24.10/rhel/9/x86_64/redborder-repo-24.10-0.0.1-1.el9.rb.noarch.rpm
+dnf install epel-release -y && rpm -ivh https://repo.redborder.com/ng/24.11/rhel/9/x86_64/redborder-repo-24.11-0.0.1-1.el9.rb.noarch.rpm
 ```
 
 ``` bash title="Proxy"
