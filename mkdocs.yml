@@ -8,6 +8,8 @@ edit_uri: edit/master/docs
 
 theme:
   name: material
+  logo: assets/images/redborder-logo-white-crop-u4409.png
+  favicon: assets/images/redborder-logo-white-crop-u4409.png
   palette:   
     # Palette toggle for light mode
     - scheme: default
@@ -22,7 +24,6 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
-  favicon: assets/images/redborder-logo-white-crop-u4409.png
   features:
     - content.action.edit
     - content.code.copy

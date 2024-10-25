@@ -1,8 +1,88 @@
 ---
-title: Inicio
+title: Home
 ---
+<!-- Additional styles for landing page -->
+  <style>
+    .mdx-container {
+      background-size: contain;
+    }
 
-# Documentación de RedBorder
+    .mdx-hero {
+
+    }
+    .mdx-hero h1 {
+        color: currentcolor;
+        margin-bottom: 1rem;
+        font-size: 2.6rem;
+    }
+    @media screen and (max-width: 29.9375em) {
+        .mdx-hero h1 {
+            font-size: 1.4rem;
+        }
+    }
+
+    @media screen and (min-width: 60em) {
+        .mdx-hero {
+            align-items: stretch;
+            display: flex;
+        }
+        .mdx-hero__content {
+            max-width: 38rem;
+        }
+        .mdx-hero__image {
+            order: 1;
+            transform: translateX(4rem);
+            width: 38rem;
+        }
+    }
+    @media screen and (min-width: 76.25em) {
+      .mdx-hero__image {
+        transform: translateX(8rem);
+      }
+    }
+    .mdx-hero .md-button {
+      border-color: var(--hb-hero-color);
+    }
+    .mdx-hero .md-button--primary {
+      color: var(--md-primary-fg-color);
+      background-color: var(--hb-hero-color);
+      border-color: transparent;
+      margin-right: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .md-main .md-button--primary {
+      color: var(--md-primary-fg-color);
+      background-color: var(--hb-hero-color);
+      border-color: transparent;
+    }
+
+    nav[class="md-tabs"] {
+      border-bottom: none;
+    }
+</style>
+
+<div class="home-logo-item">
+  <img src="/assets/images/redborder-logo-max-dark.png" alt="redborder" class="light-logo"/>
+  <img src="/assets/images/redborder-logo-max-ligth.png" alt="redborder" class="dark-logo"/>
+</div>
+
+<section class="mdx-container">
+  <div class="md-grid md-typeset">
+    <div class="mdx-hero">
+      <div class="mdx-hero__content">
+        <h1>Abierta, Activa y Profesional <div id="typewriter">Plataforma NDR</div></h1>
+        <h3>Redborder es una plataforma de ciberseguridad de código abierto para la Detección y Respuesta en Redes (NDR) que ayuda a monitorear y visualizar incidentes en la red en tiempo real.</h3>
+        <a href="manager/redborder_basics/ch2_redborder_installation/" class="md-button md-button--primary">
+          Instala Redborder
+        </a>
+        <a href="https://redborder.com/" class="md-button" target="_blank">
+          Visita nuestro sitio web oficial
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
 ## Bienvenido
 
