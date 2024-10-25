@@ -11,7 +11,7 @@ This is the redBorder documentation repository.
 
 This is a python project. To install requirements use pip:
 
-`pip3 install -r requirements`
+`pip3 install -r requirements.txt`
 
 ## Building the documentation locally
 
