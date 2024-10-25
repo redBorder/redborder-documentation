@@ -1,21 +1,17 @@
 
 # What is Redborder Manager?
 
-The platform unifies the different data sources provided by applications and probes. Additionally, it includes a set of common features: customizable panels and reports, correlation, analysis engines, user management, and layered storage.
+**Redborder Manager** is the core of **Redborder NDR**, a platform that integrates data from multiple sources and applications into a single, scalable system capable of handling millions of events per second. Key features include customizable dashboards, reports, advanced analysis, user management, and secure data storage.
 
-Applications are within the platform and can be installed as plugins. These focus on digesting new types of data.
+Applications within Redborder Manager focus on specific areas:
 
-Probes are located outside the platform but are managed from it, and their function is to create new types of data and inspection capabilities.
+- **Incidents**: Centralized tracking and management for quick threat response.
+- **Traffic**: Monitors network flow (e.g., SFlow, NetFlow) and uses AI to detect anomalies.
+- **Intrusion**: Real-time detection of malicious activity with a Network Intrusion Detection System (NIDS).
+- **Monitor**: Tracks hardware health and network performance with SNMP.
+- **Scanner**: Scans for vulnerabilities, identifying risks and providing reports for mitigation.
+- **Vault**: Collects and stores logs, centralizing data for better management.
+- **Mobility**: Monitors mobile devices to ensure security compliance.
+- **Reports**: Generates detailed, customizable reports for audits and analysis.
 
-Depending on the applications integrated into the platform, the user will see different options in the menu bar. The applications available in this new version of Redborder are as follows:
-
-- Business Intelligence
-<!-- - Malware -->
-- Traffic
-- Intrusion
-- Monitor
-- Vault
-- Mobility
-- Reports
-
-Additionally, Redborder now includes an **anomaly detection system powered by artificial intelligence**, which will be constantly learning about trends and normal data behavior in the different applications of the platform.
+This unified system enables comprehensive data oversight and streamlined security management across the network.

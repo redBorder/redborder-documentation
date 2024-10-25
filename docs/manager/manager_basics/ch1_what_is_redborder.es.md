@@ -1,25 +1,17 @@
 
 # ¿Qué es Redborder Manager?
 
-**Redborder** es la última plataforma abierta, activa y escalable de Ciberseguridad y Análisis en tiempo real de Tráfico de Red (NTA). Se basa en la tecnología Big Data para empresas y proveedores de servicios.
+**Redborder Manager** es el núcleo de **Redborder NDR**, una plataforma que integra datos de múltiples fuentes y aplicaciones en un sistema único y escalable, capaz de manejar millones de eventos por segundo. Sus principales características incluyen dashboards y reportes personalizables, análisis avanzados, gestión de usuarios y almacenamiento seguro de datos.
 
-Su capacidad para ingerir, analizar y reportar grandes cantidades de datos se ha desarrollado y probado en entornos de muy alta demanda, así como el Análisis de Tráfico de Red, la Ciberseguridad o el análisis e informe de conexiones a través de redes inalámbricas en distintos lugares.
+Las aplicaciones dentro de Redborder Manager se centran en áreas específicas:
 
-La plataforma unifica las diferentes fuentes de datos proporcionadas por las aplicaciones y las sondas. Además, incluye una serie de características comunes: paneles e informes personalizables, correlación, motores de análisis, gestión de usuarios y almacenamiento en capas.
+- **Incidentes**: Seguimiento y gestión centralizada para una rápida respuesta a amenazas.
+- **Tráfico**: Monitorea el flujo de red (e.g., SFlow, NetFlow) y utiliza IA para detectar anomalías.
+- **Intrusión**: Detección en tiempo real de actividades maliciosas con un Sistema de Detección de Intrusiones de Red (NIDS).
+- **Monitor**: Supervisa la salud del hardware y el rendimiento de la red con SNMP.
+- **Escáner**: Realiza escaneos de vulnerabilidades, identifica riesgos y proporciona informes para su mitigación.
+- **Bóveda**: Recopila y almacena logs, centralizando los datos para una mejor gestión.
+- **Movilidad**: Monitorea dispositivos móviles para asegurar el cumplimiento de seguridad.
+- **Informes**: Genera reportes detallados y personalizables para auditorías y análisis.
 
-Las aplicaciones se encuentran dentro de la plataforma y se pueden instalar como si fueran complementos. Estos se centran en digerir nuevos tipos de datos.
-
-Las sondas se sitúan fuera de la plataforma, pero se gestionan desde ella y su función es la creación de nuevos tipos de datos y capacidades de inspección.
-
-Dependiendo de las aplicaciones integradas en la plataforma, el usuario verá una u otras opciones en la barra de menú. Las aplicaciones que están disponibles en esta nueva versión de Redborder son las siguientes:
-
-- Business Intelligence
-<!-- - Malware -->
-- Tráfico
-- Intrusión
-- Monitor
-- Vault
-- Movilidad
-- Informes
-
-Además, ahora redborder incluye un **sistema de detección de anomalías potenciado por inteligencia artificial**, que estará constantemente aprendiendo sobre las tendencias y el comportamiento normal de los datos en las diferentes aplicaciones de la plataforma.
+Este sistema unificado permite una supervisión completa de los datos y una gestión de seguridad optimizada en toda la red.
