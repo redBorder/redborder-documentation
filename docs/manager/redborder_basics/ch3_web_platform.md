@@ -66,6 +66,12 @@ Let's make a quick description of the options that can be found in the menu bar,
 
 Dashboard
 
+*Incidents*: Acts as a task manager where users can view and manage events marked as incidents. Each user can have assigned incidents that require investigation, allowing for efficient tracking and resolution of security events.
+
+![Incidents View](../more_in_detail/images/ch05_1_incidents_view.png)
+
+*Incidents View*
+
 *Events*: Next, the user can view events whose information comes from sensors registered in their corresponding section. Later, each function and how these sensors are registered will be explained in detail. In the attached screenshot: Vault
 
 ![Events](images/ch03_img005.png)
