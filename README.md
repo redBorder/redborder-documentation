@@ -9,7 +9,7 @@ This documentation site uses [MkDocs](https://www.mkdocs.org/) along with [Mater
 Install python dependencies using pip:
 ```pip3 install -r requirements.txt```
 
-## Running local iste
+## Running local site
 
 Run site locally at http://localhost:8000:
 ```bash
@@ -25,6 +25,10 @@ Build site for production:
 ```bash
 mkdocs build
 ```
+
+## Building PDFs version
+
+Get into [build_pdf](https://github.com/redBorder/redborder-documentation/tree/quick_fixes/build_pdf) directory and folow the README steps
 ## License
 
 MIT license.
