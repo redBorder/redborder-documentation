@@ -1,0 +1,41 @@
+name: Create PDF
+
+on:
+  push:
+    branches:
+      - Feature/#18124_autobuild_pdf
+      # - main
+
+jobs:
+  convert_to_pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      
+      - name: Install MkDocs and required plugins
+        run: |
+          pip install mkdocs \
+              mkdocs-awesome-pages-plugin \
+              mkdocs-git-revision-date-localized-plugin \
+              mkdocs-localsearch \
+              mkdocs-material \
+              mkdocs-redirects \
+              mkdocs-static-i18n \
+              jieba \
+              mkdocs-with-pdf \
+              qrcode 
+      
+      - name: Build PDFs
+        run: bash build_pdf/build_all.sh
+
+      - name: Upload PDF artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: documentation-pdfs
+          path: |
+            /home/runner/work/redborder-documentation/redborder-documentation/**/*.pdf
