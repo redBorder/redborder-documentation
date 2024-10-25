@@ -1,7 +1,7 @@
 
 # Instalación del manager de RedBorder
 
-Bienvenido al proceso de instalación de RedBorder. Gracias a esta guía, cualquiera puede preparar la plataforma **sin tener conocimientos específicos de programación en Linux**.
+Bienvenido al proceso de instalación de RedBorder.
 
 Instalar el Manager de RedBorder es el primer paso para empezar a monitorizar y proteger la información de su red gracias a la solución de RedBorder. Debe verificar el contenido de este capítulo antes de comenzar la instalación de la plataforma (también conocido como el Manager de RedBorder).
 
