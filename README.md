@@ -1,12 +1,10 @@
 ## redBorder documentation
 
-Welcome to the official documentation for redBorder.
+Welcome to the official documentation for redBorder. Site is deployed at https://docs.redborder.com.
 
 ## Installation
 
 This documentation site uses [MkDocs](https://www.mkdocs.org/) along with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme.
-
-Site is deployed at https://docs.redborder.com.
 
 Install python dependencies using pip:
 ```pip3 install -r requirements.txt```
