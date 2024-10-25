@@ -5,6 +5,7 @@ docs_dir: '../../docs'
 
 theme:
   name: material
+  custom_dir: '../../overrides'
   font:
     text: Red Hat Text
   features:
