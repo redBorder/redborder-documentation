@@ -28,7 +28,7 @@ mkdocs build
 
 ## Building PDFs version
 
-Get into [build_pdf](https://github.com/redBorder/redborder-documentation/tree/quick_fixes/build_pdf) directory and folow the README steps
+Get into [build_pdf](https://github.com/redBorder/redborder-documentation/tree/quick_fixes/build_pdf) directory and folow the README steps.
 ## License
 
 MIT license.
