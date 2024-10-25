@@ -1,4 +1,4 @@
-# Sensor IPS
+# Registro del Sensor IPS
 
 ## Identificar el sensor IPS
 

@@ -1,4 +1,4 @@
-# IPS Sensor
+# IPS Sensor Registration
 
 ## Identify the IPS sensor
 
@@ -72,3 +72,5 @@ At the end of the whole registration process, the sensor indicator will update i
 ![IPS configured](images/IPS_configured.png)
 
 IPS configured
+
+On next chapter, you will set the rules the IPS needs to recognize traffic as intrusion.
