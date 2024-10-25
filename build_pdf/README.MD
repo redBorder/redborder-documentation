@@ -28,5 +28,5 @@ mkdocs build -f path_to_config_file.yml
 
 Execute the following command:
 ```bash
-bash build_all.sh
+./build_all.sh
 ```
