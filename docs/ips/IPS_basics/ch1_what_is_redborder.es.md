@@ -28,13 +28,13 @@ Para el **Manager**, al no ser necesario un hardware específico, la única cond
 !!! warning "Si no ha instalado el manager..."
 	Es importante haber relizado la configuración del Manager (o cluster de managers) antes de configurar y registrar el primer sensor IPS. El Manager debe estar operativo y en una red accesible a los sensores. Algunos de los procesos de configuración de los sensores dependen del acceso al Manager. El escenario de instalación del Manager Redborder es el mismo independientemente de los sensores que se instalen y registren en el mismo IPS, Flow o Vault
 
-![Escenario básico para la instalación del IPS](../../manager/redborder_basics/images/ch01_img001.png)
+![Escenario básico para la instalación del IPS](../../manager/manager_basics/images/ch01_img001.png)
 
 Escenario básico para la instalación del IPS
 
 ## Estructura de la interfaz de usuario del asistente de instalación
 
-![Pantalla inicial del asistente de instalación](../../manager/redborder_basics/images/ch01_img002.png)
+![Pantalla inicial del asistente de instalación](../../manager/manager_basics/images/ch01_img002.png)
 
 Pantalla inicial del asistente de instalación
 

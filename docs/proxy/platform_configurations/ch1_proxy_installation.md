@@ -55,7 +55,7 @@ Starting the wizard
 
 If you are unsure about the current configuration, you can cancel with the "No" option, which will show the following screen before returning to the console view.
 
-![Cancelling the wizard](../../manager/redborder_basics/images/ch02_cancel_wizard.png)
+![Cancelling the wizard](../../manager/manager_basics/images/ch02_cancel_wizard.png)
 
 Cancelling the wizard
 
@@ -66,25 +66,25 @@ Cancelling the wizard
 
 This step is optional. If you are sure that the network interfaces are already configured, you can skip this step. Otherwise, enter the configuration by pressing "Yes".
 
-![Starting network configuration](../../manager/redborder_basics/images/ch02_start_network_conf.png)
+![Starting network configuration](../../manager/manager_basics/images/ch02_start_network_conf.png)
 
 Starting network configuration
 
 In the lower box, the existing network interfaces on the device in question are listed. Below all the interfaces that the device has, there is the `Finalize` option, which we can select **after successfully configuring** the interfaces.
 
-![Network configuration](../../manager/redborder_basics/images/ch02_img001.png)
+![Network configuration](../../manager/manager_basics/images/ch02_img001.png)
 
 Network configuration
 
 By selecting an interface and entering it, we are given the option to configure it with a static IP address or to operate dynamically (with DHCP).
 
-![Network interface configuration](../../manager/redborder_basics/images/ch02_img002.png)
+![Network interface configuration](../../manager/manager_basics/images/ch02_img002.png)
 
 Network interface configuration
 
 If you select the static IP option, you will need to specify the IP, subnet mask, and default gateway:
 
-![Static interface configuration](../../manager/redborder_basics/images/ch02_img003.png)
+![Static interface configuration](../../manager/manager_basics/images/ch02_img003.png)
 
 Static interface configuration
 
@@ -100,13 +100,13 @@ Select management interface
 
 The setup wizard will give you the option to choose whether or not to configure DNS servers if you actually need to configure a DNS.
 
-![Starting DNS Configuration](../../manager/redborder_basics/images/ch02_start_dns.png)
+![Starting DNS Configuration](../../manager/manager_basics/images/ch02_start_dns.png)
 
 Starting DNS configuration
 
 If you need to configure DNS, set up at least one server. This can be done on the following screen:
 
-![DNS Configuration](../../manager/redborder_basics/images/ch02_img004.png)
+![DNS Configuration](../../manager/manager_basics/images/ch02_img004.png)
 
 DNS configuration
 

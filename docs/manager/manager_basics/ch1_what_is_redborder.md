@@ -1,9 +1,5 @@
 
-# What is Redborder?
-
-**Redborder** is the latest open, active, and scalable platform for Cybersecurity and Real-time Network Traffic Analysis (NTA). It is based on Big Data technology for enterprises and service providers.
-
-Its ability to ingest, analyze, and report large amounts of data has been developed and tested in high-demand environments, as well as Network Traffic Analysis, Cybersecurity, or analysis and reporting of connections through wireless networks in different locations.
+# What is Redborder Manager?
 
 The platform unifies the different data sources provided by applications and probes. Additionally, it includes a set of common features: customizable panels and reports, correlation, analysis engines, user management, and layered storage.
 

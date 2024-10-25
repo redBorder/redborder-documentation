@@ -4,7 +4,7 @@ This chapter explains how to view dashboards and what information is contained i
 
 Dashboards allow you to have a visual summary that includes the main KPIs (Key Performance Indicators) that are necessary to analyze the network infrastructure. The user can combine widgets to obtain valuable information about trends, changes, and exceptions associated with the traffic that occurs on or passes through the network. These visual control panels provide an overview and summary of important data on a single screen, allowing users to visualize and monitor key information quickly and efficiently in the context of Redborder Manager.
 
-![Redborder default dashboard](../redborder_basics/images/ch03_img002.png)
+![Redborder default dashboard](../manager_basics/images/ch03_img002.png)
 
 *Redborder default dashboard*
 

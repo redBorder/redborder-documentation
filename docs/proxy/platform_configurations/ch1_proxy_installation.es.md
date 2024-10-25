@@ -55,7 +55,7 @@ Iniciando el asistente
 
 Si no está seguro sobre la configuración actual, puede cancelar con la opción "No", la cual mostrará la siguiente pantalla antes de volver a la vista de la consola.
 
-![Cancelando el asistente](../../manager/redborder_basics/images/ch02_cancel_wizard.png)
+![Cancelando el asistente](../../manager/manager_basics/images/ch02_cancel_wizard.png)
 
 Cancelando el asistente
 
@@ -66,25 +66,25 @@ Cancelando el asistente
 
 Este paso es opcional. Si está seguro de que las interfaces de red ya están configuradas, puede omitir este paso. De lo contrario, entra en la configuración presionando "Sí".
 
-![Inicio de la configuración de red](../../manager/redborder_basics/images/ch02_start_network_conf.png)
+![Inicio de la configuración de red](../../manager/manager_basics/images/ch02_start_network_conf.png)
 
 Inicio de la configuración de red
 
 En el recuadro inferior se listan las interfaces de red existentes en el equipo en cuestión. Debajo de todas las interfaces que posee el equipo, está la opción `Finalize`, que podemos seleccionar **después de haber configurado** exitosamente las interfaces.
 
-![Configuración de red](../../manager/redborder_basics/images/ch02_img001.png)
+![Configuración de red](../../manager/manager_basics/images/ch02_img001.png)
 
 Configuración de red
 
 Al seleccionar una interfaz y entrar en ella, se nos da la opción de configurarla con una dirección IP estática o que esta funcione dinámicamente (con DHCP).
 
-![Configuración de interfaz de red](../../manager/redborder_basics/images/ch02_img002.png)
+![Configuración de interfaz de red](../../manager/manager_basics/images/ch02_img002.png)
 
 Configuración de interfaz de red
 
 En caso de seleccionar la opción de IP estática, se deberá especificar la IP, la máscara de red y la puerta de enlace por defecto:
 
-![Configuración de interfaz estática](../../manager/redborder_basics/images/ch02_img003.png)
+![Configuración de interfaz estática](../../manager/manager_basics/images/ch02_img003.png)
 
 Configuración de interfaz estática
 
@@ -100,13 +100,13 @@ Seleccionar interfaz de gestión
 
 El asistente de instalación le dará la opción de elegir si quiere o no configurar servidores DNS, si es que realmente se desea configurar un DNS.
 
-![Empezar la configuración de los DNS](../../manager/redborder_basics/images/ch02_start_dns.png)
+![Empezar la configuración de los DNS](../../manager/manager_basics/images/ch02_start_dns.png)
 
 Empezar la configuración de los DNS
 
 Si necesita configurar DNS, configura al menos un servidor. Esto se puede hacer en la pantalla siguiente:
 
-![Configuración de DNS](../../manager/redborder_basics/images/ch02_img004.png)
+![Configuración de DNS](../../manager/manager_basics/images/ch02_img004.png)
 
 Configuración de DNS
 

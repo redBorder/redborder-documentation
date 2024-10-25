@@ -1,5 +1,5 @@
 
-# ¿Qué es Redborder?
+# ¿Qué es Redborder Manager?
 
 **Redborder** es la última plataforma abierta, activa y escalable de Ciberseguridad y Análisis en tiempo real de Tráfico de Red (NTA). Se basa en la tecnología Big Data para empresas y proveedores de servicios.
 

@@ -22,10 +22,10 @@ plugins:
 # Customize your own book
 nav:
   - index.md
-  - manager/redborder_basics/ch1_what_is_redborder.md
-  - manager/redborder_basics/ch3_web_platform.md
-  - manager/redborder_basics/ch4_1_modules.md
-  - manager/redborder_basics/ch4_2_modules_menu_options.md
+  - manager/manager_basics/ch1_what_is_redborder.md
+  - manager/manager_basics/ch3_web_platform.md
+  - manager/manager_basics/ch4_1_modules.md
+  - manager/manager_basics/ch4_2_modules_menu_options.md
   - manager/more_in_detail/ch4_3_filtering_events.md
   - manager/more_in_detail/ch4_4_ip_reputation_monitorization.md
   - manager/more_in_detail/ch4_5_views.md

@@ -1,7 +1,7 @@
 ---
 nav:
     - ... | index*.md
-    - Redborder basics: redborder_basics
+    - Manager basics: manager_basics
     - Seeing data in more detail: more_in_detail
     - Platform configurations: platform_configurations
     - Redborder API: redborder_api
