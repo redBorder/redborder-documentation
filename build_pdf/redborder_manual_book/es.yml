@@ -30,11 +30,12 @@ nav:
   - manager/more_in_detail/ch4_4_ip_reputation_monitorization.es.md
   - manager/more_in_detail/ch4_5_views.es.md
   - manager/more_in_detail/ch4_12_anomalies.es.md
-  - manager/more_in_detail/ch5_dashboards.es.md
+  - manager/more_in_detail/ch5_dashboards_view.es.md
   - manager/more_in_detail/ch5_1_incidents.es.md
   - manager/platform_configurations/ch6_sensors.es.md
   - manager/platform_configurations/ch7_tools_and_admin.es.md
   - manager/platform_configurations/ch7_4_general_config.es.md
+  - manager/platform_configurations/ch7_5_dashboards_administration.es.md
   - manager/redborder_api/ch10_introduction.es.md
   - manager/redborder_api/ch10_use_examples.es.md
   - manager/redborder_api/ch11_model_sharing.es.md

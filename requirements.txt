@@ -1,11 +1,11 @@
 mkdocs
-mkdocs-awesome-pages-plugin
-mkdocs-git-revision-date-localized-plugin
+mkdocs-awesome-pages-plugin == 2.9.3
+mkdocs-git-revision-date-localized-plugin == 1.2.9
 mkdocs-localsearch
-mkdocs-material
+mkdocs-material == 9.5.40
 mkdocs-redirects
 mkdocs-static-i18n
 jieba
 mkdocs-with-pdf
-qrcode
+qrcode ==8.0
 WeasyPrint == 52.5
