@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Inicio
 ---
 <!-- Additional styles for landing page -->
   <style>
