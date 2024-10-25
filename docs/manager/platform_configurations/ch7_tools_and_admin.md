@@ -45,7 +45,7 @@ Expand the following tabs to read a description of the options found in the tool
 
     - **Outliers**
 
-        RedBorder uses data analysis techniques to provide notifications of potential dangers, this option allows the user to configure smart alarms that will be triggered if any network anomalies are detected within the filters specified in the *Conditions* section.
+        Redborder uses data analysis techniques to provide notifications of potential dangers, this option allows the user to configure smart alarms that will be triggered if any network anomalies are detected within the filters specified in the *Conditions* section.
 
         Activating this option will perform an anomaly analysis once the configured **Time window** in the alarm's *General Settings* has passed.
 

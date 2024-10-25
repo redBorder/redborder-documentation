@@ -1,9 +1,9 @@
 
-# Instalación del manager de RedBorder
+# Instalación del manager de Redborder
 
-Bienvenido al proceso de instalación de RedBorder.
+Bienvenido al proceso de instalación de Redborder.
 
-Instalar el Manager de RedBorder es el primer paso para empezar a monitorizar y proteger la información de su red gracias a la solución de RedBorder. Debe verificar el contenido de este capítulo antes de comenzar la instalación de la plataforma (también conocido como el Manager de RedBorder).
+Instalar el Manager de Redborder es el primer paso para empezar a monitorizar y proteger la información de su red gracias a la solución de Redborder. Debe verificar el contenido de este capítulo antes de comenzar la instalación de la plataforma (también conocido como el Manager de Redborder).
 
 !!! tip "Se recomienda..."
     Tener un conocimiento mínimo de la red, así como sobre conceptos básicos de redes.
@@ -62,7 +62,7 @@ Navegar por nuestro nuevo asistente de instalación es muy sencillo:
 !!! info "Ten en cuenta..."
     Si ejecuta la plataforma en un entorno virtual, es **posible que disminuya el rendimiento** en comparación con una implementación en una máquina física.
 
-La implementación exitosa de RedBorder requiere de al menos una máquina con el sistema operativo **Rocky Linux 9** instalado. Los requisitos de hardware dependerán de si instalamos un sólo manager o un cluster. Para cada caso, estos requisitos son:
+La implementación exitosa de Redborder requiere de al menos una máquina con el sistema operativo **Rocky Linux 9** instalado. Los requisitos de hardware dependerán de si instalamos un sólo manager o un cluster. Para cada caso, estos requisitos son:
 
 === "Un sólo manager"
 
@@ -80,7 +80,7 @@ La implementación exitosa de RedBorder requiere de al menos una máquina con el
 
 ## Proceso de instalación
 
-La primera acción para comenzar a monitorizar tu red con RedBorder es obtener los paquetes oficiales más recientes de redBorder para **Rocky Linux 9** disponibles en [repo.redborder.com](https://repo.redborder.com).
+La primera acción para comenzar a monitorizar tu red con Redborder es obtener los paquetes oficiales más recientes de Redborder para **Rocky Linux 9** disponibles en [repo.redborder.com](https://repo.redborder.com).
 
 !!! info "En el caso de instalar un cluster..."
     Todo el proceso de instalación especificado en esta página debe repetirse para cada manager que conformará el clúster.
@@ -93,7 +93,7 @@ dnf install epel-release && rpm -ivh https://repo.redborder.com/ng/24.11/rhel/9/
 dnf install redborder-manager
 ```
 
-Ya con los paquetes descargados e instalados, el siguiente paso es configurar RedBorder, para ello reniciamos la sesión en consola:
+Ya con los paquetes descargados e instalados, el siguiente paso es configurar Redborder, para ello reniciamos la sesión en consola:
 
 ``` bash title="Comando de reinicio de consola"
 /bin/bash --login
@@ -176,7 +176,7 @@ Configuración de DNS
 
 ### Nombre de host y dominio
 
-Durante la instalación, se da la opción de decidir cuál será el nombre de host para el nodo de RedBorder, así como también el dominio utilizado para la comunicación con posibles servidores Proxy de RedBorder o IPS de RedBorder.
+Durante la instalación, se da la opción de decidir cuál será el nombre de host para el nodo de Redborder, así como también el dominio utilizado para la comunicación con posibles servidores Proxy de Redborder o IPS de Redborder.
 
 El nombre de host a escoger debe respetar el estandar **RFC1123**.
 
@@ -189,7 +189,7 @@ Configuración de hostname y dominio
 
 ### Configuración de servicio de clústeres (Serf)
 
-RedBorder tiene la capacidad de trabajar de manera distribuida, repartiendo funciones o carga de trabajo entre dos o más nodos, a través de una red de sincronismo que permite a los nodos comunicarse y operar, para ello, empleamos **Serf**(1), es este servicio el que se encarga de crear el cluster de managers y definir los roles de los nodos.
+Redborder tiene la capacidad de trabajar de manera distribuida, repartiendo funciones o carga de trabajo entre dos o más nodos, a través de una red de sincronismo que permite a los nodos comunicarse y operar, para ello, empleamos **Serf**(1), es este servicio el que se encarga de crear el cluster de managers y definir los roles de los nodos.
 { .annotate }
 
 ![Iniciando la configuración de Serf](images/ch02_start_serf_configuration.png)
@@ -219,15 +219,15 @@ Ponga una contraseña entre 6 y 20 caracteres para el Serf.
 
 ### Almacenamiento con Amazon S3 (WIP)
 
-Cuando se realiza una instalación remota de RedBorder en AWS, es posible también utilizar el servicio de almacenamiento remoto de Amazon con S3.
+Cuando se realiza una instalación remota de Redborder en AWS, es posible también utilizar el servicio de almacenamiento remoto de Amazon con S3.
 
 ### Base de datos externa (WIP)
 
-Es posible también, configurar RedBorder para utilizar el servicio de Amazon RDS o alguna otra base de dados de PostgreSQL.
+Es posible también, configurar Redborder para utilizar el servicio de Amazon RDS o alguna otra base de dados de PostgreSQL.
 
 ### Seleccionar el modo del manager
 
-Dependiendo de la instalación de RedBorder que desee realizar, puede indicar a la plataforma qué debe ejecutarse en el nodo que está instalando. El caso más común será la instalación en modo `full`, pero si desea ahorrar recursos, elija uno de los otros modos en su lugar. En caso de una instalación en clúster, uno de los nodos debe estar en modo `full`o `core`. Resumiendo la configuración para cada caso:
+Dependiendo de la instalación de Redborder que desee realizar, puede indicar a la plataforma qué debe ejecutarse en el nodo que está instalando. El caso más común será la instalación en modo `full`, pero si desea ahorrar recursos, elija uno de los otros modos en su lugar. En caso de una instalación en clúster, uno de los nodos debe estar en modo `full`o `core`. Resumiendo la configuración para cada caso:
 
 === "Un sólo manager"
     Elija el modo `full`.

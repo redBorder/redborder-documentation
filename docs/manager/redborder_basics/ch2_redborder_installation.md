@@ -1,9 +1,9 @@
 
-# RedBorder Manager Installation
+# Redborder Manager Installation
 
-Welcome to the RedBorder installation process.
+Welcome to the Redborder installation process.
 
-Installing the RedBorder Manager is the first step to start monitoring and protecting your network information with RedBorder's solution. You should review the content of this chapter before starting the installation of the platform (also known as the RedBorder Manager).
+Installing the Redborder Manager is the first step to start monitoring and protecting your network information with Redborder's solution. You should review the content of this chapter before starting the installation of the platform (also known as the Redborder Manager).
 
 !!! tip "Recommendation..."
     Have a minimal knowledge of networking, as well as basic networking concepts.
@@ -62,7 +62,7 @@ Navigating through our new installation wizard is very straightforward:
 !!! info "Please note..."
     If you run the platform in a virtual environment, **performance may decrease** compared to an implementation on a physical machine.
 
-The successful implementation of RedBorder requires at least one machine with the Rocky Linux 9 operating system installed. The hardware requirements will depend on whether we install a single manager or a cluster. For each case, these requirements are:
+The successful implementation of Redborder requires at least one machine with the Rocky Linux 9 operating system installed. The hardware requirements will depend on whether we install a single manager or a cluster. For each case, these requirements are:
 
 === "Manager"
 
@@ -80,7 +80,7 @@ The successful implementation of RedBorder requires at least one machine with th
 
 ## Installation Process
 
-The first action to start monitoring your network with RedBorder is to obtain the latest official RedBorder packages for **Rocky Linux 9** available at [repo.redborder.com](https://repo.redborder.com).
+The first action to start monitoring your network with Redborder is to obtain the latest official Redborder packages for **Rocky Linux 9** available at [repo.redborder.com](https://repo.redborder.com).
 
 !!! info "In the case of installing a cluster..."
 The entire installation process specified on this page must be repeated for each manager that will make up the cluster.
@@ -93,7 +93,7 @@ dnf install epel-release && rpm -ivh https://repo.redborder.com/ng/24.11/rhel/9/
 dnf install redborder-manager
 ```
 
-With the packages downloaded and installed, the next step is to configure RedBorder. To do this, we restart the console session:
+With the packages downloaded and installed, the next step is to configure Redborder. To do this, we restart the console session:
 
 ``` bash title="Console relogin command"
 /bin/bash --login
@@ -173,7 +173,7 @@ DNS Configuration
 
 ### Hostname and Domain
 
-During installation, you have the option to decide the hostname for the RedBorder node, as well as the domain used for communication with potential RedBorder Proxy servers or RedBorder IPS.
+During installation, you have the option to decide the hostname for the Redborder node, as well as the domain used for communication with potential Redborder Proxy servers or Redborder IPS.
 
 The hostname to choose must comply with the **RFC1123** standard.
 
@@ -186,7 +186,7 @@ Hostname and Domain Configuration
 
 ### Clustering Service Configuration (Serf)
 
-RedBorder has the ability to work in a distributed manner, distributing functions or workload among two or more nodes, through a synchronization network that allows nodes to communicate and operate. For this, we use **Serf**(1), this service is responsible for creating the manager cluster and defining the roles of the nodes.
+Redborder has the ability to work in a distributed manner, distributing functions or workload among two or more nodes, through a synchronization network that allows nodes to communicate and operate. For this, we use **Serf**(1), this service is responsible for creating the manager cluster and defining the roles of the nodes.
 { .annotate }
 
 ![Start Serf Configuration](images/ch02_start_serf_configuration.png)
@@ -215,15 +215,15 @@ Put a password from 6 to 20 characters for Serf.
 
 ### Storage with Amazon S3 (WIP)
 
-When performing a remote installation of RedBorder on AWS, it is also possible to use Amazon's remote storage service with S3.
+When performing a remote installation of Redborder on AWS, it is also possible to use Amazon's remote storage service with S3.
 
 ### External Database (WIP)
 
-It is also possible to configure RedBorder to use the Amazon RDS service or some other PostgreSQL database.
+It is also possible to configure Redborder to use the Amazon RDS service or some other PostgreSQL database.
 
 ### Selecting Manager Mode
 
-Depending on the RedBorder installation you want to perform, you can indicate to the platform what should be executed on the node being installed. The most common case will be the installation the `full` mode, but in case you want to save performance, pick one of other modes instead. In case of a cluster installation, one node should've `full`or `core`mode. Sumerizing for each case:
+Depending on the Redborder installation you want to perform, you can indicate to the platform what should be executed on the node being installed. The most common case will be the installation the `full` mode, but in case you want to save performance, pick one of other modes instead. In case of a cluster installation, one node should've `full`or `core`mode. Sumerizing for each case:
 
 === "Single node"
     Choose the `full` mode.

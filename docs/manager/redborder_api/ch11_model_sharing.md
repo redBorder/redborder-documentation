@@ -1172,7 +1172,7 @@ Expand the following tab to see a complete execution example with a *JSON* respo
                   "enabled": true,
                   "authentication_token": "<API_key>",
                   "sensor_id": 472,
-                  "sensor_name": "redBorder",
+                  "sensor_name": "Redborder",
                   "sensor_uuid": "4935760011107548256"
               },
               {
@@ -1184,7 +1184,7 @@ Expand the following tab to see a complete execution example with a *JSON* respo
                   "enabled": true,
                   "authentication_token": "<API_key>",
                   "sensor_id": 472,
-                  "sensor_name": "redBorder",
+                  "sensor_name": "Redborder",
                   "sensor_uuid": "4935760011107548256"
               },
               {

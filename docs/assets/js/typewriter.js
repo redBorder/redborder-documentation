@@ -4,7 +4,7 @@ document$.subscribe(() => {
   // Define las palabras según el idioma
   const strings = lang === "es" 
       ? ['Plataforma NDR', 'Solución de ciberseguridad', 'IPS de próxima generación']
-      : ['NDR platform', 'Cybersecurity Solution', 'Next Generation IPS'];
+      : ['NDR Platform', 'Cybersecurity Solution', 'Next Generation IPS'];
 
   // Inicializa el efecto de máquina de escribir con las palabras en el idioma correspondiente
   const instance = new Typewriter('#typewriter', {

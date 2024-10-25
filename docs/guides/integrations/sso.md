@@ -2,9 +2,9 @@
 title: Single Sign On
 ---
 
-# Integrate Single Sign On with redBorder manager Web Platform  
+# Integrate Single Sign On with Redborder manager Web Platform  
 
-This documentation provides a step-by-step guide to integrating [Single Sign On](https://en.wikipedia.org/wiki/Single_sign-on) (SSO) using the [SAML protocol](https://en.wikipedia.org/wiki/SAML_2.0) with the redBorder Web Platform. By following these instructions, you will be able to enable SSO and configure it, allowing you to login and register into the redBorder Web Platform.  
+This documentation provides a step-by-step guide to integrating [Single Sign On](https://en.wikipedia.org/wiki/Single_sign-on) (SSO) using the [SAML protocol](https://en.wikipedia.org/wiki/SAML_2.0) with the Redborder Web Platform. By following these instructions, you will be able to enable SSO and configure it, allowing you to login and register into the Redborder Web Platform.  
 
 SAML Protocol diagram:  
 
@@ -29,7 +29,7 @@ After, the SSO login system is enabled. You can check it by going to the login p
 
 ![SSO Login Button](images/sso_login.png)  
 
-## Configure redBorder Web UI to use SSO  
+## Configure Redborder Web UI to use SSO  
 
 1. Go to `General Settings`.  
 2. Click on the  **"Single Sign On"** card.  
@@ -44,7 +44,7 @@ After, the SSO login system is enabled. You can check it by going to the login p
 
 === "IdP Parameters"  
     - **IdP Single Sign On Target URL**: This is the URL that redirects to the IdP when you want to login.  
-    - **IdP Single Logout On Target URL**: This is the URL that redirects to the IdP when you want to log out. There are some IdPs that have not this configuration, then write the redBorder logout path: `<host>/users/logout`.  
+    - **IdP Single Logout On Target URL**: This is the URL that redirects to the IdP when you want to log out. There are some IdPs that have not this configuration, then write the Redborder logout path: `<host>/users/logout`.  
     - **IdP Entity ID**: This is the URL used by the SP to verify the SAML responses coming from the IdP.  
     - **IdP Certificate**: The unique certificate provided by the IdP that allows decrypting the encrypted response of the authentication and get the user attributes.  
 

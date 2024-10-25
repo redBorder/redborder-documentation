@@ -1,12 +1,12 @@
-# Installation of RedBorder IPS
+# Installation of Redborder IPS
 
-The following details the basic installation of a RedBorder IPS, which will be used to analyze traffic and detect intrusions. Due to the specific and heavy workload, it is necessary to have a dedicated machine for this purpose.
+The following details the basic installation of a Redborder IPS, which will be used to analyze traffic and detect intrusions. Due to the specific and heavy workload, it is necessary to have a dedicated machine for this purpose.
 
 There are two installation modes for the IPS: the minimal version that emulates the behavior of a **proxy** and the integrated version on a node that acts as both an IPS and a **manager**. Depending on how we plan to install the IPS, we will use one or the other.
 
 ## Installation Requirements
 
-The successful implementation of the RedBorder IPS requires a machine with the **Rocky Linux 9** operating system installed. Additionally, the preinstallation of a RedBorder **Manager** against which to register the IPS is necessary. Here are the specifications for this IPS:
+The successful implementation of the Redborder IPS requires a machine with the **Rocky Linux 9** operating system installed. Additionally, the preinstallation of a Redborder **Manager** against which to register the IPS is necessary. Here are the specifications for this IPS:
 
 === "Recommended"
 
@@ -17,7 +17,7 @@ The successful implementation of the RedBorder IPS requires a machine with the *
 
 ## Installation Process
 
-The first action to start monitoring your network with RedBorder is to obtain the latest official RedBorder packages for **Rocky Linux 9** available at [repo.redborder.com](https://repo.redborder.com).
+The first action to start monitoring your network with Redborder is to obtain the latest official Redborder packages for **Rocky Linux 9** available at [repo.redborder.com](https://repo.redborder.com).
 
 ``` bash title="Latest"
 dnf install epel-release -y && rpm -ivh https://repo.redborder.com/ng/24.11/rhel/9/x86_64/redborder-repo-24.11-0.0.1-1.el9.rb.noarch.rpm
@@ -27,7 +27,7 @@ dnf install epel-release -y && rpm -ivh https://repo.redborder.com/ng/24.11/rhel
 dnf install redborder-ips -y
 ```
 
-With the packages downloaded and installed, the next step is to configure RedBorder. To do this, restart the session in the console:
+With the packages downloaded and installed, the next step is to configure Redborder. To do this, restart the session in the console:
 ``` bash title="Command to restart the console"
 /bin/bash --login
 ```

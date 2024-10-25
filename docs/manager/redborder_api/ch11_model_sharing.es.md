@@ -1175,7 +1175,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta
                   "enabled": true,
                   "authentication_token": "xxxxxx",
                   "sensor_id": 472,
-                  "sensor_name": "redBorder",
+                  "sensor_name": "Redborder",
                   "sensor_uuid": "4935760011107548256"
               },
               {
@@ -1187,7 +1187,7 @@ Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta
                   "enabled": true,
                   "authentication_token": "xxxxxx",
                   "sensor_id": 472,
-                  "sensor_name": "redBorder",
+                  "sensor_name": "Redborder",
                   "sensor_uuid": "4935760011107548256"
               },
               {

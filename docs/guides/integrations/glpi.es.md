@@ -1,8 +1,8 @@
 # GLPI
 
-## Integrar GLPI con la Plataforma Web redBorder Manager
+## Integrar GLPI con la Plataforma Web Redborder Manager
 
-Esta documentación proporciona una guía paso a paso para integrar [GLPI](https://glpi-project.org/) con la Plataforma Web redBorder. Al seguir estas instrucciones, podrás realizar solicitudes POST a la API de GLPI para crear y gestionar activos dentro de GLPI desde la plataforma redBorder.
+Esta documentación proporciona una guía paso a paso para integrar [GLPI](https://glpi-project.org/) con la Plataforma Web Redborder. Al seguir estas instrucciones, podrás realizar solicitudes POST a la API de GLPI para crear y gestionar activos dentro de GLPI desde la plataforma Redborder.
 
 !!! note "Versión de la Integración"
     Esta integración funciona con la versión 10.0.15 de GLPI.
@@ -31,14 +31,14 @@ http://glpi-api-example/glpi/apirest.php/
 
 
 
-## Configurar la Interfaz Web de redBorder para Usar la API de GLPI
+## Configurar la Interfaz Web de Redborder para Usar la API de GLPI
 
 1. Ve a `Herramientas -> Integraciones`.
 2. Haz click en la carta llamada **"Integración con la API de GLPI"** (en el botón de "Empezar").
 3. Rellena todos los campos.
 4. Presiona el botón **"Actualizar"** para aplicar los cambios.
 
-![Configure redBorder Web UI to Use the GLPI API](images/glpi_step_1.png)
+![Configure Redborder Web UI to Use the GLPI API](images/glpi_step_1.png)
 
 ## Enriquecimiento de Activos
 
@@ -48,4 +48,4 @@ Para enriquecer los activos con datos de GLPI, sigue estos pasos:
 2. Una nueva tarea, **"Inventario GLPI"**, estará disponible. Esta tarea solo será visible si se han configurado los parámetros de GLPI.
 3. Al ejecutar esta tarea, los valores de las direcciones MAC en los objetos serán modificados de acuerdo con la información de GLPI. Es decir, si un valor de MAC tiene un nombre o tipo de objeto diferente, será actualizado en función de la información de GLPI.
 
-![Configure redBorder Web UI to Use the GLPI API](images/glpi_step_2.png)
+![Configure Redborder Web UI to Use the GLPI API](images/glpi_step_2.png)

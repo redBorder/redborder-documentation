@@ -1,11 +1,11 @@
 
 # Primeros pasos
 
-RedBorder es una solución de Big Data de visibilidad de red, análisis de datos y ciberseguridad de código abierto que es escalable según las necesidades de las redes empresariales y los proveedores de servicios.
+Redborder es una solución de Big Data de visibilidad de red, análisis de datos y ciberseguridad de código abierto que es escalable según las necesidades de las redes empresariales y los proveedores de servicios.
 
 ## Requisitos
 
-La implementación exitosa de redBorder requiere una máquina con el sistema operativo **Rocky Linux 9** instalado. Los requisitos de hardware de la máquina deben ser como mínimo:
+La implementación exitosa de Redborder requiere una máquina con el sistema operativo **Rocky Linux 9** instalado. Los requisitos de hardware de la máquina deben ser como mínimo:
 
 === "Manager"
 
@@ -29,7 +29,7 @@ La implementación exitosa de redBorder requiere una máquina con el sistema ope
 
 ### Yum repo { #install-repo data-toc-label="Yum repo" }
 
-Paquetes oficiales más recientes de redBorder para Rocky Linux 9 disponibles en [repo.redborder.com](https://repo.redborder.com)
+Paquetes oficiales más recientes de Redborder para Rocky Linux 9 disponibles en [repo.redborder.com](https://repo.redborder.com)
 
 === "Latest"
 
@@ -37,9 +37,9 @@ Paquetes oficiales más recientes de redBorder para Rocky Linux 9 disponibles en
     yum install epel-release && rpm -ivh https://repo.redborder.com/ng/24.11/rhel/9/x86_64/redborder-repo-24.11-0.0.1-1.el9.rb.noarch.rpm
     ```
 
-### redBorder package { #install-package data-toc-label="redBorder package" }
+### Redborder package { #install-package data-toc-label="Redborder package" }
 
-El sistema de redBorder está compuesto por el sistema principal de gestión y visualización de información, **redBorder Manager**, junto con **redBorder proxy**, una solución para exportar tráfico de red, y **redBorder ips**, un sensor para la detección de amenazas.
+El sistema de Redborder está compuesto por el sistema principal de gestión y visualización de información, **Redborder Manager**, junto con **Redborder proxy**, una solución para exportar tráfico de red, y **Redborder ips**, un sensor para la detección de amenazas.
 
 === "Manager"
 
@@ -69,4 +69,4 @@ Para completar la configuración inicial ejecuta el wizard y sigue sus pasos.
 
 **¡Listo para Empezar!**
 
-Has completado los pasos iniciales con éxito. Ahora, solo queda esperar mientras el sistema finaliza la configuración. Si has seguido cada paso cuidadosamente, estás en camino de aprovechar al máximo las capacidades de redBorder. ¡Gracias por elegir redBorder para tus necesidades de gestión y seguridad de red! Si tienes alguna pregunta o necesitas asistencia, no dudes en consultar la documentación o contactar con nuestro equipo de soporte. ¡Bienvenido a redBorder!
+Has completado los pasos iniciales con éxito. Ahora, solo queda esperar mientras el sistema finaliza la configuración. Si has seguido cada paso cuidadosamente, estás en camino de aprovechar al máximo las capacidades de Redborder. ¡Gracias por elegir Redborder para tus necesidades de gestión y seguridad de red! Si tienes alguna pregunta o necesitas asistencia, no dudes en consultar la documentación o contactar con nuestro equipo de soporte. ¡Bienvenido a Redborder!

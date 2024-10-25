@@ -1,9 +1,3 @@
-.md-grid {
-  max-width: none;
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
 :root, [data-md-color-scheme="default"] {
   --md-default-bg-color: rgb(250, 250, 250);
   --md-primary-fg-color: rgb(255, 255, 255);

@@ -3,7 +3,7 @@
 
 In the **Events Section**, the user can **display, analyze, and manage** the events collected by the sensors.
 
-RedBorder offers maximum network visibility thanks to the many options for data representation and visualization provided by our Apps.
+Redborder offers maximum network visibility thanks to the many options for data representation and visualization provided by our Apps.
 
 The platform has a module for each functionality. Each one uses different technologies and has an independent interface. All modules need a sensor to provide them with data.
 
@@ -41,7 +41,7 @@ Traffic Module
 
 ## Intrusion
 
-The **Intrusion** module uses data from the sensor or IPS sensors to display intrusion events based on Snort rules. Also, thanks to the different views included in RedBorder, it is possible to analyze the packets that matched the rule specification.
+The **Intrusion** module uses data from the sensor or IPS sensors to display intrusion events based on Snort rules. Also, thanks to the different views included in Redborder, it is possible to analyze the packets that matched the rule specification.
 
 ![Intrusion Module](images/ch04_img004.png)
 

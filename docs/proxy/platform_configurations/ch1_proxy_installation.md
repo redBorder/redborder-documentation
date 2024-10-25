@@ -1,8 +1,8 @@
-# Installation of Proxy with RedBorder Live Registration
+# Installation of Proxy with Redborder Live Registration
 
 ## Requirements
 
-The RedBorder client proxy is software that has minimum requirements to function correctly. The essential minimum elements required for installation, as well as those recommended for adequate performance, are shown in the following table:
+The Redborder client proxy is software that has minimum requirements to function correctly. The essential minimum elements required for installation, as well as those recommended for adequate performance, are shown in the following table:
 
 **Installation Requirements**
 === "Minimum"
@@ -19,7 +19,7 @@ The RedBorder client proxy is software that has minimum requirements to function
 
 ## Installation Process
 
-The first step to start monitoring your network with RedBorder is to obtain the latest official RedBorder packages for Rocky Linux 9, available at [repo.redborder.com](https://repo.redborder.com).
+The first step to start monitoring your network with Redborder is to obtain the latest official Redborder packages for Rocky Linux 9, available at [repo.redborder.com](https://repo.redborder.com).
 
 ## Installing the RPM
 
@@ -31,7 +31,7 @@ dnf install epel-release -y && rpm -ivh https://repo.redborder.com/ng/24.11/rhel
 dnf install redborder-proxy -y
 ```
 
-With the packages downloaded and installed, the next step is to configure RedBorder. To do this, log out of the console session and log back in. You can use a basic command for this:
+With the packages downloaded and installed, the next step is to configure Redborder. To do this, log out of the console session and log back in. You can use a basic command for this:
 
 ``` bash title="Relogin"
 /bin/bash --login

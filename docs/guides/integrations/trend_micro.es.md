@@ -1,8 +1,8 @@
 # Trend Micro
 
-## Integrar Trend Micro con la Plataforma Web de redBorder Manager
+## Integrar Trend Micro con la Plataforma Web de Redborder Manager
 
-Esta documentación proporciona una guía paso a paso para integrar [Trend Micro Deep Security Manager](https://www.trendmicro.com/es_es/business/products/hybrid-cloud/deep-security.html?utm_content=ent_cloud+security_lg_e_es_wg_ao_search&ent_cloud+one_lg_e_es_wg_ao_search&gad_source=1&gclid=Cj0KCQjwkdO0BhDxARIsANkNcrel8Dzy3FK5eq43xqTjoUjEzbPHWa83z9Di5gBm_DLFxWQUQGkY3g8aAjV-EALw_wcB) con la Plataforma Web de redBorder. Siguiendo estas instrucciones, podrá habilitar la [API de Servicios Web ](https://automation.deepsecurity.trendmicro.com/article/20_0/api-reference/) en Deep Security Manager, permitiéndole realizar solicitudes REST.
+Esta documentación proporciona una guía paso a paso para integrar [Trend Micro Deep Security Manager](https://www.trendmicro.com/es_es/business/products/hybrid-cloud/deep-security.html?utm_content=ent_cloud+security_lg_e_es_wg_ao_search&ent_cloud+one_lg_e_es_wg_ao_search&gad_source=1&gclid=Cj0KCQjwkdO0BhDxARIsANkNcrel8Dzy3FK5eq43xqTjoUjEzbPHWa83z9Di5gBm_DLFxWQUQGkY3g8aAjV-EALw_wcB) con la Plataforma Web de Redborder. Siguiendo estas instrucciones, podrá habilitar la [API de Servicios Web ](https://automation.deepsecurity.trendmicro.com/article/20_0/api-reference/) en Deep Security Manager, permitiéndole realizar solicitudes REST.
 
 Esta documentación está basada en la versión 20.0.926 de Deep Security Manager.
 
@@ -54,7 +54,7 @@ A continuación, cree un rol específico para realizar solicitudes REST. Este ro
 
     Guarde la clave API cuidadosamente. Si la pierde, no podrá recuperarla.
 
-## Configurar la Interfaz Web de redBorder para Usar la API de Trend Micro
+## Configurar la Interfaz Web de Redborder para Usar la API de Trend Micro
 
 1. Vaya a `Herramientas -> Integraciones`.
 2. Haga clic en la tarjeta **"Integración con la API de Deep Security Manager (Trend Micro)"** (botón "Empezar").

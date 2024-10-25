@@ -3,7 +3,7 @@
 
 ## Introducción
 
-Esta documentación proporciona una guía paso a paso para integrar [Zabbix](https://www.zabbix.com/manuals) con la Plataforma Web redBorder. Al seguir estas instrucciones, podrás realizar solicitudes POST a la API de Zabbix para crear y gestionar elementos dentro de Zabbix desde la plataforma redBorder. 
+Esta documentación proporciona una guía paso a paso para integrar [Zabbix](https://www.zabbix.com/manuals) con la Plataforma Web Redborder. Al seguir estas instrucciones, podrás realizar solicitudes POST a la API de Zabbix para crear y gestionar elementos dentro de Zabbix desde la plataforma Redborder. 
 
 !!! note "Versión de la Integración"
     Esta integración funciona con la versión 6.4.14 de Zabbix.
@@ -31,7 +31,7 @@ Para integrar Zabbix, se requiere conocer los siguientes parámetros para su con
 !!! warning "Importante"
     Asegúrese de que el usuario tenga permisos adecuados y haya creado un `Zabbix Token` también con los permisos necesarios para acceder a la API de Zabbix. (Lea la documentación sobre cómo generar un token de API en la documentación oficial de Zabbix).
 
-## Configurar la Interfaz Web de redBorder para Usar la API de Zabbix
+## Configurar la Interfaz Web de Redborder para Usar la API de Zabbix
 
 Para configurar Zabbix en la Web de Redborder, siga estos pasos:
 
@@ -40,7 +40,7 @@ Para configurar Zabbix en la Web de Redborder, siga estos pasos:
 3. Rellena todos los campos requeridos.
 4. Presiona el botón **"Actualizar"** para aplicar los cambios.
 
-![Configurar la Interfaz Web de redBorder para Usar la API de Zabbix](images/zabbix_step_1.png)
+![Configurar la Interfaz Web de Redborder para Usar la API de Zabbix](images/zabbix_step_1.png)
 
 !!! warning "Acerca de la configuración del periodo"
     La integración de Zabbix está diseñada para ejecutarse periódicamente. Una vez que el trabajador se inicia, se ejecutará **periódicamente**. Sin embargo, al inicio del trabajador, el proceso se ejecutará **inmediatamente**.

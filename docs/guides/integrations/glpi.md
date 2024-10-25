@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This documentation provides a step-by-step guide to integrating [GLPI](https://www.zglpi.com/) with the redBorder Web Platform. By following these instructions, you will be able to make POST requests to the GLPI API to create and manage assets within GLPI from the redBorder platform.
+This documentation provides a step-by-step guide to integrating [GLPI](https://www.zglpi.com/) with the Redborder Web Platform. By following these instructions, you will be able to make POST requests to the GLPI API to create and manage assets within GLPI from the Redborder platform.
 
 !!! note "Integration Version"
     This integration works with GLPI version 10.0.15.
@@ -27,14 +27,14 @@ Here is an example of the API endpoint for the integration:
 !!! warning "Important"
     Ensure that the user has appropriate permissions and has also created a `APP Token` with the necessary permissions to access the GLPI API.
 
-## Configuring redBorder Web UI to Use the GLPI API
+## Configuring Redborder Web UI to Use the GLPI API
 
 1. Navigate to `Tools -> Integrations`.
 2. Click on the card titled **"GLPI API Integration"** (click the "Start" button).
 3. Fill in all required fields.
 4. Click the **"Update"** button to apply the changes.
 
-![Configuring redBorder Web UI to Use the GLPI API](images/glpi_step_1.png)
+![Configuring Redborder Web UI to Use the GLPI API](images/glpi_step_1.png)
 
 ## Assets Enrichment
 
@@ -44,4 +44,4 @@ To enrich assets with data from GLPI, follow these steps:
 2. A new task, **"GLPI Inventory"**, will now be available. This task will only be visible if the GLPI parameters are set.
 3. When executing this task, the values of the MAC addresses in the objects will be modified according to the information from GLPI. That is, if an MAC value has a different name or object type, it will be updated based on the information from GLPI.
 
-![Configure redBorder Web UI to Use the GLPI API](images/glpi_step_2.png)
+![Configure Redborder Web UI to Use the GLPI API](images/glpi_step_2.png)

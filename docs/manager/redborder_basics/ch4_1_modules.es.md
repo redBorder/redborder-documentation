@@ -41,7 +41,7 @@ Módulo de Tráfico
 
 ## Intrusion
 
-El módulo **Intrusión** utiliza datos del sensor o sensores IPS para mostrar eventos de intrusión basados en reglas de Snort. También, gracias a las diferentes vistas que incluye RedBorder, es posible analizar los paquetes que coincidieron con la especificación de la regla.
+El módulo **Intrusión** utiliza datos del sensor o sensores IPS para mostrar eventos de intrusión basados en reglas de Snort. También, gracias a las diferentes vistas que incluye Redborder, es posible analizar los paquetes que coincidieron con la especificación de la regla.
 
 ![Módulo de Intrusión](images/ch04_img004.png)
 

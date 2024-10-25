@@ -1,13 +1,14 @@
 ---
-site_name: redBorder Documentation
+site_name: Redborder Documentation
 site_url: "https://docs.redborder.com/"
 docs_dir: "docs"
 repo_url: https://github.com/redBorder/redborder-documentation
-repo_name: redBorder/redborder-documentation
+repo_name: Redborder/redborder-documentation
 edit_uri: edit/master/docs
 
 theme:
   name: material
+  custom_dir: overrides
   logo: assets/images/redborder-logo-white-crop-u4409.png
   favicon: assets/images/redborder-logo-white-crop-u4409.png
   palette:   

@@ -1,5 +1,5 @@
 
-# Introducción a la *API* de RedBorder
+# Introducción a la *API* de Redborder
 
 La *API* completa utiliza un estilo *HTTP REST* a través de una interfaz web *HTTPS*. La consulta debe expresarse en formato *JSON* para especificar qué valores se están solicitando. Por ejemplo:
 

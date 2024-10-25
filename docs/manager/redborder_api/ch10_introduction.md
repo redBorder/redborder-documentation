@@ -1,5 +1,5 @@
 
-# Introduction to RedBorder's API
+# Introduction to Redborder's API
 
 The full *API* uses a *HTTP REST* style via *HTTPS* web interface. The query must be expressed in *JSON* format to specify which the desired values. For example:
 

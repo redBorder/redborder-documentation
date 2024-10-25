@@ -45,7 +45,7 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
     - **Anomalías**
 
-        RedBorder utiliza técnicas de análisis de datos para proveer notificaciones de peligros potenciales, esta opción permite al usuario configurar alarmas inteligentes que serán activadas dependiendo de si se detecta alguna anomalía de red dentro de los filtros especificados en el apartado *Condiciones*.
+        Redborder utiliza técnicas de análisis de datos para proveer notificaciones de peligros potenciales, esta opción permite al usuario configurar alarmas inteligentes que serán activadas dependiendo de si se detecta alguna anomalía de red dentro de los filtros especificados en el apartado *Condiciones*.
 
         Activar esta opción hará que se realice un análisis de anomalías una vez pasada la **Ventana de tiempo** configurada en la *Configuración General* de la alarma.
 
@@ -191,9 +191,9 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
     Las *Bulk Statistics* (o estadísticas recopiladas) son estadísticas que se recopilan en un grupo o esquema, por ejemplo, estadísticas del sistema, estadísticas de puertos o estadísticas *Radius*.
 
-    Es posible visualizar información de *Bulkstats* en el manager de redBorder, para ello es necesario configurar la parte del cliente en el dispositivo de Cisco para activar el envío de información al manager via *FTP*.
+    Es posible visualizar información de *Bulkstats* en el manager de Redborder, para ello es necesario configurar la parte del cliente en el dispositivo de Cisco para activar el envío de información al manager via *FTP*.
 
-    Una vez hecho esto, podremos visualizar toda la información referente a *Bulkstats* en el manager de redBorder accediendo a su pestaña correspondiente y seleccionando los campos deseados dentro del módulo de Monitor.
+    Una vez hecho esto, podremos visualizar toda la información referente a *Bulkstats* en el manager de Redborder accediendo a su pestaña correspondiente y seleccionando los campos deseados dentro del módulo de Monitor.
 
     ![Módulo de Monitor: Campos de Bulkstats](images/ch07_img012.png)
 

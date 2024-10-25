@@ -2,9 +2,9 @@
 title: Single Sign On
 ---
 
-# Integrar Single Sign On con la Plataforma Web de redBorder  
+# Integrar Single Sign On con la Plataforma Web de Redborder  
 
-Esta documentación proporciona una guía paso a paso para integrar [Single Sign On](https://en.wikipedia.org/wiki/Single_sign-on) (SSO) utilizando el [protocolo SAML](https://en.wikipedia.org/wiki/SAML_2.0) con la Plataforma Web de redBorder. Siguiendo estas instrucciones, podrás habilitar SSO y configurarlo, permitiéndote iniciar sesión y registrarte en la Plataforma Web de redBorder.  
+Esta documentación proporciona una guía paso a paso para integrar [Single Sign On](https://en.wikipedia.org/wiki/Single_sign-on) (SSO) utilizando el [protocolo SAML](https://en.wikipedia.org/wiki/SAML_2.0) con la Plataforma Web de Redborder. Siguiendo estas instrucciones, podrás habilitar SSO y configurarlo, permitiéndote iniciar sesión y registrarte en la Plataforma Web de Redborder.  
 
 Diagrama del Protocolo SAML:  
 
@@ -29,7 +29,7 @@ Después, el sistema de inicio de sesión SSO estará habilitado. Puedes comprob
 
 ![SSO Login Button](images/sso_login.png)  
 
-## Configurar la interfaz web de redBorder para usar SSO  
+## Configurar la interfaz web de Redborder para usar SSO  
 
 1. Ve a `Configuración General`.  
 2. Haz clic en la tarjeta **"Single Sign On"**.  
@@ -44,7 +44,7 @@ Después, el sistema de inicio de sesión SSO estará habilitado. Puedes comprob
 
 === "Parámetros del IdP"  
     - **URL de destino del IdP SSO**: Esta es la URL que redirige al IdP cuando deseas iniciar sesión.  
-    - **URL de destino del IdP SLO**: Esta es la URL que redirige al IdP cuando deseas cerrar sesión. Hay algunos IdPs que no tienen esta configuración, entonces escribe la ruta de cierre de sesión de redBorder: `<host>/users/logout`.  
+    - **URL de destino del IdP SLO**: Esta es la URL que redirige al IdP cuando deseas cerrar sesión. Hay algunos IdPs que no tienen esta configuración, entonces escribe la ruta de cierre de sesión de Redborder: `<host>/users/logout`.  
     - **ID de Entidad del IdP**: Esta es la URL usada por el SP para verificar las respuestas SAML recibidas por el IdP.  
     - **Certificado del IdP**: El certificado único proporcionado por el IdP que permite descifrar la respuesta encriptada de la autenticación y obtener los atributos del usuario.  
 

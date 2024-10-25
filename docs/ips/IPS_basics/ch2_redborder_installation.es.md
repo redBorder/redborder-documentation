@@ -1,4 +1,4 @@
-# Instalación del IPS de RedBorder
+# Instalación del IPS de Redborder
 
 A continuación se detalla la instalación de base de un IPS de Redborder con el que poder analizar tráfico para detectar intrusiones en él. Debido a que es un trabajo específico y con una gran carga, se considera necesario tener una máquina instalada para ese propósito. 
 
@@ -6,7 +6,7 @@ Existen dos modos de instalación para el IPS: la versión mínima que emula el 
 
 ## Requisitos de la instalación
 
-La implementación exitosa del IPS de RedBorder requiere una máquina con el sistema operativo **Rocky Linux 9** instalado. Adicionalmente, será necesaria la preinstalación de un **Manager** de Redborder contra el que registrar el IPS. Estos son los especificaciones de este IPS:
+La implementación exitosa del IPS de Redborder requiere una máquina con el sistema operativo **Rocky Linux 9** instalado. Adicionalmente, será necesaria la preinstalación de un **Manager** de Redborder contra el que registrar el IPS. Estos son los especificaciones de este IPS:
 
 === "Recomendado"
 
@@ -17,7 +17,7 @@ La implementación exitosa del IPS de RedBorder requiere una máquina con el sis
 
 ## Proceso de instalación
 
-La primera acción para comenzar a monitorizar tu red con RedBorder es obtener los paquetes oficiales más recientes de redBorder para **Rocky Linux 9** disponibles en [repo.redborder.com](https://repo.redborder.com).
+La primera acción para comenzar a monitorizar tu red con Redborder es obtener los paquetes oficiales más recientes de Redborder para **Rocky Linux 9** disponibles en [repo.redborder.com](https://repo.redborder.com).
 
 ``` bash title="Latest"
 dnf install epel-release -y && rpm -ivh https://repo.redborder.com/ng/24.11/rhel/9/x86_64/redborder-repo-24.11-0.0.1-1.el9.rb.noarch.rpm
@@ -27,7 +27,7 @@ dnf install epel-release -y && rpm -ivh https://repo.redborder.com/ng/24.11/rhel
 dnf install redborder-ips -y
 ```
 
-Ya con los paquetes descargados e instalados, el siguiente paso es configurar RedBorder, para ello reniciamos la sesión en consola:
+Ya con los paquetes descargados e instalados, el siguiente paso es configurar Redborder, para ello reniciamos la sesión en consola:
 
 ``` bash title="Comando de reinicio de consola"
 /bin/bash --login

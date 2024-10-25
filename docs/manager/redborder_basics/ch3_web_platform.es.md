@@ -1,5 +1,5 @@
 
-# Plataforma web de RedBorder
+# Plataforma web de Redborder
 
 Una vez se ha finalizado el proceso de instalación del Manager, el usuario puede acceder a la plataforma web de Redborder insertando en la barra de direcciones de su navegador la IP de gestión asignada al Manager.
 
@@ -30,7 +30,7 @@ Pantalla de inicio del Manager: dashboard
 
 ## Estructura de la interfaz de la plataforma Redborder
 
-RedBorder posee una estructura que se repite en todas las interfaces de Redborder. Conocer estos elementos le ayudará a navegar por la web de un modo cómodo y sencillo. (1)
+Redborder posee una estructura que se repite en todas las interfaces de Redborder. Conocer estos elementos le ayudará a navegar por la web de un modo cómodo y sencillo. (1)
 { .annotate }
 
 1. La imagen corresponde a una instalación de Redborder con las Apps de Tráfico, Intrusión, Vault y Movilidad activas. La estructura será la misma para cualquier instalación de Redborder, a excepción de las aplicaciones disponibles en la barra de menú superior y de si están activas o no.

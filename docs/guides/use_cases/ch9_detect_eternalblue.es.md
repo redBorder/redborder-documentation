@@ -43,7 +43,7 @@ Puedes decidir iniciar la investigación manteniendo el incidente abierto. Sin e
 
 *Primeras notas*
 
-Las notas pueden ampliarse en función de la información que tengas, como módulos extra, acceso a la máquina física o fuentes externas. Pero el lugar más interesante para revisar es la fuente de datos correspondiente, que en este caso es **redBorder Intrusion**. Al hacer clic en ella, te redirigirá a la vista correspondiente.
+Las notas pueden ampliarse en función de la información que tengas, como módulos extra, acceso a la máquina física o fuentes externas. Pero el lugar más interesante para revisar es la fuente de datos correspondiente, que en este caso es **Redborder Intrusion**. Al hacer clic en ella, te redirigirá a la vista correspondiente.
 
 ## Entrando en la fuente
 

@@ -3,7 +3,7 @@ INHERIT: ../build_base.yml
 
 # Do not modify this block
 pdf-config: &pdf-config
-  author: redBorder Documentation Team
+  author: Redborder Documentation Team
   cover: true
   cover_logo: assets/images/logo_trans.png
   cover_subtitle: A book from the Documentation Team
@@ -16,8 +16,8 @@ pdf-config: &pdf-config
 plugins:
   - with-pdf:
       <<: *pdf-config
-      cover_title: redBorder Getting Started Guide (Spanish version)
-      output_path: ../pdf/redBorderGettingStartedGuide.es.pdf
+      cover_title: Redborder Getting Started Guide (Spanish version)
+      output_path: ../pdf/RedborderGettingStartedGuide.es.pdf
 
 # Customize your own book
 nav:

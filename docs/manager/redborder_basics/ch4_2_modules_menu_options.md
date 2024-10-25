@@ -1,7 +1,7 @@
 
 # Menu and Module Options
 
-In the analysis area of the menu bar (top bar, left margin), we can find different sections corresponding to the Apps we have integrated into the RedBorder platform.
+In the analysis area of the menu bar (top bar, left margin), we can find different sections corresponding to the Apps we have integrated into the Redborder platform.
 
 Later on, we will explore the different options for data visualization, types of charts, granularity (maximum degree of temporal detail for an event query), and attributes that can be combined to obtain a fully customizable network traffic visualizer.
 

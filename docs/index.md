@@ -1,91 +1,15 @@
 ---
-title: Home
+template: home.en.html
+title: Redorder - NDR Platform
+hide:
+  - toc
+  - navigation
+  - feedback
 ---
-<!-- Additional styles for landing page -->
-  <style>
-    .mdx-container {
-      background-size: contain;
-    }
-    .mdx-hero {
-    }
-
-    .mdx-hero h1 {
-        color: currentcolor;
-        margin-bottom: 1rem;
-        font-size: 2.6rem;
-    }
-    @media screen and (max-width: 29.9375em) {
-        .mdx-hero h1 {
-            font-size: 1.4rem;
-        }
-    }
-
-    @media screen and (min-width: 60em) {
-        .mdx-hero {
-            align-items: stretch;
-            display: flex;
-        }
-        .mdx-hero__content {
-            max-width: 38rem;
-        }
-        .mdx-hero__image {
-            order: 1;
-            transform: translateX(4rem);
-            width: 38rem;
-        }
-    }
-    @media screen and (min-width: 76.25em) {
-      .mdx-hero__image {
-        transform: translateX(8rem);
-      }
-    }
-    .mdx-hero .md-button {
-      border-color: var(--hb-hero-color);
-    }
-    .mdx-hero .md-button--primary {
-      color: var(--md-primary-fg-color);
-      background-color: var(--hb-hero-color);
-      border-color: transparent;
-      margin-right: 0.5rem;
-      margin-top: 0.5rem;
-    }
-
-    .md-main .md-button--primary {
-      color: var(--md-primary-fg-color);
-      background-color: var(--hb-hero-color);
-      border-color: transparent;
-    }
-
-    nav[class="md-tabs"] {
-      border-bottom: none;
-    } 
-</style>
-
-<div class="home-logo-item">
-  <img src="/assets/images/redborder-logo-max-dark.png" alt="redborder" class="light-logo"/>
-  <img src="/assets/images/redborder-logo-max-ligth.png" alt="redborder" class="dark-logo"/>
-</div>
-
-<section class="mdx-container">
-  <div class="md-grid md-typeset">
-    <div class="mdx-hero">
-      <div class="mdx-hero__content">
-        <h1>Open, Active and professional <div id="typewriter">NDR platform</div></h1>
-        <h3>Redborder is an open-source Network Detection and Response (NDR) cybersecurity platform that helps monitor and visualize network incidents in real-time.</h3>
-        <a href="manager/redborder_basics/ch2_redborder_installation/" class="md-button md-button--primary">
-          Install Redborder
-        </a>
-        <a href="https://redborder.com/" class="md-button" target="_blank">
-          Check our official website
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
 
 ## Welcome
 
-This is the documentation page for RedBorder; we're glad you're here. Our documentation team is responsible for maintaining and adding more information as needed. Here you will find what you need to know to implement and deploy the platform, as well as various topics of interest for your installation.
+This is the documentation page for Redborder; we're glad you're here. Our documentation team is responsible for maintaining and adding more information as needed. Here you will find what you need to know to implement and deploy the platform, as well as various topics of interest for your installation.
 
 ## Navigating the Site
 
@@ -97,10 +21,10 @@ When you open a document, you'll see a table of contents in the right margin wit
 
 The documentation sections are as follows:
 
-- **[Manager](manager/redborder_basics/ch1_what_is_redborder/)**: detailed information on different aspects of the RedBorder manager.
-- **[Proxy](proxy/platform_configurations/ch1_proxy_installation/)**: detailed information on the RedBorder proxy.
-- **[IPS](ips/IPS_basics/ch1_what_is_redborder/)**: detailed information on the RedBorder IPS.
-- **[Guides](guides/getting_started/first_steps/)**: covering specific ways to configure and use RedBorder.
+- **[Manager](manager/redborder_basics/ch1_what_is_redborder/)**: detailed information on different aspects of the Redborder manager.
+- **[Proxy](proxy/platform_configurations/ch1_proxy_installation/)**: detailed information on the Redborder proxy.
+- **[IPS](ips/IPS_basics/ch1_what_is_redborder/)**: detailed information on the Redborder IPS.
+- **[Guides](guides/getting_started/first_steps/)**: covering specific ways to configure and use Redborder.
 
 ### Using search
 
@@ -110,6 +34,6 @@ To open a page in the search results, simply click (or tap on mobile) on the des
 
 ### What's next
 
-If this is your first time visiting this documentation platform, you can visit the [getting started](guides/getting_started/first_steps.md) page to see initial information when learning about RedBorder.
+If this is your first time visiting this documentation platform, you can visit the [getting started](guides/getting_started/first_steps.md) page to see initial information when learning about Redborder.
 
 If you have questions that are not covered, feel free to reach out to us; our contact methods are available on our [official website](https://redborder.com/).

@@ -1,6 +1,6 @@
-## redBorder documentation
+## Redborder Documentation
 
-Welcome to the official documentation for redBorder. Site is deployed at https://docs.redborder.com.
+Welcome to the official documentation for Redborder. Site is deployed at https://docs.redborder.com.
 
 ## Installation
 

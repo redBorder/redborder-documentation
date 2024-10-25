@@ -1,7 +1,7 @@
 
-# RedBorder Web Platform
+# Redborder Web Platform
 
-Once the Manager installation process is completed, the user can access the RedBorder web platform by entering the management IP address assigned to the Manager in the browser's address bar.
+Once the Manager installation process is completed, the user can access the Redborder web platform by entering the management IP address assigned to the Manager in the browser's address bar.
 
     https://manager-IP-address
 
@@ -17,7 +17,7 @@ Platform Access Screen
 
     The management web will not work if attempted to be accessed through an unencrypted web (http).
 
-Upon accessing RedBorder, the user is presented with a dashboard displaying various metrics and data about the status of sensors, domains, etc., or the location of sensors if configured.
+Upon accessing Redborder, the user is presented with a dashboard displaying various metrics and data about the status of sensors, domains, etc., or the location of sensors if configured.
 
 This home screen is fully customizable. The user can create as many dashboards per profile as deemed necessary. (1)
 { .annotate }
@@ -28,21 +28,21 @@ This home screen is fully customizable. The user can create as many dashboards p
 
 Manager Home Screen: Dashboard
 
-## RedBorder Platform Interface Structure
+## Redborder Platform Interface Structure
 
-RedBorder has a structure that is repeated in all RedBorder interfaces. Knowing these elements will help you navigate the web comfortably and easily. (1)
+Redborder has a structure that is repeated in all Redborder interfaces. Knowing these elements will help you navigate the web comfortably and easily. (1)
 { .annotate }
 
-1. The image corresponds to a RedBorder installation with Traffic, Intrusion, Vault, and Mobility Apps active. The structure will be the same for any RedBorder installation, except for the available applications in the top menu bar and whether they are active or not.
+1. The image corresponds to a Redborder installation with Traffic, Intrusion, Vault, and Mobility Apps active. The structure will be the same for any Redborder installation, except for the available applications in the top menu bar and whether they are active or not.
 
 Let's see these parts:
 
 ![Event Window Parts](images/ch03_img003.png)
 
-1. **Menu Bar**: Here you will find direct access to all sections of the RedBorder platform. It is subdivided into two areas according to functionality:
+1. **Menu Bar**: Here you will find direct access to all sections of the Redborder platform. It is subdivided into two areas according to functionality:
   
     1. *Analytics Area (upper left corner)*: Here you will find all the data collected by the sensors displayed in different metrics and reports.
-    - *Configuration Area (upper right corner)*: Configuration and management options for the Apps and RedBorder.
+    - *Configuration Area (upper right corner)*: Configuration and management options for the Apps and Redborder.
 
 - **Submenu**: Shows the available options depending on the section we are consulting. Here we can see the configured filters, change the view we are in (Raw, Tops, Compare, Unique), among other options.
 
@@ -60,7 +60,7 @@ Let's make a quick description of the options that can be found in the menu bar,
 
 #### Analytics Area
 
-*Dashboard*: Provides a summary of events received by a sensor, showing them in different metrics. This is the default screen displayed when accessing the RedBorder platform.
+*Dashboard*: Provides a summary of events received by a sensor, showing them in different metrics. This is the default screen displayed when accessing the Redborder platform.
 
 ![Dashboard](images/ch03_img004.png)
 

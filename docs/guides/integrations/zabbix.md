@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This documentation provides a step-by-step guide to integrating [Zabbix](https://www.zabbix.com/manuals) with the redBorder Web Platform. By following these instructions, you will be able to make POST requests to the Zabbix API to create and manage items within Zabbix from the redBorder platform. Zabbix will enrich the assets information by adding additional data.
+This documentation provides a step-by-step guide to integrating [Zabbix](https://www.zabbix.com/manuals) with the Redborder Web Platform. By following these instructions, you will be able to make POST requests to the Zabbix API to create and manage items within Zabbix from the Redborder platform. Zabbix will enrich the assets information by adding additional data.
 
 !!! note "Integration Version" 
     This integration works with Zabbix version 6.4.14.
@@ -30,7 +30,7 @@ To integrate Zabbix, this parameters are required to know for the configuration:
 !!! warning "Important"
     Ensure that the user has appropriate permissions and has also created a `Zabbix Token` with the necessary permissions to access the Zabbix API. (Search how to generate API token in official Zabbix documentation).
 
-## Configuring redBorder Web UI to Use the Zabbix API
+## Configuring Redborder Web UI to Use the Zabbix API
 
 To configure Zabbix in Redborder Web, follow these steps:
 
@@ -39,7 +39,7 @@ To configure Zabbix in Redborder Web, follow these steps:
 3. Fill in all required fields.
 4. Click the **"Update"** button to apply the changes.
 
-![Configuring redBorder Web UI to Use the Zabbix API](images/zabbix_step_1.png)
+![Configuring Redborder Web UI to Use the Zabbix API](images/zabbix_step_1.png)
 
 !!! warning "About period configuration"
     Zabbix integration is designed to be executed periodically. Once the worker is started, it will run **periodically**. However, on the start of the worker, the process will be executed **immediately**.

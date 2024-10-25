@@ -4,8 +4,8 @@ Check **Actions** in github, open the latest successful build, click on **Upload
 
 Actual PDFs:
 
-- **redBorderGettingStartedGuide**: How to install Redborder
-- **redBorderManual**: How to use Redborder web platform
+- **RedborderGettingStartedGuide**: How to install Redborder
+- **RedborderManual**: How to use Redborder web platform
 
 In case you want to manually build them:
 

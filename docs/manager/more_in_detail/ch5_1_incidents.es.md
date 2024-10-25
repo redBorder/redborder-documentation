@@ -1,6 +1,6 @@
 # Incidentes
 
-Los incidentes son el punto de entrada principal de la plataforma RedBorder. Son el resultado del análisis de los eventos y alertas generados por el sistema que esperan ser revisados por el usuario, ya sea para ser reportados o descartados.
+Los incidentes son el punto de entrada principal de la plataforma Redborder. Son el resultado del análisis de los eventos y alertas generados por el sistema que esperan ser revisados por el usuario, ya sea para ser reportados o descartados.
 
 ![Vista de incidentes](images/ch05_1_incidents_view.png)
 *Vista de incidentes*

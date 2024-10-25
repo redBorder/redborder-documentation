@@ -43,7 +43,7 @@ You can decide to start the investigation by keeping the incident open. However,
 
 *First notes*
 
-Notes can be expanded based on the information you have, as extra modules, access to the physical machine or external sources. But the most interesting place to look at is the corresponding source, which in this case is **redBorder Intrusion**. By clicking on it, it will redirect you to the corresponding view.
+Notes can be expanded based on the information you have, as extra modules, access to the physical machine or external sources. But the most interesting place to look at is the corresponding source, which in this case is **Redborder Intrusion**. By clicking on it, it will redirect you to the corresponding view.
 
 ## Getting into the source
 

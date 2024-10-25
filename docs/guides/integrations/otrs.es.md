@@ -1,8 +1,8 @@
 # OTRS
 
-## Integrar OTRS con la Plataforma Web redBorder manager
+## Integrar OTRS con la Plataforma Web Redborder manager
 
-Esta documentación proporciona una guía paso a paso para integrar [OTRS](https://otrs.com/) con la Plataforma Web redBorder. Al seguir estas instrucciones, podrás crear un [Servicio Web](https://academy.otrs.com/doc/admin/processes-automation/web-services/) en OTRS, lo que te permitirá realizar solicitudes POST para crear tickets.
+Esta documentación proporciona una guía paso a paso para integrar [OTRS](https://otrs.com/) con la Plataforma Web Redborder. Al seguir estas instrucciones, podrás crear un [Servicio Web](https://academy.otrs.com/doc/admin/processes-automation/web-services/) en OTRS, lo que te permitirá realizar solicitudes POST para crear tickets.
 
 Esta documentación está basada en la versión 6.0.40 de OTRS Community Edition.
 
@@ -94,14 +94,14 @@ Sigue estos pasos para crear un servicio web en OTRS:
 
 ![set HTTP::REST as Network Transport and click to configure](images/otrs_step_9.png)
 
-## Configurar la Interfaz Web de redBorder para Usar la API de OTRS
+## Configurar la Interfaz Web de Redborder para Usar la API de OTRS
 
 1. Ve a `Herramientas -> Integraciones`.
 2. Haz click en la carta llamada **"Integración con la API de OTRS"** (en el botón de "Empezar").
 3. Rellena todos los campos.
 4. Presiona el botón **"Actualizar"** para aplicar los cambios.
 
-![Configure redBorder Web UI to Use the OTRS API](images/otrs_step_10.png)
+![Configure Redborder Web UI to Use the OTRS API](images/otrs_step_10.png)
 
 ```http title="Ejemplo del endpoint creado"
 http://<pagina-web-otrs>/otrs/nph-genericinterface.pl/Webservice/redborder/CreateTicket?UserLogin=root@localhost&Password=redborder

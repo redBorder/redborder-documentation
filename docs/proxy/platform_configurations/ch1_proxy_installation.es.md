@@ -19,7 +19,7 @@ El proxy cliente de Redborder es un software que tiene requisitos mínimos para 
 
 ## Proceso de instalación
 
-El primer paso para comenzar a monitorear su red con RedBorder es obtener los últimos paquetes oficiales de RedBorder para Rocky Linux 9, disponibles en [repo.redborder.com](https://repo.redborder.com).
+El primer paso para comenzar a monitorear su red con Redborder es obtener los últimos paquetes oficiales de Redborder para Rocky Linux 9, disponibles en [repo.redborder.com](https://repo.redborder.com).
 
 ## Installing the RPM
 
@@ -31,7 +31,7 @@ dnf install epel-release -y && rpm -ivh https://repo.redborder.com/ng/24.11/rhel
 dnf install redborder-proxy -y
 ```
 
-With the packages downloaded and installed, the next step is to configure RedBorder. To do this, log out of the console session and log back in. You can use a basic command for this:
+With the packages downloaded and installed, the next step is to configure Redborder. To do this, log out of the console session and log back in. You can use a basic command for this:
 
 ``` bash title="Relogin"
 /bin/bash --login
