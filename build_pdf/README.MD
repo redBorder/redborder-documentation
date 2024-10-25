@@ -7,7 +7,7 @@ Actual PDFs:
 - **redBorderGettingStartedGuide**: How to install Redborder
 - **redBorderManual**: How to use Redborder web platform
 
-In case you want to build them yourself follow these steps..
+In case you want to manually build them:
 
 ## Installation
 
@@ -16,7 +16,7 @@ Clone the project and cd into build_pdf directory. Execute the following command
 pip3 install -r requirements.txt 
 ```
 
-## Manual Build
+## Using mkdocs build
 
 Execute the following command:
 ```bash
