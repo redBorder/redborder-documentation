@@ -445,6 +445,72 @@ Despliegue las pestañas siguientes para leer una descripción de las opciones q
 
         Una **Tarea** es un programa que se ejecuta periódicamente o solo una vez, pero no permanece ejecutándose en segundo plano, sino que se ejecuta y se cierra.
 
-    ![Trabajador y cola de tareas: estado de la lista de Trabajadores y cola de tareas](images/ch07_img033.png)
+    ![Trabajador y cola de tareas: estado de la lista de Trabajadores y cola de tareas](./images/worker_jobs_es.png)
 
-    **Tareas almacenadas** muestra la lista de servicios terminados. Puede conocer el estado de cada uno a través del icono "Información", o eliminar de la lista utilizando el icono "Eliminar". Esta pantalla se recarga automáticamente cada 5 segundos.
+    Trabajador y cola de tareas: Estado de la lista de Trabajos y cola de tareas.
+
+    Las tareas pueden ser lanzadas manualmente a través del menú **Opciones de Trabajador**
+
+    ![Trabajador y cola de tareas: Menú para lanzar tareas manualmente.](./images/worker_jobs_menu_launch_job_es.png)
+
+    Trabajador y cola de tareas: Menú para lanzar tareas manualmente.
+
+    !!! info "Ten en cuenta..."
+        Hay tareas que deben ser eliminadas antes de poder ser lanzadas manualmente.
+
+    ### Tareas
+
+    #### Delete Stored Job
+
+    Cuando esta tarea está corriendo, elimina las tareas almacenadas desde una fecha que depende del campo "Dias de tareas gaurdadas almacenadas".
+
+    !!! info "Ten en cuenta..."
+        Este campo está en **Configuración General** y el valor por defecto son **90** días de guardado.
+
+        Cuando este valor es **0**, elimina todas las tareas alamacenadas más antigüas que "Ayer" a las 23:55 h.
+
+        Esta tarea se ejecutará todos los días a las 00:00 h.
+    
+    ![Trabajador y cola de tareas: Campo dias de tareas gaurdadas almacenadas](./images/general_settings_input_deleteStoredJob_es.png)
+
+    Trabajador y cola de tareas: Campo dias de tareas gaurdadas almacenadas.
+
+    ## Tareas Almacenadas
+    
+    **Tareas almacenadas** muestra la lista de servicios terminados. También se puede buscar por el **nombre de la tarea**.
+
+    ![Trabajador y cola de tareas: lista de servicios terminados](./images/stored_jobs_list_es.png)
+
+    Trabajador y cola de tareas: lista de servicios terminados.
+
+    ### Information
+
+    Comrpobar el estado e información de los servicios terminados.
+
+    ![Trabajador y cola de tareas: Ejemplo de mensaje de información de tareas ejecutadas](./images/stored_jobs_info_es.png)
+
+    Trabajador y cola de tareas: Ejemplo de mensaje de información de tareas ejecutadas.
+
+    ### Delete
+
+    Eliminar una tarea de la lista de servicios terminados.
+
+    ![Trabajador y cola de tareas: Ejemplo de mensaje de eliminación de tarea almacenada](./images/stored_jobs_delete_msg_en.png)
+
+    Trabajador y cola de tareas: Ejemplo de mensaje de eliminación de tarea almacenada.
+
+    ### Search
+
+    Se puede buscar por el nombre de la tarea y se actualiza automáticamente la lista de resultados cada vez que se modifica el campo de búsqueda.
+
+    ![Trabajador y cola de tareas: Ejemplo buscando por "r"](./images/stored_jobs_filter_r_es.png)
+
+    Worker and Job Queue: Ejemplo buscando por "r".
+
+    ![Trabajador y cola de tareas: Ejemplo buscando por "rb"](./images/stored_jobs_filter_rb_es.png)
+
+    Trabajador y cola de tareas: Ejemplo buscando por "rb".
+
+    ![Trabajador y cola de tareas: Ejemplo buscando por "x" para no obtener resultados](./images/stored_jobs_filter_no_result_es.png)
+
+    Trabajador y cola de tareas: Ejemplo buscando por "x" para **no obtener resultados**.

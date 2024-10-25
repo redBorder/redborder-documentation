@@ -445,8 +445,72 @@ Expand the following tabs to read a description of the options found in the tool
 
         A **Job** is a program that runs periodically or only once but does not remain running in the background. It runs and then closes.
 
-    ![Worker and Job Queue: status of the worker list and job queue](images/ch07_img033.png)
+    ![Worker and Job Queue: status of the worker list and job queue](./images/worker_jobs_en.png)
 
     Worker and Job Queue: status of the worker list and job queue.
 
-    **Stored Jobs** shows the list of completed services. You can check the status of each one via the "Information" icon or remove it from the list using the "Delete" icon. This screen refreshes automatically every 5 seconds.
+    Jobs can be launched manually by the menu **Worker Options**
+
+    ![Worker and Job Queue: Jobs possible to launch manually](./images/worker_jobs_menu_launch_job_en.png)
+
+    Worker and Job Queue: Jobs possible to launch manually.
+
+    !!! info "Note..."
+        There are jobs that need to be deleted before launch them manually.
+    
+    ### Jobs
+
+    #### Delete Stored Job
+
+    When this job is running, it deletes all stored jobs since a date. That date depends on the number of days to keep the stored jobs information.
+
+    !!! info "Note..."
+        There is a field in **General Settings** to change the default value of **90** days of stored jobs to keep.
+
+        When this value is **0**, It deletes all stored jobs **older than yesterday 23:55 h**.
+
+        This job is scheduled to run **everyday at 00:00 h**.
+    
+    ![Worker and Job Queue: Field of days to keep Stored Jobs](./images/general_settings_input_deleteStoredJob_en.png)
+
+    Worker and Job Queue: Field of days to keep Stored Jobs.
+
+    ## Stored Jobs
+    
+    **Stored Jobs** shows the list of completed services. Also, you can search by the **name of the job**.
+
+    ![Worker and Job Queue: list of jobs stored](./images/stored_jobs_list_en.png)
+
+    Worker and Job Queue: list of jobs stored.
+
+    ### Information
+
+    Allow to check status and other information of the job.
+
+    ![Worker and Job Queue: Information message example in stored jobs](./images/stored_jobs_info_en.png)
+
+    Worker and Job Queue: Information message message example in stored jobs.
+
+    ### Delete
+
+    Delete from Stored Jobs the selected job.
+
+    ![Worker and Job Queue: Delete message example in stored jobs](./images/stored_jobs_delete_msg_en.png)
+
+    Worker and Job Queue: Delete message example in stored jobs.
+
+    ### Search
+
+    You can search by the name of the job and it refreshes automatically each time a letter changes.
+
+    ![Worker and Job Queue: Example searching by "r"](./images/stored_jobs_filter_r_en.png)
+
+    Worker and Job Queue: Example searching by "r".
+
+    ![Worker and Job Queue: Example searching by "rb"](./images/stored_jobs_filter_rb_en.png)
+
+    Worker and Job Queue: Example searching by "rb".
+
+    ![Worker and Job Queue: Example searching by "x" to get a no result search](./images/stored_jobs_filter_no_result_en.png)
+
+    Worker and Job Queue: Example searching by "x" to get a **no result search**.
