@@ -59,7 +59,7 @@ title: Home
 
     nav[class="md-tabs"] {
       border-bottom: none;
-    }
+    } 
 </style>
 
 <div class="home-logo-item">
@@ -103,15 +103,6 @@ The documentation sections are as follows:
 - **Proxy**: detailed information on the RedBorder proxy.
 - **IPS**: detailed information on the RedBorder IPS.
 - **Release notes**: information about RedBorder releases, updates, and versions.
-- **RedBorder**: link to the official website.
-
-### Languages
-
-We want to make our documentation accessible to everyone. Currently, our documentation is available in Spanish and English. Future versions may include translations into other languages.
-
-!!! info "Please Note..."
-
-    Due to an inherent limitation in MkDocs, some platform functions may not be available in all languages.
 
 ### Using search
 
