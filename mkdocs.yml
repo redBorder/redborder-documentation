@@ -88,6 +88,14 @@ extra:
 
 extra_css:
   - stylesheets/extra.css
+extra_javascript:
+  - assets/js/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - assets/js/typewriter.js
+  - https://unpkg.com/typewriter-effect@latest/dist/core.js
+  - https://cdn.jsdelivr.net/npm/vega@5
+  - https://cdn.jsdelivr.net/npm/vega-lite@5
+  - https://cdn.jsdelivr.net/npm/vega-embed@6
 
 copyright: Copyright &copy; 2024 Eneo Tecnología S.L
 
