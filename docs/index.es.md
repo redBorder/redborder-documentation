@@ -98,10 +98,10 @@ Al abrir un documento, verá una tabla de contenidos en el margen derecho con li
 
 Las secciones de documentación son las siguientes:
 
-- **[Manager](manager)**: información detallada sobre los diferentes aspectos del manager de RedBorder.
-- **[Proxy](proxy)**: información detallada sobre el proxy de RedBorder.
+- **[Manager](manager/redborder_basics/ch1_what_is_redborder/)**: información detallada sobre los diferentes aspectos del manager de RedBorder.
+- **[Proxy](proxy/platform_configurations/ch1_proxy_installation/)**: información detallada sobre el proxy de RedBorder.
 - **[IPS](ips/IPS_basics/ch1_what_is_redborder/)**: información detallada sobre el IPS de RedBorder.
-- **[Guides](guides)**: que cubren formas específicas de configurar y usar RedBorder.
+- **[Guides](guides/getting_started/first_steps/)**: que cubren formas específicas de configurar y usar RedBorder.
 
 ### Utilizando la búsqueda
 
