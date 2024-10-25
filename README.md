@@ -7,7 +7,9 @@ Welcome to the official documentation for redBorder. Site is deployed at https:/
 This documentation site uses [MkDocs](https://www.mkdocs.org/) along with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme.
 
 Install python dependencies using pip:
-```pip3 install -r requirements.txt```
+```bash
+pip3 install -r requirements.txt
+```
 
 ## Running local site
 
