@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Satoshi';
+  src: url("/assets/fonts/Satoshi-Variable.ttf") format("truetype");
+  font-display: swap;
+}
+
 :root, [data-md-color-scheme="default"] {
   --md-default-bg-color: rgb(250, 250, 250);
   --md-primary-fg-color: rgb(255, 255, 255);
@@ -86,12 +92,17 @@
 /* header font */
 
 .md-header__topic:first-child {
+  font-family: 'Satoshi';
   font-weight: 700;
 }
 
 .md-typeset h1 {
   font-weight: 700;
   color: var(--md-typeset-a-color);
+}
+
+h2, h3 {
+  font-family: 'Satoshi';
 }
 
 /* Correct page icon size */
