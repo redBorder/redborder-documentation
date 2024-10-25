@@ -97,10 +97,10 @@ When you open a document, you'll see a table of contents in the right margin wit
 
 The documentation sections are as follows:
 
-- **Manager**: detailed information on different aspects of the RedBorder manager.
-- **Proxy**: detailed information on the RedBorder proxy.
-- **IPS**: detailed information on the RedBorder IPS.
-- **Guides**: covering specific ways to configure and use RedBorder.
+- **[Manager](manager)**: detailed information on different aspects of the RedBorder manager.
+- **[Proxy](proxy)**: detailed information on the RedBorder proxy.
+- **[IPS](ips/IPS_basics/ch1_what_is_redborder/)**: detailed information on the RedBorder IPS.
+- **[Guides](guides)**: covering specific ways to configure and use RedBorder.
 
 ### Using search
 
