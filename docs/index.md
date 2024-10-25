@@ -6,10 +6,9 @@ title: Home
     .mdx-container {
       background-size: contain;
     }
-
     .mdx-hero {
-
     }
+
     .mdx-hero h1 {
         color: currentcolor;
         margin-bottom: 1rem;
@@ -98,11 +97,10 @@ When you open a document, you'll see a table of contents in the right margin wit
 
 The documentation sections are as follows:
 
-- **Guides**: covering specific ways to configure and use RedBorder.
 - **Manager**: detailed information on different aspects of the RedBorder manager.
 - **Proxy**: detailed information on the RedBorder proxy.
 - **IPS**: detailed information on the RedBorder IPS.
-- **Release notes**: information about RedBorder releases, updates, and versions.
+- **Guides**: covering specific ways to configure and use RedBorder.
 
 ### Using search
 
