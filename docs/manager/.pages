@@ -1,7 +1,14 @@
 ---
 nav:
-    - ... | index*.md
-    - Manager basics: manager_basics
+    - ...
+    - Installation: installation
+    - Getting Started: getting_started
+    - Navigate Redborder Manager: navigate_redborder_manager
+    - Incidents: incidents
+    - Apps: apps
+    - Dashboards: dashboards
+    - Reports: reports
     - Seeing data in more detail: more_in_detail
-    - Platform configurations: platform_configurations
-    - Redborder API: redborder_api
+    - Integrations: integrations
+    - Administration: administration
+    - Resources: resources

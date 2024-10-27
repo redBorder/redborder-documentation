@@ -3,7 +3,7 @@
 SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 cd $SCRIPTPATH
 
-for book in getting_started_book redborder_manual_book
+for book in redborder_ndr_manager_installation_book redborder_ndr_intrusion_installation_book redborder_ndr_flowgate_installation_book
 do
   for config_file in $(ls ${SCRIPTPATH}/${book}/*.yml)
   do

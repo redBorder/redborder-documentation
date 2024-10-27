@@ -1,11 +1,14 @@
-# How to generate PDFs version
-Github actions is generating the pdfs on every build.
+# How to generate Books
+
+Github actions is generating the books on every build.
 Check **Actions** in github, open the latest successful build, click on **Upload PDF artifacts** and click the link to download.
 
-Actual PDFs:
+Actual Books:
 
-- **RedborderGettingStartedGuide**: How to install Redborder
-- **RedborderManual**: How to use Redborder web platform
+- **Redborder_NDR_Manager_Installation_Guide**: How to install Redborder NDR Manager
+- **Redborder_NDR_Intrusion_Installation_Guide**: How to install Redborder NDR INtrusion
+- **Redborder_NDR_Flowgate_Installation_Guide**: How to install Redborder NDR Flowgate
+- **Redborder_NDR_User_Manual**: How to use Redborder NDR platform
 
 In case you want to manually build them:
 

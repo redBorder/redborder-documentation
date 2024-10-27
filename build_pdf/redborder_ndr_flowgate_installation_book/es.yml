@@ -1,0 +1,26 @@
+---
+INHERIT: ../build_base.yml
+
+# Do not modify this block
+pdf-config: &pdf-config
+  author: Redborder Documentation Team
+  cover: true
+  cover_logo: assets/images/logo_trans.png
+  cover_subtitle: A book from the Documentation Team
+  toc_level: 3
+  ordered_chapter_level: 3
+  verbose: false
+  back_cover: true
+  
+# You are free to configure here what you want
+plugins:
+  - with-pdf:
+      <<: *pdf-config
+      cover_title: Redborder NDR Flowgate Guia de Instalación (Spanish version)
+      output_path: ../pdf/Redborder_NDR_Flowgate_Guía_de_Instalación.pdf
+
+# Customize your own book
+nav:
+  - index.es.md
+  - flowgate/index.es.md
+  - flowgate/installation/ch02_installation_on_linux.es.md

@@ -28,9 +28,10 @@ Build site for production:
 mkdocs build
 ```
 
-## Building PDFs version
+## Building Books
 
 Get into [build_pdf](https://github.com/redBorder/redborder-documentation/tree/master/build_pdf) directory and folow the README steps.
+
 ## License
 
 MIT license.

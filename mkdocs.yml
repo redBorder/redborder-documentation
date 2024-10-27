@@ -1,5 +1,5 @@
 ---
-site_name: Redborder Documentation
+site_name: Redborder NDR Documentation
 site_url: "https://docs.redborder.com/"
 docs_dir: "docs"
 repo_url: https://github.com/redBorder/redborder-documentation
@@ -12,6 +12,13 @@ theme:
   logo: assets/images/redborder-logo-white-crop-u4409.png
   favicon: assets/images/redborder-logo-white-crop-u4409.png
   palette:   
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
     # Palette toggle for light mode
     - scheme: default
       primary: custom
@@ -19,12 +26,6 @@ theme:
         icon: material/brightness-7 
         name: Switch to dark mode
 
-    # Palette toggle for dark mode
-    - scheme: slate
-      primary: custom
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
   features:
     - content.action.edit
     - content.code.copy
