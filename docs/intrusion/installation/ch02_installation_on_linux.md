@@ -4,9 +4,9 @@ How to install Redborder Intrusion on Linux systems.
 
 Important things to know before installing:
 
-1. This installation is non-reversible, cannot be directly uninstalled or rolled back.
-2. The linux distribution supported at the moment is [Rocky Linux 9 minimal](https://rockylinux.org/download).
-3. This sensor must be registered with a **Redborder Manager**, so ensure you have one available.
+- This installation is non-reversible, cannot be directly uninstalled or rolled back.
+- The linux distribution supported at the moment is [Rocky Linux 9 minimal](https://rockylinux.org/download).
+- This sensor must be registered with a **Redborder Manager**, so ensure you have one available.
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ Install the supported operative system and run the following command as root:
 yum install epel-release
 rpm -ivh https://repo.redborder.com/ng/24.11/rhel/9/x86_64/redborder-repo-24.11-0.0.1-1.el9.rb.noarch.rpm
 ```
-``` bash title="Install redborder-manage package"
+``` bash title="Install redborder-ips package"
 yum clean all
 yum install redborder-ips -y
 ```
@@ -49,194 +49,147 @@ Start the **installation wizard**:
 rbcli setup wizard
 ```
 
-Having started the **installation wizard** for the platform in the console, it can be used as a guide throughout the process. The first screen shows an index of the upcoming steps.
+The first screen shows an index of the upcoming steps.
 
-![Starting the wizard](images/ch02_configure_wizard_start.png)
-
-Starting the wizard
-
-If you are unsure about the current configuration, you can cancel with the "No" option, which will display the next screen before returning to the console view.
+![Starting the wizard](images/ch02_001.png)
 
 ### Network configuration
 
-#### Normalizing interfaces names
+#### Rename Network Interfaces
 
-![Name normalization](images/ch01_interface_naming_warn.png)
+Redborder Intrusion requires that network interfaces have defined maximum lengths. If the wizard detects that renaming the network interfaces is necessary, this screen will appear, allowing you to do so.
 
-Name normalization
+![Rename netwokr interface](images/ch02_002.png)
 
-After confirming, the IPS will restart, and you can resume by launching the wizard again:
+Press **Yes** to confirm.
+
+![Confirm rename interfaces](images/ch02_003.png)
+
+After confirmation, press **OK** to reboot.
+
+![Press OK to reboot](images/ch02_004.png)
+
+After boot launch the wizard again to continue with the next steps.
 
 ``` bash title="Command run the setup wizard"
-rb_setup_wizard
+rbcli setup wizard
 ```
 
-In the lower box, the existing network interfaces on the machine are listed. Below all the interfaces the machine has, there is the **Finalize** option, which can be selected **after successfully configuring** the interfaces.
+#### Configure Network
 
-![Network Configuration](images/ch02_img001.png)
+Select the managment interface for configuration.
 
-Network Configuration
+![Network Configuration](images/ch02_005.png)
 
 When selecting an interface and entering it, you are given the option to configure it with a static IP address or to have it work dynamically (with DHCP).
 
-![Network Interface Configuration](images/ch02_img002.png)
-
-Network Interface Configuration
+![Network Interface Configuration](images/ch02_006.png)
 
 If selecting the static IP option, you must specify the IP, subnet mask, and default gateway:
 
-![Static Interface Configuration](images/ch02_img003.png)
-
-Static Interface Configuration
+![Static Interface Configuration](images/ch02_007.png)
 
 ### DNS Configuration
 
-The installation wizard will give you the option to choose whether to configure DNS servers. It is mandatory to configure at least one server; however, up to 3 DNS servers can currently be configured on the platform. This can be done on the following screen:
+Press **Yes** to start with the DNS configuration:
 
-![DNS Configuration](images/ch02_img004.png)
+![DNS Configuration](images/ch02_008.png)
 
-DNS Configuration
+You can enter up to three different DNS servers:
 
-### Segment Configuration
+![DNS Servers](images/ch02_009.png)
 
-Segments identify those networks to which the IPS has access and on which it will act as a network security device. For the IPS to be operational, at least one segment must be declared on the interfaces.
+### Configure Segments
 
-![Segment Configuration](images/ch02_configure_segments.png)
+Segments identify those networks to which the Intrusion Probe has access and on which it will act as a network security device. At least one segment must be declared on the interfaces.
 
-Segment Configuration
+![Segment Configuration](images/ch02_010.png)
 
 #### Info
 
-In info, we can view information related to each network interface and even identify it on the physical network card. This is useful for deciding which will be the active segments and what should be physically connected to what:
+In info, we can view information related to each network interface and even identify it on the physical network card.
 
-![Segment Information](images/ch02_info_segments.png)
-
-Segment Information
+![Segment Information](images/ch02_011.png)
 
 When selecting an interface, you should choose a blinking time for the physical network interface, which will help identify it on the physical machine in question:
 
-![Interface Blinking](images/ch02_blink.png)
+![Interface Blinking](images/ch02_012.png)
 
-Interface Blinking
+Press **OK** to make the interfaces blink.
 
-!!! important "If you select one of the interfaces..."
-    You can return to segment configuration by pressing **ESC** or choose the blinking duration. During the interface blinking, the installation process will not continue.
+![Interface Blinking](images/ch02_013.png)
 
-#### Force bypass (WIP)
+#### Force bypass
+
+This option will create the segments automatically on machines with Sillicon Bypass Network Cards.
 
 #### New Segment
 
-To assign a new segment, select one of the available interfaces.
+Select **New Segment** to create one with the available network interfaces.
 
-!!! important "Regarding the management interface..."
-You must reserve the main management interface and it should not be assigned as a segment.
+![Create a new Segment](images/ch02_014.png)
 
-![Create a new Segment](images/ch02_new_segment.png)
-
-Create a new Segment
-
-The creation of a new segment will be shown in a previous list:
-
-![New Segment in the List](images/ch02_new_segment_in_list.png)
-
-New Segment in the List
-
-#### Remove Segment
+#### Delete Segment
 
 If you want to perform the opposite action, you can remove the segments you want from the list. You can select the ones you want to remove:
 
-![Remove Segments](images/ch02_delete_segment.png)
-
-Remove Segments
-
-And they will disappear from the previous list:
-
-![Segment Configuration](images/ch02_configure_segments.png)
-
-Segment Configuration
+![Remove Segments](images/ch02_015.png)
 
 #### Finalize Segment Configuration
 
 Once you have configured the desired segments, press **finalize**.
 
-## Node Mode
+## Set registration method
 
-At this point, we need to choose the mode in which the IPS will operate:
+Choose the mode in which the Intrusion Probe will operate:
 
-![IPS Registration Configuration](images/ch02_ips_mode.png)
+- Proxy: Select this mode if the Redborder Manager is on a different network than the Intrusion Probe.
+- Manager: Select this mode if the Redborder Manager and Redborder Intrusion are accessible from the same network.
 
-IPS Registration Configuration
+![Intrusion Probe Registration Method](images/ch02_016.png)
 
- In flowgate mode, the wizard will ask for the address of a manager to register with. On the other hand, in manager mode, the wizard will request the address of the manager acting as the **web server**; therefore, it will also ask for the **credentials** of the **administrator** user who is registering this IPS.
+Press **OK** to confirm.
 
-!!! info "Please note..."
-Configuring the IPS in manager mode will automatically register the sensor with the web.
+## Manager Mode: Webui Sensor Registration Configuration
 
-### Flowgate Mode: Configuration with the Remote Server
+Introduce the Redborder Manager remote address, user of registration (default admin) and the name this sensor will have.
 
-The IPS will be associated with a manager or cluster with which to share the captured data. To associate it, it is necessary to specify the manager or cluster address. You can specify either a domain address or an IP address.
+![Intrusion Probe Manager Registration Method](images/ch02_017.png)
 
-![Configuration with Remote Server](images/ch01_cloud_config.png)
+Press **OK** to continue.
 
-Configuration with Remote Server
+Introduce the Redborder Manager password to perform the registration.
 
-### Manager mode: Web registration
+![Intrusion Probe Manager Password](images/ch02_018.png)
 
-The IPS will be associated with a manager that hosts the web interface. To enable this association, you need to provide the manager's address and the credentials of a user with administrative permissions. Additionally, you can modify the sensor's name when it is registered on the web:
+Press **OK** to continue.
 
-![IPS Registration Configuration](images/ch02_sensor_reg.png)
+## Proxy Mode: Coud address configuration
 
-IPS Registration Configuration
+Introduce Redborder Manager IP address (cloud address).
 
-Upon clicking OK, you will be prompted for the password of the registered administrator on the **web**:
+![Intrusion Probe Proxy Registration Method](images/ch02_020.png)
 
-![Web User Password](images/ch02_pasword_config.png)
+Press **OK** to continue.
 
-Web User Password
-
-## End of Configuration
+## Confirm configuration
 
 Before applying the configuration, the wizard will summarize all the information filled out, waiting for the user to accept it.
 
-![Accept Configuration](images/ch02_apply_conf.png)
+![Accept Configuration](images/ch02_019.png)
 
-Accept Configuration
+Press **Yes** to confirm configuration.
 
-## End of Installation
+## Applying configuration
 
-The installation is almost complete; you only need to wait for the process to finish.
+Wait for the process to finish.
 
-![Applying Configuration](images/ch02_finishing_configuration.png)
+![Applying Configuration](images/ch02_023.png)
 
-Applying Configuration
-
-Click "OK" to return to the console view.
-
-Additionally, you can view the registration process logs with the related command:
-
-#### Flowgate mode
-
-``` bash title="Command run the setup wizard"
-journalctl -u rb-register -f
-```
-
-At the end of the installation process, the journal will display these logs:
-
-![End of installation](images/ch01_end_registration.png)
-
-#### Manager mode
-
-``` bash title="Display logs register"
-cat /var/log/rb-register-common/register.log
-```
-
-At the end of the installation process, the journal will display these logs:
-
-![End of installation](images/ch01_end_registration_manager.png)
+Press **OK** to exit the wizard.
 
 ## What's Next?
 
-In the following chapter, we will finish associating the IPS with the manager so that it can handle traffic and alert you to any detected intrusions. All of this will be manageable from the web.
+Sign in to **Redborder Manager** and check that the new sensor is there. 
 
-!!! info "If you installed the IPS in manager mode..."
-Remember that if you have installed the IPS in manager mode, the association process should already be complete.
+In case of **Proxy Mode** you will need to claim the sensor from the Unclaimed list.

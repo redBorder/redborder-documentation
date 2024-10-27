@@ -2,5 +2,4 @@
 nav:
     - ...
     - Installation: installation
-    - Getting Started: getting_started
     - Administration: administration

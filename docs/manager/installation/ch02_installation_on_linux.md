@@ -5,8 +5,8 @@ How to install Redborder Mananager on Linux systems.
 
 Important things to know before installing:
 
-1. This installation is non-reversible, cannot be directly uninstalled or rolled back.
-2. The linux distribution supported at the moment is [Rocky Linux 9 minimal](https://rockylinux.org/download).
+- This installation is non-reversible, cannot be directly uninstalled or rolled back.
+- The linux distribution supported at the moment is [Rocky Linux 9 minimal](https://rockylinux.org/download).
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ Install the supported operative system and run the following command as root:
 yum install epel-release
 rpm -ivh https://repo.redborder.com/ng/24.11/rhel/9/x86_64/redborder-repo-24.11-0.0.1-1.el9.rb.noarch.rpm
 ```
-``` bash title="Install redborder-manage package"
+``` bash title="Install redborder-manager package"
 yum clean all
 yum install redborder-manager -y
 ```

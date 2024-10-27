@@ -1,152 +1,112 @@
 # Installation on Linux
 
-## Requirements
+How to install Redborder Flowgate on Linux systems.
 
-The Redborder client flowgate is software that has minimum requirements to function correctly. The essential minimum elements required for installation, as well as those recommended for adequate performance, are shown in the following table:
+Important things to know before installing:
 
-**Installation Requirements**
-=== "Minimum"
-    * Disk: 16 GB
-    * RAM: 1 GB
-    * CPU: 1 núcleo
-    * Network Interfaces: At least two
+- This installation is non-reversible, cannot be directly uninstalled or rolled back.
+- The linux distribution supported at the moment is [Rocky Linux 9 minimal](https://rockylinux.org/download).
+- This sensor must be registered with a **Redborder Manager**, so ensure you have one available.
 
-=== "Recommended"
-    * Disk: 32 GB
-    * RAM: 8 GB
-    * CPU: 4 núcleo
-    * Network Interfaces: At least two
+## Prerequisites
 
-## Installation Process
+### Virtual machine or baremetal
 
-The first step to start monitoring your network with Redborder is to obtain the latest official Redborder packages for Rocky Linux 9, available at [repo.redborder.com](https://repo.redborder.com).
+The requirements may vary depending on the volume of traffic to analyze. The following are the minimum requirements:
 
-## Installing the RPM
+| **Component**      | **Specification**                                     |
+|--------------------|-------------------------------------------------------|
+| **Operating System** | Rocky Linux 9 minimal                               |
+| **Memory**         | 8 GB RAM                                              |
+| **Storage**        | 40 GB HDD space                                       |
+| **CPU**            | at least 4 CPU Cores or 4 vCPU                        |
+| **Network Interfaces**  | at least 1 (management interface), add an extra one to export network traffic (span port)     |
 
-``` bash title="Latest"
-dnf install epel-release -y && rpm -ivh https://repo.redborder.com/ng/24.11/rhel/9/x86_64/redborder-repo-24.11-0.0.1-1.el9.rb.noarch.rpm
+## Packages Installation
+
+Install the supported operative system and run the following command as root:
+
+``` bash title="Repositories installation"
+yum install epel-release
+rpm -ivh https://repo.redborder.com/ng/24.11/rhel/9/x86_64/redborder-repo-24.11-0.0.1-1.el9.rb.noarch.rpm
+```
+``` bash title="Install redborder-proxy package"
+yum clean all
+yum install redborder-proxy -y
 ```
 
-``` bash title="Flowgate"
-dnf install redborder-flowgate -y
-```
+Respawn a new bash to reload the environment variables:
 
-With the packages downloaded and installed, the next step is to configure Redborder. To do this, log out of the console session and log back in. You can use a basic command for this:
-
-``` bash title="Relogin"
+``` bash title="Bash reload"
 /bin/bash --login
 ```
 
-This will update the paths to the scripts, allowing us to execute the setup command:
+## Setup wizard
 
-``` bash title="Launching the setup wizard"
-rb_setup_wizard
+Start the **installation wizard**:
+
+``` bash title="Installation wizard command"
+rbcli setup wizard
 ```
 
-This will start the platform's **setup wizard** in the console to guide you through the entire process.
+The first screen shows an index of the upcoming steps.
 
-## Setup Wizard
+![Starting the wizard](images/ch02_001.png)
 
-Having started the **setup wizard** for the platform in the console, you can use it as a guide throughout the process. The first screen that appears also offers an index of the upcoming steps.
+Press **Yes** to continue.
 
-![Starting the wizard](images/ch02_configure_wizard_start.png)
+### Configure Network
 
-Starting the wizard
+This step is optional. If you are sure that the network interfaces are already configured, you can skip this step. Otherwise, enter the configuration by pressing **Yes**.
 
-If you are unsure about the current configuration, you can cancel with the "No" option, which will show the following screen before returning to the console view.
+![Starting network configuration](images/ch02_002.png)
 
-![Cancelling the wizard](../../manager/get_started/images/ch02_cancel_wizard.png)
+Select the management interface.
 
-Cancelling the wizard
+![Select interface mode](images/ch02_003.png)
 
-!!! warning "Cancellation..."
-    The "No" option will cancel the entire installation process, meaning that all configuration done during the process will be lost.
+Select the interface configuration mode (static or DHCP)
 
-### Network Configuration
-
-This step is optional. If you are sure that the network interfaces are already configured, you can skip this step. Otherwise, enter the configuration by pressing "Yes".
-
-![Starting network configuration](../../manager/get_started/images/ch02_start_network_conf.png)
-
-Starting network configuration
-
-In the lower box, the existing network interfaces on the device in question are listed. Below all the interfaces that the device has, there is the `Finalize` option, which we can select **after successfully configuring** the interfaces.
-
-![Network configuration](../../manager/get_started/images/ch02_img001.png)
-
-Network configuration
-
-By selecting an interface and entering it, we are given the option to configure it with a static IP address or to operate dynamically (with DHCP).
-
-![Network interface configuration](../../manager/get_started/images/ch02_img002.png)
-
-Network interface configuration
+![Network interface configuration](images/ch02_004.png)
 
 If you select the static IP option, you will need to specify the IP, subnet mask, and default gateway:
 
-![Static interface configuration](../../manager/get_started/images/ch02_img003.png)
-
-Static interface configuration
-
-## Select management interface
-
-Because the flowgate has at least two interfaces, you have to select which one is the management one.
-
-![Select management interface](images/Select_management.png)
-
-Select management interface
+![Static interface configuration](images/ch02_005.png)
 
 ### DNS configuration
 
-The setup wizard will give you the option to choose whether or not to configure DNS servers if you actually need to configure a DNS.
+Press **Yes** to start the DNS configuration.
 
-![Starting DNS Configuration](../../manager/get_started/images/ch02_start_dns.png)
+![Starting DNS Configuration](images/ch02_006.png)
 
-Starting DNS configuration
+You can add up to three different DNS servers:
 
-If you need to configure DNS, set up at least one server. This can be done on the following screen:
+![DNS Configuration](images/ch02_007.png)
 
-![DNS Configuration](../../manager/get_started/images/ch02_img004.png)
+Press **OK** to continue.
 
-DNS configuration
+### Cloud address configuration
 
-### Configuration with the Remote Server
+Introduce the **Redborder Manager** IP address.
 
-The flowgate will be associated with a manager or cluster with which to share the captured data. To associate, you need to indicate the address of the manager or cluster. You can indicate either a domain address or an IP address.
+![Configuration with remote server](images/ch02_008.png)
 
-![Configuration with remote server](images/ch01_cloud_config.png)
+Press **OK** to continue.
 
-Configuration with remote server
+### Confirm configuration
 
-### Finishing the Configuration
+Press **Yes** to confirm the actual configuration.
 
-Before applying the configuration, the wizard will summarize all the filled-in information, waiting for the user to accept it.
+![Accept configuration](images/ch02_009.png)
 
-![Accept configuration](images/ch01_apply_conf.png)
+### Applying configuration
 
-Accept configuration
+Wait for the process to finish.
 
-### Finishing the Installation
+![Applying Configuration](images/ch02_010.png)
 
-The installation is almost complete; you just have to wait for the process to finish.
-
-![Applying Configuration](images/ch01_applying_conf.png)
-
-Applying Configuration
-
-Press "OK" to return to the console view.
-
-Additionally, you can observe the logs of the registration process with the manager using the following command:
-``` bash title="Print the setup logs"
-journalctl -u rb-bootstrap -f
-```
-
-At the end of the installation process, the journal will show the following:
-
-![End of installation](images/ch01_end_registration.png)
-
-End of installation
+Press **OK** to return to exit the wizard.
 
 ## What's Next?
 
-In the next chapter, we will finish associating the flowgate with the manager so that it can retransmit data.
+Sign in to **Redborder Manager** and claim the new sensor from the Unclaimed sensor list.

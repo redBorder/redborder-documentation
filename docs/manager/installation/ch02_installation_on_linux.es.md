@@ -5,12 +5,12 @@ Cómo instalar Redborder Manager en sistemas Linux.
 
 Cosas importantes que debes saber antes de la instalación:
 
-1. Esta instalación es irreversible; no se puede desinstalar directamente ni revertir.
-2. La distribución de Linux compatible en este momento es [Rocky Linux 9 minimal](https://rockylinux.org/download).
+- Esta instalación es irreversible; no se puede desinstalar directamente ni revertir.
+- La distribución de Linux compatible en este momento es [Rocky Linux 9 minimal](https://rockylinux.org/download).
 
 ## Requisitos previos
 
-### Máquina virtual o baremetal
+### Máquina virtual o hardware dedicado
 
 Los requisitos mínimos pueden variar según el modo del nodo. Estos son los requisitos para un nodo full:
 
@@ -18,7 +18,7 @@ Los requisitos mínimos pueden variar según el modo del nodo. Estos son los req
 |--------------------|-------------------------------------------------------|
 | **Sistema Operativo** | Rocky Linux 9 minimal                               |
 | **Memoria**         | 16 GB RAM                                             |
-| **Almacenamiento**        | 80 GB de espacio en HDD                                       |
+| **Almacenamiento**        | 80 GB de espacio en disco duro                                   |
 | **CPU**            | al menos 4 núcleos de CPU o 4 vCPU                       |
 | **Interfaces de Red**  | al menos 1 para nodo único o 2 para crear un clúster de múltiples nodos     |
 
@@ -143,11 +143,11 @@ También es posible configurar Redborder para utilizar el servicio Amazon RDS u 
 
 ![Base de Datos Externa](images/ch02_wizard_017.png)
 
-### Configurar el modo de administrador
+### Configurar el modo del nodo
 
 Aquí puedes seleccionar el modo para el nodo que estás instalando. Estos modos afectan cómo se configurarán los nodos a nivel de servicio. Si estás instalando un solo nodo o el primer nodo (líder), selecciona el modo full (por defecto) y presiona **OK** para continuar.
 
-![Configurar el modo de administrador](images/ch02_wizard_018.png)
+![Configurar el modo del nodo](images/ch02_wizard_018.png)
 
 ### Aplicando configuración
 

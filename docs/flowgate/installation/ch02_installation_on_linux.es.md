@@ -1,150 +1,112 @@
-# Instalación en linux
+# Instalación en Linux
 
-## Requisitos
+Cómo instalar Redborder Flowgate en sistemas Linux.
 
-El flowgate cliente de Redborder es un software que tiene requisitos mínimos para funcionar correctamente. Los elementos esenciales mínimos requeridos para la instalación, así como los recomendados para un rendimiento adecuado, se muestran en la siguiente tabla:
+Aspectos importantes a considerar antes de la instalación:
 
-**Requisitos para la instalación**
-=== "Mínimos"
-    * Disco: 16 GB
-    * RAM: 1 GB
-    * CPU: 1 núcleo
-    * Interfaces de red: Al menos dos
+- Esta instalación es irreversible; no se puede desinstalar ni revertir directamente.
+- La distribución de Linux soportada actualmente es [Rocky Linux 9 minimal](https://rockylinux.org/download).
+- Este sensor debe estar registrado con un **Redborder Manager**, así que asegúrate de tener uno disponible.
 
-=== "Recomendados"
-    * Disco: 32 GB
-    * RAM: 8 GB
-    * CPU: 4 núcleo
-    * Interfaces de red: Al menos dos
+## Requisitos Previos
 
-## Proceso de instalación
+### Máquina virtual o hardware dedicado
 
-El primer paso para comenzar a monitorear su red con Redborder es obtener los últimos paquetes oficiales de Redborder para Rocky Linux 9, disponibles en [repo.redborder.com](https://repo.redborder.com).
+Los requisitos pueden variar según el volumen de tráfico que se desee analizar. A continuación se detallan los requisitos mínimos:
 
-## Installing the RPM
+| **Componente**      | **Especificación**                                     |
+|--------------------|-------------------------------------------------------|
+| **Sistema Operativo** | Rocky Linux 9 minimal                               |
+| **Memoria**         | 8 GB RAM                                              |
+| **Almacenamiento**        | 40 GB de espacio en disco duro                                     |
+| **CPU**            | al menos 4 núcleos de CPU o 4 vCPU                    |
+| **Interfaces de Red**  | al menos 1 (interfaz de gestión), añade otra para exportación de tráfico (span port)     |
 
-``` bash title="Última versión"
-dnf install epel-release -y && rpm -ivh https://repo.redborder.com/ng/24.11/rhel/9/x86_64/redborder-repo-24.11-0.0.1-1.el9.rb.noarch.rpm
+## Instalación de Paquetes
+
+Instala el sistema operativo compatible y ejecuta el siguiente comando como root:
+
+``` bash title="Instalación de repositorios"
+yum install epel-release
+rpm -ivh https://repo.redborder.com/ng/24.11/rhel/9/x86_64/redborder-repo-24.11-0.0.1-1.el9.rb.noarch.rpm
+```
+``` bash title="Instala el paquete redborder-proxy"
+yum clean all
+yum install redborder-proxy -y
 ```
 
-``` bash title="Flowgate"
-dnf install redborder-flowgate -y
-```
+Inicia una nueva instancia de bash para recargar las variables de entorno:
 
-With the packages downloaded and installed, the next step is to configure Redborder. To do this, log out of the console session and log back in. You can use a basic command for this:
-
-``` bash title="Relogin"
+``` bash title="Recarga de Bash"
 /bin/bash --login
 ```
 
-This will update the paths to the scripts, allowing us to execute the setup command:
+## Asistente de Configuración
 
-``` bash title="Lanzamiento del asistente de instalación"
-rb_setup_wizard
+Inicia el **asistente de instalación**:
+
+``` bash title="Comando para el asistente de instalación"
+rbcli setup wizard
 ```
 
-El cual iniciará el **asistente de instalación** de la plataforma en consola para funcionar como guía durante todo el proceso.
+La primera pantalla muestra un índice de los próximos pasos.
 
-## Asistente de instalación
+![Iniciando el asistente](images/ch02_001.png)
 
-Habiendo iniciado el **asistente de instalación** para la plataforma en la consola, se puede utilizar como guía durante todo el proceso. La primera pantalla que se muestra nos ofrece también un índice de los próximos pasos.
+Presiona **Yes** para continuar.
 
-![Iniciando el asistente](images/ch02_configure_wizard_start.png)
+### Configurar Red
 
-Iniciando el asistente
+Este paso es opcional. Si estás seguro de que las interfaces de red ya están configuradas, puedes omitir este paso. De lo contrario, ingresa a la configuración presionando **Yes**.
 
-Si no está seguro sobre la configuración actual, puede cancelar con la opción "No", la cual mostrará la siguiente pantalla antes de volver a la vista de la consola.
+![Iniciando configuración de red](images/ch02_002.png)
 
-![Cancelando el asistente](../../manager/get_started/images/ch02_cancel_wizard.png)
+Selecciona la interfaz de gestión.
 
-Cancelando el asistente
+![Selecciona el modo de la interfaz](images/ch02_003.png)
 
-!!! warning "Cancelación..."
-    La opción "No" cancelará todo el proceso de instalación, lo que significa que se perderá toda la configuración realizada durante el proceso.
+Selecciona el modo de configuración de la interfaz (estático o DHCP)
 
-### Configuración de red
+![Configuración de la interfaz de red](images/ch02_004.png)
 
-Este paso es opcional. Si está seguro de que las interfaces de red ya están configuradas, puede omitir este paso. De lo contrario, entra en la configuración presionando "Sí".
+Si seleccionas la opción de IP estática, deberás especificar la IP, la máscara de subred y la puerta de enlace predeterminada:
 
-![Inicio de la configuración de red](../../manager/get_started/images/ch02_start_network_conf.png)
-
-Inicio de la configuración de red
-
-En el recuadro inferior se listan las interfaces de red existentes en el equipo en cuestión. Debajo de todas las interfaces que posee el equipo, está la opción `Finalize`, que podemos seleccionar **después de haber configurado** exitosamente las interfaces.
-
-![Configuración de red](../../manager/get_started/images/ch02_img001.png)
-
-Configuración de red
-
-Al seleccionar una interfaz y entrar en ella, se nos da la opción de configurarla con una dirección IP estática o que esta funcione dinámicamente (con DHCP).
-
-![Configuración de interfaz de red](../../manager/get_started/images/ch02_img002.png)
-
-Configuración de interfaz de red
-
-En caso de seleccionar la opción de IP estática, se deberá especificar la IP, la máscara de red y la puerta de enlace por defecto:
-
-![Configuración de interfaz estática](../../manager/get_started/images/ch02_img003.png)
-
-Configuración de interfaz estática
-
-## Seleccionar interfaz de gestión
-
-Debido a que el flowgate tiene al menos dos interfaces, en este paso debemos determinar cuál es la de gestión.
-
-![Seleccionar interfaz de gestión](images/Select_management.png)
-
-Seleccionar interfaz de gestión
+![Configuración de interfaz estática](images/ch02_005.png)
 
 ### Configuración de DNS
 
-El asistente de instalación le dará la opción de elegir si quiere o no configurar servidores DNS, si es que realmente se desea configurar un DNS.
+Presiona **Yes** para comenzar la configuración de DNS.
 
-![Empezar la configuración de los DNS](../../manager/get_started/images/ch02_start_dns.png)
+![Iniciando configuración de DNS](images/ch02_006.png)
 
-Empezar la configuración de los DNS
+Puedes agregar hasta tres servidores DNS diferentes:
 
-Si necesita configurar DNS, configura al menos un servidor. Esto se puede hacer en la pantalla siguiente:
+![Configuración de DNS](images/ch02_007.png)
 
-![Configuración de DNS](../../manager/get_started/images/ch02_img004.png)
+Presiona **OK** para continuar.
 
-Configuración de DNS
+### Configuración de la dirección en la nube
 
-### Configuración con el servidor remoto
+Introduce la dirección IP del **Redborder Manager**.
 
-El flowgate se asociará a un manager o clúster con el que compartir los datos capturados. Para que se pueda asociar es necesario indicar la dirección del manager o clúster. Se puede indicar tanto una dirección de dominio como una IP.
+![Configuración con servidor remoto](images/ch02_008.png)
 
-![Configuración con el servidor remoto](images/ch01_cloud_config.png)
+Presiona **OK** para continuar.
 
-Configuración con el servidor remoto
+### Confirmar configuración
 
-### Fin de la configuración
+Presiona **Yes** para confirmar la configuración actual.
 
-Antes de aplicar la configuración, el asistente nos resumirá toda la información rellenada, a la espera de que el usuario la acepte.
+![Aceptar configuración](images/ch02_009.png)
 
-![Aceptar configuración](images/ch01_apply_conf.png)
+### Aplicando configuración
 
-Aceptar configuración
+Espera a que el proceso finalice.
 
-### Fin de la instalación
+![Aplicando configuración](images/ch02_010.png)
 
-La instalación casi ha terminado, sólo hay que esperar a que el proceso finalice.
+Presiona **OK** para salir del asistente.
 
-![Aplicando Configuración](images/ch01_applying_conf.png)
+## Siguiente paso?
 
-Aplicando Configuración
-
-Pulse "OK" para volver a la vista de consola.
-
-Adicionalmente, puede observar los logs del proceso de registro con el manager mediante el siguiente comando: 
-``` bash title="Print the setup logs"
-journalctl -u rb-bootstrap -f
-```
-
-Al final del proceso de instalación journal mostrará lo siguiente:
-
-![Final de la instalación](images/ch01_end_registration.png)
-
-## ¿Qué es lo siguiente?
-
-En el siguiente capítulo terminaremos de asociar el flowgate al manager para que pueda retransmitir datos.
+Inicia sesión en **Redborder Manager** y reclama el nuevo sensor desde la lista de sensores no reclamados.

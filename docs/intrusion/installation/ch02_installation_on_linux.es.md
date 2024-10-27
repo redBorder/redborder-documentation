@@ -1,236 +1,195 @@
 # Instalación en Linux
 
-A continuación se detalla la instalación de base de un IPS de Redborder con el que poder analizar tráfico para detectar intrusiones en él. Debido a que es un trabajo específico y con una gran carga, se considera necesario tener una máquina instalada para ese propósito. 
+Cómo instalar Redborder Intrusion en sistemas Linux.
 
-Existen dos modos de instalación para el IPS: la versión mínima que emula el comportamiento del **flowgate** y la versión integrada en un nodo que actúa, además de IPS, como **manager**. En función de cómo vayamos a instalar el IPS, utilizaremos uno u otro.
+Aspectos importantes a considerar antes de la instalación:
 
-## Requisitos de la instalación
+- Esta instalación es irreversible; no se puede desinstalar ni revertir directamente.
+- La distribución de Linux soportada actualmente es [Rocky Linux 9 minimal](https://rockylinux.org/download).
+- Este sensor debe estar registrado con un **Redborder Manager**, así que asegúrate de tener uno disponible.
 
-La implementación exitosa del IPS de Redborder requiere una máquina con el sistema operativo **Rocky Linux 9** instalado. Adicionalmente, será necesaria la preinstalación de un **Manager** de Redborder contra el que registrar el IPS. Estos son los especificaciones de este IPS:
+## Requisitos Previos
 
-=== "Recomendado"
+### Máquina virtual o hardware dedicado
 
-    * Disco: 50 GB
-    * RAM: 16 GB
-    * CPU: 4 núcleos
-    * Interfaces de red: Al menos dos
+Los requisitos pueden variar según el volumen de tráfico que se desee analizar. A continuación se detallan los requisitos mínimos:
 
-## Proceso de instalación
+| **Componente**      | **Especificación**                                     |
+|--------------------|-------------------------------------------------------|
+| **Sistema Operativo** | Rocky Linux 9 minimal                               |
+| **Memoria**         | 8 GB RAM                                              |
+| **Almacenamiento**        | 40 GB de espacio en disco duro                                     |
+| **CPU**            | al menos 4 núcleos de CPU o 4 vCPU                    |
+| **Interfaces de Red**  | al menos 2 (una para gestión y otra para el segmento de red de un solo puerto)     |
 
-La primera acción para comenzar a monitorizar tu red con Redborder es obtener los paquetes oficiales más recientes de Redborder para **Rocky Linux 9** disponibles en [repo.redborder.com](https://repo.redborder.com).
+## Instalación de Paquetes
 
-``` bash title="Latest"
-dnf install epel-release -y && rpm -ivh https://repo.redborder.com/ng/24.11/rhel/9/x86_64/redborder-repo-24.11-0.0.1-1.el9.rb.noarch.rpm
+Instala el sistema operativo compatible y ejecuta el siguiente comando como root:
+
+``` bash title="Instalación de repositorios"
+yum install epel-release
+rpm -ivh https://repo.redborder.com/ng/24.11/rhel/9/x86_64/redborder-repo-24.11-0.0.1-1.el9.rb.noarch.rpm
+```
+``` bash title="Instala el paquete redborder-ips"
+yum clean all
+yum install redborder-ips -y
 ```
 
-``` bash title="IPS"
-dnf install redborder-ips -y
-```
+Reinicia una nueva instancia de bash para recargar las variables de entorno:
 
-Ya con los paquetes descargados e instalados, el siguiente paso es configurar Redborder, para ello reniciamos la sesión en consola:
-
-``` bash title="Comando de reinicio de consola"
+``` bash title="Recarga de Bash"
 /bin/bash --login
 ```
 
-Esto actualizará las rutas a los scripts y así podremos ejecutar el comando de instalación:
+## Asistente de Configuración
 
-!!! warning "Si está conectado a la máquina de manera remota..."
-    El asistente de instalación no puede ser lanzado a través de SSH. En caso de estar virtualizado, utilize la consola proporcionada por el propio entorno de virtualización. Sino, tendrá que conectarse directamente a la máquina física.
+Inicia el **asistente de instalación**:
 
-``` bash title="Comando de instalación del programa de Redborder"
-rb_setup_wizard
+``` bash title="Comando para el asistente de instalación"
+rbcli setup wizard
 ```
 
-El cual iniciará el **asistente de instalación** de la plataforma en consola para funcionar como guía durante todo el proceso.
+La primera pantalla muestra un índice de los próximos pasos.
 
-## Asistente de instalación
+![Iniciando el asistente](images/ch02_001.png)
 
-Habiendo iniciado el **asistente de instalación** para la plataforma en la consola, se puede utilizar como guía durante todo el proceso. La primera pantalla que se muestra nos ofrece también un índice de los próximos pasos.
+### Configuración de Red
 
-![Iniciando el asistente](images/ch02_configure_wizard_start.png)
+#### Renombrar Interfaces de Red
 
-Iniciando el asistente
+Redborder Intrusion requiere que las interfaces de red tengan longitudes máximas definidas. Si el asistente detecta que es necesario renombrar las interfaces de red, aparecerá esta pantalla, permitiéndote hacerlo.
 
-Si no está seguro sobre la configuración actual, puede cancelar con la opción "No", la cual mostrará la siguiente pantalla antes de volver a la vista de la consola.
+![Renombrar la interfaz de red](images/ch02_002.png)
 
-### Configuración de red
+Presiona **Yes** para confirmar.
 
-#### Normalización del nombre de las interfaces
+![Confirmar el renombrado de las interfaces](images/ch02_003.png)
 
-![Normalización del nombre de las interfaces](images/ch01_interface_naming_warn.png)
+Después de la confirmación, presiona **OK** para reiniciar.
 
-Normalización del nombre de las interfaces
+![Presiona OK para reiniciar](images/ch02_004.png)
 
-Después de confirmar, el IPS se reiniciará y podremos reanudar lanzando de nuevo el asistente:
+Después del reinicio, inicia nuevamente el asistente para continuar con los siguientes pasos.
 
-``` bash title="Comando de instalación del programa de Redborder"
-rb_setup_wizard
+``` bash title="Comando para ejecutar el asistente de configuración"
+rbcli setup wizard
 ```
 
-En el recuadro inferior se listan las interfaces de red existentes en el equipo en cuestión. Debajo de todas las interfaces que posee el equipo, está la opción `Finalize`, que podemos seleccionar **después de haber configurado** exitosamente las interfaces.
+#### Configurar Red
 
-![Configuración de red](images/ch02_img001.png)
+Selecciona la interfaz de gestión para la configuración.
 
-Configuración de red
+![Configuración de Red](images/ch02_005.png)
 
-Al seleccionar una interfaz y entrar en ella, se nos da la opción de configurarla con una dirección IP estática o que esta funcione dinámicamente (con DHCP).
+Al seleccionar una interfaz e ingresar en su configuración, tienes la opción de asignarle una dirección IP estática o configurarla para que funcione de forma dinámica (con DHCP).
 
-![Configuración de interfaz de red](images/ch02_img002.png)
+![Configuración de la Interfaz de Red](images/ch02_006.png)
 
-Configuración de interfaz de red
+Si seleccionas la opción de IP estática, debes especificar la IP, la máscara de subred y la puerta de enlace predeterminada:
 
-En caso de seleccionar la opción de IP estática, se deberá especificar la IP, la máscara de red y la puerta de enlace por defecto:
-
-![Configuración de interfaz estática](images/ch02_img003.png)
-
-Configuración de interfaz estática
+![Configuración de Interfaz Estática](images/ch02_007.png)
 
 ### Configuración de DNS
 
-El asistente de instalación nos dará la opción de elegir si quieremos configurar servidores DNS. Es obligatorio configurar al menos un servidor, sin embargo, actualmente es posible configurar hasta 3 servidores DNS en la plataforma. Esto se puede hacer en la siguiente pantalla:
+Presiona **Yes** para comenzar con la configuración de DNS:
 
-![Configuración de DNS](images/ch02_img004.png)
+![Configuración de DNS](images/ch02_008.png)
 
-Configuración de DNS
+Puedes ingresar hasta tres servidores DNS diferentes:
 
-### Configuración de segmentos
+![Servidores DNS](images/ch02_009.png)
 
-Los segmentos identifican aquellas redes a las que el IPS tiene acceso y sobre las cuales va a actuar como dispositivo de seguridad en red. Sobre las interfaces, es necesario declarar al menos un segmento, para que el IPS esté operativo.
+### Configurar Segmentos
 
-![Configuración de segmentos](images/ch02_configure_segments.png)
+Los segmentos identifican las redes a las que la Sonda de Intrusión tiene acceso y en las que actuará como un dispositivo de seguridad de red. Debe declararse al menos un segmento en las interfaces.
+
+![Configuración de Segmentos](images/ch02_010.png)
 
 #### Info
 
-En info podremos ver la información relativa a cada interfaz de red, e incluso la podremos indentificar en la tarjeta de red física. Esto es útil para decidir cuáles van a ser los segmentos activos y qué debe conectarse físicamente con qué:
+En Info, podemos ver detalles relacionados con cada interfaz de red e incluso identificarla en la tarjeta de red física.
 
-![Información de segmentos](images/ch02_info_segments.png)
+![Información del Segmento](images/ch02_011.png)
 
-Información de segmentos
+Al seleccionar una interfaz, debes elegir un tiempo de parpadeo para la interfaz de red física, lo que ayudará a identificarla en la máquina física en cuestión:
 
-Al seleccionar una interfaz, deberemos elegir un tiempo de parpadeo de la interfaz física de red, lo que nos ayudará a identificarla en la máquina física en cuestión:
+![Parpadeo de la Interfaz](images/ch02_012.png)
 
-![Parpadeo de interfaces](images/ch02_blink.png)
+Presiona **OK** para hacer que las interfaces parpadeen.
 
-Parpadeo de interfaces
+![Parpadeo de la Interfaz](images/ch02_013.png)
 
-!!! important "Si selecciona una de las interfaces..."
-    Puede volver a la configuración de segmentos pulsando **ESC** o elegir la duración de parpadeo. Durante el parpadeo de la interfaz, el proceso de instalación no continuará.
+#### Force bypass
 
-#### Force bypass (WIP)
+Esta opción creará los segmentos automáticamente en máquinas con tarjetas de red Silicon Bypass.
 
-#### Nuevo segmento
+#### New Segment
 
-Para asignar un nuevo segmento, debemos seleccionar una de las interfaces disponibles
+Selecciona **New Segment** para crear uno con las interfaces de red disponibles.
 
-!!! important "En cuanto a la interfaz de administración..."
-    Debe reservar la interfaz principal de administración y no debe ser asignada como segmento.
+![Crear un nuevo Segmento](images/ch02_014.png)
 
-![Crear un nuevo segmento](images/ch02_new_segment.png)
+#### Delete Segment
 
-Crear un nuevo segmento
+Si deseas realizar la acción opuesta, puedes eliminar los segmentos que desees de la lista. Selecciona los que quieres eliminar:
 
-La creación de un nuevo segmento va a ser mostrado en una lista previa:
+![Eliminar Segmentos](images/ch02_015.png)
 
-![Nuevo segmento en la lista](images/ch02_new_segment_in_list.png)
+#### Finalizar Configuración de Segmentos
 
-Nuevo segmento en la lista
+Una vez que hayas configurado los segmentos deseados, presiona **finalize**.
 
-#### Eliminar segmento
+## Configurar método de registro
 
-En el caso en el que queramos hacer la acción contraria, podemos eliminar los segmentos que queramos de la lista. Podemos seleccionar los que queramos eliminar:
+Elige el modo en el que operará la Sonda de Intrusión:
 
-![Eliminación de segmentos](images/ch02_delete_segment.png)
+- Proxy: Selecciona este modo si el Redborder Manager está en una red diferente a la Sonda de Intrusión.
+- Manager: Selecciona este modo si el Redborder Manager y Redborder Intrusion son accesibles desde la misma red.
 
-Eliminación de segmentos
+![Método de Registro de la Sonda de Intrusión](images/ch02_016.png)
 
-Y desaparecerán de la lista previa:
+Presiona **OK** para confirmar.
 
-![Configuración de segmentos](images/ch02_configure_segments.png)
+## Modo Manager: Configuración de Registro del Sensor en la Interfaz Web
 
-Configuración de segmentos
+Introduce la dirección remota del Redborder Manager, el usuario de registro (por defecto admin) y el nombre que tendrá este sensor.
 
-#### Finalizar la configuración de segmentos
+![Método de Registro del Administrador de la Sonda de Intrusión](images/ch02_017.png)
 
-Cuando hayamos configurado los segmentos deseados. Pulsamos **finalizar**.
+Presiona **OK** para confirmar.
 
-## Modo del nodo
+Introduce la contraseña del Redborder Manager para realizar el registro.
 
-En este punto tenemos que elegir en qué modo va a actuar el IPS:
+![Contraseña del Administrador de la Sonda de Intrusión](images/ch02_018.png)
 
-![Configuración de registro del IPS](images/ch02_ips_mode.png)
+Presiona **OK** para confirmar.
 
-Configuración de registro del IPS
+## Modo Proxy: Configuración de la dirección en la nube
 
-En el caso de flowgate, el asistente nos pedirá la dirección de un manager contra el que registrarse. Por otro lado, en modo manager, el asistente nos pedirá la dirección del manager **que hace de servidor web**; así que nos pedirá también las **credenciales** del usuario **administrador** que está registrando este IPS.
+Introduce la dirección IP del Redborder Manager (dirección en la nube).
 
-!!! info "Tenga en cuenta..."
-    La configuración del IPS en modo manager supondrá el registro automático del sensor contra la web.
+![Método de Registro de la Sonda de Intrusión en Modo Proxy](images/ch02_020.png)
 
-### Modo flowgate: Configuración con el servidor remoto
+Presiona **OK** para confirmar.
 
-El ips se asociará a un manager o clúster con el que compartir los datos capturados. Para que se pueda asociar es necesario indicar la dirección del manager o clúster. Se puede indicar tanto una dirección de dominio como una IP.
+## Confirmar configuración
 
-![Configuración con el servidor remoto](images/ch01_cloud_config.png)
+Antes de aplicar la configuración, el asistente resumirá toda la información completada, esperando que el usuario la acepte.
 
-Configuración con el servidor remoto
+![Aceptar Configuración](images/ch02_019.png)
 
-### Modo manager: Registro contra la web
+Presiona **Yes**  para confirmar la configuración.
 
-El ips se asociará a un manager que aloje la web. Para que se pueda asociar es necesario indicar la dirección del manager y las credenciales de un usuario con permisos de administración. Adicionalmente, podemos modificar el nombre del sensor cuando se registre en la web:
+## Aplicando configuración
 
-![Configuración de registro del IPS](images/ch02_sensor_reg.png)
+Espera a que el proceso finalice.
 
-Configuración de registro del IPS
+![Aplicando configuración](images/ch02_023.png)
 
-Al pulsar OK, nos pedirá la contraseña de administrador registrado en la **web**:
+Presiona **OK** para salir del asistente.
 
-![Contraseña de usuario web](images/ch02_pasword_config.png)
+## Siguiente paso?
 
-Contraseña de usuario web
+Inicia sesión en **Redborder Manager** y verifica que el nuevo sensor esté presente.
 
-### Fin de la configuración
-
-Antes de aplicar la configuración, el asistente nos resumirá toda la información rellenada, a la espera de que el usuario la acepte.
-
-![Aceptar configuración](images/ch02_apply_conf.png)
-
-Aceptar configuración
-
-### Fin de la instalación
-
-La instalación casi ha terminado, sólo hay que esperar a que el proceso finalice.
-
-![Aplicando Configuración](images/ch02_finishing_configuration.png)
-
-Aplicando Configuración
-
-Pulse "OK" para volver a la vista de consola.
-
-Adicionalmente, puede observar los logs del proceso de registro con el manager mediante el comando correspondiente
-
-#### Modo Flowgate
-
-``` bash title="Mostrar los logs de registro"
-journalctl -u rb-register -f
-```
-
-Al final del proceso de instalación journal mostrará logs de registro:
-
-![Final de la instalación](images/ch01_end_registration.png)
-
-#### Modo Manager
-
-``` bash title="Mostrar los logs de registro"
-cat /var/log/rb-register-common/register.log
-```
-Al final del proceso de instalación journal mostrará logs de registro:
-
-![Final de la instalación](images/ch01_end_registration_manager.png)
-
-## ¿Qué es lo siguiente?
-
-En el siguiente capítulo terminaremos de asociar el IPS al manager para que pueda tomar el tráfico y alertar de las intrusiones detectadas en él. Todo ello gestionable desde la web.
-
-!!! info "Si instaló el IPS en modo manager..."
-    Recuerde que si ha instalado el ips en modo manager, el proceso de asociación ya debe haber finalizado
+En caso de estar en Modo Proxy, deberás reclamar el sensor desde la lista de No Reclamados.
