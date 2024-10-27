@@ -22,10 +22,10 @@ plugins:
 # Customize your own book
 nav:
   - index.es.md
-  - manager/manager_basics/ch1_what_is_redborder.es.md
-  - manager/manager_basics/ch3_web_platform.es.md
-  - manager/manager_basics/ch4_1_modules.es.md
-  - manager/manager_basics/ch4_2_modules_menu_options.es.md
+  - manager/get_started/ch1_what_is_redborder.es.md
+  - manager/get_started/ch3_web_platform.es.md
+  - manager/get_started/ch4_1_modules.es.md
+  - manager/get_started/ch4_2_modules_menu_options.es.md
   - manager/more_in_detail/ch4_3_filtering_events.es.md
   - manager/more_in_detail/ch4_4_ip_reputation_monitorization.es.md
   - manager/more_in_detail/ch4_5_views.es.md
@@ -39,9 +39,9 @@ nav:
   - manager/redborder_api/ch10_introduction.es.md
   - manager/redborder_api/ch10_use_examples.es.md
   - manager/redborder_api/ch11_model_sharing.es.md
-  - proxy/platform_configurations/ch1_proxy_installation.es.md
-  - proxy/platform_configurations/proxy_sensor.es.md
-  - ips/IPS_basics/ch1_what_is_redborder.es.md
-  - ips/IPS_basics/ch2_redborder_installation.es.md
+  - flowgate/platform_configurations/ch1_flowgate_installation.es.md
+  - flowgate/platform_configurations/flowgate_sensor.es.md
+  - ips/get_started/ch1_what_is_redborder.es.md
+  - ips/get_started/ch2_redborder_installation.es.md
   - ips/platform_configurations/ips_sensor.es.md
   
