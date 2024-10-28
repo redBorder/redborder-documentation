@@ -22,5 +22,5 @@ plugins:
 # Customize your own book
 nav:
   - index.md
-  - flowgate/index.en.md
-  - flowgate/installation/ch02_installation_on_linux.md
+  - documentation/flowgate/index.en.md
+  - documentation/flowgate/installation/ch02_installation_on_linux.md

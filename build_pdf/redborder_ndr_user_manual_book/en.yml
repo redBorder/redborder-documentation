@@ -22,26 +22,26 @@ plugins:
 # Customize your own book
 nav:
   - index.md
-  - manager/get_started/ch1_what_is_redborder.md
-  - manager/get_started/ch3_web_platform.md
-  - manager/get_started/ch4_1_modules.md
-  - manager/get_started/ch4_2_modules_menu_options.md
-  - manager/more_in_detail/ch4_3_filtering_events.md
-  - manager/more_in_detail/ch4_4_ip_reputation_monitorization.md
-  - manager/more_in_detail/ch4_5_views.md
-  - manager/more_in_detail/ch4_12_anomalies.md
-  - manager/more_in_detail/ch5_dashboards_view.md
-  - manager/more_in_detail/ch5_dashboards_view.md
-  - manager/platform_configurations/ch6_sensors.md
-  - manager/platform_configurations/ch7_tools_and_admin.md
-  - manager/platform_configurations/ch7_4_general_config.md
-  - manager/platform_configurations/ch7_5_dashboards_administration.md
-  - manager/redborder_api/ch10_introduction.md
-  - manager/redborder_api/ch10_use_examples.md
-  - manager/redborder_api/ch11_model_sharing.md
-  - flowgate/platform_configurations/ch1_flowgate_installation.md
-  - flowgate/platform_configurations/flowgate_sensor.md
-  - ips/get_started/ch1_what_is_redborder.md
-  - ips/get_started/ch2_redborder_installation.md
-  - ips/platform_configurations/ips_sensor.md
+  - documentation/manager/get_started/ch1_what_is_redborder.md
+  - documentation/manager/get_started/ch3_web_platform.md
+  - documentation/manager/get_started/ch4_1_modules.md
+  - documentation/manager/get_started/ch4_2_modules_menu_options.md
+  - documentation/manager/more_in_detail/ch4_3_filtering_events.md
+  - documentation/manager/more_in_detail/ch4_4_ip_reputation_monitorization.md
+  - documentation/manager/more_in_detail/ch4_5_views.md
+  - documentation/manager/more_in_detail/ch4_12_anomalies.md
+  - documentation/manager/more_in_detail/ch5_dashboards_view.md
+  - documentation/manager/more_in_detail/ch5_dashboards_view.md
+  - documentation/manager/platform_configurations/ch6_sensors.md
+  - documentation/manager/platform_configurations/ch7_tools_and_admin.md
+  - documentation/manager/platform_configurations/ch7_4_general_config.md
+  - documentation/manager/platform_configurations/ch7_5_dashboards_administration.md
+  - documentation/manager/redborder_api/ch10_introduction.md
+  - documentation/manager/redborder_api/ch10_use_examples.md
+  - documentation/manager/redborder_api/ch11_model_sharing.md
+  - documentation/flowgate/platform_configurations/ch1_flowgate_installation.md
+  - documentation/flowgate/platform_configurations/flowgate_sensor.md
+  - documentation/ips/get_started/ch1_what_is_redborder.md
+  - documentation/ips/get_started/ch2_redborder_installation.md
+  - documentation/ips/platform_configurations/ips_sensor.md
   
