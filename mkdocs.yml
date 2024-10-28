@@ -78,6 +78,7 @@ plugins:
           locale: es
           name: Español
   - tags
+  - glightbox
 
 extra:
   social:
