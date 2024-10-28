@@ -1,4 +1,4 @@
-# General Interface
+# Interface Overview
 
  How to navigate to the main features in the Redborder Manager.
 
@@ -112,7 +112,8 @@ Navigation Menu:
     ## User Profile
 
     Click in your username to open the followin options:
+
     - **Notifications**: View recent alerts and updates related to your account and system activity.
     - **My Profile**: Access and edit your personal account settings and preferences.
     - **Show Help**: Open the help section for guidance on using Redborder Manager features.
-    - **Logoout**: Sign out of your account securely.
+    - **Logout**: Sign out of your account securely.

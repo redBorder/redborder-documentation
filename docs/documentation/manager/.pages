@@ -3,10 +3,10 @@ nav:
     - ...
     - Installation: installation
     - Getting Started: getting_started
-    - Navigate Redborder Manager: navigate_redborder_manager
+    - Navigation: navigation
+    - Dashboards: dashboards
     - Incidents: incidents
     - Apps: apps
-    - Dashboards: dashboards
     - Reports: reports
     - Seeing data in more detail: more_in_detail
     - Integrations: integrations
