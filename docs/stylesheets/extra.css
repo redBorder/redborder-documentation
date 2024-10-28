@@ -1,7 +1,7 @@
-.md-grid {
-  max-width: none;
-  margin-left: 0px;
-  margin-right: 0px;
+@font-face {
+  font-family: 'Satoshi';
+  src: url("/assets/fonts/Satoshi-Variable.ttf") format("truetype");
+  font-display: swap;
 }
 
 :root, [data-md-color-scheme="default"] {
@@ -92,12 +92,17 @@
 /* header font */
 
 .md-header__topic:first-child {
+  font-family: 'Satoshi';
   font-weight: 700;
 }
 
 .md-typeset h1 {
   font-weight: 700;
   color: var(--md-typeset-a-color);
+}
+
+h2, h3 {
+  font-family: 'Satoshi';
 }
 
 /* Correct page icon size */

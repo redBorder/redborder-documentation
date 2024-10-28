@@ -1,10 +1,11 @@
 ---
-site_name: 'redBorder Documentation'
+site_name: 'Redborder Documentation'
 site_url: 'https://docs.redborder.com'
 docs_dir: '../../docs'
 
 theme:
   name: material
+  custom_dir: '../../overrides'
   font:
     text: Red Hat Text
   features:

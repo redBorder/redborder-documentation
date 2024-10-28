@@ -1,6 +1,6 @@
-## redBorder documentation
+## Redborder Documentation
 
-Welcome to the official documentation for redBorder. Site is deployed at https://docs.redborder.com.
+Welcome to the official documentation for Redborder. Site is deployed at https://docs.redborder.com.
 
 ## Installation
 
@@ -28,9 +28,10 @@ Build site for production:
 mkdocs build
 ```
 
-## Building PDFs version
+## Building Books
 
-Get into [build_pdf](https://github.com/redBorder/redborder-documentation/tree/quick_fixes/build_pdf) directory and folow the README steps.
+Get into [build_pdf](https://github.com/redBorder/redborder-documentation/tree/master/build_pdf) directory and folow the README steps.
+
 ## License
 
 MIT license.

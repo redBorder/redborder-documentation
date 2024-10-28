@@ -1,115 +1,34 @@
 ---
-title: Home
+template: home.en.html
+title: Redborder NDR
+hide:
+  - toc
+  - navigation
+  - feedback
 ---
-<!-- Additional styles for landing page -->
-  <style>
-    .mdx-container {
-      background-size: contain;
-    }
-    .mdx-hero {
-    }
 
-    .mdx-hero h1 {
-        color: currentcolor;
-        margin-bottom: 1rem;
-        font-size: 2.6rem;
-    }
-    @media screen and (max-width: 29.9375em) {
-        .mdx-hero h1 {
-            font-size: 1.4rem;
-        }
-    }
+## What is Redborder NDR?
 
-    @media screen and (min-width: 60em) {
-        .mdx-hero {
-            align-items: stretch;
-            display: flex;
-        }
-        .mdx-hero__content {
-            max-width: 38rem;
-        }
-        .mdx-hero__image {
-            order: 1;
-            transform: translateX(4rem);
-            width: 38rem;
-        }
-    }
-    @media screen and (min-width: 76.25em) {
-      .mdx-hero__image {
-        transform: translateX(8rem);
-      }
-    }
-    .mdx-hero .md-button {
-      border-color: var(--hb-hero-color);
-    }
-    .mdx-hero .md-button--primary {
-      color: var(--md-primary-fg-color);
-      background-color: var(--hb-hero-color);
-      border-color: transparent;
-      margin-right: 0.5rem;
-      margin-top: 0.5rem;
-    }
+**Redborder NDR** is an open, active, and scalable platform for Cybersecurity and Real-time Network Traffic Analysis (NTA). It is based on Big Data technology for enterprises and service providers.
 
-    .md-main .md-button--primary {
-      color: var(--md-primary-fg-color);
-      background-color: var(--hb-hero-color);
-      border-color: transparent;
-    }
+Its ability to ingest, analyze, and report large amounts of data has been developed and tested in high-demand environments, as well as Network Traffic Analysis, Cybersecurity, or analysis and reporting of connections through wireless networks in different locations.
 
-    nav[class="md-tabs"] {
-      border-bottom: none;
-    } 
-</style>
+## Core Capabilities of Redborder NDR
 
-<div class="home-logo-item">
-  <img src="/assets/images/redborder-logo-max-dark.png" alt="redborder" class="light-logo"/>
-  <img src="/assets/images/redborder-logo-max-ligth.png" alt="redborder" class="dark-logo"/>
-</div>
+Redborder NDR provides robust visibility and protection against threats through the following key capabilities:
 
-<section class="mdx-container">
-  <div class="md-grid md-typeset">
-    <div class="mdx-hero">
-      <div class="mdx-hero__content">
-        <h1>Open, Active and professional <div id="typewriter">NDR platform</div></h1>
-        <h3>Redborder is an open-source Network Detection and Response (NDR) cybersecurity platform that helps monitor and visualize network incidents in real-time.</h3>
-        <a href="manager/redborder_basics/ch2_redborder_installation/" class="md-button md-button--primary">
-          Install Redborder
-        </a>
-        <a href="https://redborder.com/" class="md-button" target="_blank">
-          Check our official website
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+- **Active Cybersecurity**: Protect your IT network with our Next Generation IPS (NGIPS) deployment.
+- **Security Info & Event Management**: Manage all your Logs, including third party vendors with integrated SIEM module.
+- **Hardware Monitoring**: Monitoring deployment hardware units trough SNMP.
+- **Network Traffic Analysis**: Complete data visualization, NetFlow, sFlow, DPI analisys, geolocation and more. 
+- **Correlation Engine**: Analysis combining any rule, detect anomalies and behaviours.
+- **Wireless Traffic Analysis**: We integrate with your AP Wifi for indoor localization management and data analysis.  
 
-## Welcome
+## Supported Browsers
 
-This is the documentation page for RedBorder; we're glad you're here. Our documentation team is responsible for maintaining and adding more information as needed. Here you will find what you need to know to implement and deploy the platform, as well as various topics of interest for your installation.
+Redborder NDR is supported on the latest version of the following browsers:
 
-## Navigating the Site
-
-### Getting started
-
-Right now, you're on the homepage. In the top menu, available even on mobile devices, you'll see all the main sections of the documentation site. If you click on a section (*"Guides," for example*), you'll see a list of *subordinate items* to each main section in the left margin.
-
-When you open a document, you'll see a table of contents in the right margin with clickable links (*If you're browsing from a mobile device, it's recommended to put the device in landscape mode*). For long documents, the table of contents makes navigating around the document easy. If you're reading a long document and want to go back up, simply scroll slightly up, and a new button will appear that, when clicked, will take you to the top of the page.
-
-The documentation sections are as follows:
-
-- **Manager**: detailed information on different aspects of the RedBorder manager.
-- **Proxy**: detailed information on the RedBorder proxy.
-- **IPS**: detailed information on the RedBorder IPS.
-- **Guides**: covering specific ways to configure and use RedBorder.
-
-### Using search
-
-The platform features a comprehensive search function. You can use it to quickly search for specific information. Simply start typing in the "Search" input field in the top menu bar, and the site will return search results.
-
-To open a page in the search results, simply click (or tap on mobile) on the desired page in the displayed list.
-
-### What's next
-
-If this is your first time visiting this documentation platform, you can visit the [getting started](guides/getting_started/first_steps.md) page to see initial information when learning about RedBorder.
-
-If you have questions that are not covered, feel free to reach out to us; our contact methods are available on our [official website](https://redborder.com/).
+- Mozilla Firefox®
+- Google Chrome™
+- Apple® Safari®
+- Microsoft Edge®    

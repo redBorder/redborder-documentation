@@ -1,116 +1,34 @@
 ---
-title: Inicio
+template: home.es.html
+title: Redborder NDR
+hide:
+  - toc
+  - navigation
+  - feedback
 ---
-<!-- Additional styles for landing page -->
-  <style>
-    .mdx-container {
-      background-size: contain;
-    }
 
-    .mdx-hero {
+## ¿Qué es Redborder NDR?
 
-    }
-    .mdx-hero h1 {
-        color: currentcolor;
-        margin-bottom: 1rem;
-        font-size: 2.6rem;
-    }
-    @media screen and (max-width: 29.9375em) {
-        .mdx-hero h1 {
-            font-size: 1.4rem;
-        }
-    }
+**Redborder NDR** es una plataforma abierta, activa y escalable para la ciberseguridad y el análisis de tráfico de red en tiempo real (NTA). Está basada en tecnología Big Data, orientada tanto a empresas como a proveedores de servicios.
 
-    @media screen and (min-width: 60em) {
-        .mdx-hero {
-            align-items: stretch;
-            display: flex;
-        }
-        .mdx-hero__content {
-            max-width: 38rem;
-        }
-        .mdx-hero__image {
-            order: 1;
-            transform: translateX(4rem);
-            width: 38rem;
-        }
-    }
-    @media screen and (min-width: 76.25em) {
-      .mdx-hero__image {
-        transform: translateX(8rem);
-      }
-    }
-    .mdx-hero .md-button {
-      border-color: var(--hb-hero-color);
-    }
-    .mdx-hero .md-button--primary {
-      color: var(--md-primary-fg-color);
-      background-color: var(--hb-hero-color);
-      border-color: transparent;
-      margin-right: 0.5rem;
-      margin-top: 0.5rem;
-    }
+Su capacidad para ingerir, analizar y reportar grandes volúmenes de datos ha sido desarrollada y probada en entornos de alta demanda, aplicándose en el análisis de tráfico de red, ciberseguridad o en el análisis y reporte de conexiones a través de redes inalámbricas en distintas ubicaciones.
 
-    .md-main .md-button--primary {
-      color: var(--md-primary-fg-color);
-      background-color: var(--hb-hero-color);
-      border-color: transparent;
-    }
+## Capacidades Clave de Redborder NDR
 
-    nav[class="md-tabs"] {
-      border-bottom: none;
-    }
-</style>
+Redborder NDR proporciona visibilidad y protección sólida contra amenazas a través de las siguientes capacidades clave:
 
-<div class="home-logo-item">
-  <img src="/assets/images/redborder-logo-max-dark.png" alt="redborder" class="light-logo"/>
-  <img src="/assets/images/redborder-logo-max-ligth.png" alt="redborder" class="dark-logo"/>
-</div>
+- **Ciberseguridad Activa**: Protege tu red de TI con nuestro despliegue de IPS de próxima generación (NGIPS).
+- **Gestión de Información y Eventos de Seguridad**: Administra todos tus registros, incluidos los de terceros, con un módulo integrado de SIEM.
+- **Monitoreo de Hardware**: Supervisión de unidades de hardware desplegadas a través de SNMP.
+- **Análisis de Tráfico de Red**: Visualización completa de datos, análisis de NetFlow, sFlow, DPI, geolocalización y más.
+- **Motor de Correlación**: Análisis combinando cualquier regla, detección de anomalías y comportamientos.
+- **Análisis de Tráfico Inalámbrico**: Integración con tus AP Wifi para gestión de localización en interiores y análisis de datos.
 
-<section class="mdx-container">
-  <div class="md-grid md-typeset">
-    <div class="mdx-hero">
-      <div class="mdx-hero__content">
-        <h1>Abierta, Activa y Profesional <div id="typewriter">Plataforma NDR</div></h1>
-        <h3>Redborder es una plataforma de ciberseguridad de código abierto para la Detección y Respuesta en Redes (NDR) que ayuda a monitorear y visualizar incidentes en la red en tiempo real.</h3>
-        <a href="manager/redborder_basics/ch2_redborder_installation/" class="md-button md-button--primary">
-          Instala Redborder
-        </a>
-        <a href="https://redborder.com/" class="md-button" target="_blank">
-          Visita nuestro sitio web oficial
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+## Navegadores Compatibles
 
-## Bienvenido
+Redborder NDR es compatible con la última versión de los siguientes navegadores:
 
-Esta es la página de documentación de RedBorder; nos complace que esté aquí. Nuestro equipo de documentación se encarga de mantenerla y agregar más en caso de ser necesaria. Aquí encontrará lo que necesita saber para implementar y desplegar la plataforma, así como también varios temas de interés para su instalación.
-
-## Navegar por el sitio
-
-### Comenzando
-
-En este momento se encuentra en la página principal. En el menú superior, disponible aún en dispositivos móviles, verá todas las secciones principales de la documentación. Si hace clic en alguna sección, (*"Guides" por ejemplo*) verá en el margen izquierdo una lista de *elementos subordinados* a cada sección principal.
-
-Al abrir un documento, verá una tabla de contenidos en el margen derecho con links que puede clicar (*Si está navegando desde un dispositivo móvil, se recomienda colocar el dispositivo en horizontal*). Para documentos largos la tabla de contenidos hará desplazarse alrededor del documento con facilidad. Si está leyendo un documento extenso y desea volver hacia arriba, desplácese ligeramente hacia arriba, un nuevo botón aparecerá y que al clicarlo, le llevará al inicio de la página.
-
-Las secciones de documentación son las siguientes:
-
-- **Manager**: información detallada sobre los diferentes aspectos del manager de RedBorder.
-- **Proxy**: información detallada sobre el proxy de RedBorder.
-- **IPS**: información detallada sobre el IPS de RedBorder.
-- **Guides**: que cubren formas específicas de configurar y usar RedBorder.
-
-### Utilizando la búsqueda
-
-La plataforma cuenta con una función de búsqueda integral. Puede utilizarla para buscar información específica de manera rápida. Simplemente comience a escribir en el campo de entrada "Buscar" en la barra de menú superior y el sitio devolverá los resultados de la búsqueda.
-
-Para abrir una página en los resultados de la búsqueda simplemente haga clic (o toque en el móvil) en la página deseada en la lista mostrada.
-
-### ¿Qué es lo siguiente?
-
-Si esta es su primera vez visitando esta plataforma de documentación, puede visitar la página [primeros pasos](guides/getting_started/first_steps.es.md) para ver la información inicial para aprender sobre RedBorder.
-
-Si llega a tener dudas que no se encuentran cubiertas, puede acudir a nosotros, nuestros métodos de contacto están disponibles en nuestro [sitio oficial](https://redborder.com/).
+- Mozilla Firefox®
+- Google Chrome™
+- Apple® Safari®
+- Microsoft Edge®

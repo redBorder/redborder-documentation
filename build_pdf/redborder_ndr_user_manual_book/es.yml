@@ -1,0 +1,47 @@
+---
+INHERIT: ../build_base.yml
+
+# Do not modify this block
+pdf-config: &pdf-config
+  author: Redborder Documentation Team
+  cover: true
+  cover_logo: assets/images/logo_trans.png
+  cover_subtitle: A book from the Documentation Team
+  toc_level: 3
+  ordered_chapter_level: 3
+  verbose: false
+  back_cover: true
+  
+# You are free to configure here what you want
+plugins:
+  - with-pdf:
+      <<: *pdf-config
+      cover_title: Redborder NDR Manual de Usuario (Spanish version)
+      output_path: ../pdf/Redborder_NDR_Manual_de_Usuario.pdf
+
+# Customize your own book
+nav:
+  - index.es.md
+  - manager/get_started/ch1_what_is_redborder.es.md
+  - manager/get_started/ch3_web_platform.es.md
+  - manager/get_started/ch4_1_modules.es.md
+  - manager/get_started/ch4_2_modules_menu_options.es.md
+  - manager/more_in_detail/ch4_3_filtering_events.es.md
+  - manager/more_in_detail/ch4_4_ip_reputation_monitorization.es.md
+  - manager/more_in_detail/ch4_5_views.es.md
+  - manager/more_in_detail/ch4_12_anomalies.es.md
+  - manager/more_in_detail/ch5_dashboards_view.es.md
+  - manager/more_in_detail/ch5_1_incidents.es.md
+  - manager/platform_configurations/ch6_sensors.es.md
+  - manager/platform_configurations/ch7_tools_and_admin.es.md
+  - manager/platform_configurations/ch7_4_general_config.es.md
+  - manager/platform_configurations/ch7_5_dashboards_administration.es.md
+  - manager/redborder_api/ch10_introduction.es.md
+  - manager/redborder_api/ch10_use_examples.es.md
+  - manager/redborder_api/ch11_model_sharing.es.md
+  - flowgate/platform_configurations/ch1_flowgate_installation.es.md
+  - flowgate/platform_configurations/flowgate_sensor.es.md
+  - ips/get_started/ch1_what_is_redborder.es.md
+  - ips/get_started/ch2_redborder_installation.es.md
+  - ips/platform_configurations/ips_sensor.es.md
+  

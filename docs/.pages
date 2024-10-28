@@ -2,7 +2,7 @@
 nav:
     - ... | index*.md
     - Manager: manager
-    - Proxy: proxy
-    - IPS: ips
-    - Guides: guides
+    - Intrusion: intrusion
+    - Flowgate: flowgate
+    - Use Cases: use_cases
     # - Release notes: index*.md

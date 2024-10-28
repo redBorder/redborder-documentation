@@ -1,16 +1,24 @@
 ---
-site_name: redBorder Documentation
+site_name: Redborder NDR Documentation
 site_url: "https://docs.redborder.com/"
 docs_dir: "docs"
 repo_url: https://github.com/redBorder/redborder-documentation
-repo_name: redBorder/redborder-documentation
+repo_name: Redborder/redborder-documentation
 edit_uri: edit/master/docs
 
 theme:
   name: material
+  custom_dir: overrides
   logo: assets/images/redborder-logo-white-crop-u4409.png
   favicon: assets/images/redborder-logo-white-crop-u4409.png
   palette:   
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
     # Palette toggle for light mode
     - scheme: default
       primary: custom
@@ -18,12 +26,6 @@ theme:
         icon: material/brightness-7 
         name: Switch to dark mode
 
-    # Palette toggle for dark mode
-    - scheme: slate
-      primary: custom
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
   features:
     - content.action.edit
     - content.code.copy
@@ -76,6 +78,7 @@ plugins:
           locale: es
           name: Español
   - tags
+  - glightbox
 
 extra:
   social:
@@ -88,6 +91,14 @@ extra:
 
 extra_css:
   - stylesheets/extra.css
+extra_javascript:
+  - assets/js/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - assets/js/typewriter.js
+  - https://unpkg.com/typewriter-effect@latest/dist/core.js
+  - https://cdn.jsdelivr.net/npm/vega@5
+  - https://cdn.jsdelivr.net/npm/vega-lite@5
+  - https://cdn.jsdelivr.net/npm/vega-embed@6
 
 copyright: Copyright &copy; 2024 Eneo Tecnología S.L
 
