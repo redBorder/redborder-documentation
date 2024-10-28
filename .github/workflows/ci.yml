@@ -34,5 +34,6 @@ jobs:
               mkdocs-static-i18n \
               jieba \
               mkdocs-with-pdf \
-              qrcode 
+              qrcode \
+              mkdocs-glightbox
       - run: mkdocs gh-deploy --force
