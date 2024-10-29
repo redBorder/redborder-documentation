@@ -25,10 +25,18 @@ Al generar un informe, se abrirá una nueva ventana en la que, después de unos 
 Cada vez que se genera un informe en PDF, esta acción se registrará en el historial de informes, incluyendo la hora y fecha de generación, el informe generado y el usuario que lo ha generado.
 El usuario también tiene la posibilidad de visualizar los informes que han sido exportados previamente, ya sea por él mismo o por otros usuarios.
 
-En esta sección dispone de todos los registros de PDFs generados de los informes a los que tiene acceso. Puede ordenar el historial pulsando el los nombres de las columnas y buscar registros de informes generados. Además puede visualizar el PDF generado en el botón correspondiente. Los usuarios con el rol de administrador tienen la posibilidad de borrar registros de informes generados.
+En esta sección dispone de todos los registros PDF generados a partir de los informes a los que tiene acceso. Esta información está separada en dos tablas, una con los informes que se generan en el módulo de informes y otra para los informes de incidencias. Ambas tablas tienen los mismos campos y funciones. 
 
-![Historial Completo](images/ch04_img053.png)
+Puede ordenar el historial haciendo clic en los nombres de las columnas y buscar los registros de informes generados. También se puede visualizar el PDF generado pulsando sobre el botón correspondiente.
 
-En esta sección puede ver todos los PDFs generados del informe específico que ha seleccionado. Es muy similar a la vista anterior.
+Los usuarios con rol de administrador tienen la posibilidad de borrar registros de informes generados. Un usuario que no tiene ese rol solo puede borrar estos registros si se trata del usuario que ha generado el reporte.
 
-![Historial de Informe](images/ch04_img054.png)
+Si hace clic en el nombre de uno de los informes, accederá a la composición del informe o al incidente a partir del cual se generó el informe.
+
+Table de informes
+
+![Historial Completo de reportes](images/ch04_img056.png)
+
+Tabla de reportes de incidentes
+
+![Historial Completo de reportes de incidentes](images/ch04_img057.png)
