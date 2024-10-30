@@ -6,7 +6,7 @@ Dashboards allow you to have a visual summary of the data. The user can combine 
 
 Redborder Manager includes a platform dashboard called **Overview** that shows the sensors' location on a map. This dashboard cannot be edited or deleted by the users.
 
-![Default dashboard](images/overview.en.png)
+![Overview dashboard](images/overview.en.png)
 
 ## Default Dashboard
 

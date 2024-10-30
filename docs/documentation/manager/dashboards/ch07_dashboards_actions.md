@@ -6,11 +6,11 @@ To set up a new dashboard, begin by creating a blank panel, then add widgets tha
 
 Click **Add Dashboard** to open the dashboard creation form.
 
-![Locate add a dashboard](images/add_dashboard.en.png)
+![Add a dashboard](images/add_dashboard.en.png)
 
 ### Dashboard form
 
-![Edit a new dashboard](images/new_dashboard.en.png)
+![Dashboard form](images/new_dashboard.en.png)
 
 Complete the form with the following properties:
 
@@ -54,6 +54,6 @@ Use this option to convert a dashboard into a report format.
 
 ### Export Dashboards
 
-Click **Export Dashboard** to download the current dashboard as a .csv file.
+Click **Export Dashboard** to download the current dashboard as a .tar.gz file.
 
 To import a dashboard, click **Import Dashboard** in the **Dashboard Menu**.

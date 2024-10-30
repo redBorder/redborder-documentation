@@ -6,7 +6,7 @@ To create a new widget, click **Add Widget** in the dashboard menu.
 
 This opens the widget wizard. The first step is to select the product (App) type and the widget type.
 
-![Widget creation: categories](images/add_widget_01.en.png)
+![Create a widget](images/add_widget_01.en.png)
 
 Certain widget types, like Tops, include an additional step to choose the data visualization format.
 
@@ -41,7 +41,7 @@ Depending on the widget type, you’ll need to complete various widget propertie
 - **Always show text**: Displays widget text persistently, even without mouse interaction.
 - **Invert colors**: Reverses the color scheme if values are color-coded.
 
-#### Other Settings
+#### Other Settings (available only in certain Widget Types)
 
 - **Font size**: Adjusts the text size within the widget.
 - **Alignment**: Positions the text inside the widget.
