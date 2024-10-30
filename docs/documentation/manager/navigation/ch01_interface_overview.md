@@ -9,14 +9,14 @@
 
 Navigation Menu:
 
-??? note "Overview and Dashboards"
-    ## Overview and Dashboards
+??? note "Dashboards"
+    ## Dashboards
 
-    Overview provides a general view of the sensors added to Redborder Manager, their location on the map, and the access points.
+    Redborder Manager comes with a platform dashboard call Overview. It provides a general view of the sensors added to Redborder Manager, their location on the map, and the access points.
 
     In the left sidebar, you can see some metrics related to Traffic and Mobility.
 
-    The option in the top menu includes a dropdown menu that provides access to the Dashboards.
+    The option in the top menu includes a dropdown menu that provides access to the User Dashboards.
 
 ??? note "Incidents"
     ## Incidents

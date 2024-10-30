@@ -9,14 +9,14 @@ Cómo navegar por las funciones principales en Redborder Manager.
 
 Menú de Navegación:
 
-??? note "Visión General y Dashboards"
+??? note "Dashboards"
     ## Visión General and Dashboards
 
-    La sección de Visión General proporciona una vista general de los sensores añadidos a Redborder Manager, su ubicación en el mapa y los puntos de acceso.
+    Redborder Manager incluye un dashboard de la plataforma llamado Visión General. Proporciona una vista general de los sensores añadidos a Redborder Manager, su ubicación en el mapa y los puntos de acceso.
 
-    En la barra lateral izquierda, puedes ver algunas métricas relacionadas con el Tráfico y la Movilidad.
+    En la barra lateral izquierda, puedes ver algunas métricas relacionadas con la app de Tráfico y la de Movilidad.
 
-    La opción en el menú superior incluye un menú desplegable que da acceso a los Dashboards.
+    La opción en el menú superior incluye un menú desplegable que da acceso a los Dashboards de los usuarios.
 
 ??? note "Incidentes"
     ## Incidentes

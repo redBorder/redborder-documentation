@@ -1,50 +1,36 @@
 # Dashboards and Widgets
 
-This chapter explains how to view dashboards and what information is contained in the widgets that compose them. However, instructions for managing dashboards and widgets will be explained in [platform configuration section](../platform_configurations/ch7_5_dashboards_administration.md).
+Dashboards allow you to have a visual summary of the data. The user can combine widgets to obtain valuable information about trends, changes, and exceptions associated with the data collected in the differents Redborder Manager Apps.
 
-Dashboards allow you to have a visual summary that includes the main KPIs (Key Performance Indicators) that are necessary to analyze the network infrastructure. The user can combine widgets to obtain valuable information about trends, changes, and exceptions associated with the traffic that occurs on or passes through the network. These visual control panels provide an overview and summary of important data on a single screen, allowing users to visualize and monitor key information quickly and efficiently in the context of Redborder Manager.
+## Default Dashboard
 
-![Redborder default dashboard](../get_started/images/ch03_img002.png)
+Dashboards can be accessed directly from the first item in the top menu. The default dashboard is displayed first.
 
-*Redborder default dashboard*
+![Default dashboard](images/default_dashboard.en.png)
 
-## Accessing dashboards
+Redborder Manager includes a platform dashboard called **Overview** that shows the sensors' location on a map. This dashboard cannot be edited or deleted by the users.
 
-Dashboards are accessible directly from the first menu in the header: Initially, it will display the name of the dashboard that has been set as default, and it will always show the name of the currently selected dashboard. The default one is called **General View** and shows a map of the sensors' location.
+![Default dashboard](images/overview.en.png)
 
-When expanding the menu, the **options menu** will appear, which will be explained in the next section.
+!!! note "About dashboards visibility"
+    You can view your own dashboards as well as those shared with you directly by other users or through a domain share.
 
-![Dashboard options menu](../platform_configurations/images/create_dashboard_action.png)
+## Dashboards Menu
 
-*Dashboard options menu*
+Click on the Dashboards to deploy the menu.
 
-!!! note "Other access methods"
-    You can access specific dashboards in the following ways:
-    - Using the **Dashboard URL** shared by another user.
-    - If you have set a dashboard as **default**, it will automatically load when you log in.
+![Dashboard options menu](images/dashboards_menu.en.png)
 
-!!! warning "You will only be able to view if..."
-    You will only be able to view certain dashboards if the **users** who own the dashboard have granted you access and if you belong to the allowed **domain**.
+Dashboards menu contains:
 
-## Dashboard options
-
-Once we access a dashboard, we can see the first option we find in the menu bar in the analysis area is *Dashboard*. This is the default selected option that will be seen as soon as you log in to the Redborder Manager.
-
-![Dashboard overview](images/ch05_img001.png)
-
-*Dashboard overview*
-
-The Dashboard section presents different options:
-
-- **List of available dashboards**: at the top, the user will see the dashboards created and available for their profile. Next to each dashboard, there are two icons; the first one (wrench) allows us to view and edit the general configuration of the dashboard. The "Copy" icon on the right will allow us to clone the selected dashboard.
-- **Dashboard URL**: gives the user a quick way to copy the URL of the current dashboard to share it.
+- **List of available dashboards**: at the top, the user will see the dashboards created and available for their profile. Next to each dashboard, there are two icons; the first one (wrench) allows us to view and edit the general configuration of the dashboard. The "Clone" icon on the right will allow us to clone the selected dashboard.
+- **Add Dashboard**: to create a new dashboard.
+- **Import Dashboard**: import a dashboard that was previusly exported.
+- **Add widget**: to create a widget.
+- **Dashboard URL**: copy the direct web link to access the current dashboard.
+- **Refresh time**: refresh the dashboard data.
+- **Unlocked**: this button allows you to prevent users from editing the current dashboard.
 - **Time machine**: allows the user to view the results of metrics from a particular day and time as if it were their real-time.
-
-The rest of the options will be explained in detail in [platform configuration](../platform_configurations/ch7_5_dashboards_administration.md).
-
-![Dashboard options](images/ch05_img002.png)
-
-*Dashboard options*
 
 ## Types of widgets
 
