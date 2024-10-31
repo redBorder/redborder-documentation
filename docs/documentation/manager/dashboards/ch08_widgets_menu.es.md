@@ -2,7 +2,7 @@
 
 Para acceder a este menú los usuarios pueden hacer clic en el ícono de tres puntos verticales ubicado en la esquina superior derecha del widget.
 
-![Acciones de widget](images/widgets_menu.es.png)
+![Acciones de widget](images/widget_menu.es.png)
 
 Las siguientes acciones están disponibles:
 

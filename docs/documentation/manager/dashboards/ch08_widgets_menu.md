@@ -2,7 +2,7 @@
 
 To access this menu users can click the **three vertical dots** icon located in the widget's upper-right corner.
 
-![Actions on the widget](images/widgets_menu.en.png)
+![Actions on the widget](images/widget_menu.en.png)
 
 The following actions are available:
 
