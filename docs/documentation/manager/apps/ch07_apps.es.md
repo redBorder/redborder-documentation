@@ -1,38 +1,36 @@
 
 # Apps Overview
 
-Redborder ofrece la máxima visibilidad de red gracias a las muchas opciones de representación y visualización de datos que nuestras Apps proveen.
+Redborder maximiza la visibilidad de la red a través de una suite de poderosas Apps diseñadas para una representación y visualización de datos integral.
 
-La plataforma tiene una App (también conocidas como módulos) para cada funcionalidad. Cada una utiliza diferentes tecnologías y tiene una interfaz independiente. Todos los módulos necesitan un sensor que le provea de datos.
+Cada aplicación aprovecha tecnología especializada y opera mediante una interfaz independiente para mejorar la comprensión de la red.
 
 ## Tráfico
 
-El módulo **Tráfico** utiliza netflow para extraer información sobre todo el tráfico del sensor. El módulo provee información como IPs, protocolos, localizaciones y mucho más.
+Analiza los datos de flujo de red (por ejemplo, SFlow, NetFlow) y utiliza IA para detectar anomalías, garantizando una seguridad proactiva en la red.
 
-![Módulo de Tráfico](images/ch04_img003.png)
+![Traffic](images/ch04_img003.png)
 
-## Intrusion
+## Intrusión
 
-El módulo **Intrusión** utiliza datos del sensor o sensores IPS para mostrar eventos de intrusión basados en reglas de Snort. También, gracias a las diferentes vistas que incluye Redborder, es posible analizar los paquetes que coincidieron con la especificación de la regla.
+Proporciona detección en tiempo real de actividades maliciosas con un robusto Sistema de Detección y Prevención de Intrusiones de Nueva Generación (NGIDS/NGIPS).
 
-![Módulo de Intrusión](images/ch04_img004.png)
+![Intrusion](images/ch04_img004.png)
 
 ## Monitor
 
-El módulo **Monitor** utiliza datos provenientes de protocolos SNMP, Redfish e Ipmi para mostrar el estado de la infraestructura.
+Rastrea la salud del hardware y el rendimiento de la red utilizando SNMP, apoyando una conciencia operativa continua.
 
-![Módulo de Monitor](images/ch04_img005.png)
+![Monitor](images/ch04_img005.png)
 
 ## Vault
 
-El módulo **Vault** utiliza datos de syslog para proveer información sobre eventos de diferentes orígenes, tales como categoría, objetivo, acción del evento y más.
+Recoge y centraliza registros para una gestión de datos simplificada y una supervisión mejorada.
 
-También es posible aumentar las capacidades del módulo Vault a través de las extensiones que añaden compatibilidades con otros fabricantes.
-
-![Módulo de Vault](images/ch04_img006.png)
+![Vault](images/ch04_img006.png)
 
 ## Movilidad
 
-El módulo **Movilidad** provee información de localización de sensores de APs de la red. Puede ser usado para mostrar como las personas se mueven en un edificio.
+Monitorea dispositivos móviles para garantizar el cumplimiento de seguridad, protegiendo los activos móviles.
 
-![Módulo de Movilidad](images/ch04_img007.png)
+![Mobility](images/ch04_img007.png)
