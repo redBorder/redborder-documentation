@@ -10,7 +10,7 @@ Las aplicaciones dentro de Redborder Manager se centran en áreas específicas:
 - **Intrusión**: Detección en tiempo real de actividades maliciosas con un Sistema de Detección de Intrusiones de Red (NIDS).
 - **Monitor**: Supervisa la salud del hardware y el rendimiento de la red con SNMP.
 - **Escáner**: Realiza escaneos de vulnerabilidades, identifica riesgos y proporciona informes para su mitigación.
-- **Bóveda**: Recopila y almacena logs, centralizando los datos para una mejor gestión.
+- **Vault**: Recopila y almacena logs, centralizando los datos para una mejor gestión.
 - **Movilidad**: Monitorea dispositivos móviles para asegurar el cumplimiento de seguridad.
 - **Informes**: Genera reportes detallados y personalizables para auditorías y análisis.
 
