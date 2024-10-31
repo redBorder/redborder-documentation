@@ -1,10 +1,10 @@
-# Incidents List
+# Lista de Incidentes
 
 La función de Incidentes de Redborder NDR simplifica la detección y respuesta a amenazas de seguridad al priorizar eventos de alto riesgo y centralizar toda la información clave en un solo lugar. Los eventos de fuentes integradas se agrupan en incidentes, lo que reduce el tiempo dedicado a alertas individuales y permite una respuesta más rápida.
 
 Los incidentes se clasifican según su nivel de riesgo, enfocando la atención en los problemas más críticos. Indicadores comunes como dispositivos, direcciones IP y nombres de usuario se utilizan para vincular eventos relacionados.
 
-![Incidents view](images/ch05_1_incidents_view.png)
+![Incidents view](images/incidents_list.es.png)
 
 Access incidents through the top menu.
 
@@ -31,11 +31,11 @@ Los campos de un incidente son los siguientes:
 - **Nuevo**: Recientemente creado y en espera de revisión.
 - **Abierto**: Actualmente en investigación.
 - **Cerrado**: La investigación ha concluido y no se requiere más acción.
-- **Contención Alcanzada**: Se han implementado con éxito medidas de contención.
+- **Contención existosa**: Se han implementado con éxito medidas de contención.
 - **Incidente Reportado**: Informado oficialmente a los interesados o autoridades relevantes.
 - **Rechazado**: Determinado como falso positivo o desestimado por otra razón.
-- **Restauración Alcanzada**: Los sistemas y datos afectados han sido completamente restaurados.
-- **Estancado**: La investigación o resolución está temporalmente pausada.
+- **Restauración existosa**: Los sistemas y datos afectados han sido completamente restaurados.
+- **Detenido**: La investigación o resolución está temporalmente pausada.
   
 ## Acciones de Incidente
 
@@ -51,4 +51,4 @@ Las acciones que puedes realizar en un incidente incluyen:
 
 Al hacer clic en el nombre del incidente, se abre un resumen en la barra lateral. Seleccionar **Ver Detalles del Incidente** o el ícono de configuración proporciona acceso completo a los detalles del incidente. Si el estado es **Nuevo**, se actualizará automáticamente a Abierto y asignará el incidente a ti para su gestión.
 
-![Incident summary](images/ch05_1_incident_sum.png)
+![Incident summary](images/incidents_sidebar.es.png)

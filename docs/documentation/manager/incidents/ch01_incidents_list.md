@@ -4,7 +4,7 @@ The Redborder NDR Incidents feature simplifies detecting and responding to secur
 
 Incidents are ranked by risk, focusing attention on the most critical issues. Common indicators like devices, IP addresses, and usernames are used to link related events. 
 
-![Incidents view](images/ch05_1_incidents_view.png)
+![Incidents view](images/incidents_list.en.png)
 
 Access incidents through the top menu.
 
@@ -51,4 +51,4 @@ Actions you can perform on an incident include:
 
 Clicking the incident name opens a summary in the sidebar. Selecting **View Incident Details** or the settings icon provides full access to the incident details. If the status is **New**, it will automatically update to Open and assign the incident to you for management.
 
-![Incident summary](images/ch05_1_incident_sum.png)
+![Incident summary](images/incidents_sidebar.en.png)
