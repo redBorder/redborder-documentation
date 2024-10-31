@@ -10,45 +10,45 @@ Access incidents through the top menu.
 
 ## Searching and Filtering Incidents
 
-You can search, filter, and sort to focus on specific incidents you want to view.
+Easily search, filter, and sort incidents to focus on the most relevant cases.
 
-By default, no filter is applied and the list is ordered by date from most recent to oldest.
+By default, incidents are displayed in order of date, from most recent to oldest, with no filters applied.
 
 ## Incident Fields
 
 The fields of an incident are the following:
 
-* **ID**: Unique identifier of the incident.
-* **Priority**: The priority of the incident to be managed.
-* **Name**: An explanatory name of the incident.
-* **Source**: The datasource from which the incident was generated.
-* **Created at**: The date and time when the incident was detected.
-* **Assigned**: The user of the web that currently has the incident assigned.
-* **Status**: The current state of the incident. Possible values include:
+- **ID**: Unique identifier for tracking the incident.
+- **Priority**: The priority level assigned to the incident for management purposes.
+- **Name**: A descriptive title for quick reference.
+- **Source**: The originating data source of the incident.
+- **Created At**: Date and time of initial detection.
+- **Assigned**: The user currently responsible for managing the incident.
+- **Status**: The current state of the incident, which may include:
 
 ## Incident Status
 
-* **New**: The incident has been created but not yet reviewed.
-* **Open**: The incident is currently being investigated.
-* **Closed**: The incident investigation is complete and no further action is required.
-* **Containment Achieved**: The incident has been contained and prevented from spreading further.
-* **Incident Reported**: The incident has been officially reported to relevant stakeholders or authorities.
-* **Rejected**: The incident has been determined to be a false positive or not requiring further action.
-* **Restoration Achieved**: Systems and data affected by the incident have been successfully restored.
-* **Stalled**: The investigation or resolution of the incident has been temporarily halted due to various factors.
+- **New**: Recently created and awaiting review.
+- **Open**: Currently under investigation.
+- **Closed**: Investigation is complete, and no further action is needed.
+- **Containment Achieved**: Containment measures have been successfully implemented.
+- **Incident Reported**: Officially reported to relevant stakeholders or authorities.
+- **Rejected**: Determined to be a false positive or otherwise dismissed.
+- **Restoration Achieved**: Affected systems and data have been fully restored.
+- **Stalled**: Investigation or resolution is temporarily paused.
   
 ## Incident Actions
 
-The actions that can be performed on an incident are the following:
+Actions you can perform on an incident include:
 
-* **View Incident Details**: Click on the name of the incident to see the details of the incident.
-* **View Incident Events**: Click on the source of the incident to go to the view of the source of the incident.
-* **Change Incident Status**: Click on status to change the status of the incident.
-* **Access Incident**: Click on the settings icon to start managing the incident.
-* **Delete Incident**: Click on trash icon to delete the incident.
+- **View Incident Details**: Click the incident name to access detailed information.
+- **View Incident Events**: Click the source to review related incident events.
+- **Change Incident Status**: Update the status by clicking on the status field.
+- **Manage Incident**: Click the settings icon to enter incident management mode.
+- **Delete Incident**: Click the trash icon to remove the incident from the list.
 
 ## Incident Sidebar
 
-Clicking on the name of the incident will open a quick incident description. Clicking on **View Incident Detail** will have the same effect as clicking on the settings icon. In both cases, if the incident's status was **New**, it will change to **Open**; and the user will be auto-assigned to yourself.
+Clicking the incident name opens a summary in the sidebar. Selecting **View Incident Details** or the settings icon provides full access to the incident details. If the status is **New**, it will automatically update to Open and assign the incident to you for management.
 
 ![Incident summary](images/ch05_1_incident_sum.png)
