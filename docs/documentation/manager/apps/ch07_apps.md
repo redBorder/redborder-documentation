@@ -23,6 +23,10 @@ Tracks hardware health and network performance using SNMP, supporting continuous
 
 ![Monitor](images/ch04_img005.png)
 
+## Scanner
+
+Scans for vulnerabilities, identifying risks and providing reports for mitigation.
+
 ## Vault
 
 Collects and centralizes logs for streamlined data management and improved oversight.

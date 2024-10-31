@@ -23,6 +23,10 @@ Rastrea la salud del hardware y el rendimiento de la red utilizando SNMP, apoyan
 
 ![Monitor](images/ch04_img005.png)
 
+## Escáner
+
+Realiza escaneos de vulnerabilidades, identifica riesgos y proporciona informes para su mitigación.
+
 ## Vault
 
 Recoge y centraliza registros para una gestión de datos simplificada y una supervisión mejorada.
