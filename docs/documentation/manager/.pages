@@ -8,7 +8,6 @@ nav:
     - Incidents: incidents
     - Apps: apps
     - Reports: reports
-    - Seeing data in more detail: more_in_detail
     - Integrations: integrations
     - Administration: administration
     - Resources: resources
