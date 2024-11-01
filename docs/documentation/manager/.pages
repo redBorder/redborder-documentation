@@ -3,11 +3,11 @@ nav:
     - ...
     - Installation: installation
     - Getting Started: getting_started
-    - Navigation: navigation
     - Dashboards: dashboards
     - Incidents: incidents
     - Apps: apps
     - Reports: reports
+    - Sensors: sensors
+    - Tools: tools
     - Integrations: integrations
-    - Administration: administration
     - Resources: resources
