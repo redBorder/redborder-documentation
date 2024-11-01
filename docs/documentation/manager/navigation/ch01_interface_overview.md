@@ -98,7 +98,7 @@ This menu provides access to various utilities like Alarms, Audits and Playbooks
 
 ## User Profile
 
-Click in your username to open the followin options:
+Click in your username to open the following options:
 
 - **Notifications**: View recent alerts and updates related to your account and system activity.
 - **My Profile**: Access and edit your personal account settings and preferences.

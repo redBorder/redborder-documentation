@@ -9,19 +9,19 @@ Cada aplicación aprovecha tecnología especializada y opera mediante una interf
 
 Analiza los datos de flujo de red (por ejemplo, SFlow, NetFlow) y utiliza IA para detectar anomalías, garantizando una seguridad proactiva en la red.
 
-![Traffic](images/ch04_img003.png)
+![Traffic](images/traffic_tops.es.png)
 
 ## Intrusión
 
 Proporciona detección en tiempo real de actividades maliciosas con un robusto Sistema de Detección y Prevención de Intrusiones de Nueva Generación (NGIDS/NGIPS).
 
-![Intrusion](images/ch04_img004.png)
+![Intrusion](images/intrusion_tops.es.png)
 
 ## Monitor
 
 Rastrea la salud del hardware y el rendimiento de la red utilizando SNMP, apoyando una conciencia operativa continua.
 
-![Monitor](images/ch04_img005.png)
+![Monitor](images/monitor_tops.es.png)
 
 ## Escáner
 
@@ -31,7 +31,7 @@ Realiza escaneos de vulnerabilidades, identifica riesgos y proporciona informes 
 
 Recoge y centraliza registros para una gestión de datos simplificada y una supervisión mejorada.
 
-![Vault](images/ch04_img006.png)
+![Vault](images/vault_tops.es.png)
 
 ## Movilidad
 
