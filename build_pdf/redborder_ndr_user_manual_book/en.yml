@@ -65,6 +65,3 @@ nav:
   - documentation/manager/integrations/sso.md
   - documentation/manager/integrations/trend_micro.md
   - documentation/manager/integrations/zabbix.md
-  - documentation/manager/resources/ch10_introduction.md
-  - documentation/manager/resources/ch10_use_examples.md
-  - documentation/manager/resources/ch11_model_sharing.md
