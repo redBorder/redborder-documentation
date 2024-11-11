@@ -28,7 +28,7 @@ Instala el sistema operativo compatible y ejecuta el siguiente comando como root
 
 ``` bash title="Instalación de repositorios"
 yum install epel-release
-rpm -ivh https://repo.redborder.com/ng/24.11/rhel/9/x86_64/redborder-repo-24.11-0.0.1-1.el9.rb.noarch.rpm
+rpm -ivh https://repo.redborder.com/ng/24.12/rhel/9/x86_64/redborder-repo-24.12-0.0.1-1.el9.rb.noarch.rpm
 ```
 ``` bash title="Instalar el paquete redborder-manager"
 yum clean all
