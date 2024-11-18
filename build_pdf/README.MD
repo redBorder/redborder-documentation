@@ -9,6 +9,7 @@ Actual Books:
 - **Redborder_NDR_Intrusion_Installation_Guide**: How to install Redborder NDR INtrusion
 - **Redborder_NDR_Flowgate_Installation_Guide**: How to install Redborder NDR Flowgate
 - **Redborder_NDR_User_Manual**: How to use Redborder NDR platform
+- **Redborder_NDR_API_Guide**: How to use Redborder NDR API
 
 In case you want to manually build them:
 

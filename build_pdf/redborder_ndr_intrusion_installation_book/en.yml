@@ -22,5 +22,5 @@ plugins:
 # Customize your own book
 nav:
   - index.md
-  - intrusion/index.en.md
-  - intrusion/installation/ch02_installation_on_linux.md
+  - documentation/intrusion/index.en.md
+  - documentation/intrusion/installation/ch02_installation_on_linux.md

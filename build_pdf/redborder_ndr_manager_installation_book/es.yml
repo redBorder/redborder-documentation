@@ -22,5 +22,5 @@ plugins:
 # Customize your own book
 nav:
   - index.es.md
-  - manager/index.es.md
-  - manager/installation/ch02_installation_on_linux.es.md
+  - documentation/manager/index.es.md
+  - documentation/manager/installation/ch02_installation_on_linux.es.md

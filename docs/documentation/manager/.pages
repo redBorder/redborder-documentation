@@ -1,0 +1,13 @@
+---
+nav:
+    - ...
+    - Installation: installation
+    - Getting Started: getting_started
+    - Dashboards: dashboards
+    - Incidents: incidents
+    - Apps: apps
+    - Reports: reports
+    - Sensors: sensors
+    - Tools: tools
+    - Integrations: integrations
+    - Resources: resources

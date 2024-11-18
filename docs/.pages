@@ -1,8 +1,5 @@
 ---
 nav:
     - ... | index*.md
-    - Manager: manager
-    - Intrusion: intrusion
-    - Flowgate: flowgate
-    - Use Cases: use_cases
+    - Documentation: documentation
     # - Release notes: index*.md
