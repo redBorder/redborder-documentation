@@ -6,9 +6,9 @@ Los incidentes se clasifican según su nivel de riesgo, enfocando la atención e
 
 ![Incidents view](images/incidents_list.es.png)
 
-Access incidents through the top menu.
+Accede a las incidencias a través del menú superior.
 
-## Searching and Filtering Incidents
+## Búsqueda y filtrado de incidentes
 
 Busca, filtra y ordena incidentes fácilmente para enfocarte en los casos más relevantes.
 
@@ -41,11 +41,22 @@ Los campos de un incidente son los siguientes:
 
 Las acciones que puedes realizar en un incidente incluyen:
 
+- **Gestionar Múltiples Incidentes**: Haz clic en la casilla de verificación dentro de la cabecera de la lista de incidentes para seleccionar todos los disponibles en la página actual, o selecciona uno a uno utilizando la casilla ubicada a la izquierda de cada incidente. Al presionar el ícono de los tres puntos, podrás cambiar el estado, vincular o borrar los incidentes seleccionados.
 - **Ver Detalles del Incidente**: Haz clic en el nombre del incidente para acceder a información detallada.
 - **Ver Eventos del Incidente**: Haz clic en la fuente para revisar los eventos relacionados con el incidente.
 - **Cambiar Estado del Incidente**: Actualiza el estado haciendo clic en el campo de estado.
 - **Gestionar Incidente**: Haz clic en el ícono de configuración para entrar en modo de gestión del incidente.
 - **Eliminar Incidente**: Haz clic en el ícono de basura para eliminar el incidente de la lista.
+
+## Contadores de Incidentes
+
+En la parte superior de la vista de incidentes se encuentra la siguiente información:
+
+- **Total de Incidentes**: Total de incidentes visibles.
+- **Incidentes Creados**: Total de incidentes creados en la última hora.
+- **Incidentes Abiertos**: Total de incidentes con estado **Abierto**.
+- **Incidentes No Asignados**: Total de incidentes que no han sido asignados a ningún usuario.
+- **Resultados Coincidentes**: Total de incidentes que coinciden con los filtros y busqueda de la lista de incidentes.
 
 ## Barra Lateral de Incidente
 
