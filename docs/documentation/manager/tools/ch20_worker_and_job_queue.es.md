@@ -10,7 +10,7 @@ Las tareas pueden ser lanzadas manualmente a través del menú **Opciones de Tra
 
 ![Trabajador y cola de tareas: Menú para lanzar tareas manualmente.](./images/worker_jobs_menu_launch_job_es.png)
 
-**Delete Stored Job** todos los días a las 00:00h elimina las tareas almacenadas desde una fecha determinada que depende del campo "Dias de tareas guardadas almacenadas" y puede modificarse en la **Configuración general**.
+**Delete Stored Job** se ejectuta todos los días a las 00:00h y elimina las tareas almacenadas desde una fecha determinada que depende del campo "Dias de tareas guardadas almacenadas" y puede modificarse en la **Configuración general**.
 
 ![Trabajador y cola de tareas: Campo dias de tareas gaurdadas almacenadas](./images/general_settings_input_deleteStoredJob_es.png)
 
