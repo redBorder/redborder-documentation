@@ -2,7 +2,7 @@
 
 The **General Settings** option in the **Tools** section of the configuration area in the menu bar provides an interface for both platform configuration and network infrastructure.
 
-![General Configuration: General Configuration of Redborder Manager](images/ch07_img006.png)
+![General Configuration: General Configuration of Redborder Manager](images/general_settings_input_deleteStoredJob_en.png)
 
 For basic configuration in the Manager, the user can edit general parameters, application features, server settings, network, routes, IP geolocation, among other parameters.
 

@@ -2,7 +2,7 @@
 
 La opción **Configuración General** de la sección **Herramientas** del área de configuración de la barra de menú, nos muestra una interfaz cuya edición se determinará tanto para la configuración de la plataforma como para la infraestructura de la red.
 
-![Configuración General: Configuración general del Manager de Redborder](images/ch07_img006.png)
+![Configuración General: Configuración general del Manager de Redborder](images/general_settings_input_deleteStoredJob_es.png)
 
 Para realizar una configuración básica en el Manager, el usuario puede editar parámetros generales, características de las aplicaciones, configuración del servidor, red, rutas, geolocalización de las IPs, entre otros parámetros.
 

@@ -56,4 +56,13 @@ After, the SSO login system is enabled. You can check it by going to the login p
 
 ## Login and register  
 
-After setting all the settings, SSO can be used. To use it, go to the login path and you will see a button referring to SSO. Click on it and will redirect you to the SSO configured service of the IdP.  
+After setting all the settings, SSO can be used. To use it, go to the login path and you will see a button referring to SSO. Click on it and will redirect you to the SSO configured service of the IdP. There is a download button of SP metadata to help with the configuration of IdP.
+
+!!! info "Note..."
+    This button is active only if SSO service is active too. If you just activate SSO service, you have to wait some minutes before using it until the service is all up and the file is generated and ready to download. 
+
+![SSO metadata button disabled](images/sso_download_metadata_button_disabled_en.png)
+SSO service inactive.
+
+![SSO metadata button enabled](images/sso_download_metadata_button_enabled_en.png)
+SSO service active.
