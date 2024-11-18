@@ -59,8 +59,7 @@ Después, el sistema de inicio de sesión SSO estará habilitado. Puedes comprob
 Después de configurar todos los ajustes, se puede iniciar sesión mediante SSO. Para usarlo, vaya a la ruta de inicio de sesión y se verá un botón que se refiere a SSO. Tras hacerse click en él, la página se redirigirá al servicio SSO configurado del IdP. Para ayudar con la configuración de metadatos necesarios se dispone de un botón de descarga que genera el archivo XML de metadatos que debe colocarse en el IdP.
 
 !!! info "Ten en cuenta..."
-        Este botón de descarga solo está habilitado si está activo el servicio SSO.
-        Puede tardar unos minutos en permitir la descarga si se acaba de activar, debido a la espera de la puesta en marcha del servicio y la generaración del fichero.
+    Este botón de descarga solo está habilitado si está activo el servicio SSO. Puede tardar unos minutos en permitir la descarga si se acaba de activar, debido a la espera de la puesta en marcha del servicio y la generaración del fichero.
 
 ![SSO metadata button disabled](images/sso_download_metadata_button_disabled_es.png)
 Servicio SSO desactivado.
