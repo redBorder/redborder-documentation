@@ -32,6 +32,7 @@ nav:
   - documentation/manager/dashboards/ch09_widgets_actions.md
   - documentation/manager/incidents/ch01_incidents_list.md
   - documentation/manager/incidents/ch05_incident_details/.md
+  - documentation/manager/incidents/ch21_incident_stats.md
   - documentation/manager/apps/ch07_apps.md
   - documentation/manager/apps/ch08_apps_menu.md
   - documentation/manager/apps/ch09_views.md
