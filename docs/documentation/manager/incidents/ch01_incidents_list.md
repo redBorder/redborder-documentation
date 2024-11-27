@@ -41,11 +41,22 @@ The fields of an incident are the following:
 
 Actions you can perform on an incident include:
 
+- **Manage Multiple Incidents**: Click the checkbox within the header of the incident list to select all available incidents on the current page, or select one by one using the checkbox located to the left of each incident. By pressing the three-dot icon, you will be able to change the status, link or delete the selected incidents.
 - **View Incident Details**: Click the incident name to access detailed information.
 - **View Incident Events**: Click the source to review related incident events.
 - **Change Incident Status**: Update the status by clicking on the status field.
 - **Manage Incident**: Click the settings icon to enter incident management mode.
 - **Delete Incident**: Click the trash icon to remove the incident from the list.
+
+## Incident Counters
+
+At the top of the incident view you will find the following information:
+
+- **Total Incidents**: Total number of visible incidents.
+- **Created Incidents**: Total number of incidents created in the last hour.
+- **Open Incidents**: Total number of incidents with status **Open**.
+- **Unassigned Incidents**: Total number of incidents that have not been assigned to any user.
+- **Matching Results**: Total number of incidents that match the filters and search in the incident list.
 
 ## Incident Sidebar
 
