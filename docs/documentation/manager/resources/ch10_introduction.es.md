@@ -109,7 +109,6 @@ curl --insecure -X POST 'https://<hostname>/api/data?auth_token=<API_key>' \
 | threshold          | (Solo para peticiones con *queryType* de *topN*) Valor único. Limita la cantidad de valores devueltos en las peticiones *topN*.      |
 | orderBy            | (Solo para peticiones con *queryType* de *groupBy*).      |
 
-Para ver los diferentes valores que los campos pueden tomar, despliegue las pestañas correspondientes:
 
 ??? note "`dataSource`"
 
@@ -162,7 +161,6 @@ Para ver los diferentes valores que los campos pueden tomar, despliegue las pest
 
 Dentro de `rb_flow` tenemos los datos de *Netflow* y *sFlow*, por lo que encontraremos la información que encontraríamos en el módulo de **Tráfico** a través de la interfaz web.
 
-Para ver un listado de las dimensiones disponibles, despliega la siguiente pestaña:
 
 ??? info "Dimensiones"
 
@@ -191,7 +189,6 @@ Para ver un listado de las dimensiones disponibles, despliega la siguiente pesta
 
 Dentro de `rb_event` tenemos los datos de *IDS/IPS*, por lo que encontraremos la información que encontraríamos en el módulo de **Intrusión** a través de la interfaz web.
 
-Para ver un listado de las dimensiones disponibles, despliega la siguiente pestaña:
 
 ??? info "Dimensiones"
 
@@ -214,7 +211,6 @@ Para ver un listado de las dimensiones disponibles, despliega la siguiente pesta
 
 Dentro de `rb_monitor` tenemos los datos de monitorización por *SNMP*, por lo que encontraremos la información que encontraríamos en el módulo de **Monitor** a través de la interfaz web.
 
-Para ver un listado de las dimensiones disponibles, despliega la siguiente pestaña:
 
 ??? info "Dimensiones"
 
@@ -230,7 +226,6 @@ Para ver un listado de las dimensiones disponibles, despliega la siguiente pesta
 
 Dentro de `rb_state` tenemos datos sobre el estado de salud de las estaciones inalámbricas, obtenidas por *SNMP*.
 
-Para ver un listado de las dimensiones disponibles, despliega la siguiente pestaña:
 
 ??? info "Dimensiones"
 

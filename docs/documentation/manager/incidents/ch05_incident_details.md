@@ -77,6 +77,12 @@ You can link two or more incidents, and once linked, their relationship is displ
 
 ![Linked incidents](images/linked_incidents.en.png)
 
+#### Assets Sidebar
+
+You can view more information about the involved assets by clicking on the IP of the desired asset in the Asset section. This will open a sidebar with the asset's details.
+
+![Assets sidebar](images/assets_sidebar.en.png)
+
 ### Detection
 
 The **Detection** section lists relevant events and its observables and assets contributing to the incident, providing insight into how it was identified.
