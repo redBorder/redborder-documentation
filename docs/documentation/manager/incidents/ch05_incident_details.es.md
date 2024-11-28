@@ -77,15 +77,15 @@ Puede vincular dos o más incidentes y, una vez vinculados, su relación se mues
 
 ![Linked incidents](images/linked_incidents.es.png)
 
-#### Barra Lateral de Activos
+#### ## Barra Lateral de Activos
 
-You can view more information about the involved assets' details by clicking on the IP of the desired asset in the Asset section. This will open a sidebar with the asset's details.
+Puede ver más información sobre los activos implicados haciendo clic en la IP del activo deseado en la sección Activos. Se abrirá una barra lateral con los detalles del activo.
 
 ![Barra lateral de Activos](images/assets_sidebar.es.png)
 
 ### Detección
 
-Puede ver más información sobre los activos implicados haciendo clic en la IP del activo deseado en la sección Activos. Se abrirá una barra lateral con los detalles del activo.
+La sección de **Detección** enumera los eventos relevantes y sus observables y activos que contribuyeron al incidente, proporcionando una visión de cómo fue identificado.
 
 ![Detección](images/incidents_detection.es.png)
 
