@@ -37,6 +37,7 @@ Donde `sensor_uuid` debe ser el UUID del árbol del sensor deseado. Si se desea 
 
 Si la petición es exitosa, la respuesta tendrá el árbol de sensores solicitado y el campo `query` establecido en `true`. Actualmente solo se soporta el formato *JSON* para las peticiones y las respuestas.
 
+Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
 
 ??? example "Ejecución completa"
 
@@ -242,6 +243,7 @@ Una carga útil en formato *JSON* debe enviarse junto con esta solicitud. Los pa
 | megabytes_limit    |  Limita los megabytes de almacenamiento para los datos de una organización. Si el tipo de dominio no es igual a 2 (Organización), este parámetro será ignorado.      |
 | visualization_range|  Limita los días que los usuarios pueden visualizar los datos de una organización. Si el tipo de dominio no es igual a 2 (Organización), este parámetro será ignorado.      |
 
+Para ver los diferentes valores de `domain_type`, despliegue la pestaña:
 
 ??? note "Valores para el campo `domain_type`"
 
@@ -256,6 +258,7 @@ Una carga útil en formato *JSON* debe enviarse junto con esta solicitud. Los pa
 
 Si la petición es exitosa, la respuesta *JSON* describirá el **dominio** creado y el campo `query` establecido en `true`.
 
+Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
 
 ??? example "Ejecución completa"
 
@@ -301,7 +304,7 @@ Si la petición es exitosa, la respuesta *JSON* describirá el **dominio** cread
           }
         }
 
-En la respuesta de la *API* hay un campo llamado `type` que indica el **tipo de sensor creado**. 
+En la respuesta de la *API* hay un campo llamado `type` que indica el **tipo de sensor creado**. Para ver los diferentes valores de `type`, despliegue la pestaña:
 
 ??? note "Valores para el campo `type`"
 
@@ -366,6 +369,7 @@ Una carga útil en formato *JSON* debe enviarse junto con esta solicitud. Los pa
 
 Si la petición es exitosa, la respuesta *JSON* describirá el **sensor** creado y el campo `query` establecido en `true`.
 
+Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
 
 ??? example "Ejecución completa"
 
@@ -418,6 +422,7 @@ Una carga útil en formato *JSON* debe enviarse junto con esta solicitud. Los pa
 
 Si la petición es exitosa, la respuesta *JSON* describirá el **sensor** creado y el campo `query` establecido en `true`.
 
+Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
 
 ??? example "Ejecución completa"
 
@@ -474,6 +479,7 @@ Una carga útil en formato *JSON* debe enviarse junto con esta solicitud. Los pa
 
 Si la petición es exitosa, la respuesta *JSON* describirá el **sensor** creado y el campo `query` establecido en `true`.
 
+Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
 
 ??? example "Ejecución completa"
 
@@ -519,6 +525,7 @@ Donde `sensor_uuid` debe ser el UUID del dominio del que se desea obtener los se
 
 Si la petición es exitosa, la respuesta *JSON* describirá los sensores **MSE** encontrados y el campo `query` establecido en `true`.
 
+Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
 
 ??? example "Ejecución completa"
 
@@ -570,8 +577,9 @@ El usuario es capaz de indicar qué sensor desea eliminar con indicar el UUID de
 
 Donde `uuid` debe ser reemplazado por el UUID del sensor a eliminar.
 
-Si la petición es exitosa, el sensor indicado y todos sus sensores subordinados serán eliminados y el campo `query` establecido en `true`.
+Si la petición es exitosa, el sensor indicado y todos sus sensores subordinados serán eliminados y el campo `query` establecido en `true`..
 
+Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
 
 ??? example "Ejecución completa"
 
@@ -587,14 +595,15 @@ Si la petición es exitosa, el sensor indicado y todos sus sensores subordinados
 
 ### Modificación de dominios
 
-Para actualizar el dominio, se utilizan los mismos parámetros que en la [Creación de dominios. Podemos actualizar el nombre, el tipo, el tipo de dominio, el UUID y *MAC Hashing salt* (solo para Proveedores de Servicios). La carga útil debe estar en formato *JSON* y la petición `PATCH` se debe realizar a la siguiente URL:
+Para actualizar el dominio, se utilizan los mismos parámetros que en la [Creación de dominios](/es/manager/redborder_api/ch11_model_sharing/#creacion-de-dominios). Podemos actualizar el nombre, el tipo, el tipo de dominio, el UUID y *MAC Hashing salt* (solo para Proveedores de Servicios). La carga útil debe estar en formato *JSON* y la petición `PATCH` se debe realizar a la siguiente URL:
 
     https://<IP_manager>/api/v1/sensors/<sensor_uuid>/?auth_token=<clave_API>
 
 Donde `sensor_uuid` debe ser reemplazado por el UUID del dominio a actualizar.
 
-Si la petición es exitosa, la respuesta *JSON* mostrará la información del **dominio** actualizada y el campo `query` establecido en `true`.
+Si la petición es exitosa, la respuesta *JSON* mostrará la información del **dominio** actualizada y el campo `query` establecido en `true`..
 
+Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
 
 ??? example "Ejecución completa"
 
@@ -632,8 +641,9 @@ La actualización de los sensores de flow, MSE y Meraki reciben los mismos pará
 
 El parámetro `type` debe ser reemplazado con el tipo de sensor a actualizar (`flow`, `mse` o `meraki`)
 
-Si la petición es exitosa, la respuesta *JSON* mostrará la información del **sensor** actualizada y el campo `query` establecido en `true`.
+Si la petición es exitosa, la respuesta *JSON* mostrará la información del **sensor** actualizada y el campo `query` establecido en `true`..
 
+Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
 
 ??? example "Ejecución completa"
 
@@ -664,7 +674,7 @@ Si la petición es exitosa, la respuesta *JSON* mostrará la información del **
 
 ### Sobreescribir un dominio
 
-Si se desea, un dominio (al que nos referiremos como "sensor principal") puede ser completamente reemplazado con el contenido proporcionado en la carga útil de la solicitud. La carga útil de la solicitud debe estar en formato *JSON*. Dicho *JSON* debe tener una única etiqueta raíz "sensor" que describa el contenido del "sensor principal" a reemplazar. Para evitar errores, no podemos cambiar el valor del UUID del "sensor principal". Los dominios secundarios se pueden establecer utilizando el valor `children` donde se aplica la herencia. Se permiten múltiples niveles de herencia.
+Si se desea, un dominio (al que nos referiremos como "sensor principal") puede ser completamente reemplazado con el contenido proporcionado en la carga útil de la solicitud. la carga útil de la solicitud debe estar en formato *JSON*. Dicho *JSON* debe tener una única etiqueta raíz "sensor" que describa el contenido del "sensor principal" a reemplazar. Para evitar errores, no podemos cambiar el valor del UUID del "sensor principal". Los dominios secundarios se pueden establecer utilizando el valor `children` donde se aplica la herencia. Se permiten múltiples niveles de herencia.
 
 !!! warning "Importante"
 
@@ -690,8 +700,9 @@ Otra opción es no darle un valor al campo `sensor_uuid`. En este caso, el domin
 
     https://<IP_manager>/api/v1/sensors/override_all/?auth_token=<clave_API>
 
-Si la petición es exitosa, la respuesta *JSON* mostrará el campo `query` establecido en `true`.
+Si la petición es exitosa, la respuesta *JSON* mostrará el campo `query` establecido en `true`..
 
+Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
 
 ??? example "Ejecución completa"
 
@@ -783,6 +794,7 @@ También es posible filtrar puntos de acceso por algunos campos disponibles. Dic
 
 Si la petición es exitosa, la respuesta tendrá el listado de puntos de acceso solicitado y el campo `query` establecido en `true`.
 
+Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta *JSON*:
 
 ??? example "Ejecución completa"
 
@@ -895,6 +907,7 @@ Los siguientes parámetros son aceptados en la carga útil:
 
 Si la petición es exitosa, la respuesta *JSON* describirá el **punto de acceso** creado y el campo `query` establecido en `true`.
 
+Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta *JSON*:
 
 ??? example "Ejecución completa"
 
@@ -986,8 +999,9 @@ Si no se especifica un dominio contenedor, el punto de acceso se creará en el d
 
 Si se especifica que el punto de acceso debe estar contenido en un dominio inexistente, **dicho dominio será creado**. Si proporcionó un nombre para este dominio, se creará con el nombre proporcionado. Si no se proporcionó ningún nombre, se creará con un nombre que coincida con `<domain_type>_<uuid>`, por ejemplo: `organization_2342356443333123`. Si se encuentra un dominio por su nombre pero el UUID no coincide, **el dominio proporcionado se actualizará para que coincida con el dado**. Además, se puede incluir un campo de enriquecimiento en los valores del punto de acceso.
 
-Si la petición es exitosa, la respuesta *JSON* mostrará el campo `query` establecido en `true`.
+Si la petición es exitosa, la respuesta *JSON* mostrará el campo `query` establecido en `true`..
 
+Despliegue la siguiente pestaña para ver un ejemplo de ejecución completo:
 
 ??? example "Ejecución completa"
 
@@ -1063,6 +1077,7 @@ Esta solicitud debe enviarse junto con una carga útil *JSON* que describa el ar
 
 Si la petición es exitosa, la respuesta *JSON* describirá el campo `query` establecido en `true`.
 
+Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta *JSON*:
 
 ??? example "Ejecución completa"
 
@@ -1100,6 +1115,7 @@ Donde `sensor_uuid` debe ser el UUID del dominio del que se desea eliminar los *
 
 Si la petición es exitosa, la respuesta *JSON* describirá el campo `query` establecido en `true`.
 
+Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta *JSON*:
 
 ??? example "Ejecución completa"
 
@@ -1131,6 +1147,7 @@ Si el usuario que realiza la petición no es súper administrador, se devolverá
 
 Si la petición es exitosa, la respuesta *JSON* listará todos los usuarios registrados en la plataforma y el campo `query` establecido en `true`.
 
+Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta *JSON*:
 
 ??? example "Ejecución completa"
 
@@ -1258,6 +1275,7 @@ Donde `user_id` debe ser reemplazado con el ID del usuario deseado.
 
 Si la petición es exitosa, la respuesta *JSON* contendrá el **token de autenticación** generado junto al campo `query` establecido en `true`.
 
+Despliegue la siguiente pestaña para ver un ejemplo de ejecución con respuesta *JSON*:
 
 ??? example "Ejecución completa"
 
