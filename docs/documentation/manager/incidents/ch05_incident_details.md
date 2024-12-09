@@ -79,7 +79,7 @@ You can link two or more incidents, and once linked, their relationship is displ
 
 #### Assets Sidebar
 
-You can view more information about the involved assets by clicking on the IP of the desired asset in the Asset section. This will open a sidebar with the asset's details.
+For more information on the assets involved, click on the IP of the desired asset in the “Assets” section or on the corresponding node within the graph. This will open a sidebar with the asset's details.
 
 ![Assets sidebar](images/assets_sidebar.en.png)
 

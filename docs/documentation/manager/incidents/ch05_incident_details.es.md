@@ -79,7 +79,7 @@ Puede vincular dos o más incidentes y, una vez vinculados, su relación se mues
 
 #### Barra Lateral de Activos
 
-Puede ver más información sobre los activos implicados haciendo clic en la IP del activo deseado en la sección Activos. Se abrirá una barra lateral con los detalles del activo.
+Para obtener más información sobre los activos implicados, haga clic en la IP del activo deseado en la sección "Activos" o en el nodo correspondiente dentro del gráfico. Se abrirá una barra lateral con los detalles del activo.
 
 ![Barra lateral de Activos](images/assets_sidebar.es.png)
 
