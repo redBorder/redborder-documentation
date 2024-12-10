@@ -77,6 +77,18 @@ You can link two or more incidents, and once linked, their relationship is displ
 
 ![Linked incidents](images/linked_incidents.en.png)
 
+#### Observables Sidebar
+
+For more information on the observables, click on the corresponding node within the graph. This will open a sidebar displaying the observable's details, including related nodes and events.
+
+![Observables Sidebar](images/observable_sidebar.png)
+
+#### Assets Sidebar
+
+For more information on the assets involved, click on the name of the desired asset in the “Assets” section or on the corresponding node within the graph. This will open a sidebar with the asset's details.
+
+![Assets sidebar](images/assets_sidebar.en.png)
+
 ### Detection
 
 The **Detection** section lists relevant events and its observables and assets contributing to the incident, providing insight into how it was identified.

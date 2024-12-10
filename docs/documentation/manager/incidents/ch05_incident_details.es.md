@@ -77,6 +77,18 @@ Puede vincular dos o más incidentes y, una vez vinculados, su relación se mues
 
 ![Linked incidents](images/linked_incidents.es.png)
 
+#### Barra Lateral de Observables
+
+Para obtener más información sobre los observales implicados, haga clic en el nodo correspondiente dentro del gráfico. Se abrirá una barra lateral con los detalles del observale con su correspondientes nodos y eventos relacionados.
+
+![Barra lateral de Observables](images/observable_sidebar.es.png)
+
+#### Barra Lateral de Activos
+
+Para obtener más información sobre los activos implicados, haga clic en el nombre del activo deseado en la sección "Activos" o en el nodo correspondiente dentro del gráfico. Se abrirá una barra lateral con los detalles del activo.
+
+![Barra lateral de Activos](images/assets_sidebar.es.png)
+
 ### Detección
 
 La sección de **Detección** enumera los eventos relevantes y sus observables y activos que contribuyeron al incidente, proporcionando una visión de cómo fue identificado.
