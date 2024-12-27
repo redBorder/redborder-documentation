@@ -104,7 +104,7 @@ Example `incident-basic-info` structured data:
 - **user-name**: name of the user
 - **user-email**: email of the user
 
-Example of syslog message with a `incident-basic-info` and a `user-basic-info` structured data on it:
+Example of `user-basic-info` structured data:
 ```
 [user-basic-info@39483 user-login="john" user-name="John Smith" user-email="johnsmith123@redborder.com"]
 ```
@@ -129,7 +129,7 @@ Example of syslog message with a `incident-basic-info` and a `user-basic-info` s
 - **src-mac-address**: source mac address
 - **dst-mac-address**: destiny mac address
 
-Example of syslog message with `incident-intrusion-event': 
+Example of `intrusion-event` structured data:
 ```
 [intrusion-event@39483 timestamp="2024-12-27T11:56:00.000Z" incident-uuid="201e3f61-17e0-4fd9-bf2d-fecf8e1a3a58" incident-uri="https://ndr.redborder.com/incidents/14" incident-domain="Aether Dynamics" sensor-name="rbips-s0rbg8nn" sensor-uuid="04231c06-da35-45f5-aa20-ab6658e194e8" priority="medium" message="ET INFO Suspicious GET To gate.php with no Referer" assets="" observables="[{\"mac_address\":\"08:00:27:b2:d5:aa\"}, {\"ip\":\"192.168.56.103\"}, {\"port\":\"1058\"}, {\"mac_address\":\"0a:00:27:00:00:00\"}, {\"ip\":\"141.8.224.79\"}, {\"port\":\"80\"}]" classification="Potentially Bad Traffic" src="192.168.56.103" dst="141.8.224.79" src-port="1058" dst-port="80" src-mac-address="08:00:27:b2:d5:aa" dst-mac-address="0a:00:27:00:00:00"]
 ```
@@ -147,7 +147,7 @@ Example of syslog message with `incident-intrusion-event':
 - **assets**: assets detected on the event
 - **observables**: observables detected on the event
 
-Example of syslog message with `incident-intrusion-event': 
+Example of `vault-event` structured data:
 ```
 [vault-event@39483 timestamp="2024-12-27T13:54:00.000Z" incident-uuid="9d661c32-442a-4455-a551-154cc4bb3c46" incident-uri="https://ndr.redborder.com/incidents/17" incident-domain="root" sensor-name="root" sensor-uuid="4803702189063327665" priority="notice" message="Alarm Cisco ISR high memory used fired because it exceeded the upper limit of 50% with 348983704.8% between 2024-12-27 13:49:02 +0000 and 2024-12-27 13:54:02 +0000 with conditions: sensor_name is ISR" assets="" observables="[{\"hostname\":\"rb-a3hl3x8ocz.redborder.cluster\"}, {\"ip\":\"127.0.0.1\"}]"]
 ```
