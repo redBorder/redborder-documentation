@@ -111,35 +111,46 @@ Example of syslog message with a `incident-basic-info` and a `user-basic-info` s
 
 #### intrusion-event
 
-- **timestamp**
-- **incident-uuid**
-- **incident-uri**
-- **incident-domain**
-- **sensor-name**
-- **sensor-uuid**
-- **priority**
-- **message**
-- **sig-id**
-- **classification**
-- **src**
-- **dst**
-- **src-port**
-- **dst-port**
+- **timestamp**: timestamp of the original intrusion event
+- **incident-uuid**: the incident uuid
+- **incident-uri**: the uri of the incident
+- **incident-domain**: the domain of the incident
+- **sensor-name**: name of the sensor that originate the event
+- **sensor-uuid**: uuid of the sensor that originate the event
+- **priority**: priority of the intrusion event
+- **message**: the message of the event
+- **assets**: assets detected on the event
+- **observables**: observables detected on the event
+- **classification**: clasification of the intrusion event
+- **src**: source IP
+- **dst**: destiny IP
+- **src-port**: source Port
+- **dst-port**: destiny Port
+- **src-mac-address**: source mac address
+- **dst-mac-address**: destiny mac address
+
+Example of syslog message with `incident-intrusion-event': 
+```
+[intrusion-event@39483 timestamp="2024-12-27T11:56:00.000Z" incident-uuid="201e3f61-17e0-4fd9-bf2d-fecf8e1a3a58" incident-uri="https://ndr.redborder.com/incidents/14" incident-domain="Aether Dynamics" sensor-name="rbips-s0rbg8nn" sensor-uuid="04231c06-da35-45f5-aa20-ab6658e194e8" priority="medium" message="ET INFO Suspicious GET To gate.php with no Referer" assets="" observables="[{\"mac_address\":\"08:00:27:b2:d5:aa\"}, {\"ip\":\"192.168.56.103\"}, {\"port\":\"1058\"}, {\"mac_address\":\"0a:00:27:00:00:00\"}, {\"ip\":\"141.8.224.79\"}, {\"port\":\"80\"}]" classification="Potentially Bad Traffic" src="192.168.56.103" dst="141.8.224.79" src-port="1058" dst-port="80" src-mac-address="08:00:27:b2:d5:aa" dst-mac-address="0a:00:27:00:00:00"]
+```
 
 #### vault-event
 
-- **timestamp**
-- **incident-uuid**
-- **incident-uri**
-- **incident-domain**
-- **sensor-name**
-- **sensor-uuid**
-- **priority**
-- **message**
-- **target**
-- **hostname**
-- **app-name**
-- **fromhost-ip**
+- **timestamp**: timestamp of the original event
+- **incident-uuid**: uuid of the incident
+- **incident-uri**: uri of the incident
+- **incident-domain**: domain of the incident
+- **sensor-name**: name of the sensor that originate the event
+- **sensor-uuid**: uuid of the sensor that originate the event
+- **priority**: priority of the vault event
+- **message**: message of the event
+- **assets**: assets detected on the event
+- **observables**: observables detected on the event
+
+Example of syslog message with `incident-intrusion-event': 
+```
+[vault-event@39483 timestamp="2024-12-27T13:54:00.000Z" incident-uuid="9d661c32-442a-4455-a551-154cc4bb3c46" incident-uri="https://ndr.redborder.com/incidents/17" incident-domain="root" sensor-name="root" sensor-uuid="4803702189063327665" priority="notice" message="Alarm Cisco ISR high memory used fired because it exceeded the upper limit of 50% with 348983704.8% between 2024-12-27 13:49:02 +0000 and 2024-12-27 13:54:02 +0000 with conditions: sensor_name is ISR" assets="" observables="[{\"hostname\":\"rb-a3hl3x8ocz.redborder.cluster\"}, {\"ip\":\"127.0.0.1\"}]"]
+```
 
 #### network-anomaly-event
 
@@ -207,3 +218,41 @@ Syslog message of adding an user to an incident:
 - **$MSGID**: *incident-assignment*
 - **$STRUCTURED-DATA**: *[incident-basic-info@39483 incident-id="5" incident-uuid="652f4c59-aa3e-4e44-b4a4-1c52ab622ebf" incident-uri="https://ndr.redborder.com/incidents/5" incident-name="Telegram API Interactions: Certificate Observed and IP Lookups to Suspected Domains (api.telegram.org, checkip.dyndns.org, reallyfreegeoip.org)" incident-domain="root" incident-priority="medium"][user-basic-info@39483 user-login="john" user-name="John Smith" user-email="johnsmith123@redborder.com"]*
 - **$MSG**: * The user John Smith was added to the incident*
+
+### New intrusion event detected
+
+Syslog message of a new detection of type intrusion
+
+```
+<134>1 2024-12-27T13:39:49.907Z rb-a3hl3x8ocz.redborder.cluster redborder-ndr 310052 incident-intrusion-event [intrusion-event@39483 timestamp="2024-12-27T12:31:00.000Z" incident-uuid="540f114b-41fc-4d6b-bd9d-cd0180abeaf9" incident-uri="https://ndr.redborder.com/incidents/15" incident-domain="Aether Dynamics" sensor-name="rbips-s0rbg8nn" sensor-uuid="04231c06-da35-45f5-aa20-ab6658e194e8" priority="high" message="ET EXPLOIT ETERNALBLUE Exploit M2 MS17-010" assets="[{\"id\":\"1791\", \"name\":\"IronClad-09\", \"mac_address\":\"00:25:b3:f5:fa:74\", \"type\":\"Workstation Endpoint\", \"operating_system\":\"Microsoft Windows 10\"}]" observables="[{\"ip\":\"192.168.116.149\"}, {\"port\":\"49767\"}, {\"mac_address\":\"00:00:00:00:54:01\"}, {\"ip\":\"192.168.116.143\"}, {\"port\":\"445\"}]" classification="Attempted Administrator Privilege Gain" src="192.168.116.149" dst="192.168.116.143" src-port="49767" dst-port="445" src-mac-address="00:25:b3:f5:fa:74" dst-mac-address="00:00:00:00:54:01"] New  intrusion event: 'ET EXPLOIT ETERNALBLUE Exploit M2 MS17-010' (Priority: high). Associated incident: '540f114b-41fc-4d6b-bd9d-cd0180abeaf9' (Domain: Aether Dynamics).
+```
+
+- **$PRI**: *134*
+- **VERSION**: *1*
+- **$TIMESTAMP**: *2024-12-27T13:39:49.907Z*
+- **$HOSTNAME**: *rb-a3hl3x8ocz.redborder.cluster*
+- **$APP-NAME**: *redborder-ndr*
+- **$PROCID**: *310052*
+- **$MSGID**: *incident-intrusion-event*
+- **$STRUCTURED-DATA**: *[intrusion-event@39483 timestamp="2024-12-27T12:31:00.000Z" incident-uuid="540f114b-41fc-4d6b-bd9d-cd0180abeaf9" incident-uri="https://ndr.redborder.com/incidents/15" incident-domain="Aether Dynamics" sensor-name="rbips-s0rbg8nn" sensor-uuid="04231c06-da35-45f5-aa20-ab6658e194e8" priority="high" message="ET EXPLOIT ETERNALBLUE Exploit M2 MS17-010" assets="[{\"id\":\"1791\", \"name\":\"IronClad-09\", \"mac_address\":\"00:25:b3:f5:fa:74\", \"type\":\"Workstation Endpoint\", \"operating_system\":\"Microsoft Windows 10\"}]" observables="[{\"ip\":\"192.168.116.149\"}, {\"port\":\"49767\"}, {\"mac_address\":\"00:00:00:00:54:01\"}, {\"ip\":\"192.168.116.143\"}, {\"port\":\"445\"}]" classification="Attempted Administrator Privilege Gain" src="192.168.116.149" dst="192.168.116.143" src-port="49767" dst-port="445" src-mac-address="00:25:b3:f5:fa:74" dst-mac-address="00:00:00:00:54:01"]*
+- **$MSG**: * New  intrusion event: 'ET EXPLOIT ETERNALBLUE Exploit M2 MS17-010' (Priority: high). Associated incident: '540f114b-41fc-4d6b-bd9d-cd0180abeaf9' (Domain: Aether Dynamics).*
+
+### New vault event detected
+
+Syslog message of a new detection of type vault
+
+```
+<134>1 2024-12-27T14:06:23.783Z rb-a3hl3x8ocz.redborder.cluster redborder-ndr 17506 incident-vault-event [vault-event@39483 timestamp="2024-12-27T13:54:00.000Z" incident-uuid="9d661c32-442a-4455-a551-154cc4bb3c46" incident-uri="https://ndr.redborder.com/incidents/17" incident-domain="root" sensor-name="root" sensor-uuid="4803702189063327665" priority="notice" message="Alarm Cisco ISR high memory used fired because it exceeded the upper limit of 50% with 348983704.8% between 2024-12-27 13:49:02 +0000 and 2024-12-27 13:54:02 +0000 with conditions: sensor_name is ISR" assets="" observables="[{\"hostname\":\"rb-a3hl3x8ocz.redborder.cluster\"}, {\"ip\":\"127.0.0.1\"}]"] New  vault event: 'Alarm Cisco ISR high memory used fired because it exceeded the upper limit of 50% with 348983704.8% between 2024-12-27 13:49:02 +0000 and 2024-12-27 13:54:02 +0000 with conditions: sensor_name is ISR' (Priority: notice). Associated incident: '9d661c32-442a-4455-a551-154cc4bb3c46' (Domain: root).
+```
+
+- **$PRI**: *134*
+- **VERSION**: *1*
+- **$TIMESTAMP**: *2024-12-27T14:06:23.783Z*
+- **$HOSTNAME**: *rb-a3hl3x8ocz.redborder.cluster*
+- **$APP-NAME**: *redborder-ndr*
+- **$PROCID**: *17506*
+- **$MSGID**: *incident-vault-event*
+- **$STRUCTURED-DATA**: *[vault-event@39483 timestamp="2024-12-27T13:54:00.000Z" incident-uuid="9d661c32-442a-4455-a551-154cc4bb3c46" incident-uri="https://ndr.redborder.com/incidents/17" incident-domain="root" sensor-name="root" sensor-uuid="4803702189063327665" priority="notice" message="Alarm Cisco ISR high memory used fired because it exceeded the upper limit of 50% with 348983704.8% between 2024-12-27 13:49:02 +0000 and 2024-12-27 13:54:02 +0000 with conditions: sensor_name is ISR" assets="" observables="[{\"hostname\":\"rb-a3hl3x8ocz.redborder.cluster\"}, {\"ip\":\"127.0.0.1\"}]"]*
+- **$MSG**: * New  vault event: 'Alarm Cisco ISR high memory used fired because it exceeded the upper limit of 50% with 348983704.8% between 2024-12-27 13:49:02 +0000 and 2024-12-27 13:54:02 +0000 with conditions: sensor_name is ISR' (Priority: notice). Associated incident: '9d661c32-442a-4455-a551-154cc4bb3c46' (Domain: root).*
+
+### New network anomaly event detected
