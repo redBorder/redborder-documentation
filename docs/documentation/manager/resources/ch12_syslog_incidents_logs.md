@@ -358,7 +358,7 @@ Syslog Message:
 
 **VERSION**: *1*
 
-**$TIMESTAMP**: *2024-12-27T14:56:45.843Z *
+**$TIMESTAMP**: *2024-12-27T14:56:45.843Z*
 
 **$HOSTNAME**: *rb-a3hl3x8ocz.redborder.cluster*
 
