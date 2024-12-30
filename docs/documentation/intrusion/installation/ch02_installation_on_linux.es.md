@@ -28,7 +28,7 @@ Instala el sistema operativo compatible y ejecuta el siguiente comando como root
 
 ``` bash title="Instalación de repositorios"
 yum install epel-release
-rpm -ivh https://repo.redborder.com/ng/24.12/rhel/9/x86_64/redborder-repo-24.12-0.0.1-1.el9.rb.noarch.rpm
+rpm -ivh https://repo.redborder.com/ng/25.01/rhel/9/x86_64/redborder-repo-25.01-0.0.1-1.el9.rb.noarch.rpm
 ```
 ``` bash title="Instala el paquete redborder-ips"
 yum clean all
