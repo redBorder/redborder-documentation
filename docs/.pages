@@ -2,4 +2,4 @@
 nav:
     - ... | index*.md
     - Documentation: documentation
-    # - Release notes: index*.md
+    - Release notes: release_notes
