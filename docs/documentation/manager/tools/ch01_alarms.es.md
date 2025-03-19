@@ -44,7 +44,7 @@ Haciendo click en el botón **Nueva Alarma** accedemos al formulario, en el que 
 
 - **Condiciones**
 
-    Son los filtros en los que se va a basar el disparado de la alarma. Pueden ser configurados de manera similar a como se configurarían en el tipo de aplicación / elemento para el que se ha definido la alarma.
+    Son los filtros en los que se va a basar la activación de la alarma. Pueden ser configurados de manera similar a como se configurarían en el tipo de aplicación / elemento para el que se ha definido la alarma.
 
 - **Tipo de producto**
 
