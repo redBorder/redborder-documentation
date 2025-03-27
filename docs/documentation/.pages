@@ -5,4 +5,5 @@ nav:
     - Intrusion: intrusion
     - Flowgate: flowgate
     - Use Cases: use_cases
+    - FAQ: faq
     # - Release notes: index*.md
