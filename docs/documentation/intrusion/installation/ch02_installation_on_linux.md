@@ -30,6 +30,10 @@ Install the supported operative system and run the following command as root:
 yum install epel-release
 rpm -ivh https://packages.redborder.com/releases/25.01/rhel/9/x86_64/redborder-repo-25.01-0.0.1-1.el9.rb.noarch.rpm
 ```
+``` bash title="Update the system and get last kernel version"
+yum update -y
+reboot
+```
 ``` bash title="Install redborder-ips package"
 yum clean all
 yum install redborder-ips -y
