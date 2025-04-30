@@ -30,7 +30,7 @@ Instala el sistema operativo compatible y ejecuta el siguiente comando como root
 yum install epel-release
 rpm -ivh https://packages.redborder.com/releases/25.01/rhel/9/x86_64/redborder-repo-25.01-0.0.1-1.el9.rb.noarch.rpm
 ```
-``` bash title="Actualiza el systema y obtén la última versión del kernel"
+``` bash title="Actualiza el sistema y obtén la última versión del kernel"
 yum update -y
 reboot
 ```
