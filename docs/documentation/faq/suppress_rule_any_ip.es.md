@@ -9,9 +9,11 @@ Regla de supresión para bloquear toda intrusión que tenga 1.1.1.1 en su IP de 
 Source IP = 0.0.0.0/0
 Destination IP = 1.1.1.1
 
+![block_target_ip](images/suppress_dst.png)
+
 Regla de supresión para bloquear toda intrusión que tenga 1.1.1.1 en su IP de origen: 
 
 Source IP  = 1.1.1.1
 Destination IP = 0.0.0.0/0
 
-Traducción realizada con la versión gratuita del traductor DeepL.com
+![block_source_ip](images/suppress_src.png)
