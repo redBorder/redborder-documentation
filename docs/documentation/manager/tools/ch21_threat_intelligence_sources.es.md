@@ -1,6 +1,6 @@
 # Fuentes de inteligencia de amenazas
 
-In this option, users can add files from different sources, which indicate a list of identifiers that, if found in traffic or intrusions, will be marked as “malicious”. Estos archivos serán descargados mediante la ejecución del Job **UpdateThreatIntelJob**
+En esta opción, los usuarios pueden añadir archivos de diferentes fuentes, que indican una lista de identificadores que, si se encuentran en el tráfico o las intrusiones, se marcarán como “malicious”. Estos archivos serán descargados mediante la ejecución del Job **UpdateThreatIntelJob**
 
 Identificadores que pueden ser incluidos en estas listas son:
 
