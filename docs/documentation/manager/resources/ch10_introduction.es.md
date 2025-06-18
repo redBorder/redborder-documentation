@@ -168,24 +168,24 @@ Para ver un listado de las dimensiones disponibles, despliega la siguiente pesta
 
     |                        |                           |                           |                         |                           |
     |------------------------|---------------------------|---------------------------|-------------------------|---------------------------|
-    | application_id_name    | darklist_category         | https_common_name         | namespace               | tos                       |
-    | building               | darklist_direction        | interface_name            | namespace_uuid          | type                      |
-    | building_uuid          | darklist_score_name       | ip_as_name                | organization            | url                       |
-    | campus                 | darklist_score            | ip_country_code           | organization_uuid       | wan_interface_description |
-    | campus_uuid            | deployment                | ip_protocol_version       | product_name            | wan_interface_name        |
-    | client_accounting_type | deployment_uuid           | l4_proto                  | public_ip               | wan_ip                    |
-    | client_auth_type       | direction                 | lan_interface_description | public_ip_mac           | wan_ip_as_name            |
-    | client_fullname        | dot11_protocol            | lan_interface_name        | referer                 | wan_ip_country_code       |
-    | client_gender          | dot11_status              | lan_ip                    | referer_l2              | wan_ip_map                |
-    | client_id              | dst_map                   | lan_ip_as_name            | scatterplot             | wan_ip_net_name           |
-    | client_latlong         | duration                  | lan_ip_country_code       | selector_name           | wan_l4_port               |
-    | client_loyality        | engine_id_name            | lan_ip_name               | sensor_ip               | wan_name                  |
-    | client_mac             | floor                     | lan_ip_net_name           | sensor_name             | wan_vlan                  |
-    | client_mac_vendor      | floor_uuid                | lan_l4_port               | sensor_uuid             | wireless_id               |
-    | client_rssi            | host                      | lan_name                  | service_provider        | wireless_operator         |
-    | client_vip             | host_l2_domain            | lan_vlan                  | service_provider_uuid   | wireless_station          |
-    | conversation           | http_social_media         | market                    | src_map                 | zone                      |
-    | coordinates_map        | http_user_agent           | market_uuid               | tcp_flags               | zone_uuid                 |
+    | application_id_name    | deployment                | https_common_name         | namespace               | tos                       |
+    | building               | deployment_uuid           | interface_name            | namespace_uuid          | type                      |
+    | building_uuid          | direction                 | ip_as_name                | organization            | url                       |
+    | campus                 | dot11_protocol            | ip_country_code           | organization_uuid       | wan_interface_description |
+    | campus_uuid            | dot11_status              | ip_protocol_version       | product_name            | wan_interface_name        |
+    | client_accounting_type | dst_map                   | l4_proto                  | public_ip               | wan_ip                    |
+    | client_auth_type       | duration                  | lan_interface_description | public_ip_mac           | wan_ip_as_name            |
+    | client_fullname        | engine_id_name            | lan_interface_name        | referer                 | wan_ip_country_code       |
+    | client_gender          | floor                     | lan_ip                    | referer_l2              | wan_ip_map                |
+    | client_id              | floor_uuid                | lan_ip_as_name            | scatterplot             | wan_ip_net_name           |
+    | client_latlong         | host                      | lan_ip_country_code       | selector_name           | wan_l4_port               |
+    | client_loyality        | host_l2_domain            | lan_ip_name               | sensor_ip               | wan_name                  |
+    | client_mac             | http_social_media         | lan_ip_net_name           | sensor_name             | wan_vlan                  |
+    | client_mac_vendor      | http_user_agent           | lan_l4_port               | sensor_uuid             | wireless_id               |
+    | client_rssi            | market                    | lan_name                  | service_provider        | wireless_operator         |
+    | client_vip             | market_uuid               | lan_vlan                  | service_provider_uuid   | wireless_station          |
+    | conversation           | src_map                   | tcp_flags                 | zone                    | zone_uuid                 |
+    | coordinates_map        |                           |                           |                         |                           |
 
 ### Dimensiones para `rb_event`
 
@@ -198,17 +198,17 @@ Para ver un listado de las dimensiones disponibles, despliega la siguiente pesta
     |                        |                      |                      |                      |                      |
     |------------------------|----------------------|----------------------|----------------------|----------------------|
     | action                 | campus               | campus_uuid          | classification       | conversation         |
-    | building               | building_uuid        | darklist_category    | darklist_direction   | darklist_score       |
-    | darklist_score_name    | deployment           | deployment_uuid      | domain_name          | dst                  |
-    | dst_as_name            | dst_country_code     | dst_map              | dst_net_name         | dst_port             |
-    | ethdst                 | ethdst_vendor        | ethlength_range      | ethsrc               | ethsrc_vendor        |
-    | file_hostname          | file_size            | file_uri             | floor                | floor_uuid           |
-    | group_name             | icmptype             | incident_uuid        | iplen_range          | l4_proto             |
-    | market                 | market_uuid          | msg                  | namespace            | namespace_uuid       |
-    | organization           | organization_uuid    | priority             | rev                  | scatterplot          |
-    | sensor_name            | service_provider     | service_provider_uuid| sha256               | sig_generator        |
-    | sig_id                 | src                  | src_as_name          | src_country_code     | src_map              |
-    | src_net_name           | src_port             | tos                  | ttl                  | vlan                 |
+    | building               | building_uuid        | deployment           | deployment_uuid      | domain_name          |
+    | dst                    | dst_as_name          | dst_country_code     | dst_map              | dst_net_name         |
+    | dst_port               | ethdst               | ethdst_vendor        | ethlength_range      | ethsrc               |
+    | ethsrc_vendor          | file_hostname        | file_size            | file_uri             | floor                |
+    | floor_uuid             | group_name           | icmptype             | incident_uuid        | iplen_range          |
+    | l4_proto               | market               | market_uuid          | msg                  | namespace            |
+    | namespace_uuid         | organization         | organization_uuid    | priority             | rev                  |
+    | scatterplot            | sensor_name          | service_provider     | service_provider_uuid| sha256               |
+    | sig_generator          | sig_id               | src                  | src_as_name          | src_country_code     |
+    | src_map                | src_net_name         | src_port             | tos                  | ttl                  |
+    | vlan                   |                      |                      |                      |                      |
 
 ### Dimensiones para `rb_monitor`
 

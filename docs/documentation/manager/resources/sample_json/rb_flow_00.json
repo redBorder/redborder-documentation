@@ -6,7 +6,7 @@
   "aggregations": [
     {"type": "longSum", "name": "events", "fieldName": "events"}
   ],
-  "dimensions": [ "client", "client_mac", "darklist_category", "darklist_direction", "direction", "duration",
+  "dimensions": [ "client", "client_mac", "direction", "duration",
    "ip_protocol_version", "lan", "lan_ip", "lan_l4_port", "public_ip", "sensor_ip", "type", "wan_ip", 
    "wan_l4_port", "namespace", "namespace_uuid", "organization", "organization_uuid", "product_name"
   ]
