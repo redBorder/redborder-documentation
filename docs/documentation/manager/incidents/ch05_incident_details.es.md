@@ -152,6 +152,8 @@ Genera el informe del incidente usando Redborder AI.
 
 ![Report](images/incidents_report.es.png)
 
-Haz click en **Ver el Informe de incidentes** para generar una versión en PDF del informe.
+Haz click en **Crear el informe de incidentes** para generar una versión en PDF del informe.
 
 ![PDF Report](images/incidents_report_pdf.es.png)
+
+Puedes ver el historial de reportes generados haciendo click en **Historial**
