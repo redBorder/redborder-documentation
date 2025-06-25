@@ -161,6 +161,8 @@ Generate the incident report using Redborder AI.
 
 ![Report](images/incidents_report.en.png)
 
-Click in **View Incident Report** to generate a PDF version of the report.
+Click in **Create Incident Report** to generate a PDF version of the report.
 
 ![PDF Report](images/incidents_report_pdf.en.png)
+
+You can see the history of the generated incident reports by clicking **History**
