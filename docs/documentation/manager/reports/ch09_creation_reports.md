@@ -4,7 +4,9 @@ The **Reports** allows the user to create periodic reports with the information 
 
 ![Reports](images/ch04_img009-en.png)
 
-To create a new report, click on the **New Report** button and fill in all required fields. You also have the option to import a report from a file using the **Import Report** button. At the same time, next to it you have a button to view the complete history of all reports you have access to.
+To create a new report, click on the drop-down with the text **New Report** and then click on the “New Group” button. Complete the fields in order to create the report.
+
+You also have the option to import a report from a file using the **Import Report** button. At the same time, next to it you have a button to view the complete history of all reports you have access to.
 
 ![Editing and Creating Reports](images/ch04_img049-en.png)
 
