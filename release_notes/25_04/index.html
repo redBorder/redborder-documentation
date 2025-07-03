@@ -1,0 +1,4049 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.redborder.com/release_notes/25_04/">
+      
+      
+        <link rel="prev" href="../../documentation/faq/suppress_rule_any_ip/">
+      
+      
+        <link rel="next" href="../25_01/">
+      
+      
+      <link rel="icon" href="../../assets/images/redborder-logo-white-crop-u4409.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Release 25.04 - Redborder NDR Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#release-notes-for-25048" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Redborder NDR Documentation" class="md-header__button md-logo" aria-label="Redborder NDR Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/redborder-logo-white-crop-u4409.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Redborder NDR Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Release 25.04
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../es/release_notes/25_04/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/redBorder/redborder-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Redborder/redborder-documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Redborder NDR
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../documentation/manager/" class="md-tabs__link">
+          
+  
+  
+  Documentation
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Release notes
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Redborder NDR Documentation" class="md-nav__button md-logo" aria-label="Redborder NDR Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/redborder-logo-white-crop-u4409.png" alt="logo">
+
+    </a>
+    Redborder NDR Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/redBorder/redborder-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Redborder/redborder-documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Redborder NDR
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Documentation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Manager
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Manager
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About Redborder Manager
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/installation/ch02_installation_on_linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation on Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/getting_started/ch03_sign_in_to_redborder_manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sign In to Redborder Manager
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/getting_started/ch04_interface_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Interface Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_4" id="__nav_2_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Dashboards
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Dashboards
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/dashboards/ch05_overview_and_default_dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview and Default Dashboard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/dashboards/ch06_dashboards_menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dashboards Menu
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/dashboards/ch07_dashboards_actions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dashboard Actions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/dashboards/ch08_widgets_menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Widgets Menu
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/dashboards/ch09_widgets_actions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Widgets Actions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_5" id="__nav_2_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Incidents
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Incidents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/incidents/ch01_incidents_list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Incidents List
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/incidents/ch05_incident_details/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Incident Details
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/incidents/ch21_incident_stats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Incident Statistics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_6" id="__nav_2_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Apps
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Apps
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/apps/ch07_apps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Apps Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/apps/ch08_apps_menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Apps Menu
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/apps/ch09_views/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Apps Views
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/apps/ch10_anomalies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Anomaly Detection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/apps/ch11_filters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Filters
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/apps/ch12_ip_search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IP search
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/apps/ch13_create_objects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create Objects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_7" id="__nav_2_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Reports
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            Reports
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/reports/ch09_creation_reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Creating Reports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/reports/ch10_reports_history/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Report History
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/reports/ch11_creation_incident_group_reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create incident group reports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_8" id="__nav_2_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Sensors
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            Sensors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/sensors/ch03_sensors_view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sensors View
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/sensors/ch04_policies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Intrusion Policies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_9" id="__nav_2_1_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/tools/ch01_alarms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Alarms
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/tools/ch02_audits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Audits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/tools/ch04_cluster_settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cluster Settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/tools/ch05_general_settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    General Settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/tools/ch06_correlation_engine_rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Correlation Engine Rules
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/tools/ch07_monitor_categories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Monitor Categories
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/tools/ch09_mitre/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mitre matrix
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/tools/ch10_licenses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Licenses
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/tools/ch11_lookup_sources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lookup Sources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/tools/ch12_objects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Objects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/tools/ch13_object_types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Object Types
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/tools/ch14_overlay_maps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overlay Maps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/tools/ch17_platform_alerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Platform Alerts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/tools/ch18_rule_versions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rule Versions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/tools/ch19_users/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Users
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/tools/ch20_worker_and_job_queue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Worker and Job Queue
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/tools/ch21_threat_intelligence_sources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Threat intelligence sources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_10" id="__nav_2_1_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Integrations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_10">
+            <span class="md-nav__icon md-icon"></span>
+            Integrations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/integrations/glpi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GLPI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/integrations/otrs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OTRS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/integrations/rsyslog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Syslog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/integrations/sso/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Single Sign On
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/integrations/trend_micro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trend Micro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/integrations/zabbix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zabbix Integration Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_11" id="__nav_2_1_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Resources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/resources/ch10_introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction to Redborder's API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/resources/ch10_use_examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Example queries to the API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/resources/ch11_model_sharing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sharing Database Models
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/manager/resources/ch12_syslog_incidents_logs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Syslog Incident Logs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Intrusion
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Intrusion
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/intrusion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About Redborder Intrusion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/intrusion/installation/ch02_installation_on_linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation on Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Flowgate
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Flowgate
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/flowgate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About Redborder Flowgate
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/flowgate/installation/ch02_installation_on_linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation on Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Use Cases
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Use Cases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/use_cases/ch09_IP_tracking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tracking an IP with Redborder
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/use_cases/ch09_detect_brute_force/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SSH Brute-Force Attacks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/use_cases/ch09_detect_eternalblue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Detecting an Eternalblue Attack with Redborder
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/use_cases/ch09_ssh_brute_force_alert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Brute force authentication attack alert
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/use_cases/ch09_untangle_remote_info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reviewing remote information from Untangle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            FAQ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/faq/flow_direction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Flow direction explanation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/faq/suppress_rule_any_ip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to create a suppress rule for any IP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Release notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Release notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Release 25.04
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release 25.04
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#release-notes-for-25048" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release notes for 25.04.8
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Release notes for 25.04.8">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whats-new" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's new
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolved-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolved Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-notes-for-25047" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release notes for 25.04.7
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Release notes for 25.04.7">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whats-new_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's new
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improvements_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolved-issues_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolved Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-notes-for-25046" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release notes for 25.04.6
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Release notes for 25.04.6">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whats-new_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's new
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improvements_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolved-issues_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolved Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-notes-for-25045" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release notes for 25.04.5
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Release notes for 25.04.5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whats-new_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's new
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improvements_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolved-issues_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolved Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-notes-for-25044" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release notes for 25.04.4
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Release notes for 25.04.4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whats-new_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's new
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improvements_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolved-issues_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolved Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-notes-for-25043" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release notes for 25.04.3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Release notes for 25.04.3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whats-new_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's new
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improvements_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolved-issues_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolved Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-notes-for-25042" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release notes for 25.04.2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Release notes for 25.04.2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whats-new_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's new
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improvements_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolved-issues_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolved Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-notes-for-25041" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release notes for 25.04.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Release notes for 25.04.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whats-new_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's new
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improvements_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolved-issues_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolved Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../25_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release 25.01
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#release-notes-for-25048" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release notes for 25.04.8
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Release notes for 25.04.8">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whats-new" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's new
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolved-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolved Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-notes-for-25047" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release notes for 25.04.7
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Release notes for 25.04.7">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whats-new_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's new
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improvements_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolved-issues_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolved Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-notes-for-25046" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release notes for 25.04.6
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Release notes for 25.04.6">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whats-new_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's new
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improvements_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolved-issues_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolved Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-notes-for-25045" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release notes for 25.04.5
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Release notes for 25.04.5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whats-new_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's new
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improvements_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolved-issues_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolved Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-notes-for-25044" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release notes for 25.04.4
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Release notes for 25.04.4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whats-new_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's new
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improvements_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolved-issues_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolved Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-notes-for-25043" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release notes for 25.04.3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Release notes for 25.04.3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whats-new_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's new
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improvements_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolved-issues_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolved Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-notes-for-25042" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release notes for 25.04.2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Release notes for 25.04.2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whats-new_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's new
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improvements_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolved-issues_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolved Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-notes-for-25041" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release notes for 25.04.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Release notes for 25.04.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whats-new_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's new
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improvements_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolved-issues_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolved Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+        <span class="md-tag">25.04</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">25.04 release</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">Redborder NDR 25.04</span>
+      
+    
+  </nav>
+
+
+  
+    <a href="https://github.com/redBorder/redborder-documentation/edit/master/docs/release_notes/25_04.en.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+  <h1>Release 25.04</h1>
+
+<h2 id="release-notes-for-25048">Release notes for 25.04.8<a class="headerlink" href="#release-notes-for-25048" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Release date: 02/Jul/2025</li>
+<li>Type: Standard</li>
+<li>Main changes: redborder-webui</li>
+</ul>
+<p>This is the release notes for the patch 25.04.8 of redBorder NDR version 25.04.</p>
+<p>This release introduces major enhancements across Snort3, the Redborder Web UI, and backend cookbooks. Notably, Snort3 now supports packet dropping based on geographic reputation and direct S3 file uploads. The Web UI gains features like PDF incident reporting, asset filtering improvements, and a new job execution button. Significant performance and usability upgrades were made to incident handling and asset views. Several backend and infrastructure bugs were fixed, including issues with GeoIP configuration, service reporting, and firewall rules, leading to a more stable and secure platform.</p>
+<h3 id="whats-new">What's new<a class="headerlink" href="#whats-new" title="Permanent link">&para;</a></h3>
+<ul>
+<li>#21794   [snort3][redborder-intrusion][redborder-webui][cookbook-snort3] Extend reputation preprocessor to drop packets via Country or Continent</li>
+<li>#21739   [snort3] Allow file sending to s3 directly from snort</li>
+<li>#21904   [redborder-intrusion][snort3] Create event_filtering &amp; event suppressing for snort3</li>
+<li>#21646   [redborder-intrusion] Make Raw View for intrusion Sensor</li>
+<li>#21749   [redborder-webui] Add order table to Tools -&gt; Users (like order by login time or other columns)</li>
+<li>#21480   [redborder-webui] Generate PDF report of a set of incidents </li>
+<li>#21855   [redborder-webui] Add a button "Force now" in Workers &amp; Job Queue to force a queue job to run now</li>
+<li>#21953   [redborder-webui] Add default Threat Intelligence sources</li>
+<li>#21968   [cookbook-logstash] Enrich asset type for traffic</li>
+</ul>
+<h3 id="improvements">Improvements<a class="headerlink" href="#improvements" title="Permanent link">&para;</a></h3>
+<ul>
+<li>#21932   [redborder-intrusion] Remove the need to rename interface in redborder-intrusion sensor</li>
+<li>#20632   [redborder-manager] rb_setup_wizard should auto fill default DNS if the machine has one set</li>
+<li>#21936   [redborder-webui] Increase default UpdateThreatIntelJob time to 60 minutes</li>
+<li>#21935   [redborder-webui] Do not create stored jobs of UpdateThreatIntelJob if there are not policies configured</li>
+<li>#21814   [redborder-webui] claim intrusion-sensor by clicking unclaimed</li>
+<li>#21800   [redborder-webui] Add way to filter assets that has multi sources "Traffic" AND "GLPI" (both)</li>
+<li>#21799   [redborder-webui] Add a way to filter out assets that have last_seen to nil</li>
+<li>#21892   [redborder-webui] When an asset had too many IP's we should hide and only show more when user click it</li>
+<li>#21891   [redborder-webui] add pagination when an asset had too many incidents</li>
+<li>#21760   [redborder-webui] Add domain column in "Reports from domains" table (from Dashboard Reports sections)</li>
+<li>#21758   [redborder-webui] Add "Please wait" to export assets</li>
+<li>#21676   [redborder-webui] Store in incident the timestamp of the first event and use this time as reference to query instead of the created_at of the incident</li>
+<li>#20886   [redborder-webui] incidents: On show view in an incident with linked incidets show clearly which events/assets/observables are from which incident</li>
+<li>#20536   [cookbook-logstash] Migrate logstash log rotate from cookbook-rb-manager</li>
+</ul>
+<h3 id="resolved-issues">Resolved Issues<a class="headerlink" href="#resolved-issues" title="Permanent link">&para;</a></h3>
+<ul>
+<li>#22068   [logstash-filter-incident-enrichment] Can't convert String into an exact number in get_timestamp</li>
+<li>#21851   [nginx] When enabling nginx in a custom node (cluster), it always fails</li>
+<li>#21909   [redborder-cli] rbcli memcached values fails</li>
+<li>#21783   [redborder-cli] rbcli service all show some services as "not running!!!" when it should be "not running" (services was disabled)</li>
+<li>#21834   [cookbook-redborder-intrusion] etc/hosts not correct after registering with domainname</li>
+<li>#21828   [cookbook-consul] Seeds rake task failing during installation (chef not ready yet)</li>
+<li>#21815   [cookbook-druid] Wrong worker_capacity calculation in druid indexer</li>
+<li>#21781   [cookbook-manager] Generate key .rsa with chef in ~/.ssh/ and use it in rbcli instead of using the rails one</li>
+<li>#21773   [cookbook-zookeeper] Disabling ZooKeeper on one node causes Kafka startup failure</li>
+<li>#22031   [cookbook-webui][cookbook-dswatcher] Add missing cdomain to chef_config.yml.erb and config.yml.erb</li>
+<li>#21548   [cookbook-rb-firewall] Syslog port (514) is open tcp/udp for everybody in public and it should not</li>
+<li>#21423   [cookbook-rb-firewall] only open port 6343 for sflow sensors defined in the platform</li>
+<li>#22014   [redborder-webui] Investigate if notif_to_slack is being execute for  every alarm event instead of every alarm triggered</li>
+<li>#21980   [redborder-webui] geoip user and geoip authentication key not saved</li>
+<li>#21954   [redborder-webui] do not allow to create a Threat Intelligence Policy without name</li>
+<li>#21920   [redborder-webui] Cannot import a exported csv assets file</li>
+<li>#21915   [redborder-webui] Threat Intelligence Source download give 302 with https://blocklist.greensnow.co/greensnow.txt </li>
+<li>#21816   [redborder-webui] prepare_system taking too long as we yum cache clean metadata all the time</li>
+<li>#21849   [redborder-webui] Event filters in linked incidents don't show all the sources and priorities</li>
+<li>#21692   [redborder-webui] Assets: z-index in the pagination is wrong</li>
+</ul>
+<h2 id="release-notes-for-25047">Release notes for 25.04.7<a class="headerlink" href="#release-notes-for-25047" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Release date: 23/Jun/2025</li>
+<li>Type: Standard</li>
+<li>Main changes: redborder-webui</li>
+</ul>
+<p>This is the release notes for the patch 25.04.7 of redBorder NDR version 25.04.</p>
+<p>The latest release introduces enhanced threat intelligence integration in redborder-manager through services that provides malicious IOC's, now available as Reputation Policy. The web UI gains improvements such as bulk alarm selection, MAC address retrieval from incident events, and more precise asset display in linked incidents. Intrusion components now support Snort 3 enhancements, including sensor rule application and CPU affinity fixes, as well as PF_RING testing. Additional updates include smarter login notifications, improved chef-client behavior, and localized IP variable bindings. Several bugs were fixed, including issues with asset selection, policy application, script pathing, dropdown visibility, incident auto-deletion, and alarm and domain report searches.</p>
+<h3 id="whats-new_1">What's new<a class="headerlink" href="#whats-new_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>#20408   [redborder-manager] Improve threat intelligence with external service like virustotal or abuseip or GTI google threat intelligence and integrate this as Reputation Policy</li>
+<li>#21738   [redborder-webui] Add select/unselect in Tools -&gt; Alarms (from the visible ones)</li>
+<li>#21696   [redborder-webui] Assets: Add a way to get the mac_address (asset) from the event on incident show view</li>
+<li>#20992   [redborder-intrusion] Test PF_RING against AF_PACKET daq connector</li>
+<li>#20989   [redborder-intrusion][..] Apply rules to intrusion sensor &amp; intrusion proxy sensor, make snort3 status panel, fix CPUAffinity for snort3 and include snort3 </li>
+</ul>
+<h3 id="improvements_1">Improvements<a class="headerlink" href="#improvements_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>#20991   [redborder-intrusion] Make ipvars per binding and not global in intrusion-sensor</li>
+<li>#21311   [redborder-webui] Only Create Login Notifications When the Login IP Changes</li>
+<li>#21310   [redborder-webui] Chef-client run should check if there are not jobs run the rake redBorder:start_worker rake task</li>
+<li>#20885   [redborder-webui] Incidents: On a incident with linked incidents, show correctly the number of assets in the sidebar (index view)</li>
+</ul>
+<h3 id="resolved-issues_1">Resolved Issues<a class="headerlink" href="#resolved-issues_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>#21807   [cookbook-rb-manager] Fix cdomain not in .s3cfg_initial file</li>
+<li>#21805   [redborder-manager] Fix passing a .tar to rb_export_import_segments script from rb_backup_node_v2 script</li>
+<li>#21803   [redborder-manager] Fix missing full path of mcli in rb_export_import_segments script</li>
+<li>#21786   [redborder-manager] Add -t option to decide file to export in script rb_export_import_segments.sh</li>
+<li>#21839   [redborder-webui] Stuck in please wait if change status without selecting an asset</li>
+<li>#21831   [redborder-webui] When Sensor.root.id is not 1 we cannot apply Global reputation/signature policies to sensors (it will not show up)</li>
+<li>#21801   [redborder-webui] Time based dropdown doesnt show on alarm creation/edit</li>
+<li>#21785   [redborder-webui] Fix search alarms</li>
+<li>#21763   [redborder-webui] Autodelete incidents not deleting when one of the incidents have a report</li>
+<li>#21759   [redborder-webui] "Reports from domains"  search dont work</li>
+<li>#21856 [redborder-webui] Incidents priority/source filters doesn't work anymore</li>
+</ul>
+<h2 id="release-notes-for-25046">Release notes for 25.04.6<a class="headerlink" href="#release-notes-for-25046" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Release date: 15/Jun/2025</li>
+<li>Type: Standard</li>
+<li>Main changes: redborder-webui</li>
+</ul>
+<p>This is the release notes for the patch 25.04.6 of redBorder NDR version 25.04.</p>
+<p>The latest release introduces several enhancements and fixes across the redborder platform. Notable new features include the removal of the deprecated darklist system, asset management improvements such as criticality assignment, OS and hardware filtering, and the ability to trigger incidents upon detecting new asset types. A new system was added to cancel Druid queries, and GLPI is now disabled by default in asset settings. The release also improves manual asset creation by allowing users to select existing, unassigned MacObjects. Additionally, critical issues have been resolved, including a broken GeoIP package, changes in the iproute2 configuration directory, and fixes in components like the Druid router, Kafka, and scanner scripts. Configuration updates for Consul and Logstash have also been applied.</p>
+<h3 id="whats-new_2">What's new<a class="headerlink" href="#whats-new_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>#21708 [redborder-webui] Remove darklist system as is replaced by TI policies</li>
+<li>#21698 [redborder-webui] Assets: Add criticality for InventoryDeviceTypeObjects (will be the default asset criticality on asset creation)</li>
+<li>#21697 [redborder-webui] Assets: Disable GLPI (by default) in Assets General Setting</li>
+<li>#21695 [redborder-webui] Assets: Add please wait in bulk actions (like delete asset) on assets list view</li>
+<li>#21694 [redborder-webui] Assets: Add filter by OS and Hardware</li>
+<li>#21660 [redborder-webui] Extender inventory device type with an option create an incident when new tye of this asset is discovered</li>
+<li>#21656 [redborder-webui] Implement a system to cancel a druid query</li>
+<li>#21365 [cookbook-consul] Update consul configuration</li>
+</ul>
+<h3 id="improvements_2">Improvements<a class="headerlink" href="#improvements_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>#20659 [redborder-webui] Assets: On manual asset creation user should be able to select existing MacObject (from the list of MacObjects that are not assign to assets yet)</li>
+</ul>
+<h3 id="resolved-issues_2">Resolved Issues<a class="headerlink" href="#resolved-issues_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>#21686 [geoipupdate] Update package as actual one is broken</li>
+<li>#21682 [redborder-manager][redborder-proxy][redborder-ips] iproute2 config dir changed since v. 6.7.0 from /etc/iproute2 to /usr/share/iproute2</li>
+<li>#21672 [cookbook-logstash] Remove the comment related with checking peer_ip_src in tagging step</li>
+<li>#21662 [cookbook-druid] Druid router port is missing in runtime.properties</li>
+<li>#21643 [redborder-scanner] Script rb_scan_vulnerabilities.rb fails because of XmlMini (NameError)</li>
+<li>#21513 [cookbook-kafka] Minimum number of topic default partitions should be 2 for  1 node</li>
+<li>#21104 [redborder-webui] Update the sensor_id of a InventoryDevice should update the sensor_id of all its mac_objects too (also reverse, showing a warning yes/no question)</li>
+<li>#20867 Fix different cdomain cluster updating erchef.service to erchef.cdomain</li>
+</ul>
+<h2 id="release-notes-for-25045">Release notes for 25.04.5<a class="headerlink" href="#release-notes-for-25045" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Release date: 03/Jun/2025</li>
+<li>Type: Standard</li>
+<li>Main changes: redborder-webui</li>
+</ul>
+<p>This is the release notes for the patch 25.04.5 of redBorder NDR version 25.04.</p>
+<p>This release introduces several new features, including an improved asset details view in the web UI, new scripts for retrieving incidents and requesting trial licenses in the manager component, and updates to watchdog processes for the intrusion sensor. Additionally, it resolves an issue where the web UI would return a 500 error when no default playbook was set for incidents.</p>
+<h3 id="whats-new_3">What's new<a class="headerlink" href="#whats-new_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>#21579 [redborder-webui] Improve asset details view</li>
+<li>#21591 [redborder-manager] Create script rb_get_incidents.sh</li>
+<li>#21583 [redborder-manager] Create script to request trial license</li>
+<li>#20994 [redborder-intrusion] Review &amp; adapt watchdog and bp_watchdog for intrusion sensor</li>
+<li>#21634 [redborder-webui] Handle error 504 in webui (when queries timeout)</li>
+</ul>
+<h3 id="improvements_3">Improvements<a class="headerlink" href="#improvements_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>#20934 [redborder-webui] Show client proxies IP in table (When View -&gt; Client Proxies) in Sensors -&gt; Tree</li>
+</ul>
+<h3 id="resolved-issues_3">Resolved Issues<a class="headerlink" href="#resolved-issues_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>#21514 [redborder-webui] When there is no default playbook incidents return 500 error</li>
+<li>#21601 [redborder-webui] Language change requires pressing 'Update' button twice to take effect</li>
+<li>#21600 [redborder-webui] Assets statistics does not have dark mode styles</li>
+<li>#21637 [redborder-webui] SSO error when registring a user in specific sensor</li>
+<li>#21245 [redborder-webui] Sensor breadcrumbs are unordered</li>
+<li>#21320 [redborder-webui] Fix filter creation with pending tab load</li>
+<li>#21636 [redborder-webui] Cannot create scanner in proxy</li>
+</ul>
+<h2 id="release-notes-for-25044">Release notes for 25.04.4<a class="headerlink" href="#release-notes-for-25044" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Release date: 03/Jun/2025</li>
+<li>Type: Standard</li>
+<li>Main changes: redborder-webui</li>
+</ul>
+<p>This is the release notes for the patch 25.04.4 of redBorder NDR version 25.04.</p>
+<p>This version introduces several new features and improvements across redborder components. Notably, the manager now supports CrowdSec CTI for IP lookups, includes new scripts for service management and indexing, and enhances GLPI integration for multitenant environments. The CLI has been upgraded to show memory usage per service and support multi-node setups. Enhancements also include expanded event counting, improved UI translations, and new automation in the web interface. Numerous issues have been resolved, such as plugin installation failures, asset import problems, UI inconsistencies, and sensor-related bugs. These updates collectively enhance system stability, usability, and performance.</p>
+<h3 id="whats-new_4">What's new<a class="headerlink" href="#whats-new_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>#21544   [redborder-manager] Add https://app.crowdsec.net/cti as ip lookups</li>
+<li>#21501   [redborder-cli] Extend rbcli service list with option -m to show memory use by each service</li>
+<li>#21317   [redborder-cli] Implement rb cli services list for multi-node manager setup</li>
+<li>#21232   [redborder-events-counter] Add counting of events for multiples pipelines (license purposes)</li>
+<li>#21216   [redborder-manager] Create rb_consul_service.sh</li>
+<li>#21105   [redborder-webui] Make GLPI Integration Multitenant</li>
+<li>#20967   [redborder-manager] Create rb_clean_indexer.sh</li>
+<li>#20668   [redborder-webui] Assets: Add translations to new assets section</li>
+<li>#20656   [redborder-webui] Create "Stats" section for Assets in the index view (list of assets)</li>
+<li>#20600   [redborder-intrusion] Make proxy mode for intrusion sensor</li>
+<li>#20313   [redborder-webui] New automatic playbook actions</li>
+</ul>
+<h3 id="improvements_4">Improvements<a class="headerlink" href="#improvements_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>#21553   [cookbook-logstash] Rename sensor_blocked to just "discard"</li>
+<li>#21346   [redborder-kafka] Add rb_persec.sh script to count events in kafka</li>
+<li>#21290   [redborder-manager] Add script to check memcached key via dalli (ruby)</li>
+<li>#21247   [redborder-webui] Incident filters with invisible option</li>
+<li>#21182   [redborder-webui] Add generic message for the ipscp sensors in ApplyUpdateJob StoredJob</li>
+<li>#20671   [redborder-webui] Assets: Add a "Please wait" indicator for links related to recent updated incidents.</li>
+</ul>
+<h3 id="resolved-issues_4">Resolved Issues<a class="headerlink" href="#resolved-issues_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>#21549   [cookbook-logstash] Discard events that don't cointain sensor_uuid in netflow pipeline (after sensor data is enriched)</li>
+<li>#21486   [cookbook-druid] Create DRUIDTYPE.log as druid user instead as root user</li>
+<li>#21471   [redborder-webui] Health checks for sensor flow inside a proxy don't work</li>
+<li>#21450   [redborder-webui] Tools -&gt; Plugins not working (not downloading or installing the vault plugins)</li>
+<li>#21447   [redborder-webui] Error 500 when trying to import signature policies</li>
+<li>#21445   [redborder-manager] rb_export_import_segments.sh script broken with new version of druid</li>
+<li>#21433   [redborder-webui] Custom rule source needs snort version (tar.gz rule source)</li>
+<li>#21358   [redborder-webui] Do not update GLPI Inventory Device if asset is locked</li>
+<li>#21356   [redborder-webui] Assets can't be created without a name and they are not being imported in GLPI without a name</li>
+<li>#21354   [redborder-webui] Snort Sources Rules swap to disable after enable and click on Force Rule Update and refresh</li>
+<li>#21352   [redborder-webui] Bad styles in Incidents -&gt; Statistics</li>
+<li>#21351   [redborder-webui] Assets css and styles of graph</li>
+<li>#21329   [redborder-webui] Do not allow exporting proxy and IPS sensors while exporting sensor tree</li>
+<li>#21321   [redborder-webui] Fix issue where navigating to Intrusion it go directly to RAW view or Unique</li>
+<li>#21314   [redborder-webui] Fix capacity warnings in monitor indexing</li>
+<li>#21297   [redborder-webui] Rule sources duplicated in signature policy creation</li>
+<li>#21292   [redborder-webui] Password validation doesn't work</li>
+<li>#21288   [redborder-webui] Fix report from incidents</li>
+<li>#21287   [redborder-webui] Error in rbcharts.js (RB.Bars)</li>
+<li>#21281   [redborder-webui] Push notification not rendering when creating new signature policy</li>
+<li>#21264   [redborder-webui] A Box widget is created, but does not load</li>
+<li>#21243   [redborder-webui] Cant import Telephones or Network Equipments from GLPI</li>
+<li>#21237   [redborder-webui] policy does not contain rules</li>
+<li>#21236   [redborder-webui] rule sources not visible when creating policy on root level</li>
+<li>#21227   [redborder-webui] Number don't fit notification circle if a lot of notifications</li>
+<li>#21212   [redborder-webui] Error in Incidents -&gt; Statistics</li>
+<li>#21198   [redborder-webui] Error in dashboard/overview after disable an user that has a dashboard shared with the current user</li>
+<li>#21194   [cookbook-postgresql][cookbook-minio] Postgresql and minio can be uninstalled and deregistered by accident if external_services data bag fail (for example network problem or erchef restarted at that moment)</li>
+<li>#21184   [redborder-webui] Cannot paint data when clicking in N/A in "Incident uuid" tab (Intrusion)</li>
+<li>#21170   [redborder-webui] DB Migrations fail </li>
+<li>#21168   [redborder-webui] Mac Object should not be changed to user type when it has a inventory device assigned and make the mac objects' sensor the same as the asset</li>
+<li>#21065   [zookeeper][logrotate] /var/log/zookeeper/ has insecure permissions </li>
+<li>#21059   [redborder-webui] large 'Message' Column in 'Incidents' Overlaps HTML and Other Elements</li>
+<li>#21058   [redborder-webui] Vault incidents produce blank or undefined observables names</li>
+<li>#21039   [cookbook-rb-firewall] Do not open 8084 if is not in use anymore</li>
+<li>#20955   [redborder-manager] /usr/lib/redborder/scripts/rb_get_tasks.rb should get routers node from zk</li>
+<li>#20852 [redborder-webui] Fix and improve report mail generation and remove wickedpdf</li>
+<li>#20785   [redborder-webui] Make ATT&amp;CK matrix responsive and fix colors in dark mode</li>
+<li>#20739   [redborder-webui] Assets: Table of Assets details invade graphs on the right</li>
+<li>#20667   [redborder-webui] Fix missing translations when editing the Objects</li>
+</ul>
+<h2 id="release-notes-for-25043">Release notes for 25.04.3<a class="headerlink" href="#release-notes-for-25043" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Release date: 08/May/2025</li>
+<li>Type: Standard</li>
+<li>Main changes: redborder-webui</li>
+</ul>
+<p>This is the release notes for the patch 25.04.4 of redBorder NDR version 25.04.</p>
+<p>This release introduces a new PF_RING DAQ connector and module for enhanced packet capture in redborder-intrusion, along with support for downloading Snort 3 rules via the web UI. Performance improvements have been made to the incidents display, and several issues have been resolved, including pagination failures in Druid queries, sensor tree inconsistencies, and problems editing worklog notes.</p>
+<h3 id="whats-new_5">What's new<a class="headerlink" href="#whats-new_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>#20993 [redborder-intrusion] - Add PF_RING Daq connector to libdaq</li>
+<li>#20644 [redborder-intrusion][libdaq] - Create new DAQ Module for packet capture using PF_RING drivers</li>
+<li>#18896 [redborder-webui] Download snort rules job for Snort 3</li>
+</ul>
+<h3 id="improvements_5">Improvements<a class="headerlink" href="#improvements_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>#20884   [redborder-webui] Optimize show method of incidents_controller</li>
+</ul>
+<h3 id="resolved-issues_5">Resolved Issues<a class="headerlink" href="#resolved-issues_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>#21102 [redborder-webui] Druid query logging pagination in cluster mode is failing</li>
+<li>#20747 [redborder-webui] Incidents-Worklog. Can't Edit or delete notes on worklog from playbook</li>
+<li>#20864 [redborder-webui] Moving an IPS sensor on sensor tree from a organization to a namespace doesn't remove the organization.</li>
+</ul>
+<h2 id="release-notes-for-25042">Release notes for 25.04.2<a class="headerlink" href="#release-notes-for-25042" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Release date: 07/May/2025</li>
+<li>Type: Standard</li>
+<li>Main changes: redborder-webui</li>
+</ul>
+<p>This is the release notes for the patch 25.04.2 of redBorder NDR version 25.04.</p>
+<p>This release does not introduce new features but includes several UI improvements, such as enhanced sorting in reports, additional device association visibility, and optimized sensor queries. Numerous issues have been resolved across various components, addressing memory errors, interface misconfigurations, UI bugs, and data synchronization problems to improve overall stability and performance.</p>
+<h3 id="whats-new_6">What's new<a class="headerlink" href="#whats-new_6" title="Permanent link">&para;</a></h3>
+<p>There are no new features introduced in this release.</p>
+<h3 id="improvements_6">Improvements<a class="headerlink" href="#improvements_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>#20896   [redborder-webui] Reports should be listed by created_at desc (by default)</li>
+<li>#20733   [redborder-webui] Add a column in MacObject to show the macObjects that has associate InventoryDevice</li>
+<li>#21106   [redborder-webui] Optimize Inventory Device Flow query to cover at least all the sensors</li>
+</ul>
+<h3 id="resolved-issues_6">Resolved Issues<a class="headerlink" href="#resolved-issues_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>#21087 [cookbook-druid] Druid Historical Java Heap Out Space Error</li>
+<li>#21013 [cookbook-rb-manager][cookbook-rb-ips][cookbook-rb-intrusion][cookbook-rb-proxy][webui] Empty string on organization's megabytes_limit causes no data from sensor</li>
+<li>#20686 [cookbook-rb-manager] Do not pass memory variable (not in use by memcached cookbook)</li>
+<li>#20980 [redborder-ips][redborder-intrusion] management_interface is not set in a IPS with one interface and a bypass card</li>
+<li>#20968 [cookbook-druid] Wrong calculation of indexer memory</li>
+<li>#20952 [redborder-cgroups] rb_check_cgroups is broken after chef-workstation update</li>
+<li>#20940 [redborder-manager][redborder-proxy][redborder-ips][redborder-intrusion] openssl-3.0.1.gemspec is back after an update breaking chef-client</li>
+<li>#20985 [redborder-webui] Tools -&gt; Jobs &amp; Workers not autorefreshing</li>
+<li>#20939 [redborder-webui] Cannot delete a user that has response_actions</li>
+<li>#20891 [redborder-webui] In Tools -&gt; license, IPS sensor show as 0/100 even with the licenses apply to the sensor</li>
+<li>#20890 [redborder-webui] Delayed job that check status of AP is failing after druid update</li>
+<li>#20807 [redborder-webui] Not generating outliers by selecting with a name that has an accent</li>
+<li>#20797 [redborder-webui] Error when creating alarm through form after creating alarm with import option</li>
+<li>#20777 [redborder-webui] User search in Tools -&gt; Users don't work</li>
+<li>#20734 [redborder-webui] only menu for type ip in events list</li>
+<li>#20716 [redborder-webui] Adjust top bar correctly and Incidents tab is not seen reducing the screen width</li>
+<li>#20672 [redborder-webui] Fix "is updating" on Force Update Assets button while job is executing</li>
+<li>#21097 [redborder-webui] Error undefined method gsub for nil app/views/jobs/info.html.erb</li>
+<li>#20971 [redborder-webui] Failure to load sensors when IPS module is disabled</li>
+<li>#20897 [redborder-webui] Default report is created every time a report / external report is created</li>
+<li>#20898 [redborder-webui] PDF needs to be uploaded again if you edit a report</li>
+</ul>
+<h2 id="release-notes-for-25041">Release notes for 25.04.1<a class="headerlink" href="#release-notes-for-25041" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Release date: 21/April/2025</li>
+<li>Type: Standard</li>
+<li>Main changes: redborder-webui</li>
+</ul>
+<p>This is the release notes for the patch 25.04.1 of redBorder NDR version 25.04.</p>
+<p>This release brings significant enhancements to asset management, including the ability to import/export assets, apply multiple type filters with icons, and view the "Locked" status in the index. The CEP service has been integrated into the NG environment, and key components like Chef Infra and Druid have been updated. UI improvements include more intuitive searches, better display elements, and usability tweaks. Additionally, several issues have been resolved to ensure greater stability and a smoother user experience across the platform.</p>
+<h3 id="whats-new_7">What's new<a class="headerlink" href="#whats-new_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>#20665   [redborder-webui] Assets: Add option to Import / Export assets</li>
+<li>#20662   [redborder-webui] Assets: Add multiple type filters (with the icons) and fix type filters checkbox not resetting</li>
+<li>#20657   [redborder-webui] Show "Locked" status of Assets in index table and search/filter by this attribute</li>
+<li>#20474   [redborder-manager][cep] Integrate cep service in NG, activate some rules, check that works</li>
+<li>#20195   [chef-client] Update version of Chef Infra Client due EOL</li>
+<li>#19925   [redborder-webui] Add a way to notify visually in the webui when druid historicals are missing</li>
+<li>#19922   [redborder-manager] Create rb_clean_druid_historical.sh script</li>
+<li>#17733   [druid] Update to latest Druid, Kafka, Zookeeper Version</li>
+</ul>
+<h3 id="improvements_7">Improvements<a class="headerlink" href="#improvements_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>#20778   [redborder-webui] Make user search not case-sensitive when assign a user in Incidents</li>
+<li>#20774   [redborder-webui] Make source names shorter in incidents and assets</li>
+<li>#20731   [redborder-webui] Remove "Public IP" as default tab in Traffic</li>
+<li>#20673   [redborder-webui] Assets: Show Total assets in index assets view</li>
+</ul>
+<h3 id="resolved-issues_7">Resolved Issues<a class="headerlink" href="#resolved-issues_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>#20932   [cookbook-keepalived] Remove depedency NetAddr gem</li>
+<li>#20895   [redborder-webui] Reports search is broken</li>
+<li>#20892   [rb-aioutliers][cookbook-rb-aioutliers] Update druid broker port</li>
+<li>#20880   [redborder-webui] Druid discoverypath references not up to date after druid update</li>
+<li>#20875   [redborder-webui] Druid Indexing has an error 500 when enter (related to task of druid historical #19925)</li>
+<li>#20865   [redborder-webui] Error when editing cep rules in web</li>
+<li>#20769   [redborder-webui] Assets: Filter is not working for all fields, it seems only working for Mac Address</li>
+<li>#20757   [redborder-webui] Fix mitre modal in incidents and reports tab</li>
+<li>#20738   [redborder-webui] GLPI: Add missing assets comments after asset rework + OS matching improvement needed</li>
+<li>#20711   [redborder-webui] Assets: Fix the index table in lower screen width</li>
+<li>#20670   [redborder-webui] Assets:  Implement a character limit for the comments field to prevent long entries and do not show full comment in index table</li>
+<li>#20669   [redborder-webui] Assets: Add validation to ensure MAC and IP addresses are not empty and conform to the correct format using regex.</li>
+<li>#20660   [redborder-webui] Assets: Return error when updating en asset with empty MacObject</li>
+<li>#20625   [redborder-webui] The advanced search in the signature policy filters returns a 500 error</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Eneo Tecnología S.L
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/redBorder" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/redBorder" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://redborder.com" target="_blank" rel="noopener" title="redborder.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "content.code.copy", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="../../assets/js/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../assets/js/typewriter.js"></script>
+      
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
