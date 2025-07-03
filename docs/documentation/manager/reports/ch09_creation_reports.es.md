@@ -2,9 +2,11 @@
 
 Los **Informes** permiten al usuario crear reportes periódicos con la información proporcionada por la plataforma Redborder.
 
-![Informes](images/ch04_img009-en.png)
+![Informes](images/ch04_img009-es.png)
 
-Para crear un nuevo informe, haga clic en el botón **Nuevo Informe** y complete todos los campos requeridos. También tiene la opción de importar un informe desde un archivo usando el botón **Importar Informe**. Al mismo tiempo, al lado de este botón, encontrará uno para ver el historial completo de todos los informes a los que tiene acceso.
+Para crear un nuevo informe, haga clic en el desplegable con el texto **Nuevo Informe** y a continuación en el botón "Nuevo Informe". Complete todos los campos requeridos. 
+
+También tiene la opción de importar un informe desde un archivo usando el botón **Importar Informe**. Al mismo tiempo, al lado de este botón, encontrará uno para ver el historial completo de todos los informes a los que tiene acceso.
 
 ![Editando un Informe](images/ch04_img049-en.png)
 
